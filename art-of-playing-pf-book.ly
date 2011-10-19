@@ -76,7 +76,7 @@
   \titledPiece \markup "Time and its Divisions"
   \partOneTimeAndItsDivisions
   
-  \repeat unfold 12 { c'4 d' e' f' \break }
+  \pageBreak
   \section "Scene 2"
   \piece \markup { Choir: \italic { bla bla bla } }
   \repeat unfold 12 { g'4 f' e' d'  \break }

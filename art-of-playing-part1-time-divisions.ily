@@ -1,6 +1,5 @@
 \version "2.14.2"
 
-
 inlineScoreBarExample = \markup { " " \general-align #Y #CENTER 
 	    \score {
 	    	    \new Staff 
@@ -19,310 +18,181 @@ inlineScoreBarExample = \markup { " " \general-align #Y #CENTER
 	    } "  "	   
 }
 inlineScoreSimpleCommon = \markup { " " \general-align #Y #CENTER 
-\column{
 	    \score {
 	    	    \new Staff
 		    {  
 		    	    \time 4/4
 		    	    \clef treble
 		    	    \cadenzaOn
-		    	    \hideNotes c''64-\markup{\whiteout \general-align #Y #-4 "or"}
-		    	    \time 2/2
+		    	    \hideNotes 
+		    	    \override TextScript #'extra-offset = #'(1 . 6.5)
+		    	    c''64-\markup{\whiteout \pad-markup #0.5 "or"}
 		    	    c''64
+		    	    \time 2/2
+		    	     c''64
 			}
 	  \layout {
 	      indent = 0\in
 	      ragged-right = ##t
 	    }
-	    } "  "
-	}
-	\column {\left-align \general-align #Y #-0.5 " Which are equal to" }	   
+	    } "  "	   
 }
-inlineScoreQuavers = \markup { " " \general-align #Y #CENTER 
-\column{
+inlineScoreSimpleCommonExample = \markup { " " \general-align #Y #CENTER 
 	    \score {
-	    	    \new Staff 
-	    	    	\with {
-	    	    		\remove Time_signature_engraver
-	    	    		\remove Clef_engraver
-	    	    	        }
+	    	    \new Staff
 		    {  
-		    	    \setProportionalScore
-		    	    \set Staff.instrumentName = #"8 Quavers"
-		    	    \cadenzaOn
-		    	    \hideNotes \repeat unfold 1 {c''2 c''8} \unHideNotes 
-		    	    \autoBeamOff 
-		    	    c''8 c''8 c''8[ c''8] c''8[ c''8 c''8 c''8] { \hideNotes c''2 \unHideNotes} 
-		    	    \bar "|"
+		    	    \set Staff.instrumentName = #'"Example"
+		    	    \time 4/4
+		    	    \clef treble
+		    	    \hideNotes 
+		    	    \override TextScript #'extra-offset = #'(1 . 5.6)
+		    	    c''64-\markup{\whiteout \pad-markup #0.5 "or"}
+		    	    c''64
+		    	    \time 2/2
+		    	    c''64
+		    	     \unHideNotes
+		    	     \set Timing.measureLength = #(ly:make-moment 4 4)
+		    	     c''1 \noBreak
+		    	     c''2 c''2 \noBreak
+		    	     c''2. c''4 \noBreak
+		    	     c''8[ c''8 c''8 c''8] c''4 c''4 \noBreak
+		    	     \cadenzaOn
+		    	     c''1   \bar "||"
 			}
 	  \layout {
-	      indent = 0.7\in
-	      line-width = 3.5\in
+	      indent = 0.5\in
 	      ragged-right = ##t
 	    }
-	    } "  "
-	}
-	\column {\left-align \general-align #Y #-0.5 " Which are equal to" }	   
+	    }	   
 }
-inlineScoreSemiQuavers = \markup { " " \general-align #Y #CENTER 
-\column{
+inlineScoreSimpleTwoFourths = \markup { " " \general-align #Y #CENTER 
 	    \score {
-	    	    \new Staff 
-	    	    	\with {
-	    	    		\remove Time_signature_engraver
-	    	    		\remove Clef_engraver
-	    	    	        }
+	    	    \new Staff
 		    {  
-		    	    \setProportionalScore
-		    	    \set Staff.instrumentName = #"16 semi-quavers"
-		    	    \cadenzaOn
-		    	    \hideNotes \repeat unfold 1 {c''2 } \unHideNotes 
-		    	    \autoBeamOff 
-		    	    c''16 c''16 c''16[ c''16] 
-		    	    \repeat unfold 3 {c''16[ c''16 c''16 c''16]} { \hideNotes c''2 \unHideNotes} 
-		    	    \bar "|"
+		    	    \time 2/4
+		    	    \clef treble 
+		    	    \hideNotes c''4
 			}
 	  \layout {
-	      indent = 0.7\in
-	      line-width = 3.5\in
+	      indent = 0\in
 	      ragged-right = ##t
 	    }
-	    } "  "
-	}
-	\column {\left-align \general-align #Y #-0.5 " Which are equal to" }	   
+	    } "  "	   
 }
-inlineScoreDemiSemiQuavers = \markup { " " \general-align #Y #CENTER 
-\column{
+inlineScoreSimpleTwoFourthsExample = \markup { " " \general-align #Y #CENTER 
 	    \score {
-	    	    \new Staff 
-	    	    	\with {
-	    	    		\remove Time_signature_engraver
-	    	    		\remove Clef_engraver
-	    	    	        }
+	    	    \new Staff
 		    {  
-		    	    \setProportionalScore
-		    	    \set Staff.instrumentName = \markup{\column {"32 demisemi-" "   quavers"}}
-		    	    \cadenzaOn
-		    	    \hideNotes \repeat unfold 1 {c''4 } \unHideNotes 
-		    	    \autoBeamOff 
-		    	    c''32 c''32 c''32[ c''32] 
-		    	    \repeat unfold 7 {c''32[ c''32 c''32 c''32]} { \hideNotes c''4 \unHideNotes} 
-		    	    \bar "|"
+		    	    \set Staff.instrumentName = #'"Example"
+		    	    \time 2/4
+		    	    \clef treble
+		    	     c''2 \noBreak
+		    	     c''4 c''4 \noBreak
+		    	     c''4. c''8 \noBreak
+		    	     c''16[ c''16 c''16 c''16] c''8[ c''8] \noBreak
+		    	     c''2   \bar "||"
 			}
 	  \layout {
-	      indent = 0.7\in
-	      line-width = 3.5\in
-	     % ragged-right = ##t
+	      indent = 0.5\in
+	      ragged-right = ##t
 	    }
-	    } "  "
-	}
-	\column {
-		\left-align
-		\general-align #Y #-0.5
-		\transparent 
-		" Which are equal to" }	   
+	    }	   
 }
 
-inlineScoreDottedMinim = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c{
-        	\cadenzaOn
-        	\stemUp
-        	c''2. 
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
+inlineScoreTwelveEigthsCompound = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+	    	    	    \setProportionalScore
+		    	    \set Staff.instrumentName = \markup{"1" \super "st" " sort"}
+		    	    \relative c''{
+		    	    	    \time 12/8
+		    	    	    \clef treble
+		    	    	    c1. \noBreak
+		    	    	    c2. c4. c \noBreak
+		    	    	    c4. c4 \autoBeamOff c8 c[ c c] c4. 
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " containing 12 quavers in a" 
+	 \general-align #Y #-1 \line{\smaller "  bar, or their equivalent"}
+}	   
 }
-inlineScoreDottedCrotchetRest = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \remove Staff_symbol_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c{
-        	\cadenzaOn
-        	\stemUp
-        	r4.
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        }
+inlineScoreSixEigthsCompound = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \set Staff.instrumentName = \markup{"2" \super "d" " sort"}
+		    	    \relative c''{
+		    	    	    \time 6/8
+		    	    	    \clef treble
+		    	    	    c2. \noBreak
+		    	    	    c4. c4 c8 \noBreak
+		    	    	    \autoBeamOff c8[ c c] c4. 
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " six quavers in a bar, or" 
+	 \general-align #Y #-1 \line{ \smaller "  their equivalent"}
+}	   
 }
-inlineScoreCrotchetQuaverRests = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \remove Staff_symbol_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c{
-        	\cadenzaOn
-        	\stemUp
-        	d''4\rest d8\rest
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
+inlineScoreTwelveFourthsCompound = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \set Staff.instrumentName = \markup{"3" \super "d" " sort"}
+		    	    \relative c''{
+		    	    	    \time 12/4
+		    	    	    \clef treble
+		    	    	    c1. c1. \noBreak
+		    	    	    c2 c4 c c c c2. c2. \noBreak 
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #0 \smaller " 12 crotchets in a bar, etc."}	   
 }
-inlineScoreDoubleDottedCrotchet = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c{
-        	\cadenzaOn
-        	c''4..
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
-}
-inlineScoreTie = \markup { \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \remove Staff_symbol_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c''{
-        	\cadenzaOn
-        	\hideNotes
-        	a4^( f a^)
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
-}
-inlineScoreDottedMinimDown = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c{
-        	\cadenzaOn
-        	\stemDown
-        	c''2. 
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
-}
-inlineScoreTiedMinimCrotchet = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c''{
-        	\cadenzaOn
-        	\stemDown
-        	c2~c4 
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
-}
-inlineScoreTiedCrotchets = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c''{
-        	\cadenzaOn
-        	\stemDown
-        	c4~c~c \bar "||" 
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
-}
-inlineScoreDoubleDottedMinim = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c{
-        	\cadenzaOn
-        	c''2..
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
-}
-inlineScoreTiedMinimCrotchetQuaver = \markup { " " \general-align #Y #CENTER 
-    \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        \remove Clef_engraver
-        \override StaffSymbol #'staff-space = #1.2
-        }
-        { \relative c''{
-        	\cadenzaOn
-        	\stemDown
-        	c2~c4~c8 
-        	}
-        }
-        \layout { 
-        	indent = 0\in
-        	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
-        }
-        } " "
+inlineScoreSixFourthsCompound = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \set Staff.instrumentName = \markup{"4" \super "th" " sort"}
+		    	    \relative c''{
+		    	    	    \time 6/4
+		    	    	    \clef treble
+		    	    	    c2. c2 c4 \noBreak
+		    	    	    \repeat unfold 6 {c4} \noBreak 
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #0 \smaller " 6 crotchets in a bar, etc."}	   
 }
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
@@ -341,8 +211,37 @@ partOneTimeAndItsDivisions = \markuplines {
     	the beginning of every composition, after the clef. 
     }
     \paragraph{
-    	\caps Simple common time, when marked thus \inlineScoreSimpleCommon	    
+    	\caps Simple common time, when marked thus \inlineScoreSimpleCommon denotes, that each bar 
+    	contains one semibreve, or its equivalent.
     }
-     \paragraph{" "}
+    \paragraph{
+    	    \inlineScoreSimpleCommonExample
+    }
+    \paragraph{
+    	When marked thus \inlineScoreSimpleTwoFourths the bar contains one minim, or its equivalent.	    
+    }
+    \paragraph{
+    	    \inlineScoreSimpleTwoFourthsExample
+    }
+    \paragraph{" "}
+    \paragraph{
+    	Four sorts of \caps compound common time explained:	    
+    }
+    \paragraph{
+    	\inlineScoreTwelveEigthsCompound	    
+    }
+    \paragraph{
+    	    \inlineScoreSixEigthsCompound
+    }
+    \paragraph{
+    	    \inlineScoreTwelveFourthsCompound
+    }
+    \paragraph{
+    	    \inlineScoreSixFourthsCompound
+    }
+    \paragraph{The two last sorts are very seldom used in modern music.}
+    \paragraph{" "}
+    \paragraph{"                             " \caps Simple triple time explained.}
+    \paragraph{" "}
 }
 }

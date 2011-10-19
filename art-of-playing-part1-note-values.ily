@@ -456,5 +456,6 @@ partOneValueOfNotes = \markuplines {
      	    is the same in effect as \inlineScoreTiedMinimCrotchetQuaver
      }
      \paragraph{" "}
+     \paragraph{" "}
 }
 }
