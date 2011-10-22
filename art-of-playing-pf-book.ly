@@ -16,6 +16,7 @@
   \include "art-of-playing-part1-clefs-explained.ily"
   \include "art-of-playing-part1-note-values.ily"
   \include "art-of-playing-part1-time-divisions.ily"
+  \include "art-of-playing-part1-sharps-flats.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -75,6 +76,9 @@
   
   \titledPiece \markup "Time and its Divisions"
   \partOneTimeAndItsDivisions
+  
+  \titledPiece \markup "Sharps, Flats, etc."
+  \partOneSharpsFlats
   
   \pageBreak
   \section "Scene 2"

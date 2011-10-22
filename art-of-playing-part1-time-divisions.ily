@@ -194,6 +194,194 @@ inlineScoreSixFourthsCompound = \markup { " " \general-align #Y #CENTER
 	}
 \column {\left-align \general-align #Y #0 \smaller " 6 crotchets in a bar, etc."}	   
 }
+inlineScoreThreeSecondsSimple = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \relative c''{
+		    	    	    \time 3/2
+		    	    	    \clef treble
+		    	    	    c1. \noBreak
+		    	    	    \repeat unfold 3 {c2} \noBreak 
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " three minims in a bar,"
+	\general-align #Y #-1 \line{ \smaller "   or their equivalent"}
+	}	   
+}
+inlineScoreThreeFourthsSimple = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \relative c''{
+		    	    	    \time 3/4
+		    	    	    \clef treble
+		    	    	    \repeat unfold 3 {c4} \noBreak
+		    	    	    c4. c8 c[ c] \noBreak
+		    	    	    c2.
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " three Crotchets in"
+	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
+	}	   
+}
+inlineScoreThreeEighthsSimple = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \relative c''{
+		    	    	    \time 3/8
+		    	    	    \clef treble
+		    	    	    c4 c8 \noBreak
+		    	    	    c8 c16[ c c c] \noBreak
+		    	    	    c4.
+		    	    	    \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " three quavers in"
+	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
+	}	   
+}
+inlineScoreNineFourthsCompound = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \relative c''{
+		    	    	    \time 9/4
+		    	    	    \clef treble
+		    	    	    c2 \repeat unfold 7 {c4} \noBreak
+		    	    	    \repeat unfold 3 {c2.} \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " nine crotchets in"
+	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
+}
+}
+inlineScoreNineEigthsCompound = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff{
+		    	    \relative c''{
+		    	    	    \time 9/8
+		    	    	    \clef treble
+		    	    	    c4. c4 c8 c[ c c] \noBreak
+		    	    	    c4. c4 c8 c4. \bar "||"
+		    	    }
+		    	    }
+	  \layout {
+	      indent = 0.4\in
+	      line-width = 3\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+\column {\left-align \general-align #Y #-1.3 \smaller " nine quavers in"
+	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
+}
+}
+inlineScoreTwoFourthsSymbol = \markup {\general-align #Y #-0.4 
+	    \score {
+	    	    \new Staff
+	    	    \with{
+	    	    	\remove Bar_engraver
+	    	    	\remove Clef_engraver
+	    	    	\remove Staff_symbol_engraver
+	    	    }
+		    {  
+		    	    \time 2/4
+		    	    s32
+			}
+	  \layout {
+	  	  #(layout-set-staff-size 15)
+	  	  indent = 0\in
+	  	  ragged-right = ##t
+	    }
+	    } " "	   
+}
+inlineScoreTwoEigthsSymbol = \markup {\general-align #Y #-0.4 
+	    \score {
+	    	    \new Staff
+	    	    \with{
+	    	    	\remove Bar_engraver
+	    	    	\remove Clef_engraver
+	    	    	\remove Staff_symbol_engraver
+	    	    }
+		    {  
+		    	    \time 3/8
+		    	    s32
+			}
+	  \layout {
+	  	  #(layout-set-staff-size 15)
+	  	  indent = 0\in
+	  	  ragged-right = ##t
+	    }
+	    } " "	   
+}
+inlineScoreTripletsExample = \markup { " " \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    \with{
+	    	    	\remove Time_signature_engraver
+	    	    	\remove Clef_engraver
+	    	    }
+		    	    \relative c''{
+				    \cadenzaOn
+				    \stemDown
+				    \tupletUp
+				    \set Staff.instrumentName = #'"thus"
+				    \override TextScript #'extra-offset = #'(1 . 4.7)
+				    \override TupletBracket #'control-points = #'( ( 1.8264 . 3.736) ( 4.4001 . 4.732) ( 6.4757 . 3.902) ( 7.555 . 2.158) )
+				    \override TupletNumber #'extra-offset = #'(1.6 . -1.2 )
+				    
+				    \override TupletBracket #'stencil = #ly:slur::print
+				    \hideNotes c16 \unHideNotes  \times 2/3 {c4 e g,} 
+				    \times 2/3 {b d g,} \bar "|" \noBreak
+				    \override TupletBracket #'control-points = #'( ( 1.5774 . 3.819) ( 3.3208 . 4.483) ( 5.3134 . 4.068) ( 6.0606 . 2.822) )
+				    \override TupletNumber #'extra-offset = #'(1.5 . -1 )
+				    \hideNotes b4-\markup{\whiteout \pad-markup #0.4 "or"} \unHideNotes
+				    \times 2/3 {c8[ e g,]} \times  2/3 {b[ d g,]} \bar "|"  \noBreak
+				    \override TupletNumber #'extra-offset = #'(1.1 . -1.1 )
+				    \override TupletBracket #'control-points = #'( ( 1.2453 . 3.819) ( 2.4076 . 4.483) ( 3.819 . 4.317) ( 4.4832 . 3.486) )
+				    \hideNotes b4-\markup{\whiteout \pad-markup #0.4 "or"} \unHideNotes
+				    \times 2/3 {c16[ e g,]} \times  2/3 {b[ d g,]} \bar "|"
+		    	    }
+	  \layout {
+	      indent = 0.1\in
+	      line-width = 2.5\in
+	      ragged-right = ##t
+	    }
+	    } "  "	   
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -214,34 +402,62 @@ partOneTimeAndItsDivisions = \markuplines {
     	\caps Simple common time, when marked thus \inlineScoreSimpleCommon denotes, that each bar 
     	contains one semibreve, or its equivalent.
     }
-    \paragraph{
-    	    \inlineScoreSimpleCommonExample
-    }
+    \paragraph{\inlineScoreSimpleCommonExample}
     \paragraph{
     	When marked thus \inlineScoreSimpleTwoFourths the bar contains one minim, or its equivalent.	    
     }
-    \paragraph{
-    	    \inlineScoreSimpleTwoFourthsExample
-    }
+    \paragraph{\inlineScoreSimpleTwoFourthsExample}
     \paragraph{" "}
     \paragraph{
     	Four sorts of \caps compound common time explained:	    
     }
-    \paragraph{
-    	\inlineScoreTwelveEigthsCompound	    
-    }
-    \paragraph{
-    	    \inlineScoreSixEigthsCompound
-    }
-    \paragraph{
-    	    \inlineScoreTwelveFourthsCompound
-    }
-    \paragraph{
-    	    \inlineScoreSixFourthsCompound
-    }
+    \paragraph{\inlineScoreTwelveEigthsCompound}
+    \paragraph{\inlineScoreSixEigthsCompound}
+    \paragraph{\inlineScoreTwelveFourthsCompound}
+    \paragraph{\inlineScoreSixFourthsCompound}
     \paragraph{The two last sorts are very seldom used in modern music.}
     \paragraph{" "}
     \paragraph{"                             " \caps Simple triple time explained.}
+    \paragraph{\inlineScoreThreeSecondsSimple}
+    \paragraph{\inlineScoreThreeFourthsSimple}
+    \paragraph{\inlineScoreThreeEighthsSimple}
+    \paragraph{" "}
+    \paragraph{"                             " \caps Compound triple time explained.}
+    \paragraph{\inlineScoreNineFourthsCompound}
+    \paragraph{\inlineScoreNineEigthsCompound}
+    \paragraph{" "}
+    \paragraph{"  " \caps Compound triple time is seldom used in modern music.}
+    \paragraph{
+    	    N.B. The contents of every bar, in common time; whether \caps simple, or \caps compound,
+    	    may be divided, (by beating or counting) into four, or into two equal parts: and in
+    	    triple time; whether simple, or \caps compound, into three equal parts.
+    }
+    \paragraph{
+    	The figures, which mark the time, have a reference to the \caps semibreve; the \caps lower 
+    	number, showing into how many parts the \caps semibreve is divided; and the \caps upper 
+    	number, how many of such parts are taken to fill up a bar.  For example \inlineScoreTwoFourthsSymbol 
+    	denotes, that the \caps semibreve is divided into four parts, namely, four crotchets; and that two 
+    	of them are taken for each bar: likewise \inlineScoreTwoEigthsSymbol indicates, that the 
+    	\caps semibreve is divided into eight parts, namely, eight quavers; and that three of them are 
+    	adopted to compleat a bar.
+    }
+    \paragraph{" "}
+    \paragraph{The figure of 3 placed over three crotchets, quavers or semiquavers}
+    \paragraph{
+    	    \inlineScoreTripletsExample (which are called triplets) denotes, that the three crotchets must
+    	    be performed within the time of two common crotchets, or of one minim; the three quavers within 
+    	    the time of two common quavers, or of one crotchet; and the three semiquavers within the time of two 
+    	    common semiquavers, or of one quaver.
+    }
+    \paragraph{
+    	    N.B. The easiest way is to consider them all as three to one, and to beat or count 
+    	    the time accordingly; that is, to beat the first of every 3.  (N.B. \caps Scarlatti, and 
+    	    others have written three demisemiquavers to a quaver; and three semiquavers to a crotchet in 
+    	    some of their pieces.)  The figure of 6 over quavers or semiquavers, means that they are to be 
+    	    performed within the time of four of the same kind; which is a similar case to the preceding one. 
+    	    The figures 5, 7, 9, 10 etc. follow the same rule.
+    }
+    \paragraph{" "}
     \paragraph{" "}
 }
 }
