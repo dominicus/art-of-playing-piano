@@ -143,6 +143,127 @@ inlineScoreFirstExampleSharp = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
+inlineScoreSecondExampleFlat = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"2" \super "d" "Ex:"}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    b16[ c d bes] a[ bes a bes] \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.55)
+		    	    \hideNotes b2 b1.-\markup{\whiteout \pad-markup #0.4 "as if written thus"} b2  b1.\unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    b16[ c d bes] a[ bes! a bes!] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreThirdExampleNatural = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"3" \super "d" "Ex:"}
+		    	    \clef treble
+		    	    \key f \major
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    f16[ c a bes] c[ b c b] c[ d c b] c4 \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.55)
+		    	    \hideNotes b1.-\markup{\whiteout \pad-markup #0.4 \smaller "as if written thus"} b2  b1.\unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    \key f \major
+		    	     f'16[ c a bes] c[ b! c b!] c[ d c b!] c4 \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreFourthExampleSharpOverBar = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c'''{
+		    	    \set Staff.instrumentName = \markup{"Ex:"}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    g16[ fis e d] e[ fis g fis] \bar "|" \noBreak
+		    	    fis[ g a g] g4 \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.4)
+		    	    \hideNotes b1.-\markup{\whiteout \pad-markup #0.4  "as if written thus"} b2  b1.\unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    g16[ fis! e d] e[ fis! g fis!] \bar "|" \noBreak
+		    	    fis![ g a g] g4 \bar "||"  \noBreak
+		     }
+	  \layout {
+	      indent = 0.1\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreOrderOfSharps = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff
+	    	    	    \with{
+	    	    	    	    \remove Time_signature_engraver
+	    	    	    	    \remove Bar_engraver
+	    	    	    }
+		    	    \relative c''{
+		    	    	    \set Staff.instrumentName = \markup{\column{\concat{"The order of " \caps "sharps  "} \line{"  at the clef."}}}
+		    	    	  \clef treble
+		    	    	  \override Stem #'transparent = ##t
+		    	    	  \override Beam #'transparent = ##t
+		    	    	  \override NoteHead #'transparent = ##t
+		    	    	  fis8 cis gis' dis ais eis' bis
+		    	    }
+	  \layout {
+	      indent = .7\in
+	      line-width = 2.5\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+	\column {\left-align \general-align #Y #-1.3 \concat {" descending by a 4" \super "th" \normalsize "and"} 
+		\general-align #Y #-1 \line{\concat{"  ascending by a 5" \super "th"}}
+}
+}
+inlineScoreOrderOfFlats = \markup { " " \general-align #Y #CENTER 
+\column{
+	    \score {
+	    	    \new Staff
+	    	    	    \with{
+	    	    	    	    \remove Time_signature_engraver
+	    	    	    	    \remove Bar_engraver
+	    	    	    }
+		    	    \relative c''{
+		    	    	    \set Staff.instrumentName = \markup{\column{\concat{"The order of " \caps "flats  "} \line{"  at the clef."}}}
+		    	    	  \clef treble
+		    	    	  \override Stem #'transparent = ##t
+		    	    	  \override Beam #'transparent = ##t
+		    	    	  \override NoteHead #'transparent = ##t
+		    	    	  bes8 ees aes, des ges, ces fes,
+		    	    }
+	  \layout {
+	      indent = .7\in
+	      line-width = 2.5\in
+	      ragged-right = ##f
+	    }
+	    }
+	}
+	\column {\left-align \general-align #Y #-1.3 \concat {" ascending by a 4" \super "th" \normalsize "and"} 
+		\general-align #Y #-1 \line{\concat{"  descending by a 5" \super "th"}}
+}
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -226,9 +347,22 @@ partOneSharpsFlats = \markuplines {
     \paragraph{
     	    When a sharp, flat, or natural is prefixed to a note, in the course of a piece, it affects all the 
     	    following notes of the \caps {same name}, contained in the \caps {same bar}: it is then called 
-    	    and \caps accidental sharp, flat, or natural.
+    	    an \caps accidental sharp, flat, or natural.
     }
-    \paragraph{ \inlineScoreFirstExampleSharp}
+    \paragraph{\inlineScoreFirstExampleSharp}
+    \paragraph{\inlineScoreSecondExampleFlat}
+    \paragraph{\inlineScoreThirdExampleNatural}
+    \paragraph{"          which abbreviations, are a modern improvement."}
+    \paragraph{" "}
+    \paragraph{
+    	The foregoing \caps rule extends even to the first note of the subsequent bar, when 
+    	the affected note is the last of one, and first of the next.
+    }
+    \paragraph{\inlineScoreFourthExampleSharpOverBar}
+    \paragraph{"           And the same with flats and naturals."}
+    \paragraph{" "}
+    \paragraph{\inlineScoreOrderOfSharps}
+    \paragraph{\inlineScoreOrderOfFlats}
     \paragraph{" "}
     \paragraph{" "}
 }

@@ -17,6 +17,7 @@
   \include "art-of-playing-part1-note-values.ily"
   \include "art-of-playing-part1-time-divisions.ily"
   \include "art-of-playing-part1-sharps-flats.ily"
+  \include "art-of-playing-part1-other-marks.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -56,16 +57,16 @@
   \chapter "Part I"
   \section "Music Notation"
   
-  \titledPiece \markup Preliminaries
+  \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
   
-  \titledPiece \markup Clefs
+  \titledPiece \markup "Clefs"
   \partOneClefs
   
   \titledPiece \markup "The Scale, or Gamut"
   \partOneScale
   
-  \titledPiece \markup Intervals
+  \titledPiece \markup "Intervals"
   \partOneIntervals
   
   \titledPiece \markup "Tenor, Counter-tenor, and Soprano clefs explained"
@@ -79,6 +80,9 @@
   
   \titledPiece \markup "Sharps, Flats, etc."
   \partOneSharpsFlats
+  
+  \titledPiece \markup "Various other marks."
+  \partOneOtherMarks
   
   \pageBreak
   \section "Scene 2"
