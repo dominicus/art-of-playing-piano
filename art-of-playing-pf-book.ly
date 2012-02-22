@@ -18,6 +18,7 @@
   \include "art-of-playing-part1-time-divisions.ily"
   \include "art-of-playing-part1-sharps-flats.ily"
   \include "art-of-playing-part1-other-marks.ily"
+  \include "art-of-playing-part1-abbreviations.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -83,6 +84,9 @@
   
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
+  
+  \titledPiece \markup "Abbreviations"
+  \partOneAbbreviations
   
   \pageBreak
   \section "Scene 2"
