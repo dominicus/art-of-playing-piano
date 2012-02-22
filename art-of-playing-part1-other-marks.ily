@@ -49,7 +49,7 @@ inlineScoreCrotchetRestFermata = \markup { " " \general-align #Y #CENTER
         { \relative c{
         	\cadenzaOn
         	\stemUp
-        	r4^\fermata
+        	r4^\markup{" "}^\fermata
         	}
         }
         \layout { 
@@ -68,7 +68,7 @@ inlineScoreDoubleBarExample =\markup { " " \general-align #Y #CENTER
         }
         { \relative c{
         	\cadenzaOn
-        	s4 \bar "||" s4
+        	s8 \bar "||" s2
         	}
         }
         \layout { 
@@ -144,23 +144,29 @@ partOneOtherMarks = \markuplines {
     	    certain cases, the composer expects some \caps embellishments from the performer; but the pause on a rest \inlineScoreCrotchetRestFermata 
     	    only lengthens, \caps "at pleasure," the \caps silence.
     }
+    \paragraph{" "}
     \paragraph {
     	The \caps sign or \caps repeat "  " \general-align #Y #-0.4 { \musicglyph #"scripts.segno"} " " is a reference 
     	to a passage, or strain, to which the performer is to return: the Italian words, \caps "al segno" or \caps "dal segno",
     	denote such a return.
     }
+    \paragraph{" "}
     \paragraph{
     	The double bar \inlineScoreDoubleBarExample marks the end of a strain; or the conclusion of a piece.
     }
+    \paragraph{" "}
     \paragraph{
-    	The \caps dotted bars \inlineScoreVoltaBarExample denote the repeat of the foregoing, and following strain. "    " \bold "N.B. "
-    	The second part of a piece, if \caps "very long," is seldom repeated; notwithstanding the \caps dots.
+    	The \caps dotted bars \inlineScoreVoltaBarExample denote the repeat of the foregoing, and following strain.
     }
+    \paragraph{" "}
+    \paragraph{
+     \bold "N.B." The second part of a piece, if \caps "very long," is seldom repeated; notwithstanding the \caps dots.	    
+    }
+    \paragraph{" "}
     \paragraph{
     	When the bars are marked thus \inlineScoreVoltaBarEndExample " or " \inlineScoreVoltaBarStartExample " " then the strain, only 
     	on the side of the \caps dots is to be repeated.
     }
-
     \paragraph{" "}
     \paragraph{" "}
 }
