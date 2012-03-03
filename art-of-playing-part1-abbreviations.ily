@@ -10,10 +10,95 @@ inlineScoreAbbreviationsExOne = \markup { \general-align #Y #CENTER
 		    	    \cadenzaOn
 		    	    \stemDown
 		    	    c1:8 \bar "|" \noBreak
-		    	    \override TextScript #'extra-offset = #'(1 . 4.55)
-		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 "to be played thus"} b1 b1  b1.\unHideNotes
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 "to be played thus"} b1 b1 b2 \unHideNotes
 		    	    \sameSizeClef \forceClef
 		    	    c8[ c c c] c[ c c c] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExEight = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    
+		    	    \override NoteHead #'rotation = #'(-50 0 0)
+		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
+		    	    \override NoteHead #'X-offset =  #-1.36 % #-1.24
+		    	    \repeat tremolo 4 { e16[ c16]}
+		    	    \repeat tremolo 4{  e16[ c16]}
+		    	    \revert  NoteHead #'rotation
+		    	    \revert  NoteHead #'text
+		    	    \revert  NoteHead #'X-offset
+		    	    
+		    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 "to be played thus"} b1 b1 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    e16[ c e c] e[ c e c] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExTwo = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn \stemDown
+		    	    
+		    	    \override NoteHead #'rotation = #'(-50 0 0)
+		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
+		    	    \override NoteHead #'X-offset =  #-1.36 % #-1.24
+		    	    c2:8 c2:16
+		    	    \revert  NoteHead #'rotation
+		    	    \revert  NoteHead #'text
+		    	    \revert  NoteHead #'X-offset
+		    	    
+		    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    c8[ c c c] c16[ c c c] c[ c c c] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExThree = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn \stemDown
+		    	    
+		    	    \repeat percent 2 {g8[ b d g]} 
+	    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b,2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    g8[ b d g] g,8[ b d g] \bar "||"
 		     }
 	  \layout {
 	      indent = 0.2\in
@@ -30,6 +115,9 @@ partOneAbbreviations = \markuplines {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph{"                " \inlineScoreAbbreviationsExOne}
+    \paragraph{"                " \inlineScoreAbbreviationsExTwo}
+    \paragraph{"                " \inlineScoreAbbreviationsExThree}
+    \paragraph{"                " \inlineScoreAbbreviationsExEight}
     \paragraph {
     	    The pause \inlineScorePauseOneExample or \inlineScorePauseTwoExample renders the \caps note longer \caps "at pleasure"; and in
     	    certain cases, the composer expects some \caps embellishments from the performer; but the pause on a rest \inlineScoreCrotchetRestFermata 
