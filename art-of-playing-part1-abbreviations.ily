@@ -106,6 +106,34 @@ inlineScoreAbbreviationsExThree = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
+inlineScoreAbbreviationsExFour = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn \stemDown
+		    	    
+		    	    \repeat percent 2 {
+    				    \override TupletBracket #'control-points = #'( ( 1.5774 . 3.819) ( 3.3208 . 4.483) ( 5.3134 . 4.068) ( 6.0606 . 2.822) )
+				    \override TupletNumber #'extra-offset = #'(1.5 . -1 )
+				    \times 2/3 {g8[ b d]} 
+		    	    } 
+	    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b,2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    g8[ b d g] g,8[ b d g] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -117,7 +145,9 @@ partOneAbbreviations = \markuplines {
     \paragraph{"                " \inlineScoreAbbreviationsExOne}
     \paragraph{"                " \inlineScoreAbbreviationsExTwo}
     \paragraph{"                " \inlineScoreAbbreviationsExThree}
+    \paragraph{"                " \inlineScoreAbbreviationsExFour}
     \paragraph{"                " \inlineScoreAbbreviationsExEight}
+
     \paragraph {
     	    The pause \inlineScorePauseOneExample or \inlineScorePauseTwoExample renders the \caps note longer \caps "at pleasure"; and in
     	    certain cases, the composer expects some \caps embellishments from the performer; but the pause on a rest \inlineScoreCrotchetRestFermata 
