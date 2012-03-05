@@ -21,38 +21,6 @@ inlineScoreAbbreviationsExOne = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
-inlineScoreAbbreviationsExEight = \markup { \general-align #Y #CENTER 
-	    \score {
-	    	    \new Staff
-	    	    	  \with{\remove Time_signature_engraver}
-	    	     \relative c''{
-		    	    \set Staff.instrumentName = \markup{"Ex:  "}
-		    	    \clef treble
-		    	    \cadenzaOn
-		    	    \stemDown
-		    	    
-		    	    \override NoteHead #'rotation = #'(-50 0 0)
-		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
-		    	    \override NoteHead #'X-offset =  #-1.36 % #-1.24
-		    	    \repeat tremolo 4 { e16[ c16]}
-		    	    \repeat tremolo 4{  e16[ c16]}
-		    	    \revert  NoteHead #'rotation
-		    	    \revert  NoteHead #'text
-		    	    \revert  NoteHead #'X-offset
-		    	    
-		    	    
-		    	    \bar "|" \noBreak
-		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
-		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 "to be played thus"} b1 b1 \unHideNotes
-		    	    \sameSizeClef \forceClef
-		    	    e16[ c e c] e[ c e c] \bar "||"
-		     }
-	  \layout {
-	      indent = 0.2\in
-	      ragged-right = ##t
-	    }
-	    }
-}
 inlineScoreAbbreviationsExTwo = \markup { \general-align #Y #CENTER 
 	    \score {
 	    	    \new Staff
@@ -115,17 +83,73 @@ inlineScoreAbbreviationsExFour = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \cadenzaOn \stemDown
 		    	    
-		    	    \repeat percent 2 {
-    				    \override TupletBracket #'control-points = #'( ( 1.5774 . 3.819) ( 3.3208 . 4.483) ( 5.3134 . 4.068) ( 6.0606 . 2.822) )
-				    \override TupletNumber #'extra-offset = #'(1.5 . -1 )
+		    	    \repeat percent 4 {
+		    	    	    \override TupletBracket #'stencil = #ly:slur::print
+    				    \override TupletBracket #'control-points = #'( ( 0.3486 . 2.092) ( 1.6936 . 3.188) ( 2.9389 . 3.586) ( 4.4832 . 3.287) )
+				    \override TupletNumber #'extra-offset = #'(1.5 . -0.6 )
 				    \times 2/3 {g8[ b d]} 
 		    	    } 
 	    	    
 		    	    \bar "|" \noBreak
-		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
-		    	    \hideNotes b,2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \override TextScript #'extra-offset = #'(0 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
 		    	    \sameSizeClef \forceClef
-		    	    g8[ b d g] g,8[ b d g] \bar "||"
+		    	    \times 2/3 {g8[ b d]} \times 2/3 {g,[ b d]}
+		    	    \revert TupletBracket #'stencil
+		    	    \override TupletBracket #'bracket-visibility = ##f
+		    	    \override TupletNumber #'transparent = ##t
+		    	    \times 2/3 {g,[ b d]} \times 2/3 {g,[ b d]}  \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExFive = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn \stemDown
+		    	    
+		    	    \repeat percent 2 {g16[ b d b]} 
+	    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    g16[ b d b] g[ b d b] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExSix = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn \stemDown
+		    	    
+		    	    \repeat percent 2 {
+		    	    	    \override TupletBracket #'stencil = #ly:slur::print
+    				    \override TupletBracket #'control-points = #'( ( 0.2717 . 0.543) ( 4.0756 . 5.071) ( 9.8721 . 4.256) ( 13.132 . 1.992) )
+				    \override TupletNumber #'extra-offset = #'(4.2 . 0.12 )
+				    \times 2/6 {g16[ b d g d b]} 
+		    	    } 
+	    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(0 . 4.8)
+		    	    \hideNotes b4-\markup{\whiteout \pad-markup #0.4 " thus"} b8 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    \times 2/6 {g16[ b d g d b]} \times 2/6 {g[ b d g d b]} \bar "||"
 		     }
 	  \layout {
 	      indent = 0.2\in
@@ -134,7 +158,118 @@ inlineScoreAbbreviationsExFour = \markup { \general-align #Y #CENTER
 	    }
 }
 
-
+inlineScoreAbbreviationsExSeven = \markup { \general-align #Y #CENTER
+ 	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn
+%		    	    \stemDown
+		    	    \override NoteHead #'rotation = #'(-50 0 0)
+		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
+		    	    \override NoteHead #'X-offset =  #-1.36
+		    	    \repeat tremolo 4 { c16 e}
+		    	    \repeat tremolo 4 { c e}
+		    	    \revert  NoteHead #'rotation
+		    	    \revert  NoteHead #'text
+		    	    \revert  NoteHead #'X-offset
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " played thus"} b1 b2 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    c16[ e c e] c[ e c e] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExEight = \markup { \general-align #Y #CENTER
+ 	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn
+%		    	    \stemDown
+		    	    \override NoteHead #'rotation = #'(-50 0 0)
+		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
+		    	    \override NoteHead #'X-offset =  #-1.36
+		    	    \repeat tremolo 4 { e16 c}
+		    	    \repeat tremolo 4 { e16 c}
+		    	    \revert  NoteHead #'rotation
+		    	    \revert  NoteHead #'text
+		    	    \revert  NoteHead #'X-offset
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b1 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    e16[ c e c] e[ c e c] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExNine = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn \stemDown
+		    	    c8[ e g e]
+		    	    \hideNotes c8 \unHideNotes
+		    	    \override NoteHead #'rotation = #'(-50 0 0)
+		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
+		    	    \override NoteHead #'X-offset =  #-1.36 % #-1.24
+		    	    <c e g>2:8_\markup{\italic segue} \bar"|"
+		    	    \revert  NoteHead #'rotation
+		    	    \revert  NoteHead #'text
+		    	    \revert  NoteHead #'X-offset
+		    	    <c f a>1:8 \bar"|"
+		    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    c8[ e g e] c8[ e g e] \bar "|"
+		    	    c8[ f a f] c8[ f a f] \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAbbreviationsExTen = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{"Ex:  "}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    <c e c'>1:16 \bar"|"
+		    	    
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
+		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b4 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    \repeat unfold 4 {<e c'>16[ c <e c'> c] } \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##t
+	    }
+	    }
+}
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
@@ -146,33 +281,18 @@ partOneAbbreviations = \markuplines {
     \paragraph{"                " \inlineScoreAbbreviationsExTwo}
     \paragraph{"                " \inlineScoreAbbreviationsExThree}
     \paragraph{"                " \inlineScoreAbbreviationsExFour}
+    \paragraph{"                " \inlineScoreAbbreviationsExFive}
+    \paragraph{"                " \inlineScoreAbbreviationsExSix}
+    \paragraph{"                " \inlineScoreAbbreviationsExSeven}
     \paragraph{"                " \inlineScoreAbbreviationsExEight}
-
-    \paragraph {
-    	    The pause \inlineScorePauseOneExample or \inlineScorePauseTwoExample renders the \caps note longer \caps "at pleasure"; and in
-    	    certain cases, the composer expects some \caps embellishments from the performer; but the pause on a rest \inlineScoreCrotchetRestFermata 
-    	    only lengthens, \caps "at pleasure," the \caps silence.
-    }
     \paragraph{" "}
-    \paragraph {
-    	The \caps sign or \caps repeat "  " \general-align #Y #-0.4 { \musicglyph #"scripts.segno"} " " is a reference 
-    	to a passage, or strain, to which the performer is to return: the Italian words, \caps "al segno" or \caps "dal segno",
-    	denote such a return.
-    }
+    \paragraph{ The \caps italian word, Segue; means, it continues, or follows:}
     \paragraph{" "}
-    \paragraph{
-    	The double bar \inlineScoreDoubleBarExample marks the end of a strain; or the conclusion of a piece.
-    }
+    \paragraph{"                " \inlineScoreAbbreviationsExNine}
     \paragraph{" "}
-    \paragraph{
-    	The \caps dotted bars \inlineScoreVoltaBarExample denote the repeat of the foregoing, and following strain. "    " \bold "N.B. "
-    	The second part of a piece, if \caps "very long," is seldom repeated; notwithstanding the \caps dots.
-    }
+    \paragraph{ Tremando, or trembling:}
     \paragraph{" "}
-    \paragraph{
-    	When the bars are marked thus \inlineScoreVoltaBarEndExample " or " \inlineScoreVoltaBarStartExample " " then the strain, only 
-    	on the side of the \caps dots is to be repeated.
-    }
+    \paragraph{"                " \inlineScoreAbbreviationsExTen}
     \paragraph{" "}
     \paragraph{" "}
 }
