@@ -64,6 +64,88 @@ inlineScoreTiedNotes = \markup { " " \general-align #Y #CENTER
         	ragged-right = ##t}
         } " "
 }
+inlineScoreArpeggioSign = \markup { " " \general-align #Y #CENTER 
+    \score
+    { \new Staff \with {
+        \remove Time_signature_engraver
+        \remove Staff_symbol_engraver
+        \remove Clef_engraver
+        }
+        { \relative c''{
+        	
+        	\clef treble
+        	\cadenzaOn
+        	\hideNotes <g b d g>16\arpeggio \bar "|"
+        	}
+        }
+        \layout { 
+        	indent = 0\in
+        	ragged-right = ##t}
+        }
+}
+
+inlineScoreArpeggio = \markup { " " \general-align #Y #CENTER 
+    \score
+    { \new Staff \with {
+        \remove Time_signature_engraver
+        }
+        { \relative c''{
+        	\clef treble
+        	\cadenzaOn
+        	<g b d g>4\arpeggio \bar "|"
+        	}
+        }
+        \layout { 
+        	indent = 0\in
+        	ragged-right = ##t}
+        } " "
+}
+inlineScoreBaroqueArpeggioSlash = \markup { " " \general-align #Y #CENTER 
+    \score
+    { \new Staff \with {
+        \remove Time_signature_engraver
+        \remove Collision_engraver
+
+        }
+        { \relative c''{
+        	\clef treble
+        	\cadenzaOn
+        	<<{
+        		\override NoteHead #'stencil = #(ly:make-stencil(list 'draw-line 0.15 -0.5 -0.4 2 0.4) '(-0.1 . 0.1) '(0.1 . 1))
+        		\override Stem #'stencil = ##f
+        		b4 s d s
+        	}\\{
+        		<g, c e> s <g c e g> s
+        	}>>	
+        	}
+        }
+        \layout { 
+        	indent = 0\in
+        	ragged-right = ##t}
+        } " "
+}
+inlineScoreBaroqueArpeggioSlashEquiv = \markup { " " \general-align #Y #CENTER 
+    \score
+    { \new Staff \with {
+        \remove Time_signature_engraver
+        \consists Span_arpeggio_engraver
+        }
+        { \relative c''{
+        	\set Staff.connectArpeggios = ##t
+        	\clef treble
+        	\cadenzaOn
+        	<<{
+        		<c e>4\arpeggio s <d e g>\arpeggio s
+        	}\\{
+        		<g, b>\arpeggio s <g c>\arpeggio s
+        	}>>	
+        	}
+        }
+        \layout { 
+        	indent = 0\in
+        	ragged-right = ##t}
+        } " "
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -85,10 +167,22 @@ partOneStyleGraces = \markuplines {
     	    \caps close manner; which is done by keeping down the first key, 'till the next is struck; by which means, the 
     	    strings \caps "vibrate sweetly" into one another.
     }
+    \paragraph{" "}
     \paragraph{
     	    N.B. When the composer leaves the \caps legato, and \caps staccato to the performer's taste; the best 
     	    rule is, to adhere chiefly to the \caps legato; reserving the \caps staccato to give \caps spirit 
     	    occasionally to certain passages, and to set off the \caps "higher beauties" of the \caps legato.
+    }
+    \paragraph{" "}
+    \paragraph{ 
+    	    This mark \inlineScoreArpeggioSign prefixed to a chord \inlineScoreArpeggio signifies, that the notes must be played 
+    	    \caps successively, from the lowest; with more or less velocity, as the sentiment may require; keeping each note 
+    	    \caps down 'till the time of the chord be filled up.
+    }
+    \paragraph{" "}
+    \paragraph{
+    	    Chords marked thus \inlineScoreBaroqueArpeggioSlash are played as the preceding chords, with the addition of a note \caps where the oblique line is put, 
+    	    as if written thus \inlineScoreBaroqueArpeggioSlashEquiv but the additional note is not to be kept down.
     }
     \paragraph{" "}
     \paragraph{" "}
