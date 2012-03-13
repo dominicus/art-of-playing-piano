@@ -228,7 +228,7 @@ inlineScoreAbbreviationsExNine = \markup { \general-align #Y #CENTER
 		    	    \hideNotes c8 \unHideNotes
 		    	    \override NoteHead #'rotation = #'(-50 0 0)
 		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
-		    	    \override NoteHead #'X-offset =  #-1.36 % #-1.24
+		    	    \override NoteHead #'X-offset =  #-1.36
 		    	    <c e g>2:8_\markup{\italic segue} \bar"|"
 		    	    \revert  NoteHead #'rotation
 		    	    \revert  NoteHead #'text
