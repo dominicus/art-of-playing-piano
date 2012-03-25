@@ -295,7 +295,7 @@ inlineScoreExampleArpeggioOneCont = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
-inlineScoreAppoggiatura = \markup { \general-align #Y #CENTER
+inlineScoreAppoggiaturaOne = \markup { \general-align #Y #CENTER
  	    \score {
 	    	    \new Staff
 	    	    	  \with{\remove Time_signature_engraver}
@@ -417,7 +417,7 @@ inlineScoreAppoggiatura = \markup { \general-align #Y #CENTER
 		    	    \override TextScript #'extra-offset = #'(1 . 4.2)
 		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 "or thus"} b2 b2 \unHideNotes
 		    	    \revert TextScript #'extra-offset
-		    	    e4(_\markup{\halign #-2.4 \pad-markup #0.1 \musicglyph #"scripts.sforzato"}%_\markup{as taste best directs in the passage.}
+		    	    e4(_\markup{\halign #-2.4 \pad-markup #0.1 \musicglyph #"scripts.sforzato"}
 		    	    \override NoteHead #'rotation = #'(-35 0 0)
 		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
 		    	    \override NoteHead #'X-offset =  #-1.36
@@ -431,6 +431,59 @@ inlineScoreAppoggiatura = \markup { \general-align #Y #CENTER
 	  \layout {
 	      indent = 0\in
 	      ragged-right = ##t
+	    }
+	    }
+}
+inlineScoreAppoggiaturaTwo = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = "Sometimes"
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \grace e8 d4 \grace c8 b4 \grace a8 g4
+		    	    \bar "|"
+		    	    \override TextScript #'extra-offset = #'(1 . 6)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 "played thus"} b2 b2 b2 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    \once \override Slur #'control-points = #'( ( 1.1955 . 2.49) ( 2.4906 . 2.988) ( 3.3873 . 2.889) ( 4.6824 . 2.092) )
+		    	    e8([_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"} d16)]\staccatissimo r
+		    	    \once \override Slur #'control-points = #'( ( 1.3947 . 1.594) ( 2.5902 . 1.892) ( 3.8854 . 1.793) ( 4.782 . 0.996) )
+		    	    c8[(_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"} b16)]\staccatissimo r
+		    	    \override Slur #'control-points = #'( ( 1.6936 . -1.3947) ( 2.6899 . -1.8929) ( 3.7858 . -1.9925) ( 4.5828 . -1.8929) )
+		    	    a8([_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"} g16])\staccatissimo r
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreAppoggiaturaThree = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = "Example"
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \grace g16 b4 \grace a16 c4 \grace b16 d4 \grace g,16 g'4
+		    	    \bar "|"
+		    	    \override TextScript #'extra-offset = #'(1 . 4.3)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 "played thus"} b2 b2 b2 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    \stemDown
+		    	    g,32([ b8..)] 
+		    	    a32[( c8..)]
+		    	    b32[( d8..)]
+		    	    g,32([ g'8..])
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.5\in
+	      ragged-right = ##f
 	    }
 	    }
 }
@@ -538,7 +591,11 @@ partOneStyleGraces = \markuplines {
     \paragraph{
     	    \huge \caps "Appoggiaturas," \large " and other " \huge \caps "Graces" \large " in small notes explained."
     }
-    \paragraph{ \inlineScoreAppoggiatura}
+    \paragraph{ \inlineScoreAppoggiaturaOne}
+    \paragraph{ \inlineScoreAppoggiaturaTwo}
+    \paragraph{ Sometimes the little notes are added to give \caps emphasis:}
+    \paragraph{ \inlineScoreAppoggiaturaThree}
+    \paragraph{ N.B. the finger or thumb must be taken off immediately from the \caps lower notes.}
     \paragraph{" "}
 }
 }
