@@ -358,7 +358,7 @@ inlineScoreAppoggiaturaOne = \markup { \general-align #Y #CENTER
 		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
 		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 "thus"} b2 \unHideNotes
 		    	    \revert TextScript #'extra-offset
-		    	    e4_\markup{\halign #-2.4 \musicglyph #"scripts.sforzato"}( d) \bar "||" \noBreak
+		    	    e4( d) \bar "||" \noBreak
 		    	    \hideNotes b64 \unHideNotes
 		    	    \sameSizeClef \forceClef
 		    	    \grace e8 d4 \grace c8 b4 \bar "|" \noBreak
@@ -448,11 +448,11 @@ inlineScoreAppoggiaturaTwo = \markup { \general-align #Y #CENTER
 		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 "played thus"} b2 b2 b2 \unHideNotes
 		    	    \revert TextScript #'extra-offset
 		    	    \once \override Slur #'control-points = #'( ( 1.1955 . 2.49) ( 2.4906 . 2.988) ( 3.3873 . 2.889) ( 4.6824 . 2.092) )
-		    	    e8([_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"} d16)]\staccatissimo r
+		    	    e8([_\markup{\halign #-2.4 \musicglyph #"scripts.sforzato"} d16)]\staccatissimo r
 		    	    \once \override Slur #'control-points = #'( ( 1.3947 . 1.594) ( 2.5902 . 1.892) ( 3.8854 . 1.793) ( 4.782 . 0.996) )
-		    	    c8[(_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"} b16)]\staccatissimo r
+		    	    c8[(_\markup{\halign #-2.4 \musicglyph #"scripts.sforzato"} b16)]\staccatissimo r
 		    	    \override Slur #'control-points = #'( ( 1.6936 . -1.3947) ( 2.6899 . -1.8929) ( 3.7858 . -1.9925) ( 4.5828 . -1.8929) )
-		    	    a8([_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"} g16])\staccatissimo r
+		    	    a8([_\markup{\halign #-2.4 \musicglyph #"scripts.sforzato"} g16])\staccatissimo r
 		    	    \bar "||"
 		     }
 	  \layout {
@@ -483,6 +483,122 @@ inlineScoreAppoggiaturaThree = \markup { \general-align #Y #CENTER
 		     }
 	  \layout {
 	      indent = 0.5\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreAppoggiaturaFour = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = "Ex:"
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    c4
+		    	    \hideNotes b64 \unHideNotes \bar "|" \noBreak
+		    	    \grace c16
+		    	    		    	    \revert TextScript #'extra-offset
+		    	    \override NoteHead #'rotation = #'(-40 0 0)
+		    	    \override NoteHead #'text = #( markup #:musicglyph "noteheads.s1" )
+		    	    \override NoteHead #'X-offset =  #-1.36
+		    	    e2(_\markup{\halign #-2 \pad-markup #0.1 \musicglyph #"scripts.sforzato"}
+		    	    \revert  NoteHead #'rotation
+		    	    \revert  NoteHead #'text
+		    	    \revert  NoteHead #'X-offset
+		    	    d4)
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 6.9)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "played"}_\markup{\whiteout \pad-markup #0.4 \small "thus  "}
+		    	    b2 b2 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    \stemDown
+		    	    c4 \bar "|" \noBreak
+		    	    \hideNotes b64 \unHideNotes
+		    	    c16 e4..(\> d4)\!
+		    	    \bar "||" \noBreak
+		    	    \stemNeutral
+		    	    \hideNotes b64 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    \cadenzaOff
+		    	    \time 4/4
+		    	    \grace b16 c4 \grace fis,16 g4 \grace cis16 d4 \grace fis,!16 g4 \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(1 . 5.8)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 "th:"} b8 \unHideNotes
+		    	    b32[ c8..] fis,!32[ g8..] cis!32[ d8..] fis,!32[ g8..]
+		    	    \cadenzaOn
+		    	    \bar "||"
+		    	    %--------------------------LINE 2
+		    	    \override TextScript #'extra-offset = #'(1 . 4.4)
+		    	    \grace {c16[ d]} e4 \grace {g,32[ c e]} g4 \bar "|" \noBreak
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 "thus"} b2 \unHideNotes
+		    	    c,32[ d e8.] 
+		    	    \override TupletBracket #'stencil = #ly:slur::print
+		    	    \override TupletBracket #'control-points = #'( ( 0.3486 . 2.092) ( 1.6936 . 3.188) ( 2.9389 . 3.586) ( 4.4832 . 3.287) )
+			    \override TupletNumber #'extra-offset = #'(1.5 . -0.6 )
+		    	    \times 2/3 {g,32[ c e} g8.] \bar "||" \noBreak
+		    	    \hideNotes b64 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    \revert TextScript #'extra-offset
+		    	    \override TextScript #'extra-offset = #'(1 . 6.6)
+		    	    \hideNotes
+		    	    b32-\markup{\whiteout \pad-markup #0.1 \small "but   "}_\markup{\whiteout \pad-markup #0.1 \small "some-"}_\markup{\whiteout \pad-markup #0.1 \small "times"} 
+		    	    b4 b4 \unHideNotes
+		    	    \grace {c,16[d]} e4(d8) r8 \bar "|" \noBreak
+		    	    \revert TextScript #'extra-offset
+		    	    \override TextScript #'extra-offset = #'(1 . 7.2)
+		    	    \hideNotes
+		    	    b32-\markup{\whiteout \pad-markup #0.3 \small "expressively"}_\markup{\whiteout \pad-markup #0.3 \small "thus      "} 
+		    	    b1 b2 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    c8.[( d32 e]) d8\staccatissimo r \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreAppoggiaturaFive = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    <<{ s8 \grace {e8} d4}
+		    	    \\{s8 \grace {c8_\markup{"Ex: in double notes"}} b4}>>
+		    	    \hideNotes
+		    	    \stemDown
+		    	    \revert TextScript #'extra-offset
+		    	    \override TextScript #'extra-offset = #'(1 . -3.2)
+		    	    b32-\markup{\whiteout \pad-markup #0.4 \small "thus"} b2 
+		    	    \unHideNotes
+		    	    <<{ e8[(d])}\\{ c8([ b])}>>
+		    	    \bar "||" \noBreak
+		    	    \hideNotes b64 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    <<{ \grace e8 d4}\\{ b4 }>>
+		    	         \hideNotes
+		    	         \stemDown
+		    	    	 \override TextScript #'extra-offset = #'(1 . -3.2)
+		    	    	 b32-\markup{\whiteout \pad-markup #0.4 \small "thus"} b2
+		    	    	 \unHideNotes
+		    	    <<{ e8([d]) }\\{b4 }>>
+		    	    \bar "||"  \noBreak
+		    	    \hideNotes b64 \unHideNotes
+		    	    \sameSizeClef \forceClef
+		    	    <<{ \grace {cis16[ e]} d4}\\{ b4 }>>
+		    	         \hideNotes
+		    	         \stemDown
+		    	    	 \override TextScript #'extra-offset = #'(1 . -3.2)
+		    	    	 b32-\markup{\whiteout \pad-markup #0.4 \small "thus"} b2
+		    	    	 \unHideNotes
+		    	    <<{ cis!32[ e d8.] }\\{b4 }>>
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.0\in
 	      ragged-right = ##f
 	    }
 	    }
@@ -596,6 +712,8 @@ partOneStyleGraces = \markuplines {
     \paragraph{ Sometimes the little notes are added to give \caps emphasis:}
     \paragraph{ \inlineScoreAppoggiaturaThree}
     \paragraph{ N.B. the finger or thumb must be taken off immediately from the \caps lower notes.}
+    \paragraph{ \inlineScoreAppoggiaturaFour}
+    \paragraph{ \inlineScoreAppoggiaturaFive}
     \paragraph{" "}
 }
 }
