@@ -20,6 +20,7 @@
   \include "art-of-playing-part1-other-marks.ily"
   \include "art-of-playing-part1-abbreviations.ily"
   \include "art-of-playing-part1-style-graces.ily"
+  \include "art-of-playing-part1-turns-shakes.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -91,6 +92,9 @@
   
   \titledPiece \markup "Style, Graces, and marks of Expression, etc."
   \partOneStyleGraces
+  
+  \titledPiece \markup {\caps "Turns, Shakes, " and \caps Beats, explained} 
+  \partOneTurnsShakesBeats
   
   \pageBreak
   \section "Scene 2"
