@@ -1,4 +1,4 @@
-%%
+﻿%%
 %%
 %%%%MUZIO CLEMENTI'S Art of Playing on the Piano Forte
 %%  Typeset by Javier Ruiz-Alma
@@ -56,6 +56,7 @@
   \markuplines \table-of-contents
   }
   
+	%{
   
   \chapter "Part I"
   \section "Music Notation"
@@ -87,13 +88,15 @@
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
+	%}
+
   \titledPiece \markup "Abbreviations"
   \partOneAbbreviations
   
   \titledPiece \markup "Style, Graces, and marks of Expression, etc."
   \partOneStyleGraces
   
-  \titledPiece \markup {\caps "Turns, Shakes, " and \caps Beats, explained} 
+  \titledPiece \markup "Turns, Shakes, and Beats, explained"
   \partOneTurnsShakesBeats
   
   \pageBreak
