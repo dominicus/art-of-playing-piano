@@ -88,10 +88,11 @@
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
-	%}
 
   \titledPiece \markup "Abbreviations"
   \partOneAbbreviations
+  
+  %}
   
   \titledPiece \markup "Style, Graces, and marks of Expression, etc."
   \partOneStyleGraces
