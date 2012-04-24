@@ -56,11 +56,11 @@
   \markuplines \table-of-contents
   }
   
-	%{
+	
   
   \chapter "Part I"
   \section "Music Notation"
-  
+  %{
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
   
