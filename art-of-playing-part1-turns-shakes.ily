@@ -170,7 +170,7 @@ inlineScoreTurnsFour = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \cadenzaOn
 		    	    \hideNotes b64 \unHideNotes
-		    	    c4^\markup{" " \rotate #90 \musicglyph #"scripts.turn"}
+		    	    c4^\markup{ \tiny " " \rotate #90 \musicglyph #"scripts.turn"}
 		    	    \revert TextScript #'extra-offset
 		    	    \override TextScript #'extra-offset = #'(-1.4 . 6.3 )
 		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.4 \small "or"} \unHideNotes
@@ -182,16 +182,21 @@ inlineScoreTurnsFour = \markup { \general-align #Y #CENTER
 		    	    b32-\markup{\whiteout \pad-markup #0.4 \small "thus"} b2 
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
-		    	    \override TupletBracket #'control-points = #'( ( 0.5977 . 2.49) ( 2.8891 . 3.486) ( 5.9776 . 2.889) ( 6.9738 . 1.693) )
-			    \override TupletNumber #'extra-offset = #'(1.9 . -0.9 )
+		    	    \override TupletBracket #'control-points = #'( ( 0.797 . 1.394) ( 1.9925 . 2.988) ( 3.985 . 3.188) ( 5.2802 . 2.59) )
+			    \override TupletNumber #'extra-offset = #'(1.9 . -0.3 )
 		    	    \times 2/3 {b32[ c d} c8.]
 		    	    \bar "||" \noBreak
 		    	    \hideNotes b64 
 		    	    \sameSizeClef \forceClef
 		    	    b64 \unHideNotes
-		    	    g4^\markup{\tiny \sharp}^\markup{\musicglyph #"scripts.turn"}
+		    	    \revert TextScript #'extra-offset
+		    	    \override TextScript #'extra-offset = #'(0.4 . 0.0 )
+		    	    g4^\markup{\tiny \sharp}^\markup{\rotate #90 \musicglyph #"scripts.turn"}
+		    	    \override TextScript #'extra-offset = #'(-2.0 . 6.3 )
 		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.4 \small "or"} \unHideNotes
-		    	    g4^\markup{\tiny \sharp \rotate #90 \musicglyph #"scripts.turn"}
+		    	    \revert TextScript #'extra-offset
+		    	    \override TextScript #'extra-offset = #'(-0.4 . 0.0 )
+		    	    g4^\markup{ \tiny \sharp \rotate #90 \musicglyph #"scripts.turn" }
 		    	    \bar "|" \noBreak
 		    	    \hideNotes
 		    	    \revert TextScript #'extra-offset
@@ -199,8 +204,8 @@ inlineScoreTurnsFour = \markup { \general-align #Y #CENTER
 		    	    b32-\markup{\whiteout \pad-markup #0.4 \small "thus"} b2 
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
-		    	    \override TupletBracket #'control-points = #'( ( 0.7245 . 2.626) ( 2.1736 . 3.441) ( 4.0756 . 3.26) ( 4.8002 . 1.72) )
-			    \override TupletNumber #'extra-offset = #'(1.4 . -0.9 )
+		    	    \override TupletBracket #'control-points = #'( ( 1.2951 . -3.188) ( 3.188 . -3.5865) ( 4.4832 . -3.2876) ( 5.3798 . -2.391) )
+			    \override TupletNumber #'extra-offset = #'(1.2 . 1.2 )
 		    	    \times 2/3 {fis32[ g a} g8.]
 		    	    \bar "||"
 		     }
@@ -222,6 +227,7 @@ partOneTurnsShakesBeats = \markuplines {
     \paragraph{ \inlineScoreTurnsTwo }
     \paragraph{ \inlineScoreTurnsThree}
     \paragraph{ \inlineScoreTurnsFour }
+    \paragraph{ N.B. The \caps lowest note of \caps every sort of turn is \caps mostly a semitone: }
     \paragraph{" "}
   }
 }
