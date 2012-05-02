@@ -290,7 +290,7 @@ inlineScoreTurnsSix = \markup { \general-align #Y #CENTER
 		    	    b64 \unHideNotes
 		    	    <<{
 		    	    	\revert TextScript #'extra-offset
-		    	    	\override TextScript #'extra-offset = #'(0.6 . -2.9 )
+		    	    	\override TextScript #'extra-offset = #'(0.5 . -2.9 )
 				b4^\markup{\rotate #90 \musicglyph #"scripts.turn"}
 				}\\{g4}>>
 			    \hideNotes
@@ -336,6 +336,195 @@ inlineScoreTurnsSix = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
+inlineScoreTurnsSeven = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+	    	     	    \set Staff.instrumentName = \markup { "Shake."}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    d4^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}}
+		    	    \override TextScript #'extra-offset = #'(1 . 6.9)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "played"}_\markup{\whiteout \pad-markup #0.4 \small "thus  "}
+		    	    b2 b2 \unHideNotes
+		    	    e32[ d e d e d e d]
+		    	    \hideNotes
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    b32-\markup{\whiteout \pad-markup #0.4 \small "or"}
+		    	    b4 \unHideNotes
+		    	    e32[ d e d e d8.]
+		    	    \bar "||"
+		    	    \override TextScript #'extra-offset = #'(1 . 6.9)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "Some Authors"}_\markup{\whiteout \pad-markup #0.4 \small "mark it thus"}
+		    	    b2 b2 \unHideNotes
+		    	    d4\prallprall
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.4\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreTurnsEight = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{\column{{"Short shake"} \line{"beginning by the"} \line{"note itself."}}}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    d8[^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}} c]
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "played thus"}
+		    	    b2 b2 \unHideNotes
+		    	    d32[ e d16 c8]
+		    	    \bar "||" \noBreak
+		    	    \hideNotes
+		    	    b64
+		    	    \sameSizeClef \forceClef
+		    	    b64 \unHideNotes
+		    	    \revert TextScript #'extra-offset 
+		    	    f'4 e^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}}
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "thus"}
+		    	    b2 \unHideNotes
+		    	    f'4( e32[ f e8.])
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.7\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreTurnsNine = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{\column{{"Transient"} \line{"or passing"} \line{"shakes"}}}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    \override TextScript #'extra-offset = #'(0.3 . -2.8 )
+		    	    c16[^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}}
+		    	    b
+		    	    \override TextScript #'extra-offset = #'(0.3 . -1.6 )
+		    	    a^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}}
+		    	    g]
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "or"}
+		    	    b8 \unHideNotes
+		    	    c16[\prall b
+		    	    \override TextScript #'extra-offset =  #'(0.6 . -1.3 )
+		    	    a^\markup{\musicglyph #"scripts.prall"} g]
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "thus"}
+		    	    b8 \unHideNotes
+		    	    c64[ d c32 b16] a64[ b a32 g16] 
+		    	    \bar "||" \noBreak
+		    	    \hideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    \override TextScript #'extra-offset = #'(1 . 9.5)
+		    	    b64-\markup{\whiteout \pad-markup #0.1 \column{{\small "Sometimes ex-"} \line{\small "-pressed in small"} \line{\small "notes."}}}
+		    	    b1 b1 b1
+		    	    \sameSizeClef \forceClef
+		    	    b64 \unHideNotes
+		    	    \stemUp  \grace {c16[d]} \stemDown c16[ b \stemUp \grace {a[b]} \stemDown a g]
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.5\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreTurnsTen = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{\column{{"Turned"} \line{"Shake."}}}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    d4\trill
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "or"}
+		    	    b16 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    d4^\markup{\musicglyph #"scripts.turn"}^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}}
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "or"}
+		    	    b16 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    d4^\markup{\concat{\rotate #40 \musicglyph #"scripts.rvarcomma" \rotate #40 \musicglyph #"scripts.rvarcomma"}}^\markup{\musicglyph #"scripts.turn"}
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "or"}
+		    	    b16 \unHideNotes
+		    	    \override TextScript #'extra-offset = #'(0.5 . 0.0 )
+		    	    d4^\markup{\musicglyph #"scripts.prallprall"}^\markup{\musicglyph #"scripts.turn"}
+		    	    \override TextScript #'extra-offset = #'(1 . 6.9)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.2 \small "played"}_\markup{\whiteout \pad-markup #0.2 \small "thus  "}
+		    	    b2. \unHideNotes
+		    	    e32[ d e d e d c d]
+		    	    \bar "|"
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.2 \small "and sometimes"}_\markup{\whiteout \pad-markup #0.4 \small "turned thus  "}
+		    	    b2 b2 b4 \unHideNotes
+		    	    e32[ d e d e d cis d]
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.4\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreTurnsEleven = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \set Staff.instrumentName = \markup{\column{{"Continued"} \line{"shake."}}}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \stemDown
+		    	    d4(\startTrillSpan \bar "|"
+		    	    d4)
+		    	    \override TextScript #'extra-offset = #'(-0.7 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "thus"}\stopTrillSpan
+		    	    b8 \unHideNotes
+		    	    \revert TextScript #'extra-offset
+		    	    e32[ d e d e d e d]
+		    	    \bar "|"
+		    	    e32[ d e d e d cis d]
+		    	    \bar "||"
+		    	    \hideNotes
+		    	    c64^\markup{ "Prepared shake"}
+		    	    \sameSizeClef \forceClef
+		    	    \unHideNotes
+		    	    \grace {c16[ d]} d4\trill
+		    	    \bar "|"
+		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "thus"}
+		    	    b8 \unHideNotes
+		    	    \override TupletBracket #'stencil = #ly:slur::print
+		    	    \override TupletBracket #'control-points =  #'( ( 0.9962 . 2.739) ( 2.4906 . 4.234) ( 6.2266 . 4.607) ( 8.4682 . 3.237) )
+			    \override TupletNumber #'extra-offset = #'(3.5 . -0.5 )
+		    	    \times 2/6 {c32[ d e d e d]}
+		    	    \override TupletNumber #'extra-offset = #'(2.5 . -1.1 )
+		    	    \override TupletBracket #'control-points =  #'( ( 1.3698 . 3.736) ( 3.985 . 4.856) ( 6.6002 . 4.483) ( 8.3437 . 3.113) )
+		    	    \times 2/6 {e[d e d c d]}
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.4\in
+	      ragged-right = ##f
+	    }
+	    }
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -351,6 +540,11 @@ partOneTurnsShakesBeats = \markuplines {
     \paragraph{ N.B. The \caps lowest note of \caps every sort of turn is \caps mostly a semitone: }
     \paragraph{ \inlineScoreTurnsFive }
     \paragraph{ \inlineScoreTurnsSix }
+    \paragraph{ \inlineScoreTurnsSeven }
+    \paragraph{ \inlineScoreTurnsEight }
+    \paragraph{ \inlineScoreTurnsNine }
+    \paragraph{ \inlineScoreTurnsTen }
+    \paragraph{ \inlineScoreTurnsEleven }
     \paragraph{" "}
   }
 }
