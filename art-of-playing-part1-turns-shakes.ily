@@ -525,6 +525,42 @@ inlineScoreTurnsEleven = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
+inlineScoreTurnsTwelve = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \override TextScript #'extra-offset = #'(1.6 . -1.1 ) 
+		    	    e4( d)^\markup{\small \musicglyph #"scripts.trill"} c \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(0.0 . 3.2 )
+		    	    \hideNotes b64_\markup{\small thus} \unHideNotes
+		    	    e4( e32)[ d e d e d c d] c4 \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset = #'(-2.0 . 3.2 )
+		    	    \hideNotes b64_\markup{\whiteout \pad-markup #0.1 \small "or thus"} \unHideNotes
+		    	    \override TupletBracket #'stencil = #ly:slur::print
+		    	    \override TupletBracket #'control-points =  #'( ( 0.5977 . 2.689) ( 1.3947 . 3.188) ( 2.7895 . 3.188) ( 3.8854 . 2.391) )
+			    \override TupletNumber #'extra-offset = #'(1.4 . -0.9 )
+			    \once \override Slur #'control-points = #'( ( 0.7748 . 2.656) ( 4.4278 . 4.759) ( 17.268 . 4.87) ( 20.589 . 2.103) )
+		    	    e4( d32[ e d e d e] \times 2/3 {d[ c d]} c4) \bar "||" \noBreak
+		    	    \hideNotes b64 \sameSizeClef \forceClef
+		    	    \unHideNotes
+		    	    \once \override Slur #'control-points = #'( ( 0.797 . 4.184) ( 2.1917 . 5.678) ( 4.6824 . 5.778) ( 6.1768 . 4.881) )
+		    	    \override TextScript #'extra-offset = #'(0.7 . -3.1 )
+		    	    e4( f^\markup{\small \musicglyph #"scripts.trill"}
+		    	    \override TextScript #'extra-offset = #'(0.6 . 3.4 )
+		    	    g)-\markup{\whiteout \pad-markup #0.1 \small "thus"} \hideNotes d8 \unHideNotes
+		    	    \override TupletBracket #'control-points = #'( ( 0.6973 . 3.586) ( 1.4944 . 4.184) ( 3.2876 . 4.184) ( 3.7858 . 3.387) )
+		    	    e4( f32[ g f g f g \times 2/3 {f e f]} g4)
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.2\in
+	      ragged-right = ##f
+	    }
+	    }
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -545,6 +581,9 @@ partOneTurnsShakesBeats = \markuplines {
     \paragraph{ \inlineScoreTurnsNine }
     \paragraph{ \inlineScoreTurnsTen }
     \paragraph{ \inlineScoreTurnsEleven }
+    \paragraph{ The shake \caps legato with the preceding note, explained:}
+    \paragraph{ \inlineScoreTurnsTwelve }
+    
     \paragraph{" "}
   }
 }
