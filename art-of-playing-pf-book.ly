@@ -21,6 +21,7 @@
   \include "art-of-playing-part1-abbreviations.ily"
   \include "art-of-playing-part1-style-graces.ily"
   \include "art-of-playing-part1-turns-shakes.ily"
+  \include "art-of-playing-part1-major-minor-keys.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -60,10 +61,10 @@
   
   \chapter "Part I"
   \section "Music Notation"
-  %{
+ %{
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
-  
+
   \titledPiece \markup "Clefs"
   \partOneClefs
   
@@ -88,18 +89,19 @@
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
-
   \titledPiece \markup "Abbreviations"
   \partOneAbbreviations
-  
-  %}
-  
+
   \titledPiece \markup "Style, Graces, and marks of Expression, etc."
   \partOneStyleGraces
-  
+ 
   \titledPiece \markup "Turns, Shakes, and Beats, explained"
   \partOneTurnsShakesBeats
+         %} 
+  \titledPiece \markup "Major and Minor Modes or Keys; vulgarly called Sharp and Flat Keys."
+  \partOneMajorMinorKeys
   
+%{
   \pageBreak
   \section "Scene 2"
   \piece \markup { Choir: \italic { bla bla bla } }
@@ -109,3 +111,4 @@
   \section "Scene 1"
   \titledPiece \markup Overtura
   { c'4 d' e' f' g'1 }
+  %}
