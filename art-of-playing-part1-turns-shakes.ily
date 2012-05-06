@@ -561,6 +561,100 @@ inlineScoreTurnsTwelve = \markup { \general-align #Y #CENTER
 	    }
 	    }
 }
+inlineScoreTurnsThirdteen = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+	    	     	    \set Staff.instrumentName = \markup { "The "\caps "beat"}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \once \override TextScript #'extra-offset = #'(0.4 . -0.9 )
+		    	    c4^\markup{\rotate #-25 \musicglyph #"scripts.rvarcomma" \rotate #-25 \musicglyph #"scripts.rvarcomma"}
+		    	    \override TextScript #'extra-offset =  #'(-2.3 . 6.0 )
+		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.1 \small "or"} \unHideNotes
+		    	    c4\prallmordent \bar "|"
+		    	    \override TextScript #'extra-offset =  #'(0.0 . 6.4 )
+		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.1 \small "thus"} b16 \unHideNotes
+		    	    \override TextScript #'extra-offset = #'(2.2 . 4.0 )
+		    	    b32[ c b c b c8.]-\markup{\whiteout \pad-markup #0.1 \small "or"}
+		    	    \override TupletBracket #'stencil = #ly:slur::print
+		    	    \override TupletBracket #'control-points =  #'( ( 0.8855 . 2.324) ( 2.1032 . 3.431) ( 4.3171 . 3.542) ( 5.6455 . 2.546) )
+			    \override TupletNumber #'extra-offset = #'(1.9 . -0.9 )
+		    	    \times 2/3 {b32[c b} c8.]-\markup{\whiteout \pad-markup #0.1 \small "or"}
+		    	    c32[b c b c8]-\markup{\whiteout \pad-markup #0.1 \small "or"}
+		    	    c32[b c8.]-\markup{\whiteout \pad-markup #0.1 \small "or"}
+		    	    b32[ c8..]		    	    
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.4\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreTurnsFourteen = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c''{
+	    	     	    \set Staff.instrumentName = \markup {Ex:}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \hideNotes b32 \unHideNotes
+		    	    b4( c)\prallmordent \bar "|"
+		    	    \override TextScript #'extra-offset = #'(1 . 6.9)
+		    	    \hideNotes b32-\markup{\whiteout \pad-markup #0.4 \small "played"}_\markup{\whiteout \pad-markup #0.4 \small "thus  "}
+		    	    b2 \unHideNotes
+		    	    b4( c32[b c8.)]
+		    	    \bar "||"
+		    	    \hideNotes b64 \sameSizeClef \forceClef
+		    	    b32
+		    	    \unHideNotes
+		    	    f4( g)\prallmordent
+		    	    \bar "|"
+		    	    \override TextScript #'extra-offset =  #'(0.0 . 6.4 )
+		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.1 \small "thus"} b16 \unHideNotes
+		    	    f4( g32[ f g8.]) 
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.4\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScoreTurnsFifteen = \markup { \general-align #Y #CENTER 
+	    \score {
+	    	    \new Staff
+	    	    	  \with{\remove Time_signature_engraver}
+	    	     \relative c'''{
+	    	     	    \set Staff.instrumentName = \markup {Examples}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    \hideNotes b32 \unHideNotes
+		    	    a4\prallmordent b8[ e,] \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset =  #'(0.0 . 6.4 )
+		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.1 \small "thus"} b16 \unHideNotes
+		    	    a'32[ gis a gis a8] b[ e,]
+		    	    \bar "||" \noBreak
+		    	    \hideNotes b64 \sameSizeClef \forceClef
+		    	    b32
+		    	    \unHideNotes
+		    	    \stemDown
+		    	    a4 d\prallmordent
+		    	    \bar "|" \noBreak
+		    	    \override TextScript #'extra-offset =  #'(0.0 . 6.4 )
+		    	    \hideNotes b64-\markup{\whiteout \pad-markup #0.1 \small "thus"} b16 \unHideNotes
+		    	    a4 d32[ cis d cis d8]
+		    	    \bar "||"
+		     }
+	  \layout {
+	      indent = 0.4\in
+	      ragged-right = ##f
+	    }
+	    }
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -583,7 +677,30 @@ partOneTurnsShakesBeats = \markuplines {
     \paragraph{ \inlineScoreTurnsEleven }
     \paragraph{ The shake \caps legato with the preceding note, explained:}
     \paragraph{ \inlineScoreTurnsTwelve }
-    
+    \paragraph{
+    	    N.B. The \caps general mark for the shake is this "  " \musicglyph #"scripts.trill" " and" composers trust
+    	    \caps chiefly to the taste and judgement of the performer, whether it shall be long, short, 
+    	    transient, or turned.
+    }
+    \paragraph{ \inlineScoreTurnsThirdteen }
+    \paragraph{
+    	    The \caps length of the \caps beat is determined, like that of the other graces, by the 
+    	    circumstances of the passage.
+    }
+    \paragraph{
+    	    N.B.  When the note preceding the beat is an interval of a \caps second, let the beat 
+    	    adopt it, whether it be a semitone or a whole tone:
+    }
+    \paragraph{ \inlineScoreTurnsFourteen }
+    \paragraph{
+    	    But when the beat, is on the \caps first note of a passage, or, when it follows a note,
+    	    whose interval is \caps greater than a \caps second, it should be made with a semitone; as
+    	    the following examples will show.
+    }
+    \paragraph{ \inlineScoreTurnsFifteen }
+    \paragraph{
+    	Lastly, let us remark, that the beat is seldom used in modern music.	    
+    }
     \paragraph{" "}
   }
 }
