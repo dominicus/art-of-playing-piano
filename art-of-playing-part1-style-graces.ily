@@ -68,14 +68,11 @@ inlineScoreArpeggioSign = \markup { " " \general-align #Y #CENTER
     \score
     { \new Staff \with {
         \remove Time_signature_engraver
-        \remove Staff_symbol_engraver
+        \override StaffSymbol #'stencil = ##f %	\remove Staff_symbol_engraver         %  <----- THIS LINE IS CAUSING "VERTICAL ALIGNMENT" ERROR
         \remove Clef_engraver
         }
         { \relative c''{
-        	
-        	\clef treble
-        	\cadenzaOn
-        	\hideNotes <g b d g>16\arpeggio \bar "|"
+        	\hideNotes <g b d g>16\arpeggio
         	}
         }
         \layout { 
@@ -631,8 +628,10 @@ partOneStyleGraces = \markuplines {
     	    occasionally to certain passages, and to set off the \caps "higher beauties" of the \caps legato.
     }
     \paragraph{" "}
+    %}
     \paragraph{ 
-    	    This mark \inlineScoreArpeggioSign prefixed to a chord \inlineScoreArpeggio signifies, that the notes must be played 
+    	    This mark \inlineScoreArpeggioSign prefixed to a chord 
+    	    %\inlineScoreArpeggio signifies, that the notes must be played 
     	    \caps successively, from the lowest; with more or less velocity, as the sentiment may require; keeping each note 
     	    \caps down 'till the time of the chord be filled up.
     }
