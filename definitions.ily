@@ -13,6 +13,7 @@ autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 hideKeyCancellation = \set Staff.printKeyCancellation = ##f
+
 setProportionalScore = {
 		  	\override Score.SpacingSpanner #'strict-note-spacing = ##t
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 16)
