@@ -25,6 +25,7 @@
   \include "art-of-playing-part1-explain-various-terms.ily"
   \include "art-of-playing-part1-fingering.ily"
   \include "art-of-playing-part1-prelim-directions.ily"
+  \include "art-of-playing-part1-scales.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -100,7 +101,7 @@
  
   \titledPiece \markup "Turns, Shakes, and Beats, explained"
   \partOneTurnsShakesBeats
-         %} 
+        
   \titledPiece \markup "Major and Minor Modes or Keys; vulgarly called Sharp and Flat Keys."
   \partOneMajorMinorKeys
   
@@ -109,9 +110,12 @@
   
   \titledPiece \markup "Fingering"
   \partOneFingering
-  
+ 
   \titledPiece \markup "Preliminary Directions"
   \partOnePrelimDirections
+    %} 
+  \titledPiece \markup "Scales in all the Major keys, with their relative Minors"
+  \partOneMajorMinorScales
   
 %{
   \pageBreak
