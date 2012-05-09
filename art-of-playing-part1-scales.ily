@@ -149,6 +149,73 @@ inlineScaleEmin = \markup { \general-align #Y #CENTER
 	      }
 	    }
  }
+ inlineScaleDmaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger D major}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key d \major
+		    	    d16-1 e fis g-1   a b cis d-1   e fis g-1 a   b cis d-5 cis
+		    	    b a g fis-3       e d cis-4 b   a g fis-3 e   d4
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key d \major
+		    	    d,16-5 e fis g     a b-3 cis d   e-4 fis g a   b-3 cis d-1 cis
+		    	     b a-1 g  fis     e d-1 cis b   a-1 g fis e   d4-5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+ }
+ 
+inlineScaleBmin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger B minor}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key b \minor
+		    	    b16-1 cis d e-1   fis gis ais b-1  cis d e-1 fis   gis ais b-5 a!
+		    	    g!  fis e d-3     cis b a-4 g      fis e d-3 cis   b4
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key b \minor
+		    	    b,16_4 cis d e    fis_4 gis ais b  cis-3 d e fis-4   gis ais b-1 a!-2
+		    	    g! fis e-1 d     cis b_1 a g       fis e_1 d cis   b4_4
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+ }
+ 
+ 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
@@ -165,9 +232,9 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{" "}
     \paragraph{ \inlineScaleEmin }
     \paragraph{   }
-    \paragraph{" "}
+    \paragraph{ \inlineScaleDmaj }
     \paragraph{}
-    \paragraph{}
+    \paragraph{ \inlineScaleBmin }
     \paragraph{" "}
   }
 }
