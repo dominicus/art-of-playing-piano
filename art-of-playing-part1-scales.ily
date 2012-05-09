@@ -159,8 +159,8 @@ inlineScaleEmin = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \time 4/4
 		    	    \key d \major
-		    	    d16-1 e fis g-1   a b cis d-1   e fis g-1 a   b cis d-5 cis
-		    	    b a g fis-3       e d cis-4 b   a g fis-3 e   d4
+		    	    d16_1 e fis g_1   a b cis d-1   e fis g-1 a   b cis d-5 cis
+		    	    b a g fis-3       e d cis-4 b   a g fis_3 e   d4
 		    	    \bar "|."
 		     }
         	}
@@ -169,8 +169,8 @@ inlineScaleEmin = \markup { \general-align #Y #CENTER
 		    	    \clef bass
 		    	    \time 4/4
 		    	    \key d \major
-		    	    d,16-5 e fis g     a b-3 cis d   e-4 fis g a   b-3 cis d-1 cis
-		    	     b a-1 g  fis     e d-1 cis b   a-1 g fis e   d4-5
+		    	    d,16_5 e fis g     a b_3 cis d   e-4 fis g a   b-3 cis d-1 cis
+		    	     b a-1 g  fis     e d_1 cis b   a_1 g fis e   d4_5
 		    	    \bar "|."
 		     }
 	}
@@ -214,6 +214,38 @@ inlineScaleBmin = \markup { \general-align #Y #CENTER
 	      }
 	    }
  }
+inlineScaleAmaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger A major}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key a \major
+		    	    a16-1 b cis d-1   e fis gis a-1    b cis d e-1   fis gis a-5 gis
+		    	    fis e d cis-3     b a gis-4 fis    e d cis-3 b   a4
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key a \major
+		    	    a,16_5 b cis d    e fis_3 gis a    b_4 cis d e   fis-3 gis a-1 gis
+		    	    fis e-1 d cis     b a_1 gis fis    e_1 d cis b   a4_5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
  
  
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
@@ -233,8 +265,12 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{ \inlineScaleEmin }
     \paragraph{   }
     \paragraph{ \inlineScaleDmaj }
-    \paragraph{}
+    \paragraph{   }
     \paragraph{ \inlineScaleBmin }
+    \paragraph{   }
+    \paragraph{ \inlineScaleAmaj }
+    \paragraph{   }
+    \paragraph{   }
     \paragraph{" "}
   }
 }
