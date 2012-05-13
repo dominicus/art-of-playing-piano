@@ -246,7 +246,172 @@ inlineScaleAmaj = \markup { \general-align #Y #CENTER
 	      }
 	    }
 }
- 
+inlineScaleFisMin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger \concat{"F" \smaller \sharp} minor}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key fis \minor
+		    	    fis16-2 gis-3 a-1 b   cis dis eis-1 fis     gis a-1 b-2 cis-3
+		    	    b-2 a-1 gis-3 fis-2   e!-1 d!-4 cis-3 b-2   a-1 gis-3 fis-2 eis-1
+		    	    fis2.-2
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key fis \minor
+		    	    fis,16_4 gis a b   cis-3 dis eis fis-4   gis a b-1 cis-2
+		    	    b-1 a gis fis     e!_1 d! cis b_1       a gis fis eis_5
+		    	    fis2._4
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleEmaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger E major}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key e \major
+		    	    e16-1 fis gis a-1   b cis dis e-1    fis gis a-1 b  cis dis e-5 dis
+		    	    cis b a gis-3    fis e dis-4 cis   b a gis-3 fis  e4-1
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key e \major
+		    	    e,16_5 fis gis a   b cis_3 dis e    fis-4 gis a b   cis-3 dis e-1 dis
+		    	    cis b-1 a gis     fis e-1 dis cis  b_1 a gis fis   e4_5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleCisMin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger \concat{"C" \smaller \sharp} minor}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key cis \minor
+		    	    cis16-2 dis-3 e-1 fis   gis ais bis-1 cis   dis e-1 fis-2-3 gis-3-4
+		    	    fis-2-3 e-1 dis-3 cis   b!-1 a!-4 gis fis   e dis-3 cis bis-1
+		    	    cis2.-2
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key cis \minor
+		    	    cis,16_3 dis_2 e_1 fis_4   gis ais bis cis_3   dis e fis-3 gis-2
+		    	    fis-3 e-1 dis cis         b!_1  a!  gis fis   e_1 dis cis bis_4
+		    	    cis2._3
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleBmaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger B major}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key b \major
+		    	    b16-1 cis dis e-1  fis gis ais b-1   cis dis e-1 fis  gis ais b-5 ais
+		    	    gis fis e dis-3  cis b ais-4 gis   fis e dis-3 cis  b4-1
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key e \major
+		    	    b,16_4 cis_3 dis_2 e_1  fis_4 gis ais b   cis-3 dis e fis-4  gis ais b-1 ais
+		    	    gis fis e-1 dis        cis b_1 ais gis   fis e_1 dis cis  b4-4
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleCisMin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger \concat{"C" \smaller \sharp} minor}
+        \new Staff{
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key cis \minor
+		    	    cis16-2 dis-3 e-1 fis   gis ais bis-1 cis   dis e-1 fis-2-3 gis-3-4
+		    	    fis-2-3 e-1 dis-3 cis   b!-1 a!-4 gis fis   e dis-3 cis bis-1
+		    	    cis2.-2
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key cis \minor
+		    	    cis,16_3 dis_2 e_1 fis_4   gis ais bis cis_3   dis e fis-3 gis-2
+		    	    fis-3 e-1 dis cis         b!_1  a!  gis fis   e_1 dis cis bis_4
+		    	    cis2._3
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
  
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -269,8 +434,19 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{ \inlineScaleBmin }
     \paragraph{   }
     \paragraph{ \inlineScaleAmaj }
-    \paragraph{   }
-    \paragraph{   }
+    \paragraph{  }
+    \paragraph{ \inlineScaleFisMin }
+    \paragraph{  }
+    \paragraph{ \inlineScaleEmaj }
+    \paragraph{  }
+    \paragraph{ \inlineScaleCisMin  }
+    \paragraph{ \inlineScaleBmaj }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
     \paragraph{" "}
   }
 }
