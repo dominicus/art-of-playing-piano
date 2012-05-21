@@ -551,7 +551,112 @@ inlineScaleBesMin = \markup { \general-align #Y #CENTER
 	      }
 	    }
 }
- 
+inlineScaleAesMaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger \concat{"A" \smaller \flat} major}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key aes \major
+		    	    aes16_2 bes_3 c_1 des   ees f_1 g aes   bes c-1 des ees  f-1 g aes bes
+		    	    c-5 bes aes g           f ees-3 des c   bes_4 aes g f    ees_3 des c bes_3
+		    	    aes2_2
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key aes \major
+		    	    aes16_3 bes c des_4   ees f g aes_3 \stemUp  bes c des_4 ees \stemNeutral f g aes-3 bes
+		    	    c-1 bes aes g-1   f ees des c-1  bes aes g_1 f     ees des c_1 bes
+		    	    aes2
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleFmin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new ChoirStaff 
+    <<
+    	    \set ChoirStaff.instrumentName = \markup{F minor}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key f \minor
+		    	    f16_1 g aes bes   c-1 d! e! f-1         g aes bes c-5
+		    	    bes aes g f-1   ees!-3 des! c bes-4   aes g f e!-2
+		    	    f2.-1
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key f \minor
+		    	    f16_5 g aes bes     c-1 d!-3 e! f       g-4 aes bes c
+		    	    des!-2 c-1 bes aes  g f-1 ees! des!     c-1 bes aes g 
+		    	    f2._5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleEesMaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger \concat{"E" \smaller \flat} major}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key aes \major
+		    	    ees16-2 f-1 g aes   bes c_1 des   ees f_1 g aes   bes c-1 des ees  f-1 g aes bes
+		    	    c-5 bes aes g           f ees-3 des c   bes_4 aes g f    ees_3 des c bes_3
+		    	    aes2_2
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key aes \major
+		    	    aes16_3 bes c des_4   ees f g aes_3 \stemUp  bes c des_4 ees \stemNeutral f g aes-3 bes
+		    	    c-1 bes aes g-1   f ees des c-1  bes aes g_1 f     ees des c_1 bes
+		    	    aes2
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
@@ -590,6 +695,15 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{ \inlineScaleDesMaj }
     \paragraph{  }
     \paragraph{ \inlineScaleBesMin }
+    \paragraph{  }
+    \paragraph{ \inlineScaleAesMaj }
+    \paragraph{  }
+    \paragraph{ \inlineScaleFmin }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
     \paragraph{  }
     \paragraph{  }
     \paragraph{  }
