@@ -631,10 +631,10 @@ inlineScaleEesMaj = \markup { \general-align #Y #CENTER
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 4/4
-		    	    \key aes \major
-		    	    ees16-2 f-1 g aes   bes c_1 des   ees f_1 g aes   bes c-1 des ees  f-1 g aes bes
-		    	    c-5 bes aes g           f ees-3 des c   bes_4 aes g f    ees_3 des c bes_3
-		    	    aes2_2
+		    	    \key ees \major
+		    	    ees16-2 f-1 g aes   bes c-1 d ees   f-1 g aes bes  c-1 d-2-3 ees-3-4 d-2-3 
+		    	    c-1 bes-4 aes g     f ees-3 d c     bes-4 aes g f 
+		    	    ees4-2
 		    	    \bar "|."
 		     }
         	}
@@ -642,10 +642,46 @@ inlineScaleEesMaj = \markup { \general-align #Y #CENTER
 	    	     \relative c,{
 		    	    \clef bass
 		    	    \time 4/4
-		    	    \key aes \major
-		    	    aes16_3 bes c des_4   ees f g aes_3 \stemUp  bes c des_4 ees \stemNeutral f g aes-3 bes
-		    	    c-1 bes aes g-1   f ees des c-1  bes aes g_1 f     ees des c_1 bes
-		    	    aes2
+		    	    \key ees \major
+		    	    ees16_3 f_2 g_1 aes_4   bes c d ees_3   f g aes-4 bes  c d ees-2 d-1 
+		    	    c bes aes g-1           f ees d-1 c     bes aes g_1 f 
+		    	    ees4
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleCmin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new ChoirStaff 
+    <<
+    	    \set ChoirStaff.instrumentName = \markup{C minor}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key c \minor
+		    	    c16-1 d ees f-1   g a! b! c-1     d ees f g-5 
+		    	    f-4  ees d c      bes!-4 aes! g f 
+		    	    ees-3 d c b!-2
+		    	    c2.-1
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key c \minor
+		    	    c16_5 d_4 ees f   g a!_3 b! c    d-4 ees f g-1 
+		    	    aes!-2 g-1 f ees  d c_1 bes! aes!    g_1 f ees d 
+		    	    c2._5
 		    	    \bar "|."
 		     }
 	}
@@ -700,9 +736,9 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{  }
     \paragraph{ \inlineScaleFmin }
     \paragraph{  }
+    \paragraph{ \inlineScaleEesMaj }
     \paragraph{  }
-    \paragraph{  }
-    \paragraph{  }
+    \paragraph{ \inlineScaleCmin }
     \paragraph{  }
     \paragraph{  }
     \paragraph{  }
