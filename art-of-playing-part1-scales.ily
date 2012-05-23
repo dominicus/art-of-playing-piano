@@ -692,6 +692,79 @@ inlineScaleCmin = \markup { \general-align #Y #CENTER
 	      }
 	    }
 }
+inlineScaleBesMaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{\larger \concat{"B" \smaller \flat} major}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key bes \major
+		    	    bes16-2 c-1 d ees   f-1 g a bes     c-1 d ees f-1   g a bes-4 a 
+		    	    g f ees-3 d \stemDown c bes-4 a g \stemNeutral f ees-3 d c  
+		    	    bes4-2
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key bes \major
+		    	    bes16_3 c_2 d_1 ees_4   f g a bes_3     c d ees-4 f   g a-1 bes-2 a-1 
+		    	    g f ees d-1             c bes a_1 g     f ees d_1 c_2  
+		    	    bes4_3
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleGmin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new ChoirStaff
+    <<
+    	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
+    	    \override ChoirStaff.SystemStartBrace #'transparent = ##t
+    	    \override ChoirStaff.SpanBar #'transparent = ##t
+    	    \set ChoirStaff.instrumentName = \markup{G minor}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c''{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key g \minor
+		    	    g16-1 a bes c-1   d e! fis g-1    a bes c d-5
+		    	    c bes a g         f!-4 ees! d c   bes-3 a g fis-2 
+		    	    g2.-1
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key g \minor
+		    	    g16-5 a bes c    d e!-3 fis g     a-4 bes c d
+		    	    ees!-2 d-1 c bes   a g-1 f! ees!    d-1 c bes a 
+		    	    g2.-5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
@@ -740,9 +813,9 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{  }
     \paragraph{ \inlineScaleCmin }
     \paragraph{  }
+    \paragraph{ \inlineScaleBesMaj }
     \paragraph{  }
-    \paragraph{  }
-    \paragraph{  }
+    \paragraph{ \inlineScaleGmin }
     \paragraph{" "}
   }
 }
