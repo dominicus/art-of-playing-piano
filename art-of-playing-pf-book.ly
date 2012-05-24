@@ -65,7 +65,7 @@
   
   \chapter "Part I"
   \section "Music Notation"
- %{
+ %{    
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -113,7 +113,7 @@
  
   \titledPiece \markup "Preliminary Directions"
   \partOnePrelimDirections
-    %} 
+%} 
   \titledPiece \markup "Scales in all the Major keys, with their relative Minors"
   \partOneMajorMinorScales
   

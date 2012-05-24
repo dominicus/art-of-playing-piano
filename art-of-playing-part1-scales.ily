@@ -590,6 +590,7 @@ inlineScaleFmin = \markup { \general-align #Y #CENTER
     \score {	    	    
 	    \new ChoirStaff 
     <<
+    	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{F minor}
         \new Staff{
         	#(set-accidental-style 'forget 'Staff)
@@ -616,6 +617,7 @@ inlineScaleFmin = \markup { \general-align #Y #CENTER
 	}
         >>
 	  \layout {
+	      \context { \Score \remove "System_start_delimiter_engraver" }
 	      indent = 0.6\in
 	      ragged-right = ##f
 	      }
@@ -660,6 +662,7 @@ inlineScaleCmin = \markup { \general-align #Y #CENTER
     \score {	    	    
 	    \new ChoirStaff 
     <<
+    	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{C minor}
         \new Staff{
         	#(set-accidental-style 'forget 'Staff)
@@ -687,6 +690,7 @@ inlineScaleCmin = \markup { \general-align #Y #CENTER
 	}
         >>
 	  \layout {
+	  	  \context { \Score \remove "System_start_delimiter_engraver" }
 	      indent = 0.6\in
 	      ragged-right = ##f
 	      }
@@ -732,8 +736,6 @@ inlineScaleGmin = \markup { \general-align #Y #CENTER
 	    \new ChoirStaff
     <<
     	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
-    	    \override ChoirStaff.SystemStartBrace #'transparent = ##t
-    	    \override ChoirStaff.SpanBar #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{G minor}
         \new Staff{
         	#(set-accidental-style 'forget 'Staff)
@@ -760,9 +762,121 @@ inlineScaleGmin = \markup { \general-align #Y #CENTER
 	}
         >>
 	  \layout {
+	  	\context { \Score \remove "System_start_delimiter_engraver" }
 	      indent = 0.6\in
 	      ragged-right = ##f
 	      }
+	    }
+}
+inlineScaleFmaj = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new PianoStaff 
+    <<
+    	    \set PianoStaff.instrumentName = \markup{F major}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key f \major
+		    	    f16-1 g a bes         c-1 d e f-1    g a bes c-1   d-2-3 e-3-4 f-4-5 e-3-4   
+		    	    d-2-3 c-1-1 bes-4 a   g f e-3 d        c bes-4 a g   
+		    	    f4
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 4/4
+		    	    \key f \major
+		    	    f16-5 g a bes    c d-3 e f   g-4 a bes c   d-3 e f-1 e   
+		    	    d c-1 bes a      g f-1 e d     c-1 bes a g   
+		    	    f4-5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleDmin = \markup { \general-align #Y #CENTER 
+    \score {	    	    
+	    \new ChoirStaff
+    <<
+    	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
+    	    \set ChoirStaff.instrumentName = \markup{D minor}
+        \new Staff{
+        	#(set-accidental-style 'forget 'Staff)
+		 \relative c'{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key d \minor
+		    	    d16-1 e f g-1   a b! cis! d-1   e f g a-5
+		    	    g f e d \stemDown c!-4 bes! a g \stemNeutral  f-3 e d cis-2 
+		    	    f2.-1
+		    	    \bar "|."
+		     }
+        	}
+	\new Staff{
+	    	     \relative c,{
+		    	    \clef bass
+		    	    \time 3/4
+		    	    \key d \minor
+		    	    d16-5 e f g    a b!-3 cis! d    e-4 f g a
+		    	    bes!-2 a-1 g f  e d-1 c! bes!    a-1 g f e 
+		    	    d2.-5
+		    	    \bar "|."
+		     }
+	}
+        >>
+	  \layout {
+	  	\context { \Score \remove "System_start_delimiter_engraver" }
+	      indent = 0.6\in
+	      ragged-right = ##f
+	      }
+	    }
+}
+inlineScaleRHChromatic = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'{
+	    	     	    \set Staff.instrumentName = \markup {\column{ \line{the Scale of semi-}\line{-tones for the}\line{right hand:}}}
+		    	    \clef treble
+		    	    \cadenzaOn
+		    	    g16^1_1[ gis!^2_2 a^3_1 ais!^4_2]    b^1[ c^2 cis!^3 d^1]   dis!^2[ e^1 f^2 fis!^3]
+		    	    g^1[ gis!^2 a^3 ais!^4]              b-1[ c-2 cis!-3 d-1]   dis!-2[ e-3 f-4 e-3]
+		    	    \override TextScript #'extra-offset = #'(1.6 . 4.9 )
+		    	    dis!-2[ d!-1 cis!-3 c!-2]-\markup{etc.} s8
+		    	    \bar "|."
+		     }
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	    }
+	    }
+}
+inlineScaleLHChromatic = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c,{
+	    	     	    \set Staff.instrumentName = \markup {\column{ \line{and for the}\line{left hand.}}}
+		    	    \clef bass
+		    	    \cadenzaOn
+		    	    f16^5_3[ fis^4_2 g^3_1 gis^2]   a^1[ ais!^3 b-2 c-1]
+		    	    cis^2_1[ d^1_3 dis^3 e-2]   f-1[ fis^4_2 g^3_1 gis^2]
+		    	    a-1[ ais-3 b-2 c-1]        cis-2[ d-1 cis!-2 c!-1]
+		    	    \override TextScript #'extra-offset = #'(1.6 . 4.9 )
+		    	    b-2[ bes-3 a-1 aes-2]      g^3_2[ ges^4_1 f-1 e-2]-\markup{etc.} s8
+		    	    \bar "|."
+		     }
+	  \layout {
+	      indent = 0.6\in
+	      ragged-right = ##f
+	    }
 	    }
 }
 
@@ -793,6 +907,7 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{ \inlineScaleEmaj }
     \paragraph{  }
     \paragraph{ \inlineScaleCisMin  }
+    \paragraph{  }
     \paragraph{ \inlineScaleBmaj }
     \paragraph{  }
     \paragraph{ \inlineScaleGisMin }
@@ -816,6 +931,23 @@ partOneMajorMinorScales = \markuplines {
     \paragraph{ \inlineScaleBesMaj }
     \paragraph{  }
     \paragraph{ \inlineScaleGmin }
+    \paragraph{  }
+    \paragraph{ \inlineScaleFmaj }
+    \paragraph{  }
+    \paragraph{ \inlineScaleDmin }
+    \paragraph{  }
+    \paragraph{ 
+    	    N.B. All the preceding Scales should be extended, in practising, 2 or 3 octaves more, as 
+    	    likewise
+    }
+    \paragraph{  }
+    \paragraph{ \inlineScaleRHChromatic }
+    \paragraph{  }
+    \paragraph{ \inlineScaleLHChromatic }
+    \paragraph{  }
+    \paragraph{ 
+    	    N.B. The semitones are to be fingered in the same way, ascending and descending.
+    }
     \paragraph{" "}
   }
 }
