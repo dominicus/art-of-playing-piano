@@ -26,6 +26,8 @@
   \include "art-of-playing-part1-fingering.ily"
   \include "art-of-playing-part1-prelim-directions.ily"
   \include "art-of-playing-part1-scales.ily"
+  \include "art-of-playing-part1-scales-remarks.ily"
+  \include "art-of-playing-part1-extensions.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -65,7 +67,7 @@
   
   \chapter "Part I"
   \section "Music Notation"
- %{    
+ %{     
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -113,9 +115,15 @@
  
   \titledPiece \markup "Preliminary Directions"
   \partOnePrelimDirections
-%} 
+
   \titledPiece \markup "Scales in all the Major keys, with their relative Minors"
   \partOneMajorMinorScales
+ 
+  \titledPiece \markup "General Remarks on the foregoing Scales"
+  \partOneRemarksOnScales
+   %}
+  \titledPiece \markup "Extensions and Contractions etc."
+  \partOneExtensionsContractions
   
 %{
   \pageBreak
