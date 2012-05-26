@@ -8,8 +8,9 @@ inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER
 	    	     	    \set Staff.instrumentName = \markup{\larger{\concat{R.H. \super d}}}
 	    	     	    \cadenzaOn
 		    	    \clef treble
-		    	    %\once \override Beam #'positions = #'(-0.5 . -1.6 )
-		    	    c8-1[ c'-5] b-1[ a'-5] g-4[ c,-1] c'4-5
+		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    c8-1[ c'-5] 
+		    	    b-1[ a'-5] g-4[ c,-1] c'4-5
 		    	    \bar "||" 
 		    	    \stopStaff
 		    	    \once \override TextScript #'extra-offset = #'(0.8 . 5.2 )
@@ -18,7 +19,9 @@ inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER
 		    	    \startStaff
 		    	    \clef bass
 		    	    \unHideNotes
-		    	    c,8-1[ c,-5] d-1[ e,-5] f-4[ c'-1] c,4-5
+		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    c,8-1[ c,-5] 
+		    	    d-1[ e,-5] f-4[ c'-1] c,4-5
 		    	    \bar "||" 
 		    	    \stopStaff
 		    	    \once \override TextScript #'extra-offset = #'(0.8 . 5.2 )
@@ -27,7 +30,9 @@ inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER
 		    	    \startStaff
 		    	    \clef treble
 		    	    \unHideNotes
-		    	    c'16-1[ c'-5] c-1[ c'-5]
+		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    c'16-1[ c'-5] 
+		    	    c-1[ c'-5]
 		    	    \bar "||"
 		     }
 	  \layout {
@@ -45,7 +50,9 @@ inlineScoreExtensionsExTwo = \markup { \general-align #Y #CENTER
 	    	     	    \cadenzaOn
 		    	    \clef bass
 		    	    \unHideNotes
-		    	    c,,16-5[ c'-1] c-5[ c'-1]
+		    	    c,,16-5[ c'-1] 
+		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    c-5[ c'-1]
 		    	    \bar "||"
 		    	    \stopStaff
 		    	    \once \override TextScript #'extra-offset = #'(0.8 . 5.2 )
@@ -71,7 +78,7 @@ inlineScoreExtensionsExThree = \markup { \general-align #Y #CENTER
 	    	     \relative c{
 	    	     	    \cadenzaOn
 		    	    \clef bass
-		    	    c,8-5 c'4^\markup{\finger{ \concat{ "5" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}} c'8_1
+		    	    c,8-5 c'4^\markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}} c'8_1
 		    	    \bar "||"
 		     }
 	  \layout {
@@ -103,6 +110,10 @@ partOneExtensionsContractions = \markuplines {
     \paragraph{
     	    Which mode of fingering should be much practised in various ways, the \caps "legato-style" requiring 
     	    it very frequently.
+    }
+    \paragraph{
+    	    The shakes should be practised with every finger, not excluding the thumb; and upon the 
+    	    short as well as long keys.
     }
     \paragraph{ }
 }
