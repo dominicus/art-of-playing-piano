@@ -68,13 +68,21 @@ scoreFingeringExerciseFour = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \cadenzaOn
 		    	    \stemDown
-		    	    r16 bes16-3[ a-2 bes-3] c-4[ c-3 bes-2 c-3] d-4[ d-3 c-2 d-3] ees-4[ ees-3 d-2 ees-3] \stemNeutral f8-4
+		    	    r16 bes16-3[ a-2 bes-3] c-4[ c-3 bes-2 c-3] d-4[ d-3 c-2 d-3] ees-4[ ees-3 d-2 ees-3] \stemNeutral 
+		    	    \once \override Stem #'transparent = ##t
+		    	    f16-4
 			    \bar "|." \noBreak
-			    r16 f16-3[ a-5 f-3] c-1[ c-3 f-5 c-3] \stemDown a-1[ a-3 c-5 a-3] \stemNeutral f8-1
-			    \bar "|."  \noBreak   %END NOTE SHOULD HAVE NO STEM
-			    r16 f'16-3[ bes-5 f-3] d-1[ d-3 f-5 d-3] bes!-1[ bes-3 d-5 bes-3] f8-1
+			    r16 f16-3[ a-5 f-3] c-1[ c-3 f-5 c-3] \stemDown a-1[ a-3 c-5 a-3] \stemNeutral 
+			    \once \override Stem #'transparent = ##t
+			    f16-1
+			    \bar "|."  \noBreak 
+			    r16 f'16-3[ bes-5 f-3] d-1[ d-3 f-5 d-3] bes!-1[ bes-3 d-5 bes-3] 
+			    \once \override Stem #'transparent = ##t
+			    f16-1
 			    \bar "|." \noBreak %END NOTE SHOULD HAVE NO STEM
-			    r16 ees16-2[ d-1 ees-2] g-4[ g-2 f-1 g-2] \stemDown bes!-4[ bes-2 a-1 bes-2] ees!-4[ ees-2 d-1 ees-2] \stemNeutral g8-4
+			    r16 ees16-2[ d-1 ees-2] g-4[ g-2 f-1 g-2] \stemDown bes!-4[ bes-2 a-1 bes-2] ees!-4[ ees-2 d-1 ees-2] \stemNeutral 
+			    \once \override Stem #'transparent = ##t
+			    g16-4
 			    \bar "|." %END NOTE SHOULD HAVE NO STEM  
 		     }
 	  \layout {
