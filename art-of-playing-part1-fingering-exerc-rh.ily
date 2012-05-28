@@ -1,5 +1,7 @@
 \version "2.14.2"
 
+\include "definitions.ily"
+
 scoreFingeringExerciseOne = \markup { \general-align #Y #CENTER 
    \score {
    	   \new Staff \with { \remove Time_signature_engraver }
@@ -79,11 +81,37 @@ scoreFingeringExerciseFour = \markup { \general-align #Y #CENTER
 			    r16 f'16-3[ bes-5 f-3] d-1[ d-3 f-5 d-3] bes!-1[ bes-3 d-5 bes-3] 
 			    \once \override Stem #'transparent = ##t
 			    f16-1
-			    \bar "|." \noBreak %END NOTE SHOULD HAVE NO STEM
+			    \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+ 
+	    }
+	    }
+}
+scoreFingeringExerciseFive = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'{
+		    	    \clef treble
+		    	    \cadenzaOn
 			    r16 ees16-2[ d-1 ees-2] g-4[ g-2 f-1 g-2] \stemDown bes!-4[ bes-2 a-1 bes-2] ees!-4[ ees-2 d-1 ees-2] \stemNeutral 
 			    \once \override Stem #'transparent = ##t
 			    g16-4
-			    \bar "|." %END NOTE SHOULD HAVE NO STEM  
+			    \bar "|." \noBreak
+			    s32
+			    \sameSizeClef \forceClef
+			    \key d \major
+			    r16 d,16-1[ cis-2 d-1] fis-4[ fis-2 e-1 fis-2] a-4[ a-3 gis-2 a-3] d-5[ d-3 cis-2 d-3] fis4-5
+			    \bar "|." \noBreak
+			    s32
+			    \sameSizeClef \forceClef
+			    \set Staff.printKeyCancellation = ##f
+			    \key c \major
+			    c,16-1-2[ e-3-4  d-1-2 f-3-4] e-1-2[ g-3-4 f-1-2 a-3-4] 
+			    \stemDown g[ bes a c] b-1-2[ d-3-4 c8-2-3] \stemNeutral
+			    \bar "|."
 		     }
 	  \layout {
 	      indent = 0.0\in
@@ -103,6 +131,15 @@ partOneFingeringRightHand = \markuplines {
     \paragraph{ \scoreFingeringExerciseOne " " \scoreFingeringExerciseTwo }
     \paragraph{ \scoreFingeringExerciseThree }
     \paragraph{ \scoreFingeringExerciseFour }
+    \paragraph{ \scoreFingeringExerciseFive }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
+    \paragraph{  }
     \paragraph{  }
 }
 }
