@@ -122,10 +122,10 @@
  
   \titledPiece \markup "General Remarks on the foregoing Scales"
   \partOneRemarksOnScales
-   %}
+  
   \titledPiece \markup "Extensions and Contractions etc."
   \partOneExtensionsContractions
-  
+   %}
   \titledPiece \markup "Examples of fingering for the Right Hand."
   \partOneFingeringRightHand
   
