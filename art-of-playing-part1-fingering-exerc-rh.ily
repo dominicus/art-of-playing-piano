@@ -453,6 +453,59 @@ scoreFingeringExerciseEighteen = \markup { \general-align #Y #CENTER
    }
 }
 
+scoreFingeringExerciseNineteen = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'''{
+		    	    \clef treble
+		    	    \time 3/4
+		    	    \key c \major
+		    	    d16-5[ f,!-2 a-3 d,-1] f-5[ a,-2 d-4 f,!-1] a-5[ d,-2 f-4 a,-1]
+		    	    \bar "|" \noBreak
+		    	    bes-2[ f'-5 d-1 bes'-4] f-1[ d'-4 bes-2 f'-5] d-1[ bes'-4 f-2 d'-5]
+		    	    \bar "|" \noBreak
+		    	    \time 4/4
+		    	    b!-4[ d-5 aes-2 b!-5] f-2[ aes!-4 d,-1 f-4] b,!-1[ d-5 aes-2 b-4] f4-1
+		    	    \bar "|." \noBreak
+		    	    cis''16-4[ e-5 bes-2 cis!-4] g-1[ bes-4 e,-1 g-5] cis,-2[ e-5 bes-2 cis!-4] g4-1
+		    	    \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+scoreFingeringExerciseTwenty = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+		    	    \clef treble
+		    	    \time 4/4
+		    	    \key c \major
+		    	    a'16-4[ c!-5 fis,-2 a-5] ees-2[ fis!-4 c-2 ees-4] a,-1[ c-5 fis,-2 a-5] ees4-2
+		    	    \bar "|." \noBreak
+		    	    \time 2/4
+		    	    \phrasingSlurDown
+		    	    \override TextScript #'avoid-slur = #'inside
+		    	    \override TextScript #'outside-staff-priority = ##f
+		    	    c'16-1[\( ees-2 fis-3 a-4]_\markup {bis}  c-5[ a-4 fis-3 ees!-2]\)
+		    	    \bar "|" \noBreak
+		    	    \phrasingSlurDown
+		    	    b!16-1[\( d-2 f!-3 aes-4]_\markup {bis} b!-5[ aes-4 f-3 d-2]\)
+		    	    \bar "|" \noBreak
+		    	    \phrasingSlurDown
+		    	    bes16-1[\( des-2 e!-3 g-4]_\markup {bis} bes-5[ g-4 e-3 des!-2]\)
+		    	    \bar "|"
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
@@ -477,8 +530,8 @@ partOneFingeringRightHand = \markuplines {
     \paragraph{ \scoreFingeringExerciseSixteen }
     \paragraph{ \scoreFingeringExerciseSeventeen }
     \paragraph{ \scoreFingeringExerciseEighteen }
-    \paragraph{  }
-    \paragraph{  }
+    \paragraph{ \scoreFingeringExerciseNineteen }
+    \paragraph{ \scoreFingeringExerciseTwenty }
     \paragraph{  }
 }
 }
