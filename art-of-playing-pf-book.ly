@@ -1,4 +1,4 @@
-﻿%%
+%%
 %%
 %%%%MUZIO CLEMENTI'S Art of Playing on the Piano Forte
 %%  Typeset by Javier Ruiz-Alma
