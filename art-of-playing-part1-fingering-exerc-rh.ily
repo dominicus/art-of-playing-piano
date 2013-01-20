@@ -28,7 +28,7 @@ scoreFingeringExerciseTwo = \markup { \general-align #Y #CENTER
 		    	    \cadenzaOn
 		    	    \set Staff.instrumentName = \markup \override #'(baseline-skip . 1.5 ) {\column{ \tiny{ \line{But when the notes re-}\line{-peat too quick for the}\line{same finger, it is then}\line{necessary to change.}}}}
 		    	    %LINE1-cont
-		    	    g'16-4[ f-3] e-2[ e-3 d-2 d-3] c8-2 
+		    	    g'16-4[ f-3] e-2[ e-3 d-2 d-3] c4-2 
 		    	    \bar "|."
 		    	    \stemDown
 		    	    g'16-4[ f-3] f-4[ e-3 d-2 c-1] c-4[ b-3 a-2 g-1] c8-4  
@@ -104,12 +104,12 @@ scoreFingeringExerciseFive = \markup { \general-align #Y #CENTER
 			    g16-4
 			    \bar "|." \noBreak
 			    s32
-			    \sameSizeClef \forceClef
+			    %\sameSizeClef \forceClef
 			    \key d \major
 			    r16 d,16-1[ cis-2 d-1] fis-4[ fis-2 e-1 fis-2] a-4[ a-3 gis-2 a-3] d-5[ d-3 cis-2 d-3] fis4-5
 			    \bar "|." \noBreak
 			    s32
-			    \sameSizeClef \forceClef
+			    %\sameSizeClef \forceClef
 			    \set Staff.printKeyCancellation = ##f
 			    \set Staff.lastKeySignature = #`()
 			    \set Staff.keySignature = #`()
@@ -133,17 +133,17 @@ scoreFingeringExerciseSix = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \cadenzaOn
 		    	    \key bes \major
-		    	    bes16-2[ d-4 c-1 ees-3] d-1[ f-3 ees-2 g-4] f-1[ aes-3 g-1 bes-3] a-1[ c-3 bes8-2]
+		    	    bes16-2[ d-4 c-1 ees-3] d-1[ f-3 ees-2 g-4] f-1[ aes-3 g-1 bes-3] \stemUp a-1[ c-3 bes8-2] \stemNeutral
 		    	    \bar "|." \noBreak
 		    	    s32
-		    	    \forceClef \sameSizeClef
+		    	    %\forceClef \sameSizeClef
 		    	    \set Staff.lastKeySignature = #`()
 		    	    \set Staff.keySignature = #`()
 		    	    \key g \major
 		    	    e,16-1[ g-3 fis-2 a-4] g-1[ b-3 a-1 c-3]
 		    	    \bar "|." \noBreak
 		    	    s32
-		    	    \forceClef \sameSizeClef
+		    	    %\forceClef \sameSizeClef
 		    	    \key d \major
 		    	    d16-5[ b-3 cis-4 a-2] b-3[ g-1 a-4 fis-2] g-3[ e-1 fis-3 d-1]
 		    	    \bar "|." \noBreak
@@ -221,32 +221,6 @@ scoreFingeringExerciseNine = \markup { \general-align #Y #CENTER
    	   \new Staff \with { \remove Time_signature_engraver }
 	    	     \relative c''{
 		    	    \clef treble
-		    	    \time 4/4
-		    	    g16-3[ fis-2 e-1 fis-2] b-4[ a-3 gis-2 a-1] e'-4[ d-3 cis-2 d-1] g-4[ fis-3 e-2 fis-1]
-		    	    \noBreak
-		    	    \cadenzaOn
-		    	    a4-5
-		    	    \bar "|." \noBreak
-		    	    \cadenzaOff
-		    	    c,16-3[ bes-2 a-1 bes-2] ees-4[ d-3 cis-2 d-1] g-4[ f-3 e-2 f-1] bes4-4
-		    	    \bar "|." \noBreak
-		    	    bes16-4[ a-3 gis-2 a-5] g-4[ f-3 e-2 f-5] d-4[ c-3 b!-2 c-5] bes-4[ a-3 gis-2 a-5]
-		    	    \bar "|" \noBreak
-		    	    f4-1
-		    	    \bar "|."
-		     }
-	  \layout {
-	      indent = 0.0\in
-	      ragged-right = ##t
-	    }
-	    }
-}
-
-scoreFingeringExerciseTen = \markup { \general-align #Y #CENTER 
-   \score {
-   	   \new Staff \with { \remove Time_signature_engraver }
-	    	     \relative c''{
-		    	    \clef treble
 		    	    %\cadenzaOn
 		    	    \time 3/4
 			      c8-3-1[ d32-4 c-3 b-2 c-1] c'8-5  
@@ -275,6 +249,95 @@ scoreFingeringExerciseTen = \markup { \general-align #Y #CENTER
 	    }
 }
 
+scoreFingeringExerciseTen = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+		    	    \clef treble
+		    	    %\cadenzaOn
+			      \time 4/4
+			      c,16-1[ d-2 e-3 f-4] \stemDown g-1[ a-2 b-3 c-4] \stemNeutral d-5[ c b a] g-1[ f-4 e-3 d-2]
+			      %\bar "|"
+			      \noBreak
+			      c16-1[ d-4 c-3 b-2] c-1[ e-2 g-3 c-5] g-3[ a-4 g-3 fis-2] g-1[ b-2 d-3 g-5]
+			      \noBreak
+			      %\bar "|"
+			      cis,16-2[ e-3 a-5 g-4] f!-3[ e-2 d-1 c-2] b-1[ d-2 g-5 f-4] e-3[ d-2 c-1 b-2]
+		    	      \bar "|"
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+
+scoreFingeringExerciseEleven = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+		    	    \clef treble
+		    	    %\cadenzaOn
+			      \time 4/4
+			      a16-1[ c-2 f-5 e] d[ c b-1 a-3]
+				 %LINE 9
+			      gis16-2[ b-3 e-5 d-4] c!-3[ b-2 a-1 g-3]
+			      \bar "|" \noBreak
+			      fis16-2[ a-3 d-5 c] b[ a g f-2] 
+			      \once \override Stem #'transparent = ##t
+			      \once \override TextScript #'extra-offset = #'(2.1 . 3.8 )
+			      e4*2-1-\markup{"&"}
+			      \bar "|." \noBreak
+			      \time 12/8
+			      e8-1[ g-2 c-5] f,-1[ a-2 d-5] g,-1[ b e] a,[ c f]-\markup{"&"}
+			      \bar "|." \noBreak 
+			      % EXERCISE ENDS WITH "&" SIGN, MUST ADD
+			      \time 18/8
+			      \key ees \major
+			      g,8-1[ bes-3 ees-5] aes,-2[ c-3 f-5] bes,-2[ d-3 g-5] c,-1[ ees-3 aes-5] d,-1[ f-3 bes-5] ees,-2[ g-3 c-5]
+			      \bar "|." % EXERCISE ENDS WITH "&" SIGN, MUST ADD
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+
+%{
+scoreFingeringExerciseTwelve = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+		    	    \clef treble
+		    	    %\cadenzaOn
+			      \time 4/4
+			      a16-1[ c-2 f-5 e] d[ c b-1 a-3]
+				 %LINE 9
+			      gis16-2[ b-3 e-5 d-4] c!-3[ b-2 a-1 g-3]
+			      \bar "|" \noBreak
+			      fis16-2[ a-3 d-5 c] b[ a g f-2] 
+			      \once \override Stem #'transparent = ##t
+			      \once \override TextScript #'extra-offset = #'(2.1 . 3.8 )
+			      e4*2-1-\markup{"&"}
+			      \bar "|." \noBreak
+			      \time 12/8
+			      e8-1[ g-2 c-5] f,-1[ a-2 d-5] g,-1[ b e] a,[ c f]-\markup{"&"}
+			      \bar "|." \noBreak 
+			      % EXERCISE ENDS WITH "&" SIGN, MUST ADD
+			      \time 18/8
+			      \key ees \major
+			      g,8-1[ bes-3 ees-5] aes,-2[ c-3 f-5] bes,-2[ d-3 g-5] c,-1[ ees-3 aes-5] d,-1[ f-3 bes-5] ees,-2[ g-3 c-5]
+			      \bar "|." % EXERCISE ENDS WITH "&" SIGN, MUST ADD
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	    }
+	    }
+}
+%}
+
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
@@ -289,10 +352,10 @@ partOneFingeringRightHand = \markuplines {
     \paragraph{ \scoreFingeringExerciseSix }
     \paragraph{ \scoreFingeringExerciseSeven }
     \paragraph{ \scoreFingeringExerciseEight }
-    \paragraph{ \scoreFingeringExerciseNine }
+    \paragraph{ \scoreFingeringExerciseNine }  
     \paragraph{ \scoreFingeringExerciseTen }
-    \paragraph{  }
-    \paragraph{  }
+    \paragraph{ \scoreFingeringExerciseEleven }
+%    \paragraph{ \scoreFingeringExerciseTwelve }
     \paragraph{  }
     \paragraph{  }
 }

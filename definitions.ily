@@ -48,22 +48,6 @@ shapeSlur = #(define-music-function (parser location offsets) (list?)
     ;; return altered coordinates
     (loop n)
     coords))
-
-
-#(define (EventChord? music)
- (eq? (ly:music-property music 'name) 'EventChord))
- 
-#(define (NoteEvent? music)
- (eq? (ly:music-property music 'name) 'NoteEvent))
- 
-#(define (hide-accidental music)
- (if (NoteEvent? music)
- (ly:music-set-property! music 'hide-accidental #t))
- music)
-
- hideAccidental = 
-#(define-music-function (parser location mus) (ly:music?)
- (music-map hide-accidental mus))
      
 
 %{

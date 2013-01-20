@@ -52,8 +52,6 @@
     tocTitle = "TABLE OF CONTENTS"
   }
   
-
-  
   %% Inner Cover
   \bookpart{
   	  \pageBreak
@@ -126,7 +124,7 @@
   \titledPiece \markup "Extensions and Contractions etc."
   \partOneExtensionsContractions
    %}
-  \titledPiece \markup "Examples of fingering for the Right Hand."
+  \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
   
 %{
