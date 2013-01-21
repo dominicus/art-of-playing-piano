@@ -859,5 +859,6 @@ partOneFingeringRightHand = \markuplines {
     \paragraph{ \scoreFingeringExerciseTwentySeven }
     \paragraph{ \scoreFingeringExerciseTwentyEight }
     \paragraph{ \scoreFingeringExerciseTwentyNine }
+    \paragraph{  }
 }
 }
