@@ -43,7 +43,7 @@
     title = "Art of Playing on the Piano Forte"
     date = "LilyPond Typesetting by Javier Ruiz-Alma"
     arrangement = "From editions published in 1801 and 1803"
-    copyright = \markup{"2012 - Creative Commons Attribution-ShareAlike 3.0 (Unported) License " \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))} 
+    copyright = \markup{\concat{ \char ##x00a9 "2012 Javier Ruiz - Creative Commons Attribution-ShareAlike 3.0 (Unported) License "} \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))} 
   }
   \markup {""}  %force printing front page
 }
@@ -66,7 +66,7 @@
   
   \chapter "Part I"
   \section "Music Notation"
- %{     
+ %{    
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 

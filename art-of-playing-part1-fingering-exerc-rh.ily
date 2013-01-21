@@ -490,14 +490,92 @@ scoreFingeringExerciseTwenty = \markup { \general-align #Y #CENTER
 		    	    \phrasingSlurDown
 		    	    \override TextScript #'avoid-slur = #'inside
 		    	    \override TextScript #'outside-staff-priority = ##f
-		    	    c'16-1[\( ees-2 fis-3 a-4]_\markup {bis}  c-5[ a-4 fis-3 ees!-2]\)
+		    	    c'16-1[\( ees-2 fis-3 a-4]_\markup {\smaller bis}  c-5[ a-4 fis-3 ees!-2]\)
 		    	    \bar "|" \noBreak
 		    	    \phrasingSlurDown
-		    	    b!16-1[\( d-2 f!-3 aes-4]_\markup {bis} b!-5[ aes-4 f-3 d-2]\)
+		    	    b!16-1[\( d-2 f!-3 aes-4]_\markup {\smaller bis} b!-5[ aes-4 f-3 d-2]\)
 		    	    \bar "|" \noBreak
 		    	    \phrasingSlurDown
-		    	    bes16-1[\( des-2 e!-3 g-4]_\markup {bis} bes-5[ g-4 e-3 des!-2]\)
+		    	    bes16-1[\( des-2 e!-3 g-4]_\markup {\smaller bis} bes-5[ g-4 e-3 des!-2]\)
+		    	    \bar "|" \noBreak
+		    	    \phrasingSlurDown
+		    	    a!16-1[\( c-2 ees-3 ges-4]_\markup {\smaller bis} a!-5[ ges-4 ees-3 c-2]\)
 		    	    \bar "|"
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentyOne = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+	    	     	     \clef treble
+	    	     	     \time 2/4
+	    	     	     \phrasingSlurDown
+	    	     	     \override TextScript #'avoid-slur = #'inside
+	    	     	     \override TextScript #'outside-staff-priority = ##f
+	    	     	     aes16-1[\( b!-2 d-3 f!-4]_\markup {\smaller bis} aes-5[ f d b!]\)
+	    	     	     \bar "|" \noBreak
+	    	     	     \phrasingSlurDown
+	    	     	     g16-1[\( bes-2 des-3 e!-4]_\markup {\smaller bis} g-5[ e des bes]\)
+	    	     	     \bar "|" \noBreak
+	    	     	     \override TextScript #'extra-offset = #'(2.1 . 3.8 )
+	    	     	     \cadenzaOn
+	    	     	     \hideNotes
+	    	     	     c8-\markup{"&"} c8
+	    	     	     \stopStaff
+	    	     	     \override TextScript #'extra-offset = #'(1.6 . 7.0 )
+	    	     	     c-\markup{\column{
+		    	    	    \line{"downward 9 or 10 bars longer, keeping down the thumb"}
+		    	    	    \line{"and every finger as long as possible; being one of the best"}
+		    	    	    \line{"exercises for opening the hand."}
+		    	    	    }
+		    	    	    }
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentyTwo = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+	    	     	     \clef treble		
+	    	     	     \key c \major
+	    	     	     \time 2/4
+	    	     	     c,16-1[ c'-5 d,-1 d'-5] 
+	    	     	     \beamUp
+	    	     	     e,-1[ e'-5 f,-1 f'-5] |
+	    	     	     \bar "|." \noBreak
+	    	     	     \time 3/4
+	    	     	     c,16-1-1[ c'-5-5 cis,-1-1 cis'-5-4] d,-1-1[ d'-5-5 dis,-1-1 dis'-5-4] e,-1-1[ e'-5-5 f,-1-1 f'-5-5] |
+	    	     	     \bar "|." \noBreak
+	    	     	     \time 4/4
+	    	     	     \stemDown
+	    	     	     <c, c'>4-1-5 <d d'>-1-5 <e e'>-1-5 <f f'>-1-5 |
+	    	     	     \bar "|." \noBreak
+	    	     	     \stopStaff
+	    	     	     \hideNotes
+	    	     	     \once \override TextScript #'extra-offset = #'(1.1 . 7.7 )
+	    	     	     c'4-\markup{\column{ \smaller 
+		    	    	    \line{"But when"}
+		    	    	    \line{"wanted"}
+		    	    	    \line{"legato, thus:"}
+		    	    	    }
+		    	     }
+		    	     \repeat unfold 3 {c4}
+		    	     \noBreak
+		    	     \startStaff \unHideNotes
+		    	     \phrasingSlurUp \stemDown
+		    	     <c, c'>4-1-4\( <d d'>^1^\markup{ \finger {5-4} } <e e'>^1^\markup { \finger "5-4" } <f f'>-1-5\) 
+		    	     \bar "|."
 		     }
 	  \layout {
 	      indent = 0.0\in
@@ -532,6 +610,8 @@ partOneFingeringRightHand = \markuplines {
     \paragraph{ \scoreFingeringExerciseEighteen }
     \paragraph{ \scoreFingeringExerciseNineteen }
     \paragraph{ \scoreFingeringExerciseTwenty }
+    \paragraph{ \scoreFingeringExerciseTwentyOne }
+    \paragraph{ \scoreFingeringExerciseTwentyTwo }
     \paragraph{  }
 }
 }
