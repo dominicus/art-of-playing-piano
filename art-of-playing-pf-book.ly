@@ -29,6 +29,7 @@
   \include "art-of-playing-part1-scales-remarks.ily"
   \include "art-of-playing-part1-extensions.ily"
   \include "art-of-playing-part1-fingering-exerc-rh.ily"
+  \include "art-of-playing-part1-fingering-exerc-lh.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -109,7 +110,8 @@
   \titledPiece \markup "Explanation of Various Terms"
   \partOneVariousTerms
   
-  \titledPiece \markup "Fingering"
+  \section "Fingering"
+  
   \partOneFingering
  
   \titledPiece \markup "Preliminary Directions"
@@ -126,6 +128,9 @@
    %}
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
+  
+  \titledPiece \markup "The left hand."
+  \partOneFingeringLeftHand
   
 %{
   \pageBreak
