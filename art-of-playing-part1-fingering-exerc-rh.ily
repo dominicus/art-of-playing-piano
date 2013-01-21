@@ -584,6 +584,246 @@ scoreFingeringExerciseTwentyTwo = \markup { \general-align #Y #CENTER
    }
 }
 
+scoreFingeringExerciseTwentyThree = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'{
+	    	     	     \key c \major
+	    	     	     \time 4/4
+	    	     	     \stemUp
+	    	     	     <c e>16-1-3[ <d f>-2-4 <e g>-3-5 <f a>-1-3]
+	    	     	     \stemDown
+	    	     	     <g b>-2-4[ <a c>-3-5 <b d>-1-3 <c e>-2-4]
+	    	     	     \stemDown
+	    	     	     <d f>-3-5[ <c e>-2-4 <b d>-1-3 <a c>-3-5]
+	    	     	     \stemUp
+	    	     	     <g b>-2-4[ <f a>-1-3 <e g>-3-5 <d f>-2-4]
+	    	     	     \noBreak
+	    	     	     \time 1/4
+	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     <c e>4-1-3
+	    	     	     \bar "|." \noBreak
+	    	     	     \time 3/4
+	    	     	     \stemDown
+	    	     	     <c' e>16-1-2[ <f a>-3-5 <e g>-2-4 <d f>-1-3]
+	    	     	     <c e>-1-2[ <f a>-3-5 <e g>-2-4 <d f>-1-3]
+	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     <c e>4-1-2 
+	    	     	     \bar "|." \noBreak
+	    	     	     \key f \major
+	    	     	     <bes d>16-2-3[ <c ees>-1-4 <d f>-3-5 <c ees>-1-4]
+	    	     	     <bes d>-2-3[ <c ees>-1-4 <d f>-3-5 <c ees>-1-4] <bes d>4-2-3 |
+	    	     	     \bar "|." \noBreak
+	    	     	     \time 5/4
+	    	     	     <f c'>16-1-3 <a f'>-2-5 <f c'>16-1-3 <a f'>-2-5
+	    	     	     <g e'>-1-4 <bes! g'>-2-5 <g e'> <bes g'>
+	    	     	     <a f'>-1-4 <c a'>-2-5 <a f'> <c a'>
+	    	     	     <bes! f'>-1-3 <d bes'>-2-5 <bes f'> <d bes'>
+	    	     	     <a f'>-1-4 <c a'>-2-5 <a f'> <c a'>
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentyFour = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+	    	     	     \time 4/4
+	    	     	     \key d \major
+	    	     	     <d fis>16-1-3[ <e g>-2-4 <fis a>-3-5 <e g>-2-4]
+	    	     	     <d fis>-1-3[ <e g>-2-4 <d fis>-1-3 <cis e>-2-4]
+	    	     	     <b d>-1-3[  <cis e>-2-4 <d fis>-3-5 <cis e>-2-4] 
+	    	     	     <b d>-1-3[ <b d>-1-3 <cis e>-2-4 <d fis>-3-5]
+	    	     	     \noBreak
+	    	     	     <e g>-1-3[ <fis a>-2-4 <g b>-3-5 <fis a>-2-4]
+	    	     	     <e g>-1-3[ <fis a>-3-5 <e g>-2-4 <d fis>-1-3]
+	    	     	     <cis e>-3-5[ <b d>-2-4 <a cis>-1-3 <b d>-2-4] 
+	    	     	     <a cis>4-1-3
+	    	     	     \bar "|." \noBreak
+	    	     	     \set Staff.lastKeySignature = #'()
+	    	     	     \set Staff.keySignature = #'()
+	    	     	     \key c \major
+	    	     	     <c, e>8-|-1-3[^Staccato <d f>-|-1-3 <e g>-|-1-3 <f a>-|-1-3]
+	    	     	     <g b>-|-1-3[ <a c>-| <b d>-| <c e>-|] 
+	    	     	     \noBreak
+	    	     	     <c, e>8-|-2-4[^"thus:"^"or" <d f>-|-2-4 <e g>-|-2-4 <f a>-|-2-4]
+	    	     	     <g b>-|-2-4[ <a c>-| <b d>-| <c e>-|] |
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentyFive = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+	    	     	     \key c \major
+	    	     	     \time 4/4
+	    	     	     \stemDown
+	    	     	     <g e'>8-1-4[\(_legato <a f'>-2-5 <f d'>-1-4 <g e'>-2-5]
+	    	     	     <e c'>-1-4[ <f d'>-2-5]
+	    	     	     <d b'>4-1-4\) 
+	    	     	     \bar "|." \noBreak
+	    	     	     \time 5/4
+	    	     	     <b' g'>8-1-5[\( <c e>-2-4 <a f'>-1-5 <b d>-2-4]
+	    	     	     <g e'>-1-5[ <a c>-2-4 <f d'>-1-5 <g b>-2-4]
+	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     <e c'>4-1-5\)
+	    	     	     \bar "|." \noBreak
+	    	     	     \grace s32
+		    	     \forceClef \sameSizeClef
+	    	     	     \key bes \major
+	    	     	     \time 4/4
+	    	     	     \override TupletNumber #'stencil = ##f
+	    	     	     \times 2/3 {<bes' d>8-2-4[ <a c>-1-3 <bes d>-2-4]}
+	    	     	     \times 2/3 {<c ees>-1-3 <d f>-2-4 <ees g>-3-5}
+	    	     	     \times 2/3 {<d f>-2-4 <ees g>-3-5 <d f>-2-4}
+	    	     	     \times 2/3 {<c ees>-1-3 <bes d>-3-5 <a c>-2-4}
+	    	     	     \noBreak
+	    	     	     \times 2/3 {<g bes>-1-3 <a c>-2-4 <bes d>-3-5}
+	    	     	     \times 2/3 {<c ees>-1-3 <d f>-2-4 <ees g>-3-5}
+	    	     	     \times 2/3 {<bes d>-2-4 <c ees>-3-5 <bes d>-2-4}
+	    	     	     \times 2/3 {<a c>-1-3 <bes d>-2-4 <a c>-1-3}
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentySix = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'{
+	    	     	     \key bes \major
+	    	     	     \time 1/4
+	    	     	     <f f'>4-1-5\(^\markup{\smaller legato}
+	    	     	     \time 4/4
+	    	     	     \stemUp
+	    	     	     <d bes'>2-1-2 <ees c'>4-1-3 <f f'>-1-5
+	    	     	     <d bes'>2-1-2 <ees c'>4-1-3 <f f'>-1-5\)
+	    	     	     \bar "|." \noBreak
+	    	     	     \grace s32
+	    	     	     \forceClef \sameSizeClef
+	    	     	     \set Staff.lastKeySignature = #'()
+	    	     	     \set Staff.keySignature = #'()
+	    	     	     \key a \major
+	    	     	     \time 6/4
+	    	     	     <a, e'>16-1-3[ <cis a'>-2-5 <b gis'>-1-4 <cis a'>-2-5 <b gis'>-1-4 <cis a'>-2-5]
+	    	     	     <a e'>-1-3[ <cis a'> <b gis'> <cis a'> <b gis'> <cis a'>]
+	    	     	     <d b'>-1-4[ <fis d'>-5-2 <e cis'>-1-4 <fis d'>-5-2 <e cis'>-1-4 <fis d'>-5-2]
+	    	     	     \stemNeutral
+	    	     	     <gis d'>-1-3[ <b gis'>-2-5 <a d>-1-3 <b gis'>-2-5 <a d>-1-3 <b gis'>-2-5]
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##f
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentySeven = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'''{
+	    	     	     \key a \major
+	    	     	     \time 4/4
+	    	     	     <cis e>16-3-5[ <b d>-2-4 <a cis>-1-3 <gis b>-3-5]
+	    	     	     <fis a>-2-4[ <e gis>-1-3 <d fis>-1-2 <cis e>-3-5]
+	    	     	     <b d>-2-4[ <a cis>-1-3 <gis b>-3-5 <fis a>-2-4]
+	    	     	     <e gis>-1-3[ <d fis>-1-2 <cis e>-3-5 <b d>-2-4]
+	    	     	     \noBreak
+	    	     	     <a cis>-1-3[ <b d>-2-4 <cis e>-3-5 <d fis>-1-2]
+	    	     	     <e gis>-1-3[ <fis a>-2-4 <gis b>-3-5 <fis a>-2-4]
+	    	     	     <e gis>-1-3[ <d fis>-1-2 <cis e>-3-5  <d b>-1-2] 
+	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     <cis a>4-1-3 |
+	    	     	     \bar "|." \noBreak
+	    	     	     \grace s32
+	    	     	     \forceClef \sameSizeClef
+	    	     	     \set Staff.lastKeySignature = #'()
+	    	     	     \set Staff.keySignature = #'()
+	    	     	     \key d \major
+	    	     	     \time 5/4
+	    	     	     <d' fis>16-1-4[ <cis e>-2-3 <d fis>-1-4 <cis e>-2-3]
+	    	     	     <d fis>-1-4[ <fis a>-3-5 <e g>-2-4 <d fis>-1-3]
+	    	     	     <cis e>-3-5[ <b d>-2-4 <a cis>-1-3 <g b>-1-2]
+	    	     	     <fis a>-3-5[ <e g>-2-4 <d fis>-1-3 <e g>-2-4]
+	    	     	     <d fis>4-1-3
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##f
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentyEight = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c'{
+	    	     	     \key c \major
+	    	     	     \time 1/4
+	    	     	     << {c''4-5~} \\ {e,4-2 }   >>
+	    	     	     \time 4/4
+	    	     	     << {c'4 b2^\markup { \finger "4 - 5" } a4-\markup{\finger "4-"} ~} \\ {d,2-1 c2-1} >>
+	    	     	     \noBreak
+	    	     	     << {a'4-5 g2^\markup { \finger "4 - 5" } f!4-\markup{\finger "4-"} ~} \\ {b,2-1 a2-1}  >>
+	    	     	     << {f'4-5 dis4-4 e2-5~} \\ {g,2._\markup { \finger "1 - 2" } e4-1} >>
+	    	     	     << {e'4 cis4-4 d2-5~} \\ { f,!2.-2 d4-1} >>
+	    	     	     << {d'4 b4-4 c!2-5} \\ { e,1_\markup { \finger "2 - 1" } } >>
+	    	     	     \bar "|."
+	    	     	     \noBreak
+	    	     	     <c e>4^\markup {\finger "3"}_\markup {\finger "1"}\(
+	    	     	     <d f>^\markup {\finger "4 3"}_\markup {\finger "2 1"}
+	    	     	     <e g>^\markup {\finger "4 3"}_\markup {\finger "2 1"}
+	    	     	     <f a>^\markup {\finger "4 3"}_\markup {\finger "2 1"}
+	    	     	     <g b>^\markup {\finger "4 3"}_\markup {\finger "2 1"}
+	    	     	     <a c>^\markup {\finger "4 3"}_\markup {\finger "2 1"}
+	    	     	     <b d>^\markup {\finger "4"}_\markup {\finger "2"}
+	    	     	     <c e>^\markup {\finger "5"}_\markup {\finger "3"}\)
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##f
+	  }
+   }
+}
+
+scoreFingeringExerciseTwentyNine = \markup { \general-align #Y #CENTER 
+   \score {
+   	   \new Staff \with { \remove Time_signature_engraver }
+	    	     \relative c''{
+	    	     	     \key c \major
+	    	     	     \time 4/4
+	    	     	     << {s4 e4-4-5 d2-4-5~} \\ {s4 c4~ c2 } \\ { s1} \\ {s4 e,4-1\( f-1 fis-2} >>
+	    	     	     << { <d' b>-3-5 g2-5 f!4-5} \\ { s1} \\ {s1} \\ {g,4-1 <g b>-2-1 <a c>-3-1 <b d~>-4-2} >>
+	    	     	     << {e2-5 d-5 } \\ { s1} \\ {s1} \\ {<g, d'>4-4-1 <a c~>-4-2 <f c'>-1 <g b>-4-2} >>
+	    	     	     << {c1-5} \\ {s1} \\{s1}\\{<g e>-2-1\)} >>
+	    	     	     \bar "|."
+		     }
+	  \layout {
+	      indent = 0.0\in
+	      ragged-right = ##t
+	  }
+   }
+}
+
+
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
@@ -612,6 +852,12 @@ partOneFingeringRightHand = \markuplines {
     \paragraph{ \scoreFingeringExerciseTwenty }
     \paragraph{ \scoreFingeringExerciseTwentyOne }
     \paragraph{ \scoreFingeringExerciseTwentyTwo }
-    \paragraph{  }
+    \paragraph{ \scoreFingeringExerciseTwentyThree }
+    \paragraph{ \scoreFingeringExerciseTwentyFour }
+    \paragraph{ \scoreFingeringExerciseTwentyFive }
+    \paragraph{ \scoreFingeringExerciseTwentySix }
+    \paragraph{ \scoreFingeringExerciseTwentySeven }
+    \paragraph{ \scoreFingeringExerciseTwentyEight }
+    \paragraph{ \scoreFingeringExerciseTwentyNine }
 }
 }
