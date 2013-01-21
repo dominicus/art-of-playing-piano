@@ -1,9 +1,10 @@
-%%
+%{
 %%
 %%%%MUZIO CLEMENTI'S Art of Playing on the Piano Forte
 %%  Typeset by Javier Ruiz-Alma
 %%
-%%
+%}
+
 \version "2.14.2"
 
 %% INCLUDED FILES
@@ -30,7 +31,7 @@
   \include "art-of-playing-part1-extensions.ily"
   \include "art-of-playing-part1-fingering-exerc-rh.ily"
   \include "art-of-playing-part1-fingering-exerc-lh.ily"
-  \include "art-of-playing-part2-lessons-1-4.ily"
+  \include "art-of-playing-part2-introduction.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -63,12 +64,10 @@
   \bookpart{
   \markuplines \table-of-contents
   }
-  
-	
-  
+    
   \chapter "Music Notation"
   %\section "Music Notation"
- %{  %}
+ %{  
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -137,10 +136,8 @@
   \partTwoIntroduction
   
   \section "Lesson I"
-  
   \titledPiece \markup "Prelude in C Major"
   \include "art-of-playing-part2-lesson1-prel-cmaj.ily"
-  
   \titledPiece \markup "Away with melancholy: by Mozart"
   \include "art-of-playing-part2-lesson1-moderato.ily"
   
@@ -156,4 +153,26 @@
   
   \pageBreak
   
-
+  \section "Lesson IV"
+  \titledPiece \markup "Air, in Saul, by Handel"
+  \include "art-of-playing-part2-lesson4-air-handel.ily"
+  
+  \pageBreak
+  
+  \section "Lesson V"
+  \titledPiece \markup "Dead March, in Saul, by Handel"
+  \include "art-of-playing-part2-lesson5-march-handel.ily"
+    
+  \pageBreak
+  
+  \section "Lesson VI"
+  \titledPiece \markup "Allegro by Corelli"
+  \include "art-of-playing-part2-lesson6-allegro-corelli.ily"
+  
+  \pageBreak
+  
+  \section "Lesson VII"
+  \titledPiece \markup "Prelude in A minor"
+  \include "art-of-playing-part2-lesson7-prel-amin.ily"
+  \titledPiece \markup "Gavotta by Corelli"
+  \include "art-of-playing-part2-lesson7-gavotta-corelli.ily"
