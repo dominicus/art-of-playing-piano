@@ -30,6 +30,7 @@
   \include "art-of-playing-part1-extensions.ily"
   \include "art-of-playing-part1-fingering-exerc-rh.ily"
   \include "art-of-playing-part1-fingering-exerc-lh.ily"
+  \include "art-of-playing-part2-lessons-1-4.ily"
   
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
 
@@ -44,7 +45,7 @@
     title = "Art of Playing on the Piano Forte"
     date = "LilyPond Typesetting by Javier Ruiz-Alma"
     arrangement = "From editions published in 1801 and 1803"
-    copyright = \markup{\concat{ \char ##x00a9 "2012 Javier Ruiz - Creative Commons Attribution-ShareAlike 3.0 (Unported) License "} \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))} 
+    copyright = \markup{"2012 Javier Ruiz - Creative Commons Attribution-ShareAlike 3.0 (Unported) License " \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))} 
   }
   \markup {""}  %force printing front page
 }
@@ -65,9 +66,9 @@
   
 	
   
-  \chapter "Part I"
-  \section "Music Notation"
- %{    
+  \chapter "Music Notation"
+  %\section "Music Notation"
+ %{  %}
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -110,7 +111,7 @@
   \titledPiece \markup "Explanation of Various Terms"
   \partOneVariousTerms
   
-  \section "Fingering"
+  \chapter "Fingering"
   
   \partOneFingering
  
@@ -125,21 +126,34 @@
   
   \titledPiece \markup "Extensions and Contractions etc."
   \partOneExtensionsContractions
-   %}
+   
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
-  
+  %}
   \titledPiece \markup "The left hand."
   \partOneFingeringLeftHand
   
-%{
-  \pageBreak
-  \section "Scene 2"
-  \piece \markup { Choir: \italic { bla bla bla } }
-  \repeat unfold 12 { g'4 f' e' d'  \break }
+  \chapter "Preludes and Lessons"
+  \partTwoIntroduction
   
-  \chapter "Act II"
-  \section "Scene 1"
-  \titledPiece \markup Overtura
-  { c'4 d' e' f' g'1 }
-  %}
+  \section "Lesson I"
+  
+  \titledPiece \markup "Prelude in C Major"
+  \include "art-of-playing-part2-lesson1-prel-cmaj.ily"
+  
+  \titledPiece \markup "Away with melancholy: by Mozart"
+  \include "art-of-playing-part2-lesson1-moderato.ily"
+  
+  \pageBreak
+  
+  \section "Lesson II"
+  \titledPiece \markup "Aria"
+  \include "art-of-playing-part2-lesson2-aria.ily"
+  
+  \section "Lesson III"
+  \titledPiece \markup "Air, in Atalanta, by Handel"
+  \include "art-of-playing-part2-lesson3-air-handel.ily"
+  
+  \pageBreak
+  
+
