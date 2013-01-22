@@ -128,7 +128,7 @@
    
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
-  %}
+  
   \titledPiece \markup "The left hand."
   \partOneFingeringLeftHand
   
@@ -140,7 +140,6 @@
   \include "art-of-playing-part2-lesson1-prel-cmaj.ily"
   \titledPiece \markup "Away with melancholy: by Mozart"
   \include "art-of-playing-part2-lesson1-moderato.ily"
-  
   \pageBreak
   
   \section "Lesson II"
@@ -150,25 +149,21 @@
   \section "Lesson III"
   \titledPiece \markup "Air, in Atalanta, by Handel"
   \include "art-of-playing-part2-lesson3-air-handel.ily"
-  
   \pageBreak
   
   \section "Lesson IV"
   \titledPiece \markup "Air, in Saul, by Handel"
   \include "art-of-playing-part2-lesson4-air-handel.ily"
-  
   \pageBreak
   
   \section "Lesson V"
   \titledPiece \markup "Dead March, in Saul, by Handel"
   \include "art-of-playing-part2-lesson5-march-handel.ily"
-    
   \pageBreak
   
   \section "Lesson VI"
   \titledPiece \markup "Allegro by Corelli"
   \include "art-of-playing-part2-lesson6-allegro-corelli.ily"
-  
   \pageBreak
   
   \section "Lesson VII"
@@ -176,3 +171,90 @@
   \include "art-of-playing-part2-lesson7-prel-amin.ily"
   \titledPiece \markup "Gavotta by Corelli"
   \include "art-of-playing-part2-lesson7-gavotta-corelli.ily"
+  \pageBreak
+  
+  \section "Lesson VIII"
+  \titledPiece \markup "Prelude in F Major"
+  \include "art-of-playing-part2-lesson8-prel-fmaj.ily"
+  \titledPiece \markup "Air, in Judas Maccabeus, by Handel"
+  \include "art-of-playing-part2-lesson8-air-handel.ily"
+  \pageBreak
+  
+  \section "Lesson IX"
+  \titledPiece \markup "March, in Judas Maccabeus, by Handel"
+  \include "art-of-playing-part2-lesson9-march-handel.ily"
+  \pageBreak
+   
+  \section "Lesson X"
+  \titledPiece \markup "Sarabanda, by Corelli"
+  \include "art-of-playing-part2-lesson10-sarabanda-corelli.ily"
+  \pageBreak 
+   
+  \section "Lesson XI"
+  \titledPiece \markup "Giga, by Corelli"
+  \include "art-of-playing-part2-lesson11-giga-corelli.ily"
+  \pageBreak
+     
+  \section "Lesson XII"
+  \titledPiece \markup "Arietta, by Mozart"
+  \include "art-of-playing-part2-lesson12-arietta-mozart.ily"
+  \pageBreak
+  
+  \section "Lesson XIII"
+  \titledPiece \markup "Minuet and Trio, by Mozart"
+  \include "art-of-playing-part2-lesson13-minuet-mozart.ily"
+  \include "art-of-playing-part2-lesson13-trio-mozart.ily"
+  \pageBreak
+  
+  \section "Lesson XIV"
+  \titledPiece \markup "Le Réveilmatin, by Couperin"
+  \include "art-of-playing-part2-lesson14-couperin.ily"
+  \pageBreak
+  
+  \section "Lesson XV"
+  \titledPiece \markup "Prelude in D minor"
+  \include "art-of-playing-part2-lesson15-prel-dmin.ily"
+  \titledPiece \markup "Larghetto, by Scarlatti"
+  \include "art-of-playing-part2-lesson15-scarlatti.ily"
+  \pageBreak
+  
+  \section "Lesson XVI"
+  \titledPiece \markup "Allemanda, by Corelli"
+  \include "art-of-playing-part2-lesson16-corelli.ily"
+  \pageBreak
+  
+  \section "Lesson XVII"
+  \titledPiece \markup "Sarabanda, by Corelli"
+  \include "art-of-playing-part2-lesson17-corelli.ily"
+  \pageBreak
+  
+  \section "Lesson XVIII"
+  \titledPiece \markup "Prelude in G Major"
+  \include "art-of-playing-part2-lesson18-prel-gmaj.ily"
+  \titledPiece \markup "Ah vous dirai - je maman"	
+  \include "art-of-playing-part2-lesson18-dirai-maman.ily"
+  \pageBreak
+  
+  \section "Lesson XIX"
+  \titledPiece \markup "Triste Raison"
+  \include "art-of-playing-part2-lesson19-triste.ily"
+  %}
+  \section "Lesson XX"
+  \titledPiece \markup "Fal, lal, la. Air in the Cherokee."
+  \include "art-of-playing-part2-lesson20-fal-lal-la.ily"
+  \pageBreak
+  
+  \section "Lesson XXI"
+  \titledPiece \markup "Larghetto, by Pleyel"
+  \include "art-of-playing-part2-lesson21-pleyel.ily"
+  
+  \section "Lesson XXII"
+  \titledPiece \markup "Arietta"
+  \include "art-of-playing-part2-lesson22-arietta.ily"
+  
+  \section "Lesson XXIII"
+  \titledPiece \markup "German Hymn, with Variations by Pleyel"
+  \include "art-of-playing-part2-lesson23-hymn.ily"
+  \include "art-of-playing-part2-lesson23-hymn-v1.ily"
+  \include "art-of-playing-part2-lesson23-hymn-v2.ily"
+  \include "art-of-playing-part2-lesson23-hymn-v3.ily"
