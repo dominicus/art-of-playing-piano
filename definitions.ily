@@ -14,6 +14,10 @@ autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 hideKeyCancellation = \set Staff.printKeyCancellation = ##f
+setFingeringLeft = \set fingeringOrientations = #'(left)
+setFingeringRight = \set fingeringOrientations = #'(right)
+setFingeringDown = \set fingeringOrientations = #'(down)
+allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
 
 setProportionalScore = {
 		  	\override Score.SpacingSpanner #'strict-note-spacing = ##t
