@@ -67,7 +67,7 @@
     
   \chapter "Music Notation"
   %\section "Music Notation"
- %{  
+ %{  %}
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -125,7 +125,7 @@
   
   \titledPiece \markup "Extensions and Contractions etc."
   \partOneExtensionsContractions
-   
+  
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
   
@@ -238,7 +238,7 @@
   \section "Lesson XIX"
   \titledPiece \markup "Triste Raison"
   \include "art-of-playing-part2-lesson19-triste.ily"
-  %}
+  
   \section "Lesson XX"
   \titledPiece \markup "Fal, lal, la. Air in the Cherokee."
   \include "art-of-playing-part2-lesson20-fal-lal-la.ily"
@@ -247,7 +247,7 @@
   \section "Lesson XXI"
   \titledPiece \markup "Larghetto, by Pleyel"
   \include "art-of-playing-part2-lesson21-pleyel.ily"
-  
+  %} 
   \section "Lesson XXII"
   \titledPiece \markup "Arietta"
   \include "art-of-playing-part2-lesson22-arietta.ily"
@@ -258,3 +258,44 @@
   \include "art-of-playing-part2-lesson23-hymn-v1.ily"
   \include "art-of-playing-part2-lesson23-hymn-v2.ily"
   \include "art-of-playing-part2-lesson23-hymn-v3.ily"
+  \pageBreak
+  
+  \section "Lesson XXIV"
+  \titledPiece \markup "Andantino, by Dussek"
+  \include "art-of-playing-part2-lesson24-dussek.ily"
+  \pageBreak
+  
+  \section "Lesson XXV"
+  \titledPiece \markup "Allegro, by Handel"
+  \include "art-of-playing-part2-lesson25-handel.ily"
+  \pageBreak
+  
+  \section "Lesson XXVI"
+  \titledPiece \markup "Minuet in Samson, by Handel"
+  \include "art-of-playing-part2-lesson26-handel.ily"
+  \pageBreak
+  
+  %Arpeggio warning
+  \section "Lesson XXVII"
+  \titledPiece \markup "God Save the Emperor, composed by Dr. Haydn"
+  \include "art-of-playing-part2-lesson27-haydn.ily"
+  \pageBreak
+  
+  \section "Lesson XXVIII"
+  \titledPiece \markup "Rondo in the Gipsy stile, by Dr. Haydn"
+  \include "art-of-playing-part2-lesson28-haydn.ily"
+  \pageBreak
+  
+  \section "Lesson XXIX"
+  \titledPiece \markup "Prelude in E minor"
+  \include "art-of-playing-part2-lesson29-prel-emin.ily"
+  \titledPiece \markup "Tambourin by Rameau"
+  \include "art-of-playing-part2-lesson29-rameau.ily"
+  \pageBreak
+  
+  \section "Lesson XXX"
+  \titledPiece \markup "Prelude in B flat, Major"
+  \include "art-of-playing-part2-lesson30-prel-bfmaj.ily"
+  \titledPiece \markup "Minuetto by Scarlatti"
+  \include "art-of-playing-part2-lesson30-scarlatti.ily"
+  \pageBreak
