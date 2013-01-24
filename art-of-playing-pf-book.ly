@@ -67,7 +67,7 @@
     
   \chapter "Music Notation"
   %\section "Music Notation"
- %{  %}
+ %{  
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -247,7 +247,7 @@
   \section "Lesson XXI"
   \titledPiece \markup "Larghetto, by Pleyel"
   \include "art-of-playing-part2-lesson21-pleyel.ily"
-  %} 
+   
   \section "Lesson XXII"
   \titledPiece \markup "Arietta"
   \include "art-of-playing-part2-lesson22-arietta.ily"
@@ -285,7 +285,7 @@
   \titledPiece \markup "Rondo in the Gipsy stile, by Dr. Haydn"
   \include "art-of-playing-part2-lesson28-haydn.ily"
   \pageBreak
-  
+  %}
   \section "Lesson XXIX"
   \titledPiece \markup "Prelude in E minor"
   \include "art-of-playing-part2-lesson29-prel-emin.ily"
@@ -299,3 +299,21 @@
   \titledPiece \markup "Minuetto by Scarlatti"
   \include "art-of-playing-part2-lesson30-scarlatti.ily"
   \pageBreak
+  
+  \section "Lesson XXXI"
+  \titledPiece \markup "Lindor - an Air"
+  \include "art-of-playing-part2-lesson31-lindor.ily"
+  \pageBreak
+  
+  \section "Lesson XXXII"
+  \titledPiece \markup "Minuet and Trio, By Mozart"
+  \include "art-of-playing-part2-lesson32-mozart.ily" \noPageBreak
+  \include "art-of-playing-part2-lesson32-trio-mozart.ily"
+  \pageBreak
+  
+  \section "Lesson XXXIII"
+  \titledPiece \markup "Gavotta in Otho, by Handel"
+  \include "art-of-playing-part2-lesson33-handel.ily"
+  \pageBreak
+  
+  
