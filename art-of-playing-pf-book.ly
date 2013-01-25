@@ -67,7 +67,7 @@
     
   \chapter "Music Notation"
   %\section "Music Notation"
- %{  
+ %{  %}
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -285,7 +285,7 @@
   \titledPiece \markup "Rondo in the Gipsy stile, by Dr. Haydn"
   \include "art-of-playing-part2-lesson28-haydn.ily"
   \pageBreak
-  %}
+  
   \section "Lesson XXIX"
   \titledPiece \markup "Prelude in E minor"
   \include "art-of-playing-part2-lesson29-prel-emin.ily"
@@ -316,4 +316,51 @@
   \include "art-of-playing-part2-lesson33-handel.ily"
   \pageBreak
   
+  \section "Lesson XXXIV"
+  \titledPiece \markup "Andante with Variations, by Cramer"
+  \include "art-of-playing-part2-lesson34-cramer.ily"
+  \include "art-of-playing-part2-lesson34-cramer-v1.ily"
+  \include "art-of-playing-part2-lesson34-cramer-v2.ily"
+  \include "art-of-playing-part2-lesson34-cramer-v3.ily"
+  \pageBreak
   
+  \section "Lesson XXXV"
+  \titledPiece \markup "Prelude in G minor"
+  \include "art-of-playing-part2-lesson35-prel-gmin.ily"
+  \titledPiece \markup "Allegro, by Scarlatti"
+  \include "art-of-playing-part2-lesson35-scarlatti.ily"
+  \pageBreak
+  %}
+  \section "Lesson XXXVI"
+  \titledPiece \markup "Prelude in D Major"
+  \include "art-of-playing-part2-lesson36-prel-dmaj.ily"
+  \titledPiece \markup "Gavotta, by Corelli"
+  \include "art-of-playing-part2-lesson36-corelli.ily"
+  \pageBreak
+  
+  \section "Lesson XXXVII"
+  \titledPiece \markup "Minuet in Ariadne, by Handel"
+  \include "art-of-playing-part2-lesson37-handel.ily"
+  \pageBreak
+  
+  \section "Lesson XXXVIII"
+  \titledPiece \markup "March in the Occasional Oratorio, by Handel"
+  \include "art-of-playing-part2-lesson38-handel.ily"
+  \pageBreak
+  
+  \section "Lesson XXXIX"
+  \titledPiece \markup "Waltz, by Beethoven"
+  \include "art-of-playing-part2-lesson39-beethoven.ily"
+  \pageBreak
+  
+  \section "Lesson XL"
+  \titledPiece \markup "Allegro, by Corelli"
+  \include "art-of-playing-part2-lesson40-corelli.ily"
+  \pageBreak
+  
+  \section "Lesson XLI"
+  \titledPiece \markup "Prelude in B minor"
+  \include "art-of-playing-part2-lesson41-prel-bmin.ily"
+  \titledPiece \markup "Giga, by Corelli"
+  \include "art-of-playing-part2-lesson41-corelli.ily"
+  \pageBreak
