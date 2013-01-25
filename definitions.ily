@@ -10,6 +10,13 @@ trillFour= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0
 trillThree = \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
 trillTwo = \markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
 trillOne = \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
+trillFourTwo= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
+switchOneTwo= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
+switchOneThree= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "3"}}}
+switchOneFive= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
+switchTwoOne= \markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
+switchThreeOne= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
+switchFourFive= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
 autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
@@ -17,6 +24,7 @@ hideKeyCancellation = \set Staff.printKeyCancellation = ##f
 setFingeringLeft = \set fingeringOrientations = #'(left)
 setFingeringRight = \set fingeringOrientations = #'(right)
 setFingeringDown = \set fingeringOrientations = #'(down)
+setFingeringUp = \set fingeringOrientations = #'(up)
 allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
 
 setProportionalScore = {
