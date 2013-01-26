@@ -17,6 +17,9 @@ switchOneFive= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace
 switchTwoOne= \markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
 switchThreeOne= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
 switchFourFive= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
+switchThreeFive= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
+switchThreeFour= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "4"}}}
+switchFiveFour= \markup{\finger{ \concat{ "5" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "4"}}}
 autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
@@ -26,6 +29,8 @@ setFingeringRight = \set fingeringOrientations = #'(right)
 setFingeringDown = \set fingeringOrientations = #'(down)
 setFingeringUp = \set fingeringOrientations = #'(up)
 allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
+staffUp = \change Staff = "upper"
+staffDown = \change Staff = "lower"
 
 setProportionalScore = {
 		  	\override Score.SpacingSpanner #'strict-note-spacing = ##t
