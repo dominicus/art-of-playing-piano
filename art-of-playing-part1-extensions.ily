@@ -1,4 +1,5 @@
-\version "2.14.2"
+\version "2.16.1"
+\include "definitions.ily"
 
 inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER 
 	    \score {
@@ -61,7 +62,7 @@ inlineScoreExtensionsExTwo = \markup { \general-align #Y #CENTER
 		    	    \startStaff
 		    	    \clef treble
 		    	    \unHideNotes
-		    	    c'8-1 c'4^\markup{\finger{ \concat{ "5" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}} 
+		    	    c'8-1 c'4^\switchFiveOne 
 		    	    c'8-5
 		    	    \bar "||"
 		     }
@@ -78,7 +79,7 @@ inlineScoreExtensionsExThree = \markup { \general-align #Y #CENTER
 	    	     \relative c{
 	    	     	    \cadenzaOn
 		    	    \clef bass
-		    	    c,8-5 c'4^\markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}} c'8_1
+		    	    c,8-5 c'4^\switchOneFive c'8_1
 		    	    \bar "||"
 		     }
 	  \layout {
@@ -92,15 +93,15 @@ inlineScoreExtensionsExThree = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneExtensionsContractions = \markuplines {
+partOneExtensionsContractions = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{  }
     \paragraph{ \inlineScoreExtensionsExOne }
     \paragraph{ \inlineScoreExtensionsExTwo }
     \paragraph{  }
     \paragraph{ 
-    	    \larger "N.B." The \finger{ \concat{ "5" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}} means
-    	    that after striking \larger C  with the \concat{ 4 \super th } finger, the thumb is shifted on the 
+    	    \larger "N.B." The \larger{ \up-tied-lyric \finger 5 \finger 1 }means
+    	    that after striking \larger C  with the \concat{ 5 \super th } finger, the thumb is shifted on the 
     	    key without striking it.
     }
     \paragraph{

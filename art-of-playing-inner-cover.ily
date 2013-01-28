@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 innerCover = \markup {      % HEADER PAGE TEXT
 	\column {

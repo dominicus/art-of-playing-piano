@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXIV.  Andantino, ma Moderato e con espressione, by Dussek.
@@ -69,21 +69,27 @@ LessonXXIVLower= \relative c'{
 	\clef bass
 	\repeat volta 2{
 	%LINE 1
-		\setFingeringLeft <g b>4-2-1 <g b>|<g b,>4.-5-2 <a d,>8-4-1|
+		\setFingeringLeft <g b>4-2-1 <g b>|
+		<g b,>4.-5-2 <a d,>8-4-1|
 		<g b>8. <a fis>16-3-1 <g e>8.-4-2 <a fis d_5>16-3-1|
-		<a fis d>4^( g8-2^) r|\setFingeringLeft <fis-4 d'-1>4 <g-3 d'-1>|
+		<a fis d>4^( g8-2^) r|
+		\setFingeringLeft <fis-4 d'-1>4 <g-3 d'-1>|
 		<c a e>4-5-2-1 <d a d,>|
 		\clef treble <<{\setFingeringLeft <g>8.-5-4-1 fis16-2 g4-1|}\\{<cis, a>2|}>>
 		<fis d>8^\markup{\finger "3-5"}^\markup{\finger "2-3"} <g e>-4-2 <a fis>4-3-1|
 		\clef bass <<{g,8 d g d|}\\{g,2|}>>
 	%LINE 2
-		b'8-1 d,-3 a'-1 d,-3|<g g,>4 <d d,>|<g, g,> r|
-		<b g'>-4-1 <c g'>-3-1|\setFingeringLeft <a d fis>_1_2_5 <g d' g>|
+		b'8-1 d,-3 a'-1 d,-3|
+		<g g,>4 <d d,>|
+		<g, g,> r|
+		<b g'>-4-1 <c g'>-3-1|
+		\setFingeringLeft <a d fis>_1_2_5 <g d' g>|
 		<<{ \setFingeringLeft <c'-1>8. \allowFingeringInStaff b16-2 c4-1|b2|}\\
 		{<fis d>2-4-5|g-3|}>>
 	}
 	\repeat volta 2 {
-		g4-1 <gis e>-3-2|<a a,> <b b,>|
+		g4-1 <gis e>-3-2|
+		<a a,> <b b,>|
 		<<{<c-1>8. b16-2 a8.-1 g16-2|<g-5-1>4_( <fis-2>8_) d8\rest|}\\
 		 {c2|b4. s8|}>>
 		 <b' e,>4-3-1 <b d,>-4-1|

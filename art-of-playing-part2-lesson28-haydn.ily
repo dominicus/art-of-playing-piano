@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXVIII. Rondo in the Gipsy stile, by Dr. Haydn.
@@ -603,8 +603,7 @@ LessonXXVIIILower = \relative c'{
 \score{ % LESSON XXVIII: Rondo de HAYDN PRINT
 	  \new PianoStaff
 	  <<
-		    \new Staff = "upper" % \with {\consists "Span_arpeggio_engraver"}
-			\LessonXXVIIIUpper 
+		    \new Staff = "upper" \LessonXXVIIIUpper 
 		    \new Staff = "lower" \LessonXXVIIILower 
 	  >>
 	  \layout { }

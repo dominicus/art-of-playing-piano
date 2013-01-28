@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXIII. German Hymn - Variation 3, by Pleyel.
@@ -49,15 +49,26 @@ LessonXXIIILowerD=\relative c{
 	\clef bass
 	\repeat volta 2{
 	%LINE 1
-		g8 r b r|d4 r8 b|a r d r|g,4 r|
+		g8 r b r|
+		d4 r8 b|
+		a r d r|
+		g,4 r|
 	%LINE 2
-		g8 r b r|d4 r8 b|a r d r|
+		g8 r b r|
+		d4 r8 b|
+		a r d r|
 	}
 	\alternative{{g,4 r}{g r}}
 	\repeat volta 2{
-		d'8 r b r|e4 r8 a,|d r a r|<d d,>4 r|g,8 r
+		d'8 r b r|
+		e4 r8 a,|
+		d r a r|
+		<d d,>4 r|
+		g,8 r
 	%LINE 4
-		b r|d4 r8 b|a r d r|
+		b r|
+		d4 r8 b|
+		a r d r|
 	}
 	\alternative{{g,4 r}{g r}}
 }

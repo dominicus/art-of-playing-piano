@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXXI. Lindor - an Air.
 
@@ -51,10 +52,9 @@ LessonXXXILower=\relative c{
 	  \layout{}
 }
 \score{ % LESSON XXXI:  Air de LINDOR - MIDI-45
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
-		\unfoldRepeats
 		    \new Staff = "upper" \LessonXXXIUpper
-		\unfoldRepeats
 		    \new Staff = "lower" \LessonXXXILower
 	  >>
 	  \midi {}

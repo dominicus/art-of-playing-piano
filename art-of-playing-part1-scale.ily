@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreScale = \markup { " " \general-align #Y #CENTER 
 	\score{
@@ -128,7 +128,7 @@ inlineScoreExerciseBass = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneScale = \markuplines {
+partOneScale = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph {""}
     \paragraph {Shewing the position, and name of the notes.}

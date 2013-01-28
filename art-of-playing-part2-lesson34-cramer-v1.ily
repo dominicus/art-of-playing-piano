@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXXIV. Andante with Variations by Cramer. (Variation 1)
@@ -11,7 +11,7 @@ LessonXXXIVUpperB=\relative c'{
 	\repeat volta 2{
 	%LINE 1
 		\set Score.measurePosition = #(ly:make-moment 3 8)
-		\stemUp f16 f' \stemNeutral
+		\stemUp f16-\tweak #'stencil ##f\mf f' \stemNeutral
 		d-4 f,-1 bes-2 f-1 c'-3 g-1 a-2 f-1|bes-2 f'-5 d-4  bes-2 f-1 d-2 ees-3 f-4|
 		d-1 f-2 bes-4 g-2 f-1[ a-2] bes-3[ d-5]|\stemDown d-4( f,-1 bes-2 d-4 c-3 a d a) \stemNeutral|
 		\once \override Slur #'control-points = #'( ( 0.6641 . 2.988) ( 7.638 . 6.199) ( 31.105 . 7.527) ( 44.389 . 4.095) )
@@ -42,7 +42,7 @@ LessonXXXIVLowerB=\relative c'{
 	\time 2/4
 	\repeat volta 2{
 		\set Score.measurePosition = #(ly:make-moment 3 8)
-		r8
+		r8-\tweak #'stencil ##f \mf
 		r8 <bes d> <ees ees,> <c f,>|
 		<bes d>4 r8 <f^~ a,>|\stemUp <f bes,>8 d16 ees <d bes>8 bes \stemNeutral|
 		f' f, r fis'^\markup{\italic "rf"}|g g,g'f16 ees|

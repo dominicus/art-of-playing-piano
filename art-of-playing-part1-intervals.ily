@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreSemitones = \markup { " " \general-align #Y #CENTER 
     \score
@@ -102,7 +102,7 @@ inlineScoreHarmonyExample = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneIntervals = \markuplines {
+partOneIntervals = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph {""}
     \paragraph {An \caps interval \normal-text is the distance, or difference between two sounds in point

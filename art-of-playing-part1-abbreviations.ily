@@ -1,4 +1,5 @@
-\version "2.14.2"
+\version "2.16.0"
+\include "definitions.ily"
 
 inlineScoreAbbreviationsExOne = \markup { \general-align #Y #CENTER 
 	    \score {
@@ -275,7 +276,7 @@ inlineScoreAbbreviationsExTen = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneAbbreviations = \markuplines {
+partOneAbbreviations = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph{"                " \inlineScoreAbbreviationsExOne}

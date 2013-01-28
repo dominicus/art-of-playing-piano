@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON IV: Air in Saul de Handel.
 
@@ -21,8 +22,8 @@ LessonIVUpper = \relative c''{
 			b-1 a8-3 [gis-2 a-3 b-4]|gis2.-2|e'-5|c-1|g'-3|e-1|e-5|a4-3 gis-2 a-1|b-3 d8-5 c-4 b-3 a-1|
 			gis4.-2 a8-3 \grace b16-4 a8-3 g16-2 a-3|b4-4 e,-1 d-2|\grace c8-1 c'4-5 b8-4 c-5 a4-3|
 			b-4 gis4.-2 a8-3|a2.-5|g2.-4|
-			e^\markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
-			|a,4-2 g-1 c-3|b-1 e-3 d-1|f-3 e-2 a-5|
+			e^\switchTwoFive |
+			a,4-2 g-1 c-3|b-1 e-3 d-1|f-3 e-2 a-5|
 			g-4 f8-3 e-2 d-1 c-3|b-2 c-3 \preTrill c4.\trill^\trillFour b16-2 c-3|d2-4 r4|g,2.-2|e-1|
 			a'4-3 g-2 c-5|\grace c8-5 b4-4 a8-3 b-4 g4-2|f-1 e-4 d-3|g,4.-1 a16-2 b-3 c4-1|f-5 e-4 d-3|
 			g,4.-1 a16-2 b-3 c4-1|f-3 e-2 d-1|c'-5 b8-4 a-3 g-2 f-1|e4-3 f-4 d-2|c2.-1
@@ -59,8 +60,8 @@ LessonIVLower =  \relative c{
   \layout {  }
 }	
 
-\score { %LESSON IV: MIDI-7
-\unfoldRepeats
+\score { %LESSON IV: MIDI
+\unfoldRepeats \articulate
   \new PianoStaff <<
     \new Staff = "upper" \LessonIVUpper
     \new Staff = "lower" \LessonIVLower

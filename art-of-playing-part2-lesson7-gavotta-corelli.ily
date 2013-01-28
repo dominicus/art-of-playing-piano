@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON VII: Gavotta by Corelli
 
@@ -49,7 +50,7 @@ LessonVIILower= \relative c'{
 	  \layout {}
 }
 \score{ % LESSON VII: Gavotte MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 	    \new Staff = "upper" \LessonVIIUpper
 	    \new Staff = "lower" \LessonVIILower

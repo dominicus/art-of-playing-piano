@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 \include "definitions.ily"
 
@@ -6,7 +6,7 @@
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
    
-partTwoIntroduction = \markuplines {
+partTwoIntroduction = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{ 
     	    To preserve the order of keys, some of the difficult are intermixed with the

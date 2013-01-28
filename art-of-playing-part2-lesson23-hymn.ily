@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXIII. German Hymn, with Variations by Pleyel.
@@ -10,16 +10,31 @@ LessonXXIIIUpperA = \relative c''{
 	\tempo "Andante" 4=80
 	\hideTempo
 	\repeat volta 2{
-		<<{b4-1-4 d-5|a4.(-2-3 b8-2-4)|c4-1-5 a8..-2-4 b32-5|b4.-3-5 b8\rest|
-		   b4 d|a4. b8|c4^\markup{\finger "1-2"}^\markup{\finger 5} a8..-1-4 b32-5|}\\
-		  {d,2|fis4. g8|e4 fis|g4. s8|d2|fis4. g8|e4 c|}>>
+		<<{
+			b4-1-4 d-5|
+			a4.(-2-3 b8-2-4)|
+			c4-1-5 a8..-2-4 b32-5|
+			b4.-3-5 b8\rest|
+		   	b4 d|
+			a4. b8|
+			c4^\switchOneTwo^\markup{\finger 5} a8..-1-4 b32-5|
+		}\\{
+			d,2|
+			fis4. g8|
+			e4 fis|
+			g4. s8|
+			d2|
+			fis4. g8|
+			e4 c|
+		}>>
 		  <g' b,>4.-1-3 r8|
 	}
 	\repeat volta 2{
-		<a fis>4-3-4^(_\< <b fis dis>-2-3-5^)|<g e>4.-1-4^(_\! <a e cis>8-2-3-5^)_\fz|
+		<a fis>4-3-4^(_\< <b fis dis>-2-3-5^)|
+		<g e>4.-1-4^(_\! <a e cis>8-2-3-5^)_\fz|
 		<<{<fis d>4-1-4_\p e8..-2-3 d32-1|}\\{s4  cis|}>>
 		d4.-1 r8_\pp|
-		<<{b'4-1-4 d-5|a4. b8|<c e,>4^\markup{\finger "1-2"}^\markup{\finger 5} a8..-1-4 b32-5|}\\
+		<<{b'4-1-4 d-5|a4. b8|<c e,>4^\switchOneTwo^\markup{\finger 5} a8..-1-4 b32-5|}\\
 		  {d,2|fis4. g8|s4 c,|}>>
 		  <g' b,>4. r8|
 		
@@ -50,7 +65,7 @@ LessonXXIIILowerA = \relative c{
 	  >>
 	  \layout {}
 }
-\score{ % LESSON XXIII: Variations de PLEYEL -Andante MIDI-32
+\score{ % LESSON XXIII: Variations de PLEYEL -Andante MIDI
 	\unfoldRepeats
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXIIIUpperA

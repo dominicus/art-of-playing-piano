@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 
 \include "definitions.ily"
 
@@ -70,15 +70,18 @@ scoreFingeringExerciseFour = \markup { \general-align #Y #CENTER
 		    	    \cadenzaOn
 		    	    \stemDown
 		    	    r16 bes16-3[ a-2 bes-3] c-4[ c-3 bes-2 c-3] d-4[ d-3 c-2 d-3] ees-4[ ees-3 d-2 ees-3] \stemNeutral 
-		    	    \once \override Stem #'transparent = ##t
+		    	    \once \override Stem #'transparent = ##t 
+		    	    \once \override Flag #'transparent = ##t
 		    	    f16-4
 			    \bar "|." \noBreak
 			    r16 f16-3[ a-5 f-3] c-1[ c-3 f-5 c-3] \stemDown a-1[ a-3 c-5 a-3] \stemNeutral 
-			    \once \override Stem #'transparent = ##t
+			    \once \override Stem #'transparent = ##t 
+			    \once \override Flag #'transparent = ##t
 			    f16-1
 			    \bar "|."  \noBreak 
 			    r16 f'16-3[ bes-5 f-3] d-1[ d-3 f-5 d-3] bes!-1[ bes-3 d-5 bes-3] 
-			    \once \override Stem #'transparent = ##t
+			    \once \override Stem #'transparent = ##t 
+			    \once \override Flag #'transparent = ##t
 			    f16-1
 			    \bar "|."
 		     }
@@ -96,7 +99,8 @@ scoreFingeringExerciseFive = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \cadenzaOn
 			    r16 ees16-2[ d-1 ees-2] g-4[ g-2 f-1 g-2] \stemDown bes!-4[ bes-2 a-1 bes-2] ees!-4[ ees-2 d-1 ees-2] \stemNeutral 
-			    \once \override Stem #'transparent = ##t
+			    \once \override Stem #'transparent = ##t 
+			    \once \override Flag #'transparent = ##t
 			    g16-4
 			    \bar "|." \noBreak
 			    s32
@@ -225,10 +229,12 @@ scoreFingeringExerciseNine = \markup { \general-align #Y #CENTER
 			     \bar "|." \noBreak
 			     bes,16-2-2[ c-1-1 d-2-3 ees-3-4] f-4-5[ ees-3-4 d-2-3 c-1-1]
 			     \once \override Stem #'transparent = ##t
+			     \once \override Flag #'transparent = ##t
 			     bes4-2-2
 			     \bar "|." \noBreak
 			     ees16-2-2[ f-1-1 g-2-3 aes-3-4] bes-4-5[ aes-3-4 g-2-3 f-1-1] 
-			     \once \override Stem #'transparent = ##t
+			     \once \override Stem #'transparent = ##t 
+			     \once \override Flag #'transparent = ##t
 			     ees4-2-2
 		    	     \bar "|."
 		     }
@@ -269,7 +275,8 @@ scoreFingeringExerciseEleven = \markup { \general-align #Y #CENTER
 			      gis16-2[ b-3 e-5 d-4] c!-3[ b-2 a-1 g-3]
 			      \bar "|" \noBreak
 			      fis16-2[ a-3 d-5 c] b[ a g f-2] 
-			      \once \override Stem #'transparent = ##t
+			      \once \override Stem #'transparent = ##t 
+			      \once \override Flag #'transparent = ##t
 			      \once \override TextScript #'extra-offset = #'(2.1 . 3.8 )
 			      e4*2-1-\markup{"&"}
 			      \bar "|." \noBreak
@@ -307,6 +314,7 @@ scoreFingeringExerciseTwelve = \markup { \general-align #Y #CENTER
 			     \time 4/4
 			     c'16-5[ g-2 e-1 c'-5] b-4[ f-2 d-1 b'-5] a-4[ e-2 c-1 a'-5]
 			     \once \override Stem #'transparent = ##t
+			     \once \override Flag #'transparent = ##t
 			     \once \override TextScript #'extra-offset = #'(0.4 . 3.4 )
 			     g4-4-\markup{"&"}
 			     \bar "|."
@@ -601,6 +609,7 @@ scoreFingeringExerciseTwentyThree = \markup { \general-align #Y #CENTER
 	    	     	     \noBreak
 	    	     	     \time 1/4
 	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     \once \override Flag #'transparent = ##t
 	    	     	     <c e>4-1-3
 	    	     	     \bar "|." \noBreak
 	    	     	     \time 3/4
@@ -608,6 +617,7 @@ scoreFingeringExerciseTwentyThree = \markup { \general-align #Y #CENTER
 	    	     	     <c' e>16-1-2[ <f a>-3-5 <e g>-2-4 <d f>-1-3]
 	    	     	     <c e>-1-2[ <f a>-3-5 <e g>-2-4 <d f>-1-3]
 	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     \once \override Flag #'transparent = ##t
 	    	     	     <c e>4-1-2 
 	    	     	     \bar "|." \noBreak
 	    	     	     \key f \major
@@ -677,6 +687,7 @@ scoreFingeringExerciseTwentyFive = \markup { \general-align #Y #CENTER
 	    	     	     <b' g'>8-1-5[\( <c e>-2-4 <a f'>-1-5 <b d>-2-4]
 	    	     	     <g e'>-1-5[ <a c>-2-4 <f d'>-1-5 <g b>-2-4]
 	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     \once \override Flag #'transparent = ##t
 	    	     	     <e c'>4-1-5\)
 	    	     	     \bar "|." \noBreak
 	    	     	     \grace s32
@@ -748,7 +759,8 @@ scoreFingeringExerciseTwentySeven = \markup { \general-align #Y #CENTER
 	    	     	     <a cis>-1-3[ <b d>-2-4 <cis e>-3-5 <d fis>-1-2]
 	    	     	     <e gis>-1-3[ <fis a>-2-4 <gis b>-3-5 <fis a>-2-4]
 	    	     	     <e gis>-1-3[ <d fis>-1-2 <cis e>-3-5  <d b>-1-2] 
-	    	     	     \once \override Stem #'transparent = ##t
+	    	     	     \once \override Stem #'transparent = ##t 
+	    	     	     \once \override Flag #'transparent = ##t
 	    	     	     <cis a>4-1-3 |
 	    	     	     \bar "|." \noBreak
 	    	     	     \grace s32
@@ -828,7 +840,7 @@ scoreFingeringExerciseTwentyNine = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneFingeringRightHand = \markuplines {
+partOneFingeringRightHand = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{  }
     \paragraph{ \scoreFingeringExerciseOne " " \scoreFingeringExerciseTwo }

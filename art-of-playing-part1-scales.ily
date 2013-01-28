@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScaleCmaj = \markup { \general-align #Y #CENTER 
     \score {	    	    
@@ -384,7 +384,7 @@ inlineScaleGisMin = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{\larger \concat{"G" \smaller \sharp} minor}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c''{
 		    	    \clef treble
 		    	    \time 3/4
@@ -487,7 +487,7 @@ inlineScaleDesMaj = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{\larger \concat{"D" \smaller \flat} major}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 3/4
@@ -522,7 +522,7 @@ inlineScaleBesMin = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{\larger \concat{"B" \smaller \flat} minor}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 4/4
@@ -557,7 +557,7 @@ inlineScaleAesMaj = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{\larger \concat{"A" \smaller \flat} major}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 4/4
@@ -593,7 +593,7 @@ inlineScaleFmin = \markup { \general-align #Y #CENTER
     	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{F minor}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 3/4
@@ -629,7 +629,7 @@ inlineScaleEesMaj = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{\larger \concat{"E" \smaller \flat} major}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 4/4
@@ -665,7 +665,7 @@ inlineScaleCmin = \markup { \general-align #Y #CENTER
     	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{C minor}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 3/4
@@ -702,7 +702,7 @@ inlineScaleBesMaj = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{\larger \concat{"B" \smaller \flat} major}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 4/4
@@ -738,7 +738,7 @@ inlineScaleGmin = \markup { \general-align #Y #CENTER
     	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{G minor}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c''{
 		    	    \clef treble
 		    	    \time 3/4
@@ -774,7 +774,7 @@ inlineScaleFmaj = \markup { \general-align #Y #CENTER
     <<
     	    \set PianoStaff.instrumentName = \markup{F major}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 4/4
@@ -810,7 +810,7 @@ inlineScaleDmin = \markup { \general-align #Y #CENTER
     	    \override ChoirStaff.SystemStartBracket #'transparent = ##t
     	    \set ChoirStaff.instrumentName = \markup{D minor}
         \new Staff{
-        	#(set-accidental-style 'forget 'Staff)
+        	\accidentalStyle #'Staff "forget"
 		 \relative c'{
 		    	    \clef treble
 		    	    \time 3/4
@@ -884,7 +884,7 @@ inlineScaleLHChromatic = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneMajorMinorScales = \markuplines {
+partOneMajorMinorScales = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
   	  \paragraph{"                     which ought to be practised daily."}
     \paragraph{" "}

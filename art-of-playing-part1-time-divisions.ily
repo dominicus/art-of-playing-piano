@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreBarExample = \markup { " " \general-align #Y #CENTER 
 	    \score {
@@ -387,7 +387,7 @@ inlineScoreTripletsExample = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneTimeAndItsDivisions = \markuplines {
+partOneTimeAndItsDivisions = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph {
     	The \caps bar, made thus \inlineScoreBarExample divides a musical composition into \caps equal

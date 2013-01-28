@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreStaccatissimo = \markup { " " \general-align #Y #CENTER 
     \score
@@ -109,6 +109,7 @@ inlineScoreBaroqueArpeggioSlash = \markup { " " \general-align #Y #CENTER
         	<<{
         		\override NoteHead #'stencil = #(ly:make-stencil(list 'draw-line 0.15 -0.5 -0.4 2 0.4) '(-0.1 . 0.1) '(0.1 . 1))
         		\override Stem #'stencil = ##f
+        		\override Flag #'stencil = ##f
         		b4 s d s
         	}\\{
         		<g, c e> s <g c e g> s
@@ -605,7 +606,7 @@ inlineScoreAppoggiaturaFive = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneStyleGraces = \markuplines {
+partOneStyleGraces = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph{

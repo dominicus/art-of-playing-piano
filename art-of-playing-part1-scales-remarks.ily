@@ -1,10 +1,10 @@
-\version "2.14.2"
+\version "2.16.0"
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneRemarksOnScales = \markuplines {
+partOneRemarksOnScales = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph{ 

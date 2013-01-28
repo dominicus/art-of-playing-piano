@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXXV. Allegro by Scarlatti.
 
@@ -126,7 +127,7 @@ LessonXXXVLowerB=\relative c'{
 	  \layout{}
 }
 \score{ % LESSON XXXV: Allegro de Scarlatti - MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXXVUpperB
 		    \new Staff = "lower" \LessonXXXVLowerB

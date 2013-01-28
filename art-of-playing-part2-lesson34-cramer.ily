@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXXIV. Andante with Variations by Cramer. (ANDANTE)
 
@@ -18,13 +19,13 @@ LessonXXXIVUpperA=\relative c''{
 		\\{s4. \setFingeringRight
 		\once \override Stem #'cross-staff = ##t
 		\once \override Stem #'length = #16
-		\once \override Stem #'flag-style = #'no-flag
+		\once \override Flag #'style = #'no-flag
 		<c,-3 ees-2>8}>>
 		\autoBeamOff \stemUp bes'-2([ d-4] f,-1)\> \autoBeamOn <f ees c>\!|
 		\stemNeutral
 		\once \override Slur #'control-points = #'( ( 2.717 . -2.1736) ( 3.4416 . -2.717) ( 4.7096 . -2.8076) ( 6.0681 . -2.5359) )
-		<f d>8.( a32 g) f8-. <d'bes>-.|<d bes>4( <c a>8)\> <d a>\!|
-		<d bes>8.-2-3 f32-5 ees-4 <d bes>8-2-3( <ees c>-1-4)|
+		<f d>8.( a32 g)-\tweak #'stencil ##f \p f8-. <d'bes>-.|<d bes>4( <c a>8)\> <d a>\!|
+		<d bes>8.-2-3-\tweak #'stencil ##f \p f32-5 ees-4 <d bes>8-2-3( <ees c>-1-4)|
 	%LINE 2
 		<<{\stemUp<d f>8-3-5 f,-1 bes4-5~|<bes e,>8_\markup{\italic "dimin."}[<a f><bes g d><g e bes>]|}\\{s4 r8 d|s2|}>>
 		\set Score.measurePosition = #(ly:make-moment 1 8)
@@ -32,11 +33,11 @@ LessonXXXIVUpperA=\relative c''{
 	}
 	\repeat volta 2{
 		\set Score.measurePosition = #(ly:make-moment 3 8)
-		\stemUp <c' a>8^(
+		\stemUp <c' a>8^(-\tweak #'stencil ##f \p
 		<d bes>[ <ees c><f d>^)<bes bes,>~\<]|
 		<bes bes,>\![ <bes bes,> <bes bes,>] <f d>|
 		<bes g>[ <aes f> <g ees> <f d>]|
-		<f d>8.^\markup{\halign #-3 \musicglyph #"scripts.turn"}
+		<f d>8.^\markup{\halign #-3 \musicglyph #"scripts.turn"}-\tweak #'stencil ##f \turn
 
 		fis16 \autoBeamOff g8 \autoBeamOn <g, f d>|
 	%LINE 3
@@ -53,7 +54,7 @@ LessonXXXIVLowerA=\relative c'{
 	%LINE 1
 		\set Score.measurePosition = #(ly:make-moment 3 8)
 		r8
-		r \change Staff = "upper" \stemDown <f d>_2_4[ <g ees>_1_3] \change Staff = "lower" \setFingeringRight <f,-5>|
+		r \change Staff = "upper" \stemDown <f d>_2_4[-\tweak #'stencil ##f \p <g ees>_1_3] \change Staff = "lower" \setFingeringRight <f,-5>|
 		\stemNeutral <d' bes>-4-1 r r <f, a,>|<f bes,>4 d8 bes|f' f,4 fis8|g g'( f[ ees])|
 	%LINE 2
 		d4. bes8|c[ d bes c]
@@ -64,7 +65,7 @@ LessonXXXIVLowerA=\relative c'{
 		\set Score.measurePosition = #(ly:make-moment 3 8)
 		\change Staff = "upper" \stemDown 
 		f''8_~
-		f[ ees d] \change Staff = "lower" <bes g>-3-2(|
+		f[ ees! d] \change Staff = "lower" <bes g>-3-2(|
 		<a f>^\markup{\finger "4-3"}^\markup{\finger 1}[ <g ees>-4-2 <f d>-5-3]) \change Staff = "upper" bes'_~|
 		bes[ bes bes] <aes bes,>|<aes ees>4_( \autoBeamOff <g ees>8) \autoBeamOn \change Staff = "lower" <g, b,>8(|
 	%LINE 3
@@ -76,17 +77,17 @@ LessonXXXIVLowerA=\relative c'{
 			% extend the stems to reach the other staff
 			\once \override Stem #'length = #16
 			% do not print extra flags
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			% prevent beaming as needed
 			\autoBeamOff
 			g'8
 			\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			<a ees>8
 			\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			\once \override Slur #'control-points = #'( ( 2.117 . 8.966) ( 4.3586 . 8.219) ( 6.4757 . 6.102) ( 7.0984 . 3.237) )
 			<a ees>(
 			bes,,4  <bes'' d,>8)
@@ -103,7 +104,7 @@ LessonXXXIVLowerA=\relative c'{
 	  \layout{}
 }
 \score{ % LESSON XXXIV:  Andante avec Variation de CRAMER - MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXXIVUpperA
 		    \new Staff = "lower" \LessonXXXIVLowerA

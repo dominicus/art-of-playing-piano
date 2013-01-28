@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XL. Allegro by Corelli.
@@ -89,9 +89,9 @@ LessonXLLower=\relative c{
 		   indent = 0.0\cm % remove indent on first staff
 	  }
 }
-\score{ % LESSON XL: Allegro de CORELLI. MIDI-59
-	  \new PianoStaff 
-	  \unfoldRepeats <<
+\score{ % LESSON XL: Allegro de CORELLI. MIDI
+	\unfoldRepeats 
+	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXLUpper
 		    \new Staff = "lower" \LessonXLLower
 	  >>

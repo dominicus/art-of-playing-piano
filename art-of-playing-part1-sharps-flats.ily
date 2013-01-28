@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreChromaticScale = \markup { " " \general-align #Y #CENTER 
 	\column{
@@ -222,6 +222,7 @@ inlineScoreOrderOfSharps = \markup { " " \general-align #Y #CENTER
 		    	    	    \set Staff.instrumentName = \markup{\column{\concat{"The order of " \caps "sharps  "} \line{"  at the clef."}}}
 		    	    	  \clef treble
 		    	    	  \override Stem #'transparent = ##t
+		    	    	  \override Flag #'transparent = ##t
 		    	    	  \override Beam #'transparent = ##t
 		    	    	  \override NoteHead #'transparent = ##t
 		    	    	  fis8 cis gis' dis ais eis' bis
@@ -249,6 +250,7 @@ inlineScoreOrderOfFlats = \markup { " " \general-align #Y #CENTER
 		    	    	    \set Staff.instrumentName = \markup{\column{\concat{"The order of " \caps "flats  "} \line{"  at the clef."}}}
 		    	    	  \clef treble
 		    	    	  \override Stem #'transparent = ##t
+		    	    	  \override Flag #'transparent = ##t
 		    	    	  \override Beam #'transparent = ##t
 		    	    	  \override NoteHead #'transparent = ##t
 		    	    	  bes8 ees aes, des ges, ces fes,
@@ -269,7 +271,7 @@ inlineScoreOrderOfFlats = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneSharpsFlats = \markuplines {
+partOneSharpsFlats = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph {

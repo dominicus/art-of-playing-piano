@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreBlankStaff = \markup { " " \general-align #Y #CENTER 
     \score
@@ -24,6 +24,7 @@ inlineScoreLedgerLines = \markup { " " \general-align #Y #CENTER
         	{
         		\override NoteHead #'transparent = ##t
         		\override Stem #'transparent = ##t
+        		\override Flag #'transparent = ##t
         		a''4 c''' c' a
         	}
         \layout { 
@@ -37,7 +38,7 @@ inlineScoreLedgerLines = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOnePreliminaries = \markuplines {
+partOnePreliminaries = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph {""}
     \paragraph {

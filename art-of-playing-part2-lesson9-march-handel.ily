@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON IX.  March in Judas Maccabeus, by Handel
 
@@ -22,7 +23,7 @@ LessonIXUpper= \relative c'{
 		d8-3 cis-2 d-3 e-4 d4-3 e-4|f2.-5 a,4-1|bes8-2 a-1 bes-2 c-3 bes4-2 c-1|d2.-3 c8-2 ees-4|
 	%LINE4
 		\preTrill d2.\trill^\trillThree c16-1 d-2 ees8-3|d2.-2 c4-1|
-		d8-2 f-4 e-3 g-5 f4-4 e8-3 d-2|c4-1 d8-2 e-3 f4-4 e-3|d-2 e8-3 f-4 g4-5 f-4|
+		d8-2 f-4 e!-3 g-5 f4-4 e8-3 d-2|c4-1 d8-2 e-3 f4-4 e-3|d-2 e8-3 f-4 g4-5 f-4|
 		e-3 d-2 c-1 d-4|bes-2 a8-1 g-2 a4-3 bes-4|\preTrill g2\trill^\trillThree f-1|
 	}
 }
@@ -51,7 +52,7 @@ LessonIXLower= \relative c{
 	 \layout {}
 }
 \score{ % LESSON IX: Judas Handel MIDI-14
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 	    \new Staff = "upper" \LessonIXUpper
 	    \new Staff = "lower" \LessonIXLower

@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON VIII: Air, in Judas Maccabeus, by Handel
 
@@ -8,18 +9,32 @@ LessonVIIIUpper= \relative c''{
 	\clef treble
 	\key f \major
 	\repeat volta 2{
-		c4-5 a8.-3 bes16-4|\grace {a16-3[ bes-4]} c4-5 f,-1|
-		g16-2 a-3 bes-4 c-5 bes8-4 a-3|a4-2 g-1|
-		a16-2 bes-3 c-4 d-5 c8-3 c-2|f4-5 c-2|
-		\grace c16-5 bes8-4 a16-3 bes-4 \preTrill g4\trill^\trillThree |f2-1|
+		c4-5 a8.-3 bes16-4|
+		\grace {a16-3[ bes-4]} c4-5 f,-1|
+		g16-2 a-3 bes-4 c-5 bes8-4 a-3|
+		a4-2 g-1|
+		a16-2 bes-3 c-4 d-5 c8-3 c-2|
+		f4-5 c-2|
+		\grace c16-5 bes8-4 a16-3 bes-4 \preTrill g4\trill^\trillThree |
+		f2-1|
 	}
 	\repeat volta 2{
-		a16-3 g-2 a-3 bes-4 a8-3 a-3|g4-2 f-1|
-		bes8-4 a-3 g-2 f-1|\preTrill f4\trill^\trillThree e-1|
-		d'16-3 cis-2 d-3 e-4 d8-3 e-4|f4-5 d-3|
-		\grace f16-5 e8-4 d16-3 c-2 d8-3 b-1|\preTrill c2\mordent^\trillThree|
-		c4-5 a8.-3 bes16-4|c4 f,|g16 a bes c bes8 a|a4 g|
-		a16 bes c d c8 c|f4 c|\grace c16 bes8 a16 bes g4\trill|f2| 
+		a16-3 g-2 a-3 bes-4 a8-3 a-3|
+		g4-2 f-1|
+		bes8-4 a-3 g-2 f-1|
+		\preTrill f4\trill^\trillThree e-1|
+		d'16-3 cis-2 d-3 e-4 d8-3 e-4|
+		f4-5 d-3|
+		\grace f16-5 e8-4 d16-3 c-2 d8-3 b-1|
+		\preTrill c2\mordent^\trillThree|
+		c4-5 a8.-3 bes16-4|
+		c4 f,|
+		g16 a bes c bes8 a|
+		a4 g|
+		a16 bes c d c8 c|
+		f4 c|
+		\grace c16 bes8 a16 bes g4\trill|
+		f2| 
 	}
 }
 LessonVIIILower = \relative c{
@@ -43,7 +58,7 @@ LessonVIIILower = \relative c{
   \layout {}
 }
 \score{ % LESSON VIII: Judas Handel MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	\new PianoStaff <<
 	    \new Staff = "upper" \LessonVIIIUpper
 	    \new Staff = "lower" \LessonVIIILower

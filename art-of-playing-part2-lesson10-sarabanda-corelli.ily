@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON X. Sarabanda by Corelli.
 
@@ -63,8 +64,8 @@ LessonXLower = \relative c{
 	  >>
 	\layout {}
 }
-\score{ % LESSON X: Sarabande de CORELLI MIDI-15
-	\unfoldRepeats
+\score{ % LESSON X: Sarabande de CORELLI MIDI
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 	    \new Staff = "upper" \LessonXUpper
 	    \new Staff = "lower" \LessonXLower

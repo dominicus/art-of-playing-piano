@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXIX. Tambourin by Rameau.
 
@@ -85,11 +86,18 @@ LessonXXIXLower = \relative c{
 		\set Score.measurePosition = #(ly:make-moment 2 4)
 		<g' b, e,>2 \bar "|."
 }
-\score{ % LESSON XXIX: Tambourin de RAMEAU - PRINT and MIDI-42
+\score{ % LESSON XXIX: Tambourin de RAMEAU - PRINT
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXIXUpper
 		    \new Staff = "lower" \LessonXXIXLower
 	  >>
 	  \layout{}
+}
+\score{ % LESSON XXIX: Tambourin de RAMEAU - MIDI
+	\unfoldRepeats \articulate
+	  \new PianoStaff <<
+		    \new Staff = "upper" \LessonXXIXUpper
+		    \new Staff = "lower" \LessonXXIXLower
+	  >>
 	  \midi {}
 }

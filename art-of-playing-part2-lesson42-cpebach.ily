@@ -1,5 +1,5 @@
 %#(ly:set-option 'old-relative)
-\version "2.14.2"
+\version "2.16.1"
 
 \include "definitions.ily"
 
@@ -29,9 +29,11 @@ LessonXLIIUpperA =  \relative c'' {
 	\stemUp as[-2 as as as] \stemNeutral \staffUp
 	<d' f c'>4^\markup{\tiny ten} \grace es8 
 	\override TextScript #'extra-offset = #'(0.9 . -2.2 )
-	d4^\markup{\musicglyph #"scripts.trill"}^\markup{\musicglyph #"scripts.turn"}
+	\once \override Script #'script-priority = #-100
+	d4\trill\turn
 	\revert TextScript #'extra-offset
-	es16 bes c as g8 f^\markup{\musicglyph #"scripts.trill"}^\markup{\musicglyph #"scripts.turn"}
+	\once \override Script #'script-priority = #-100
+	es16 bes c as g8 f\trill\turn
 	es4 r8 \stemUp bes'\p
 	
 	bes2^~
@@ -90,9 +92,9 @@ LessonXLIIUpperA =  \relative c'' {
 	es es es es
 	
 	<a c g'>4\arpeggio \grace {
-	\override Stem   #'stroke-style = #"grace"
+	\override Flag #'stroke-style = #"grace"
 	bes16 
-	\revert Stem #'stroke-style }
+	\revert Flag #'stroke-style }
 	a4^\prall\turn
 	bes16 f g es d8 c^\prall\turn
 	bes4 r
@@ -101,9 +103,9 @@ LessonXLIIUpperA =  \relative c'' {
 	bes
 	as4 ges
 	\grace {
-	\override Stem   #'stroke-style = #"grace"
+	\override Flag #'stroke-style = #"grace"
 	f16[ as]
-	\revert Stem #'stroke-style }
+	\revert Flag #'stroke-style }
 	ges4 f
 	d'2 ~
 	
@@ -133,15 +135,15 @@ LessonXLIIUpperA =  \relative c'' {
 	ges8 ges ges ges
 	
 	\staffUp \stemNeutral <c' es bes'>4\arpeggio \grace {
-	\override Stem   #'stroke-style = #"grace"
+	\override Flag #'stroke-style = #"grace"
 	des16 
-	\revert Stem #'stroke-style }
+	\revert Flag #'stroke-style }
 	c4^\prall\turn
 	des16 as bes ges f8 es^\prall\turn
 	<bes' d! f bes>4\arpeggio \grace {
-	\override Stem   #'stroke-style = #"grace"
+	\override Flag #'stroke-style = #"grace"
 	es16 
-	\revert Stem #'stroke-style }
+	\revert Flag #'stroke-style }
 	d4^\prall\turn
 	es16 bes ces as g8 f^\prall\turn
 	
@@ -298,9 +300,9 @@ LessonXLIIUpperA =  \relative c'' {
 	as as as as
 	
 	<d' f c'>4\arpeggio \grace {
-	\override Stem   #'stroke-style = #"grace"
+	\override Flag #'stroke-style = #"grace"
 	es16 
-	\revert Stem #'stroke-style }
+	\revert Flag #'stroke-style }
 	d4^\prall\turn
 	es16 bes c as g8 f^\prall\turn
 	es4 r8 bes
@@ -1289,10 +1291,7 @@ LessonXLIILowerB =  \relative c' {
 }
 
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 66 4)
-      }
+    \tempo 4 = 66
     }
 
 

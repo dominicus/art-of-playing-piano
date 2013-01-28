@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXXIV. Andante with Variations by Cramer. (Variation 1)
@@ -15,7 +15,7 @@ LessonXXXIVUpperC= \relative c''{
 		<<{d8 bes32[ c d bes] c8 a32[ bes c a]}
 		\\{s4. 	\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			<ees c>8}>>
 		\stemNeutral
 		bes'8
@@ -42,16 +42,16 @@ LessonXXXIVUpperC= \relative c''{
 		<<{bes[ a bes c]}
 		\\{	\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			f,,8}>>
 		<<{bes'8 aes32[ g aes f] ees8}
 		\\{	\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			f,4(
 			\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			ees8)
 		}>>
 		
@@ -61,12 +61,12 @@ LessonXXXIVUpperC= \relative c''{
 		<<{a,32[ bes c a]}
 		\\{	\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			ees}>>
 		<<{bes'8}
 		\\{	\once \override Stem #'cross-staff = ##t
 			\once \override Stem #'length = #16
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			d,}>>
 		c'32[ bes a g] \autoBeamOff f8 <f ees> \autoBeamOn|
 		<f d> 
@@ -92,7 +92,7 @@ LessonXXXIVLowerC = \relative c'{
 	%LINE 2
 		f8 e32[ f e f] \autoBeamOff \stemUp f,8 \stemNeutral <a'fis>|
 		\autoBeamOn <bes g>4 <bes f>8<a ees>|
-		<bes d,>8 r r g,32[ a bes g]|c8 d32[ e f d] bes8[ c]|
+		<bes d,>8 r r g,32[ a bes g]|c8 d32[ e f d] bes8[ c]
 		\set Score.measurePosition = #(ly:make-moment 1 8)
 		r e32[ f e f] f,8
 	}
@@ -124,7 +124,7 @@ LessonXXXIVLowerC = \relative c'{
 	  >>
 	  \layout {}
 }
-\score{ % LESSON XXXIV:  Variat II.  MIDI-51
+\score{ % LESSON XXXIV:  Variat II.  MIDI
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXXIVUpperC
 		    \new Staff = "lower" \LessonXXXIVLowerC

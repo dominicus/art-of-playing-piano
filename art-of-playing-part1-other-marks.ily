@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScorePauseOneExample =\markup { " " \general-align #Y #CENTER 
     \score
@@ -136,7 +136,7 @@ inlineScoreVoltaBarStartExample =\markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneOtherMarks = \markuplines {
+partOneOtherMarks = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph {

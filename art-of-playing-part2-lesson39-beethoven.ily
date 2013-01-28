@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXXIX. Waltz, by Beethoven.
 
@@ -12,8 +13,10 @@ LessonXXXIXUpperVoltaA= \relative c'''{
 		\set Score.measurePosition = #(ly:make-moment 2 4) a8-5\( fis-4
 		d-2 a-1 fis'-4 d-2 a'-5 fis-4\)
 		cis-2\( a-1 e'-4 cis-2 g'-5 e-4\)|
-		cis-2 a-1 g-2 a-3 cis-5 a-3|d-5[ a-3 fis-2 a-1] a'-5 fis-4|
-		d a fis' d a' fis|cis a e'cis g'e|
+		cis-2 a-1 g-2 a-3 cis-5 a-3|
+		d-5[ a-3 fis-2 a-1] a'-5 fis-4|
+		d a fis' d a' fis|
+		cis a e'cis g'e|
 	%LINE 2
 		cis[ a g a cis a]
 		\set Score.measurePosition = #(ly:make-moment 1 4)
@@ -23,9 +26,12 @@ LessonXXXIXUpperVoltaA= \relative c'''{
 		\set Score.measurePosition = #(ly:make-moment 2 4)
 		d8-5 cis-4
 		d-5[ b-3 gis-2 e-1]  d'-5 cis-4|
-		d[ b gis e]  d' cis|d[ b gis e] e'-5 cis-4|
-		gis-2[ a-1 gis a] a'-5 fis-4|d-2 a fis'd a' fis|
-		cis a e'cis g'e|cis[ a g a cis a]|
+		d[ b gis e]  d' cis|
+		d[ b gis e] e'-5 cis-4|
+		gis-2[ a-1 gis a] a'-5 fis-4|
+		d-2 a fis'd a' fis|
+		cis a e'cis g'e|
+		cis[ a g a cis a]|
 	}
 	%LINE 3
 	\alternative{
@@ -179,9 +185,9 @@ LessonXXXIXLowerVoltaA=\relative c'{
 	  >>
 	  \layout{}
 }
-\score{ % LESSON XXXIX: Walze de Beethoven. MIDI-58
-	  \new PianoStaff 
-	  \unfoldRepeats <<
+\score{ % LESSON XXXIX: Walze de Beethoven. MIDI
+	\unfoldRepeats \articulate
+	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXXIXUpperVoltaA
 		    \new Staff = "lower" \LessonXXXIXLowerVoltaA
 	  >>

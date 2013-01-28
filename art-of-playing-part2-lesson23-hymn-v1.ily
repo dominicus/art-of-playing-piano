@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXIII. German Hymn - Variation 1, by Pleyel.
@@ -35,28 +35,40 @@ LessonXXIIILowerB = \relative c'{
 	\time 2/4
 	\repeat volta 2{
 	%LINE 1
-		g16-. g-. g8-. b16-. b-. b8-.| \set fingeringOrientations = #'(left) <d-1> d d b-2|
-		a16-3 a a8 \set fingeringOrientations = #'(left) <d-1>16 d d8|
-		g,-1 d-2 g,-5 r|g'16 g g8 b16 b b8|d d d b|a16 a a8 d16 d d8|
+		g16-. g-. g8-. b16-. b-. b8-.|
+		\setFingeringLeft <d-1> d d b-2|
+		a16-3 a a8 \setFingeringLeft <d-1>16 d d8|
+		g,-1 d-2 g,-5 r|
+		g'16 g g8 b16 b b8|
+		d d d b|
+		a16 a a8 d16 d d8|
 	%LINE 2
 		g, g g r|
 	}
 	\repeat volta 2 {
-		d'16 d d8 b16 b b8|e-1 e e a,|d16 d d8 a16 a a8|d, d d r|g16 g g8 b16 b b8|d d d b|
-		a16 a a8 d16 d d8|g, g g r|
+		d'16 d d8 b16 b b8|
+		e-1 e e a,|
+		d16 d d8 a16 a a8|
+		d, d d r|
+		g16 g g8 b16 b b8|
+		d d d b|
+		a16 a a8 d16 d d8|
+		g, g g r|
 	}
 }
 \score{ % LESSON XXIII: Variat. I PRINT
 	  \new PianoStaff <<
 	  \set PianoStaff.instrumentName = \markup {
 						\column { \center-align "Variat."
-							\line {\center-align "I"} } }
+							\line {\center-align "I"}
+						}
+	  }
 		    \new Staff = "upper" \LessonXXIIIUpperB
 		    \new Staff = "lower" \LessonXXIIILowerB
 	  >>
 	  \layout {}
 }
-\score{ % LESSON XXIII: Variat. I MIDI-33
+\score{ % LESSON XXIII: Variat. I MIDI
 	\unfoldRepeats
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXIIIUpperB

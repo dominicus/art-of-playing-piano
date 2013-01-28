@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 \include "definitions.ily"
 
@@ -39,9 +39,9 @@ scoreFingeringExerciseThirtyOne = \markup { \general-align #Y #CENTER
 	    	     	     \stemNeutral
 	    	     	     \bar "|." \noBreak
 	    	     	     \time 3/4
-	    	     	     c,,16-5[ c'-1 ees-4 g-2] c-1[ g-2 ees-4 c-1] \once \override Stem #'transparent = ##t c,4-5
+	    	     	     c,,16-5[ c'-1 ees-4 g-2] c-1[ g-2 ees-4 c-1] \once \override Stem #'transparent = ##t \once \override Flag #'transparent = ##t c,4-5
 	    	     	     \bar "|." \noBreak
-	    	     	     e'!16-5-4 f-4-3 g-3-2 a-1-1 bes-2-2 a-1-1 g-3-2 f-4-3 \once \override Stem #'transparent = ##t e4-5-4
+	    	     	     e'!16-5-4 f-4-3 g-3-2 a-1-1 bes-2-2 a-1-1 g-3-2 f-4-3 \once \override Stem #'transparent = ##t \once \override Flag #'transparent = ##t e4-5-4
 	    	     	     \bar "|."
 		     }
 	  \layout {
@@ -97,7 +97,7 @@ scoreFingeringExerciseThirtyThree = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneFingeringLeftHand = \markuplines {
+partOneFingeringLeftHand = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{  }
     \paragraph{ \scoreFingeringExerciseThirty }

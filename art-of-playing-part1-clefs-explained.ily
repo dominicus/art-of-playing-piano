@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 inlineScoreTenorClefExp = \markup { " " \general-align #Y #CENTER 
 	    \score {
@@ -221,7 +221,7 @@ inlineScoreTrebleClefSnip = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneClefsExplained = \markuplines {
+partOneClefsExplained = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph { \line {
     \inlineScoreTenorClefExp} }

@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XIII. Minuet and Trio, by Mozart.  TRIO
 
@@ -69,7 +70,7 @@ LessonXIIILowerB= \relative c{
 	  \layout {}
 }
 \score{ % LESSON XIII: Trio de MOZART. MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 	    \new Staff = "upper" \LessonXIIIUpperB
 	    \new Staff = "lower" \LessonXIIILowerB

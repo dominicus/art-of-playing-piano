@@ -5,10 +5,11 @@
 %%
 %}
 
-\version "2.14.2"
+\version "2.16.1"
 
 %% INCLUDED FILES
   \include "book-titling.ily"
+  \include "definitions.ily"
   \include "art-of-playing-inner-cover.ily"
   \include "art-of-playing-part1-preliminaries.ily"
   \include "art-of-playing-part1-clefs.ily"
@@ -62,7 +63,7 @@
   }
   %% Table of contents
   \bookpart{
-  \markuplines \table-of-contents
+  \markuplist \table-of-contents
   }
     
   \chapter "Music Notation"
@@ -91,7 +92,7 @@
   
   \titledPiece \markup "Sharps, Flats, etc."
   \partOneSharpsFlats
-  
+  %}
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
@@ -145,7 +146,7 @@
   \section "Lesson II"
   \titledPiece \markup "Aria"
   \include "art-of-playing-part2-lesson2-aria.ily"
-  
+  %{ %}
   \section "Lesson III"
   \titledPiece \markup "Air, in Atalanta, by Handel"
   \include "art-of-playing-part2-lesson3-air-handel.ily"
@@ -330,7 +331,7 @@
   \titledPiece \markup "Allegro, by Scarlatti"
   \include "art-of-playing-part2-lesson35-scarlatti.ily"
   \pageBreak
-  %}
+  
   \section "Lesson XXXVI"
   \titledPiece \markup "Prelude in D Major"
   \include "art-of-playing-part2-lesson36-prel-dmaj.ily"
@@ -364,3 +365,9 @@
   \titledPiece \markup "Giga, by Corelli"
   \include "art-of-playing-part2-lesson41-corelli.ily"
   \pageBreak
+  
+  \section "Lesson XLII"
+  \titledPiece "Rondo by C.P.E. Bach"
+  %\include "art-of-playing-part2-lesson42-cpebach.ily"
+  \pageBreak
+  %}

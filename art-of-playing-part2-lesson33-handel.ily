@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXXIII. Gavotta in Otho, by Handel.
 
@@ -12,8 +13,8 @@ LessonXXXIIIUpper=\relative c''{
 		\set Score.measurePosition = #(ly:make-moment 2 4)
 		d4-2 g-5
 		\grace g8-5 f4-4 ees8-3 d-2 c4-1 d8-4 bes-2|
-		a4^3_\prallmordent g8-2 f-1 bes-3 f-1 bes-3 d-5|c-4 f,-1 a-2 c-4 bes-3 f bes d|
-		c-4 f, a c bes4-2 g'-5|\noPageBreak 
+		a4^3_\prallmordent-\tweak #'stencil ##f \prallmordent g8-2 f-1 bes-3 f-1 bes-3 d-5|c-4 f,-1 a-2 c-4 bes-3 f bes d|
+		c-4 f, a c bes4-2 g'-5| 
 		\grace g8-5 f4-4 ees8 d c4 d8 bes|
 	%LINE 2
 		a4\prallmordent g8
@@ -33,9 +34,9 @@ LessonXXXIIIUpper=\relative c''{
 	%LINE 3
 		<<{<c' g>2-1-2-5 s|}\\{e, c'4^\markup{\finger 1}bes'^\markup{\finger 4}|}>>
 		a-3\prallmordent g8-2 f-1 g4-3 a8-4 f-2|e4\prallmordent-3 d8-2 c-1 \grace c8-4 bes4-3 a8-2 g-1|
-		a4-3 bes8-4 c-5 a4-3 g8\prall-2 f-1|f2-1 a'4-5 d,-1|cis\prallmordent-3 b8-2 a-1 a'4-5 d,-1|\noPageBreak
+		a4-3 bes8-4 c-5 a4-3 g8\prall-2 f-1|f2-1 a'4-5 d,-1|cis\prallmordent-3 b8-2 a-1 a'4-5 d,-1|
 	%LINE 4
-		cis4\prallmordent-3 b8-2 a-1 f'-4 a,-1 d-2 f-3|bes-5 d,-1 g-3 bes-5 e,-2 c-1 e-2 g-4|\noPageBreak
+		cis4\prallmordent-3 b8-2 a-1 f'-4 a,-1 d-2 f-3|bes-5 d,-1 g-3 bes-5 e,-2 c-1 e-2 g-4|
 		a-5 c,-1 f-3 a-5 d,4-1 bes'-5|\grace bes 8-5 a4-4 g8-3 f-2 \preTrill e2\trill^\trillFour|
 		<<{d2-1-2-4 s|}\\{<a f> d4^\markup{\finger 2} g^\markup{\finger 5}|}>>
 		\grace g8 f4 ees8 d c4 d8 bes|
@@ -57,51 +58,51 @@ LessonXXXIIILower=\relative c{
 	\repeat volta 2{
 	%LINE 1
 		\set Score.measurePosition = #(ly:make-moment 2 4)
-		bes4-5 ees-2 \noPageBreak
-		d-3 bes-5 ees-2 g-1|\noPageBreak
-		f-2 ees-3 d-1 bes-3|\noPageBreak
-		<f' f,>2 d4-2 bes-3|\noPageBreak
-		<f' f,>2 d4-4 ees-3|\noPageBreak
-		f-2 bes-1 ees,-3 c-5|\noPageBreak
+		bes4-5 ees-2 
+		d4-3 bes-5 ees-2 g-1|
+		f4-2 ees-3 d-1 bes-3|
+		<f' f,>2 d4-2 bes-3|
+		<f' f,>2 d4-4 ees-3|
+		f-2 bes-1 ees,-3 c-5|
 	%LINE 2
-		f4-2 d-5 g-2 a-1|\noPageBreak
-		bes-2 ees,-5 f-1 f,-5|\noPageBreak
+		f4-2 d-5 g-2 a-1|
+		bes4-2 ees,4-5 f4-1 f,4-5
 		\set Score.measurePosition = #(ly:make-moment 2 4)
-		<<{<f'd>2-3-2-1}\\{bes,}>>\noPageBreak
+		<<{<f'd>2-3-2-1}\\{bes,}>>
 	}
 	\repeat volta 2{
 		\set Score.measurePosition = #(ly:make-moment 2 4)
-		a'4-1 g-2 \noPageBreak
-		f-3 a-1 bes-2 g-4|\noPageBreak
-		c2-1 f,8-3 c-5 f-3 a-1|\noPageBreak
-		g-2 c,-5 g'-1 bes-2 a-1 c,-5 f-3 a-1|\noPageBreak
+		a'4-1 g-2 
+		f-3 a-1 bes-2 g-4|
+		c2-1 f,8-3 c-5 f-3 a-1|
+		g-2 c,-5 g'-1 bes-2 a-1 c,-5 f-3 a-1|
 	%LINE 3
-		g8-2 c,-5 e-4 g-2 a4-1 g-2|\noPageBreak
-		f-3 a-1 bes-2 g-4|\noPageBreak
-		c-1 a-2 d,-5 e-3|\noPageBreak
-		f-1 bes,-3 c-1 c,-5|\noPageBreak
-		f8-3 c'-1 d-3 e-2 f4-1 g-2|\noPageBreak
-		<<{a2 s|\noPageBreak}\\{a, f'4^\markup{\finger 3} g^\markup{\finger 2}|}>>
+		g8-2 c,-5 e-4 g-2 a4-1 g-2|
+		f-3 a-1 bes-2 g-4|
+		c-1 a-2 d,-5 e-3|
+		f-1 bes,-3 c-1 c,-5|
+		f8-3 c'-1 d-3 e-2 f4-1 g-2|
+		<<{a2 s|}\\{a, f'4^\markup{\finger 3} g^\markup{\finger 2}|}>>
 	%LINE 4
-		<<{a2 s|\noPageBreak
-		bes-3-2 s4 c,-5|\noPageBreak
-		a'2-3-1 s|\noPageBreak}
+		<<{a2 s|
+		bes-3-2 s4 c,-5|
+		a'2-3-1 s|}
 		\\{a,2 d'4^\markup{\finger 1} d,^\markup{\finger 5}|g2 c4^\markup{\finger 1}s|
 		   f,2 bes4^\markup{\finger 2} g^\markup{\finger 3}|}>>
-		   a4-1 d,-4 a'-1 a,-5|\noPageBreak
-		<<{<a'f>2-3-2-1 s4 <ees ees,>|\noPageBreak}
+		   a4-1 d,-4 a'-1 a,-5|
+		<<{<a'f>2-3-2-1 s4 <ees ees,>|}
 		\\{d2 <bes' bes,>4 s|}>>
-		<d, d,><bes bes,><ees ees,><c c,>|\noPageBreak
-		<f f,>2 bes8-3 f-5 bes-3 d-1|\noPageBreak
+		<d, d,><bes bes,><ees ees,><c c,>|
+		<f f,>2 bes8-3 f-5 bes-3 d-1|
 	%LINE 5
-		c8-2 f,-5 c'-1 ees-2 d-1 f,-5 bes-3 d-1|\noPageBreak
-		c-2 f,-5 a-3 c-1 d,4-5 ees-4|\noPageBreak
-		f-3 bes-2 ees,-4 c-5|\noPageBreak
-		f-3 d-5 g-2 a-1|\noPageBreak
-		bes-2 ees,-5 f-1 f,-5|\noPageBreak
+		c8-2 f,-5 c'-1 ees-2 d-1 f,-5 bes-3 d-1|
+		c-2 f,-5 a-3 c-1 d,4-5 ees-4|
+		f-3 bes-2 ees,-4 c-5|
+		f-3 d-5 g-2 a-1|
+		bes-2 ees,-5 f-1 f,-5
 		\set Score.measurePosition = #(ly:make-moment 2 4)
 		<<{<f'd>2-3-2-1}\\{bes,}>>
-		\noPageBreak
+		
 	}
 }
 \score{ % LESSON XXXIII:  Gavotte in Otho de HANDEL - PRINT
@@ -112,7 +113,7 @@ LessonXXXIIILower=\relative c{
 	  \layout{}
 }
 \score{ % LESSON XXXIII:  Gavotte in Otho de HANDEL - MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXXIIIUpper
 		    \new Staff = "lower" \LessonXXXIIILower

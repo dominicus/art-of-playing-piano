@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON VI: Allegro by Corelli
 
@@ -82,11 +83,18 @@ LessonVILower = \relative c{
 		\bar "|."		
 }
 
-\score{ % LESSON VI: PRINT & MIDI-9
-			  \new PianoStaff <<
+\score{ % LESSON VI: PRINT
+	\new PianoStaff <<
 	    \new Staff = "upper" \LessonVIUpper
 	    \new Staff = "lower" \LessonVILower
 	  >>
 	  \layout {}
+}
+\score{ % LESSON VI: MIDI
+	\unfoldRepeats \articulate
+	\new PianoStaff <<
+	    \new Staff = "upper" \LessonVIUpper
+	    \new Staff = "lower" \LessonVILower
+	  >>
 	  \midi {}
 }

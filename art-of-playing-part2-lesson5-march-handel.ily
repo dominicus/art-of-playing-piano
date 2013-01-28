@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON V: Dead March in Saul de Handel.
 
@@ -79,7 +80,7 @@ LessonVLower = \relative c{
 		r a r cis-2|
 	%LINE 5
 		d8-1 g,-3 a4-2 d,-5 r| c' r c-4 c-4| f8-1 e-2 d-1 c-2 g4-5 
-		\preTrill g8.\trill^\markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "3"}}}
+		\preTrill g8.\trill^\switchTwoThree
 		f16-4|
 		
 		e4-5 r e e'-1| d8-2 c-1 g4-2 <c c,> r|
@@ -94,12 +95,18 @@ LessonVLower = \relative c{
 	\bar "|."	
 	}
 	
-\score{ % LESSON V: PRINT & MIDI
+\score{ % LESSON V: PRINT
 	\new PianoStaff <<
 	    \new Staff = "upper" \LessonVUpper
 	    \new Staff = "lower" \LessonVLower
 	  >>
   \layout { }
-  \midi { }
 }			
-
+\score{ % LESSON V: MIDI
+	\unfoldRepeats \articulate
+	\new PianoStaff <<
+	    \new Staff = "upper" \LessonVUpper
+	    \new Staff = "lower" \LessonVLower
+	  >>
+  \midi { }
+}

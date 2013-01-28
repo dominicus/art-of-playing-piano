@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXXVII. Minuet in Ariadne, by Handel.
 
@@ -16,14 +17,14 @@ LessonXXXVIIUpperABegToSegno=\relative c''{
 	%LINE 2
 		\grace g8-5 fis4-4 e16-2 d8.-1 g16-3 a b8|
 		a4-4 a8-4 g-3 g-4 fis-3|\grace fis8-4 <e cis>2.-2-3|
-		a2^\markup{\finger "5-2"} b16-3( cis d8)|
+		a2^\switchFiveTwo b16-3( cis d8)|
 		\grace d8 cis4 b16 a8. g4-1|fis-3 e8 d cis-3 b|a2.|
 		%\once \override Slur #'control-points = #'( ( 0.5977 . 2.291) ( 3.8854 . 3.387) ( 9.1656 . 3.287) ( 11.457 . 2.391) )
 		d4-5\p( d,-1 e)|\grace g8-4 fis4-3( e8 d) g4|
 	%LINE 3
 		fis8-3( e-2) \preTrill e4.\trill^\trillThree d8-1|d2 r4|d2.-2_\pp|
 		e2-3 fis4|
-		g4-5 \preTrill e4.\trill^\markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}} d8-1|
+		g4-5 \preTrill e4.\trill^\trillFourTwo d8-1|
 		d2.\arpeggio-2-3-5|
 		\once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
 		\mark \markup { \musicglyph #"scripts.segno" }
@@ -35,14 +36,14 @@ LessonXXXVIIUpperASegnoToFine=\relative c'{
 		a4-1 d fis16 e8.|\grace g8 fis4 e16 d8. g16 a b8|
 		<<{a4-2-4 a8-3-5 g-2-4 g-3-5 fis-1-4|\grace fis8-4 e2.-2-3|}
 		\\{fis4 fis8 e e d|cis2.|}>>
-		a'2^\markup{\finger "5-2"} b16-3 cis d8|d16 cis8. b16 a8. g4-1|
+		a'2^\switchFiveTwo b16-3 cis d8|d16 cis8. b16 a8. g4-1|
 		fis-3 e8-2 d-1 \grace d-4 cis-3 b-2|a2.|
 		%\once \override Slur #'control-points = #'( ( 0.7472 . 2.117) ( 2.6152 . 3.362) ( 7.0984 . 3.486) ( 9.4645 . 2.366) )
 		d4(\pp d,e^)|
 	%LINE 5
 		\grace g8 fis4( e8 d) g4|fis8( e) e4.\trill d8|d2 r4|
 		d2.-2\f|e2-3 fis4-4|
-		\grace {b,16-1[ e-3]} g4-5 \preTrill e4.\trill^\markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}} d8-1|
+		\grace {b,16-1[ e-3]} g4-5 \preTrill e4.\trill^\trillFourTwo d8-1|
 		d2.\arpeggio_\markup{\italic\left-align "Fine"} |\bar "|."
 		\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
 		\override Score.RehearsalMark #'direction = #UP
@@ -117,6 +118,7 @@ LessonXXXVIILowerB=\relative c,{
 	  \layout{\context { \Staff \consists "Span_arpeggio_engraver"}}
 }
 \score{ % LESSON XXXVII: Menuet de Handel MIDI
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 		\set PianoStaff.connectArpeggios = ##t
 		\new Staff = "upper" {	\LessonXXXVIIUpperA

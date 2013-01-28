@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XVII.  Sarabanda, by Corelli.
@@ -15,7 +15,7 @@ LessonXVIIUpper = \relative c'' {
 		  {d, cis|f e|f d|d cis|}>>
 	}
 	\repeat volta 2{
-		<cis e>-2-3 <d f>^1^\trillFour|
+		<cis e>-2-3 <d f>^1^\switchFourThree|
 	%LINE 2
 		<e g>4.-2-4 <f a>-1-3|
 		<a c>8-3-5 <g bes>-2-4 <f a>-1-3 <e g>-1-3 <f a>-2-4 <g bes>-3-5|

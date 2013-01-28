@@ -1,5 +1,6 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 %LESSON III. Air del'Opera Atalante de HANDEL
 
@@ -52,7 +53,7 @@ LessonIIILower = \relative c'{
   \layout { }
 }
 \score { % LESSON III (MIDI)
-  \unfoldRepeats
+  \unfoldRepeats \articulate
   \new PianoStaff <<
     \new Staff = "upper" \LessonIIIUpper
     \new Staff = "lower" \LessonIIILower

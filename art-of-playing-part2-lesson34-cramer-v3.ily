@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.1"
 \include "definitions.ily"
 
 % LESSON XXXIV. Andante with Variations by Cramer. (Variation 3)
@@ -33,7 +33,7 @@ LessonXXXIVUpperD= \relative c''{
 	\repeat volta 2{
 		\times 2/3{
 			\stemNeutral
-			c''16-3[ a-2 f-1]  d'-4[ bes-2 f-1]  ees'-5[ c-3 f,-1]  f'-5[ d-4 a-1]  bes-2[ c-4 bes-3]
+			c''16-3[ a-2 f-1]-\tweak #'stencil ##f \f  d'-4[ bes-2 f-1]  ees'-5[ c-3 f,-1]  f'-5[ d-4 a-1]  bes-2[ c-4 bes-3]
 	%LINE 3
 			a-2[ bes-4 a-3]  g-2[ a-4 g-3]  f-2[ d-1 ees-2]  
 			\once \override Slur #'control-points = #'( ( 0.9132 . 2.988) ( 9.0494 . 6.309) ( 28.974 . 5.479) ( 39.352 . 2.905) )
@@ -54,12 +54,12 @@ LessonXXXIVUpperD= \relative c''{
 	}
 	\set Score.measurePosition = #(ly:make-moment 3 8)
 	\change Staff = "upper"
-	f''8
+	f''8-\tweak #'stencil ##f \f
 	<<{d <bes' bes,>[ <c c,> <a a,>]}
 	\\{s4.                     
 		\once \override Stem #'cross-staff = ##t
 		\once \override Stem #'length = #16
-		\once \override Stem #'flag-style = #'no-flag
+		\once \override Flag #'style = #'no-flag
 		<ees, c>8}>>
 	\grace bes'16 \stemDown bes'8.( d32 c) bes( a g f ees d c bes)
 	<<{<g'bes,>8 bes,\rest <a f ees c> bes\rest}
@@ -91,10 +91,10 @@ LessonXXXIVLowerD= \relative c{
 		\set Score.measurePosition = #(ly:make-moment 3 8)
 		<c'f,>8
 		<d bes>[ <c f,> <bes d,>] \clef treble 
-		<<{g'  %{LINE 3  %}  <a f>8[ <g ees> <f d>]}
+		<<{ \ignoreClashNote g'  %{LINE 3  %}  <a f>8[ <g ees> <f d>]}
 		\\{
 			\stemUp
-			\once \override Stem #'flag-style = #'no-flag
+			\once \override Flag #'style = #'no-flag
 			bes,~ \stemDown bes4.}>> r8
 		r c'-.[ bes-. aes-.]
 		<aes f bes,>4^( <g ees>8) r

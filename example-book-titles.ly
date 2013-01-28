@@ -1,5 +1,5 @@
 %%%% Here's an example file that use the above functions.
-\version "2.14.2"
+\version "2.16.0"
 
   \header {
     title = "The Title"
@@ -21,7 +21,7 @@
   
   %% Table of contents
   \pageBreak
-  \markuplines \table-of-contents
+  \markuplist \table-of-contents
   
   %% 1st Chapter
   \chapter "Act I"
