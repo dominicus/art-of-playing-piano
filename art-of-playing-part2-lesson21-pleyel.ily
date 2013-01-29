@@ -1,5 +1,6 @@
 \version "2.16.1"
 \include "definitions.ily"
+\include "articulate.ly"
 
 % LESSON XXI. Larghetto, by Pleyel.
 
@@ -12,9 +13,9 @@ LessonXXIUpper = \relative c''{
 		\repeat volta 2{
 		%LINE 1
 			<<{
-				b2-1-3 b4. d8-3-5|
+				b2-1-3-\tweak #'stencil ##f \mf b4.-\tweak #'stencil ##f \turn d8-3-5|
 				d2-3-5( c4-2-4) b4\rest|
-				a2-2-4 a4.-2-4 c8-3-5|
+				a2-2-4 a4.-2-4-\tweak #'stencil ##f \turn c8-3-5|
 			   	c2-3-5( b4-2-4) b4\rest|
 				g'2-1-5( fis4-4 e-3|
 				d4.^\switchTwoFour c8-3\> b4-2) b4\rest\!|
@@ -38,17 +39,17 @@ LessonXXIUpper = \relative c''{
 			<<{b2-3-5( a4-2-4) b4\rest|}\\{g2( fis4) s4|}>>
 		}
 		\repeat volta 2{
-			<<{a2-2_\p a4.-2 a8-2|}\\{s2. s8^\turn s8|}>>|b4-1 b'8-5 a g fis e d-3|
+			<<{a2-2_\p a4.-2-\tweak #'stencil ##f \turn a8-2|}\\{s2. s8^\turn s8|}>>|b4-1 b'8-5 a g fis e d-3|
 			<<{s2. s8^\turn s8|}\\
-			{cis2^\markup{\finger 2}_\markup{\italic "cresc."} cis4.^\markup{\finger 2} cis8^\markup{\finger 2}|}>>|
+			{cis2^\markup{\finger 2}_\markup{\italic "cresc."} cis4.^\markup{\finger 2}-\tweak #'stencil ##f \turn cis8^\markup{\finger 2}|}>>|
 			d4-1 d'8-5 cis b a g fis-2|
 			<<{s2. s8^\turn s8|}\\
-			{\grace s8_\f e2^\markup{\finger 1} e4.^\markup{\finger 3} e8^\markup{\finger 1}|}>>
+			{\grace s8_\f e2^\markup{\finger 1} e4.^\markup{\finger 3}-\tweak #'stencil ##f \turn e8^\markup{\finger 1}|}>>
 			fis8-2 a-3 d-5 a-3 b-5 fis-2 g-4 e-2|d2-1 \grace fis16-3 e8-2 d-1 e-2 fis-3|
 		%LINE 3
 			d4-1 <fis a>8-.-3-5_\p( <e g>-.-2-4 <d fis>-.-1-3 <c e>-.-1-3 <b d>-.-1-3 <a c>-.-1-3)|
-			<<{	b2-1-3 b4.-1-3 d8|
-				d2( c4) b4\rest|a2 a4. c8|
+			<<{	b2-1-3 b4.-1-3-\tweak #'stencil ##f \turn d8|
+				d2( c4) b4\rest|a2 a4.-\tweak #'stencil ##f \turn c8|
 				c2( b4) b4\rest|
 			   	\grace s16_\f g'2( fis4 e|
 			   	d4.\> c8 b4)\! b8\rest s8|
@@ -116,7 +117,7 @@ LessonXXILower = \relative c'{
 	  \layout {}
 }
 \score{ % LESSON XXI: Larghetto de PLEYEL MIDI
-	\unfoldRepeats
+	\unfoldRepeats \articulate
 	  \new PianoStaff <<
 		    \new Staff = "upper" \LessonXXIUpper
 		    \new Staff = "lower" \LessonXXILower

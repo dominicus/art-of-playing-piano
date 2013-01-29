@@ -44,7 +44,7 @@ LessonXIIUpperMIDI=\relative c''{
 	\tempo 4=70
 	\hideTempo
 	\clef treble
-		<a f>4.-1-3 \grace c16-5 <bes g>8-2-4 <a f>-1-3 <bes g>-2-4|
+		<a f>4.-1-3-\tweak #'stencil ##f \mf \grace c16-5 <bes g>8-2-4 <a f>-1-3 <bes g>-2-4|
 		<<{c4-1-3 f8-5 f4-1-5}\\{a,4. a4}>> r8|f4.-2 \grace a16-4 g8-3 f-2 g-3|
 		<a f>8-2-4 <bes g>-3-5 <a f>8-2-4 <g e>4-1-3 r8|<a f>4.-1-3\< \grace c16 <bes g>8 <a f> <bes g>\!|
 		<<{c4 f8 f4}\\{a,4. a4}>> r8|<<{a4.-2-4 \grace a16-4 g8-1-3 f-2 g-3|}\\{f4.\p e4 e8|}>>

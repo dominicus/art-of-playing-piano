@@ -10,7 +10,9 @@ LessonIIIUpper = \relative c''{
 			\time 4/4
 			\repeat volta 2 {
 			\set Score.measurePosition = #(ly:make-moment 1 2)
-			e4-3 f8-4 e-3| d4-2 g-5 c,-1 d8-2 e-3|d2-2 f4-4 g8-5 f-4|
+			e4-3-\tweak #'stencil ##f \mf f8-4 e-3|
+			d4-2 g-5 c,-1 d8-2 e-3|
+			d2-2 f4-4 g8-5 f-4|
 			\grace f8-4 e4-3 d8-2 c-1 \preTrill d2^\trill^\trillThree|
 			\set Score.measurePosition = #(ly:make-moment 1 2) c2-1|
 			}

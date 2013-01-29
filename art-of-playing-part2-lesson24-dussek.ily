@@ -33,7 +33,7 @@ LessonXXIVUpper = \relative c'' {
 	\repeat volta 2{
 		<b d,>4-1-5 <b d,>-1-4 \noPageBreak|
 		<<{c4.-5^( b8-4^) \noPageBreak|\grace b16-4 a8.-3[ gis16-2 a8.-3 ais16-4] \noPageBreak|}\\
-		{\setFingeringLeft <e-2 c-1>4_\< \setFingeringRight <gis-3 d-1>_\! \noPageBreak|
+		{\setFingeringLeft <e-2 c-1>4-\tweak #'stencil ##f \mf _\< \setFingeringRight <gis-3 d-1>_\! \noPageBreak|
 		<e_1>2 \noPageBreak|}>>
 		<ais e>4-1-4 <b dis,>8-2-5 r \noPageBreak|
 		<<{\grace s16_\p \ignoreClashNote b4-1-2 b-1-2 \noPageBreak|}\\{g fis \noPageBreak|}>>
@@ -47,7 +47,7 @@ LessonXXIVUpper = \relative c'' {
 		<a fis d~_1>4-2-4^( <b g d>8-3-5^) r \noPageBreak|
 		\stemUp <d g,>4-1-4_\< <d a>-2-4_\! \stemNeutral \noPageBreak|
 		<<{g4.-1-5 fis8-4 \noPageBreak|\grace fis16-5_\p e8.-4 d16-3 e8.-4 fis16-5 \noPageBreak|}\\
-		{b,8_\> cis^\markup{\finger 2}_\! d4^\markup{\finger 3} \noPageBreak|
+		{b,8-\tweak #'stencil ##f \mf _\> cis^\markup{\finger 2}_\! d4^\markup{\finger 3} \noPageBreak|
 		<b_2> <a_1> \noPageBreak|}>>
 	%LINE 4
 		\stemUp d4.^\markup{\finger 3-1} <c'-5>8_\f \noPageBreak|

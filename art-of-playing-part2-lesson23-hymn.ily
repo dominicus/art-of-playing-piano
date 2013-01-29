@@ -30,7 +30,7 @@ LessonXXIIIUpperA = \relative c''{
 		  <g' b,>4.-1-3 r8|
 	}
 	\repeat volta 2{
-		<a fis>4-3-4^(_\< <b fis dis>-2-3-5^)|
+		<a fis>4-3-4^(-\tweak #'stencil ##f \mf _\< <b fis dis>-2-3-5^)|
 		<g e>4.-1-4^(_\! <a e cis>8-2-3-5^)_\fz|
 		<<{<fis d>4-1-4_\p e8..-2-3 d32-1|}\\{s4  cis|}>>
 		d4.-1 r8_\pp|

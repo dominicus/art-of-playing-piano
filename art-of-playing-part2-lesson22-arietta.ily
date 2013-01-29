@@ -12,7 +12,7 @@ LessonXXIIUpper = \relative c''{
 	\hideTempo
 	\repeat volta 2{
 	%LINE 1
-		g8-1 b-3 d-5 b-3|
+		g8-1-\tweak #'stencil ##f \mf b-3 d-5 b-3|
 		c-4 a-2 a4\turn-2|
 		b8-3 b16-3 a-2 g8-1 b-3|
 		b4-3( a8-2) r8|
