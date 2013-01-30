@@ -69,6 +69,7 @@ hideTempo = \set Score.tempoHideNote = ##t
 autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
+lessScriptPriority = \once \override Script #'script-priority = #-100
 hideKeyCancellation = \set Staff.printKeyCancellation = ##f
 setFingeringLeft = \set fingeringOrientations = #'(left)
 setFingeringRight = \set fingeringOrientations = #'(right)
