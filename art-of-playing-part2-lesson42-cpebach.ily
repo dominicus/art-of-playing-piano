@@ -53,7 +53,7 @@ LessonXLIIUpperA =  \relative c'' {
 	
 	<es es'> \stemUp <es, g>[ <es g> <es as>]
 	<es as>[ a a bes]
-	<es, c'>4^\markup{\tiny ten} \stemNeutral d^\markup{\musicglyph #"scripts.trill"}^\markup{\musicglyph #"scripts.turn"}
+	<es, c'>4^\markup{\tiny \halign #CENTER ten} \stemNeutral d^\markup{\musicglyph #"scripts.trill"}^\markup{\musicglyph #"scripts.turn"}
 	es r8 g\p
 	
 	\stemUp r8 b^([ d c)]
@@ -91,7 +91,7 @@ LessonXLIIUpperA =  \relative c'' {
 	\stemUp <ees c'>4^( <d bes'>8)^[ es,]\ff
 	ees[ ees ees ees]
 	
-	\stemNeutral <a c g'>4^\markup{\smaller ten} \grace bes8
+	\stemNeutral <a c g'>4^\markup{\tiny \halign #CENTER ten} \grace bes8
 	\once \override Script #'script-priority = #-100
 	a4^\trill\turn
 	bes16 f g es d8 \once \override Script #'script-priority = #-100 c^\trill\turn
@@ -130,67 +130,63 @@ LessonXLIIUpperA =  \relative c'' {
 	as4. as8
 	as2-5^~
 	as4. \staffDown ges,8^\ff
-	ges8 ges ges ges
+	ges8[ ges ges ges]
 	
-	\staffUp \stemNeutral <c' es bes'>4\arpeggio \grace {
-	\override Flag #'stroke-style = #"grace"
-	des16 
-	\revert Flag #'stroke-style }
-	c4^\prall\turn
-	des16 as bes ges f8 es^\prall\turn
-	<bes' d! f bes>4\arpeggio \grace {
-	\override Flag #'stroke-style = #"grace"
-	es16 
-	\revert Flag #'stroke-style }
-	d4^\prall\turn
-	es16 bes ces as g8 f^\prall\turn
+	\staffUp \stemNeutral <c' es bes'>4^\markup{\tiny \halign #CENTER ten}
+	\grace des8 \once \override Script #'script-priority = #-100 c4^\trill\turn
+	des16 as bes ges f8^1 \once \override Script #'script-priority = #-100 es^\trill\turn
+	<bes' d! f bes>4^\markup{\tiny \halign #CENTER ten} \once \override Script #'script-priority = #-100 d4^\trill\turn
+	\stemUp es16 bes ces as g8 \once \override Script #'script-priority = #-100 f^\trill\turn
 	
-	<c' e g c>4\arpeggio r4\fermata
-	r8 c, e f
-	as4 g8 r
-	r <e des'> <f c'> <e bes'>
+	\stemNeutral <c' e g! c>4\arpeggio r4\fermata
+	r8 c,[_( e f])
+	aes!4_( g8) r
+	r <e des'>-1-5_([ <f c'>-2-5 <e bes'>-1-4)]
 	
-	<e bes'>4 <f as>8 <b, b'>
-	<b b'>4. <b b'>8
+	<e bes'>4-1-5_( <f as>8-2-4) <b, b'>
+	<b b'>4. <b b'>8\p
 	<b b'>2 ~
-	<b b'>4. <b b'>8
+	<b b'>4. <b b'>8\f
 	
 	<b b'>4. <b b'>8
-	<b b'>4 <a! a'!>8 <c e>
-	\stemUp e8 c' b a
-	a4 gis8 d
+	<b b'>4^( <a! a'!>8) <c e>\p
+	\key c \major
+	\stemUp e8^([ c' b a)]
+	a4^( gis8) d
 	
-	d d' c b
-	b4 a8 e
-	e e' d c
-	c ais b f'
+	d^([ d' c b)]
+	b4^( a8) e
+	e^([ e' d c)]
+	c^([ ais b f')]
 	
-	e d c b
-	a4 gis8 r
-	r e' gis a^~
-	a fis a g!
+	e^([ d c b)]
+	a4^( gis8) r
+	r e'[ gis a]^~
+	a[ fis a g!]
 	
-	r8 c, e f! ~
-	f dis e f,!
-	\stemNeutral f f f <d' d'>
-	<d d'> <d d'> <d d'> fis,
+	r8\p c,[ e f!] ~
+	f[ dis e f,!]\ff
+	\stemUp f[ f f \stemDown <d' d'>]\p
+	<d d'>[ <d d'> <d d'> \stemUp fis,]\ff
 	
-	fis fis fis <d' d'>
-	<d d'>4 <d d'>
-	<d d'> <d d'>
+	fis[ fis fis \stemDown <d' d'>]\p \stemNeutral
+	<d d'>4-. <d d'>-.
+	<d d'>-. <d d'>-.
 	s2
 	
-	\repeat unfold 4 {s2}
+	\repeat unfold 2 {s2}
+	\key ees \major
+	\repeat unfold 2 {s2}
 	
 	s
 	s
 	s
-	es,8 cis d as'
+	es,8^([ cis d as')]
 	
-	g f es d
-	c4 b8 <g' g'>
-	<g g'> r r4
-	r r8 <g g'>
+	g^([ f es d)]
+	c4_( b8) <g' g'>\ff
+	\stemUp <g g'> r r4
+	r r8 <g g'>\ff
 	
 	<g g'> r r4
 	r2
@@ -198,59 +194,62 @@ LessonXLIIUpperA =  \relative c'' {
 	r4 r8 es
 	
 	\stemUp r4 r8 a
-	a a a <a d>
-	d d d <d g>
-	g g g <g c>
+	a[ a a] <a d>
+	d[ d d] <d g>
+	g[ g g] <g c>
 	
-	\stemNeutral c16 as g f es8 d^\prall\turn
+	\stemNeutral c16 aes! g f es8 \once \override Script #'script-priority = #-100 d^\trill\turn
 	c4 r8 g
-	g des' c bes
-	bes4 a8 a
+	g^(^[ des' c bes])
+	\stemUp bes4^( a8) a
 	
-	a es'! d c
-	\stemUp r d d as'
-	r b b f'
-	f es d c
+	a^([ es'! d c)]
+	\stemUp r d[\f d as'!]
+	r b[ b f']
+	f_[^( <es g,> <d f,> <c ees,>])
 	
-	d4 c8 b^\prall\turn
-	b4 c8 r
-	ges2^~
-	ges4 f ~
+	d4 c8_[ \lessScriptPriority b]^\trill\turn
+	\stemDown b4^( c8) g\rest
+	\stemUp ges2^~
+	ges4 f^~
 	
 	f es
-	\stemNeutral es des
-	\stemUp as'2 ~
-	as4 g ~
+	es^( des)
+	aes'!2^~
+	as4 g!^~
 	
 	g f
-	f e
-	\stemNeutral r <c c'> ~
+	f^( e)
+	\stemUp r <c c'> ~
 	<c c'> <c c'> ~
 	
 	<c c'> <c c'> ~
 	<c c'> <c c'> ~
-	<c c'>8 <des des'> <des des'>4 ~
-	<des des'>8 <c c'> <c c'>4 ~
+	<c c'>8 <des des'> <des des'>4^~
+	<des des'>8 <c c'> <c c'>4^~
 	
 	<c c'>8 <bes bes'>4 <as as'>8
-	<as as'>4 <g g'>8 es
-	es c' bes as
-	as4 g8 des
+	<as as'>4^( <g! g'!>8)\noBeam es^\p
+	es([ c' bes as])
+	as4( g8) des
 	
-	des des' c bes
-	bes4 as8 es
-	es es' des c
-	c a bes f'
+	des([ des' c bes)]
+	bes4( as8) es
+	es([ es' des c)]
+	c(_[ a bes f')]
 	
-	es des c bes
-	as4 g8 s
+	\stemNeutral es([ des c bes)]
+	as4( 
+	\once \override  DynamicText #'extra-offset = #'(1.8 . -2.9 )
+	\once \override Beam #'damping = #+inf.0
+	g8)_\f \staffDown ees,
 	s2
-	as,2_~
+	\stemUp as2^~
 	
-	as8 as as as'
-	as2 ~
-	as4. f8
-	es4 des8 \staffDown f,
+	as8[ as as \staffUp \stemDown as']
+	\stemNeutral as2 ~
+	as4. f8\p
+	es4_( \stemUp \once \override Beam #'damping = #+10 des8) \staffDown f,^\f \stemNeutral
 	
 	f \staffUp des' c bes
 	bes2 ~
@@ -469,11 +468,11 @@ LessonXLIIUpperB =  \relative c'' {
   d2
   e4. s8
   e2
-  f ~
+  f_~
 
-  f8 f e d
+  f8[ f e d]
   c4 b8 s
-  s e' d c
+  s e'\p[ d c]
   b2
 
   s8 a4.
@@ -506,8 +505,8 @@ LessonXLIIUpperB =  \relative c'' {
   s
   s
 
-  es8 es es es
-  es4 d
+  ees8[ ees ees ees]
+  ees4 d
   a' g
   d' c
 
@@ -519,19 +518,19 @@ LessonXLIIUpperB =  \relative c'' {
   s
   c4 b
   g'8 f es4
-  \stemUp \staffDown as,8 \staffUp \stemDown g' f es
+  s8 s s s
 
   f4 s
   s2
-  ges,
+  \stemUp ges,\ff
   a4 bes
 
-  c2
+  \stemDown c2
   s
-  as
-  b4 c
+  aes!\ff
+  \stemUp b4 c
 
-  d2
+  \shiftOn d2
   des
   s
   s
@@ -688,7 +687,7 @@ LessonXLIILowerA =  \relative c {
 
   r <des, des'> <des des'> <c c'>
   <c c'> <ces ces'> <ces ces'> <bes bes'>
-  <as as'>4^\markup{\tiny ten} <bes' f' as>
+  <as as'>4^\markup{\tiny \halign #CENTER ten} <bes' f' as>
   es8[ bes es,] r
 
   r d''^([ g es)]
@@ -724,7 +723,7 @@ LessonXLIILowerA =  \relative c {
   r8 \staffUp fis''^(_[ g)] \staffDown <es,, es'>
   <es es'>[ <es es'> <es es'> <es es'>]
 
-  <es' a c>4^\markup{\smaller ten} \stemUp <f c'>
+  <es' a c>4^\markup{\tiny \halign #CENTER ten} \stemUp <f c'>
   \stemNeutral d8[ es f f,]
   bes[ f bes,] r
   r2
@@ -757,25 +756,26 @@ LessonXLIILowerA =  \relative c {
   ges ges
   r4 ges
   \stemNeutral <f as> \stemDown \once \override Beam #'positions = #'(-0.5 . 0.2) <f as>8\ff \stemUp <ges,, ges'>
-  \override Beam #'positions = #'(0 . 0) <ges ges'> <ges ges'> <ges ges'> <ges ges'> \revert Beam #'positions
+  \override Beam #'positions = #'(0 . 0) <ges ges'>[ <ges ges'> <ges ges'> <ges ges'>] \revert Beam #'positions
 
-  \stemUp <ges'' c es>4\arpeggio <as es'>
-  \stemNeutral f8 ges as as,
-  <as' d! f>4\arpeggio \stemUp <bes f'>
-  \stemNeutral ges8 as bes bes,
+  \stemDown <ges'' c es>4^\markup{\tiny \halign #CENTER ten} \stemUp <as es'>
+  \stemNeutral f8[ ges as \stemUp as,]
+  \stemDown <as' d! f>4_\markup{\tiny \halign #CENTER ten} \stemUp <bes f'>
+  \stemDown ges8[ as bes \stemUp bes,] \stemNeutral
 
-  <bes' e g>4\arpeggio r8\fermata c,
-  \stemUp r8 as' g f
-  f4 e8 r
-  r bes' as g
+  <bes' e g>4\arpeggio r8\fermata c,\p
+  \stemUp r8 aes'![ g f]
+  f4^( e8) r
+  r bes'_([ as g)]
 
-  g4 f
-  r8 \stemNeutral <des f> <des f> r
-  r <f as> <f as>4 ~
-  <f as> r
+  g4^( f)
+  r8 \stemNeutral <des f>[ <des f>] r
+  r <f aes!> <f aes>4 ~
+  <f aes> r
 
-  r8 <gis, d'> <gis d'> r
+  r8 <gis, d'!>[ <gis d'>] r
   <c e>4. r8
+  \key c \major
   a4 a
   b b
 
@@ -785,78 +785,82 @@ LessonXLIILowerA =  \relative c {
   d d
 
   d d
-  e4. <e, e'>8
+  e4. <e, e'>8\ff
   <e e'>2 ~
-  <e e'>4. <e e'>8
+  <e e'>4. <e e'>8\ff
 
   <e e'>2 ~
-  <e e'>4. <f! f'>8
-  <f f'> <f f'> <f f'> r
+  <e e'>4. <f f'>8
+  <f f'>[ <f f'> <f f'>] r
   r4 r8 <fis fis'>
 
-  <fis fis'> <fis fis'> <fis fis'> r
+  <fis fis'>[ <fis fis'> <fis fis'>] r
   r <fis' c'> r <g b>
   r <a c fis> r <b d g>
-  \stemNeutral b16 d \staffUp f as b d f as
+  \stemNeutral b16 d \staffUp f! aes  b! d f aes!
 
-  f, as b d f as b d
-  f4 r8\fermata \staffDown \stemUp g,,,
-  g es' d c
-  c4 b8 f
+  f, as b! d f as b! d
+  f4 r8\fermata \staffDown \stemUp g,,,^\p
+  \key ees \major
+  \once \override Beam #'positions = #'(11.3 . 10.3)
+  g^([ \staffUp es' d c)]
+  \staffDown c4^( b8) f
 
-  f f' es d
-  d4 c8 g
-  g \staffUp \stemDown g' f es
+  \once \override Beam #'positions = #'(11.8 . 10.8)
+  f^([ \staffUp f' es d)]
+  d4^( c8) \staffDown g
+  \once \override Beam #'positions = #'(12.3 . 11.3)
+  g^([ \staffUp g' f es^)]
   \staffDown \stemNeutral <f, as>2
 
   <f as>
   g4. r8
-  r <es g> <d f> <c es>
-  <c es>4 <b d>8 r
+  r <es g>\p^([ <d f> <c es>)]
+  \stemUp <c es>4_( <b d>8) r
 
-  r <b d> <c es> <d f>
-  <d f>4 <c es>8 <as as'>
-  \stemUp r4 r8 bes'
-  bes bes bes bes
+  r <b d>\p_([ <c es> <d f>)]
+  \stemDown <d f>4^( <c es>8) <as as'>^\ff
+  \staffUp r4 r8 \staffDown \stemUp bes'
+  bes[ bes bes bes]
 
-  ges4 a8 c
+  bes4 a8 c
   c4 a
   c b
   g2
 
   as4 g8 g,
   \stemNeutral c g16 es c8 r
-  r4 e''
-  f f,
+  \staffUp \stemDown r4 e''\p
+  f \staffDown f, \stemNeutral
 
   \clef treble fis'4 r8 d
-  d as' g f!
-  \stemUp r4 r8 as
-  s8 \clef bass r r c,
+  d[_( as'! g f!)]
+  \stemUp r4 a'8\rest aes,!
+  s8 \clef bass s s c,
 
   s2
   s
   r
-  es4 f
+  \staffUp \stemDown es4 f
 
-  f2
+  s2
   f
-  r
-  \clef treble f4 g
+  \staffDown r
+  \staffUp f4 g
 
   g2
   g
-  ges
-  f
+  ges\ff
+  f\f
 
-  e
-  es
-  as,4. \stemNeutral <f' as>8
-  <es g>4. <es g>8
+  e\mf
+  ees\p
+  \staffDown \stemUp as,4. \staffUp \stemDown <f' as>8\f
+  <es ges>4. <es ges>8
 
-  <des f>4 <c! f>
+  <des f>4 <d f>
   es4. r8
-  \clef bass <as,, c>4 <as c>
+  \staffDown \stemNeutral <as,, c>4 <as c>
   <bes des> <bes des>
 
   r4 \stemUp g'
@@ -865,14 +869,14 @@ LessonXLIILowerA =  \relative c {
   f f
 
   r f
-  \stemNeutral es4. \stemUp es8
-  es c' bes as
-  r4 es8 f
+  \stemNeutral es4. \stemUp s8
+  es[ c' bes as]
+  d,4\rest es8 f
 
-  ges2^~
-  ges4. ges8 ~
-  ges e f as
-  ges4 f8 s
+  \shiftOn ges2_~
+  ges4. ges8^~
+  ges[ e f as]
+  ges4^( f8) s
 
   \override Rest   #'extra-offset = #'(0 . -4) r2
   \revert Rest #'extra-offset r4 f8 g
@@ -1081,7 +1085,7 @@ LessonXLIILowerB =  \relative c' {
   s2
 
   s
-  c,2 ~
+  c,2_~
   c4. c8
   c2
 
@@ -1132,7 +1136,7 @@ LessonXLIILowerB =  \relative c' {
 
   s
   s
-  <as, as'>8 <as as'> <as as'> as'
+  <as, as'>8-\tweak #'stencil ##f \ff[ <as as'> <as as'>] as'
   as4 g
 
   ges2
@@ -1147,23 +1151,24 @@ LessonXLIILowerB =  \relative c' {
 
   s
   s
-  es'8 d c b
-  c c, c <as' c>
+  \once \override Beam #'positions = #'(0 . -1.8)
+  \stemUp es'8_([ d) c b]
+  <c aes'> c,_[ c aes']
 
-  <as c> \staffUp <f' as> <es g> <d f>
-  <d f>4 <c es>8 r
+  <as c>[ \staffUp \stemDown <f' as>_( <es g> <d f>)]
+  <d f>4^( <c es>8) ees\rest
   \staffDown s2
-  c4 des
+  \staffUp c4_(\p des) \staffDown
 
   a2
   bes
   s
-  d!4 es
+  \staffUp d!4_(\p es)
 
-  b2
-  bes
+  \staffDown b2
+  bes!
   a
-  as
+  aes!
 
   g
   ges
@@ -1183,12 +1188,12 @@ LessonXLIILowerB =  \relative c' {
   s des
   s4. r8
   r2
-  r8 c4. ~
+  f,8\rest c'4._~
 
-  c2 ~
+  c2_~
   c8 c4.
-  des2 ~
-  des4. \override Rest   #'extra-offset = #'(0 . -4) r8
+  des2_~
+  des4. b8\rest
 
   \revert Rest #'extra-offset s2
   r8 d!4. ~
