@@ -251,94 +251,95 @@ LessonXLIIUpperA =  \relative c'' {
 	as4. f8\p
 	es4_( \stemUp \once \override Beam #'damping = #+10 des8) \staffDown f,^\f \stemNeutral
 	
-	f \staffUp des' c bes
-	bes2 ~
-	bes8 bes bes bes'
-	bes2 ~
+	f^(^[ des' c bes)]
+	\stemUp bes2^~
+	bes8[ bes bes \staffUp \stemDown bes']
+	bes2 ~ \stemNeutral
 	
-	bes4. g8
-	f4 es8 es
-	es f f g
-	g4 as8 f
+	bes4. g8\p
+	f4_( ees8) es-1-4
+	es-1-4 f-2-5 f-1-4 g-2-5
+	g4-1-4 as8-2-5 f-1-4
 	
-	f g g as
-	as4 bes8 g
-	g as as a
-	a bes bes b
+	f-1-4 g-2-5 g-1-4 a-2-5
+	a4-1-4 bes8-2-5 g-1-4
+	g-2( aes!-3) as-2( a-3)
+	a-2( bes-3) bes-2(^[ b-3)]
 	
-	b c4 d8^~
-	d es4 e8 ~
-	e f4 g8 ~
-	g as4 b8 ~
+	b-1 c4-2 d8-1^~
+	d es4-2 e8-1 ~
+	e f4-2 g8-1~
+	g aes!4-2 b8-4~
 	
-	b c bes16 as g f
-	es4 d8 <bes bes'>
+	b c-5 bes16 as g f-1
+	ees!4-3( d8-2) <bes bes'>\ff
 	<bes bes'>4. <d d'>8
-	<d d'>4. <bes, bes'>8
+	<d d'>4 r8 <bes, bes'>
 	
 	<bes bes'>4. <f'' f'>8
-	<f f'>2 ~
+	\stemUp <f f'>2^~
 	<f f'>4. bes,8
-	bes g' f es
+	bes^([ g' f es)]
 	
-	\stemUp es4 d8 as
-	as as' g f
-	f4 es8 bes
-	bes bes' as g
+	\stemUp es4^( d8) as
+	aes^([ aes' g f]
+	f4^( ees8) bes
+	bes^([ bes' as g)]
 	
-	g e f c'
-	bes as g f
-	es4 d8 r
-	\stemNeutral r <bes g'> <as f'> <g es'>
+	g[ e f c']
+	bes[ as g f]
+	es!4^( d8) r
+	\stemNeutral r <bes g'>([\p <as f'> <g es'>)]
 	
-	<g es'>4 <f d'>8 r
-	r <c' as'> <bes g'> <as f'>
-	<as f'>4 <g es'>8 as,
-	as as as as
+	\stemDown <g es'>4^( <f d'>8) r
+	r <c' as'>^([\p <bes g'> <as f'>)]
+	<as f'>4^( <g es'>8)\noBeam \staffDown \stemUp  as,
+	as[ as as as]
 	
-	<d' f c'>4\arpeggio \grace {
-	\override Flag #'stroke-style = #"grace"
-	es16 
-	\revert Flag #'stroke-style }
-	d4^\prall\turn
-	es16 bes c as g8 f^\prall\turn
-	es4 r8 bes
-	bes es d g
+	\staffUp	
+	\stemDown <d' f c'>4^\markup{\tiny \halign #CENTER ten} \grace es8 \lessScriptPriority d4^\trill\turn
+	es16 bes c as \stemUp g8 \lessScriptPriority f^\trill\turn
+	es4 r8 bes\p
+	bes[( es d g)]
 	
-	f es d f
-	\times 4/6 { es[ d c bes g f]}
-	bes2
-	as4.^\prall\turn as8
+	f([ es d f)]
+	\once \override Beam #'positions = #'(1 . -1.3)
+	\times 4/6 { es[( d c \staffDown bes g f])}
+	\once \override Slur #'control-points = #'( ( 2.2227 . 3.016) ( 4.3661 . 3.969) ( 7.3033 . 3.889) ( 9.2085 . 3.016) ) bes2^(
+	\lessScriptPriority as4.)^\trill\turn as8
 	
-	as f' es d
-	bes' as g f
+	\once \override Beam #'positions = #'(11.8 . 10.8)
+	as([ \staffUp f' es d]
+	bes'[ as g f])
+	\once \override Beam #'positions = #'(1 . -1.3)
 	\stemUp \times 4/6 { es[ d c \staffDown bes as g]}
-	f2
+	\once \override Slur #'control-points = #'( ( 2.2227 . 3.016) ( 4.3661 . 3.969) ( 7.3033 . 3.889) ( 9.2085 . 3.016) )
+	f2^(
 
-  es4^\prall\turn \staffUp r8 bes'
-  bes bes' as g
-  g e f c
-  c c' bes as
+  \lessScriptPriority es4)^\trill\turn \staffUp c'8\rest bes
+  bes^([ bes' as g)]
+  g^([ e f c)]
+  c^([ c' bes as)]
 
-  as fis g des
-  \stemNeutral des des' c bes
-  bes g bes as
-  g f b c
+  as[ fis g des!]
+  \stemUp des^([ \stemDown des' c bes)]
+  \stemNeutral bes([ g bes as)]
+  g([ f b c)]
 
-  es,4 d!8 g
-  g32 bes as g as bes c d es f g f es d c bes
-  as8 r r as
-  as32 c bes as bes c d es f g as g f es d c
+  es,4_( d!8) g
+  \stemDown g32-1 bes! as g as bes c-1 d-2 es-3 f-4 g-5 f es d c bes-3
+  \stemUp as8-2 r r as
+  \stemDown as32-2 c bes as bes c-1 d es f-1 g as g f-1 es-3 d c
 
-  bes8 r r bes
-  bes32 d c bes c d es f g as g f es d c bes
-  c d es d c bes as g f g as g f es d c
-  \stemUp bes c d es f g as g f es d c \staffDown bes as g f
+  bes8-2 r r bes
+  bes32-2 d c bes c-1 d es f-1 g as g f ees-3 d c bes
+  c-1 d es d c-1 bes-4 as g \stemUp f-1 g as g f-1 es-3 d c
+  bes-2 c-1 d es f-1 g as g  \once \override Beam #'positions = #'(2.6 . 0) f-1 ees-3 d c \staffDown bes-4 as g f
 
-  es8 <g bes> <g bes> \staffUp g'
-  \stemNeutral f4 es8 <g' bes>
-  <f c'>2
-  <es g>4 s4
+  es8^.\noBeam \stemUp <g bes>^\p^([ <g bes> \stemDown \staffUp g'])
+  \stemUp f4_( es8)[ \stemDown <g' bes>-2-4]
+  <f c'>2^1^\switchThreeFour(
+  <es g>4-2-3) s4
   \bar "|."
   }
 LessonXLIIUpperB =  \relative c'' {
@@ -596,9 +597,9 @@ LessonXLIIUpperB =  \relative c'' {
   bes4. s8
   bes2
 
-  c2 ~
-  c8 c bes as
-  g4 f8 s
+  c2_~
+  c8[ c bes as]
+  g4_( f8) s
   s2
 
   s
@@ -621,8 +622,8 @@ LessonXLIIUpperB =  \relative c'' {
   s
   s
 
-  s
-  bes,2
+  s4 \staffDown \stemUp ees, \staffUp
+  \stemDown bes'2
   c
   s
 
@@ -878,70 +879,77 @@ LessonXLIILowerA =  \relative c {
   ges[ e f as]
   ges4^( f8) s
 
-  \override Rest   #'extra-offset = #'(0 . -4) r2
-  \revert Rest #'extra-offset r4 f8 g
+  b,2\rest
+  d4\rest f8 g
   as2 ~
-  as4. as8 ~
+  as4. as8^~
 
-  as fis g bes
-  as4 g8 g
-  g as as bes
-  bes4 c8 as
+  aes[ fis g bes]
+  as4^( g8)\noBeam \crossStaff { g}
+  \autoBeamOff \crossStaff { \shiftOff g_( as) as_( bes)
+  bes4 c8 a }
 
-  as bes bes c
-  c4 des8 bes
-  \stemNeutral bes ces ces c
-  c des des d
+  \crossStaff{
+  a_( bes) bes_( c)
+  c4 des8 bes}
+  \autoBeamOn \stemNeutral
+  \override Fingering #'staff-padding = #'()
+  bes_2( ces_1) ces_2( c_1)
+  c_3( des_2) des_2( d_1)
+  
 
-  es4 b
-  c \stemUp bes!
-  c c
+  es4_2 b^4
+  c-1 \stemUp <bes!^4^2>
+  
+  <c^3^1> c
+  \revert Fingering #'staff-padding
   c g
 
   \stemNeutral as2
-  r8 bes, bes' r
+  r8 \once \override Beam #'positions = #'(1 . 0.6) \stemUp bes,[ \stemDown bes'] r
   r <as, as'> <as as'>4 ~
   <as as'>8 <as as'> <as as'>4 ~
 
   <as as'>8 <as as'> <as as'>4 ~
-  <as as'> \clef treble \stemUp c''
-  bes as
+  <as as'> \staffUp \stemDown \once \override Slur #'control-points = #'( ( 0.961 . 1.217) ( 3.1393 . 1.729) ( 7.3038 . 1.473) ( 8.9055 . 0.512) ) ces''!(
+  bes as)
   g2
 
-  \clef bass \stemNeutral f,4 f
+  \staffDown \stemNeutral f,4 f
   f f
   g g
   g g
 
   as as
   as as
-  bes4. <bes,, bes'>8
+  bes4. <bes,, bes'>8^\ff
   <bes bes'> r r4
 
-  r8 a'' bes <bes,, bes'>
+  r8 \stemDown a''([_\p bes) \stemUp <bes,, bes'>]^\ff
   <bes bes'> r r4
-  r8 d'' es <as,,, as'>
-  <as as'> <as as'> <as as'> <as as'>
+  r8 \stemDown d''^([\p ees)] \stemUp \once \override Stem #'no-stem-extend = ##t \once \override Stem #'length-fraction = #(magstep -3) <as,,, as'>
+  <as as'>[ <as as'> <as as'> <as as'>]
 
-  <as'' d f>4\arpeggio \stemUp <bes f'>
-  \stemNeutral g8 as bes bes,
-  es bes es, r
+  \stemDown <as'' d f>4^\markup{\tiny \halign #CENTER ten} \stemUp <bes f'>
+  \stemDown g8[ as bes \stemUp bes,]
+  ees[ bes ees,] r
   r2
 
   r
   r
-  r4 f
-  \stemUp d'2
+  b'4\rest f~
+  f4 f
+  
 
-  r
-  r
+  b2\rest
   r
   s
 
-  s4 es
+  s4 s
   s2
   s
-  f
+  s
+  f'
 
   s
   g
@@ -950,16 +958,16 @@ LessonXLIILowerA =  \relative c {
 
   \stemNeutral bes4. r8
   es,2
-  r8 <f' d'> <f d'> r
+  r8 <f' d'>[ <f d'>] r
   f,2
 
-  r8 <g' es'> <g es'> r
+  r8 <g' es'>[ <g es'>] r
   g,2
   as
   bes
 
-  \stemDown es,8 r r bes''
-  as4 g8 r
+  \stemUp es,8 \stemDown b'\rest b\rest bes'
+  as4( g8) r
   r2
   r
   }
@@ -1196,13 +1204,15 @@ LessonXLIILowerB =  \relative c' {
   des4. b8\rest
 
   \revert Rest #'extra-offset s2
-  r8 d!4. ~
-  d2 ~
+  f8\rest d'!4._~
+  d2_~
   d8 d4.
 
-  es2 ~
+  es2_~
   es
-  es,
+  \stemNeutral
+  \once \override Stem #'no-stem-extend = ##t
+  \once \override Stem #'length-fraction = #(magstep -3) es,
   r8 es es'4
 
   es,2
@@ -1221,7 +1231,7 @@ LessonXLIILowerB =  \relative c' {
   s
 
   s
-  s4 d'! ~
+  s4 \staffUp \stemDown d'! ~
   d d
   es2
 
@@ -1240,7 +1250,7 @@ LessonXLIILowerB =  \relative c' {
   s
   s
 
-  s4 as,
+  s4 \staffDown as,
   s2
   s
   s
@@ -1248,19 +1258,19 @@ LessonXLIILowerB =  \relative c' {
   s
   s
   s
-  f,4 ~ f
+  s2
 
   s2
   s
   s
-  r4 g ~
+  r4 g,_~
 
   <g bes>2
   g
-  as ~
+  as_~
   as
 
-  bes ~
+  bes_~
   bes
   c
   as
@@ -1302,7 +1312,12 @@ LessonXLIILowerB =  \relative c' {
     }
 
 
-\layout {}
+    \layout {
+    	    \context{
+    	    	    \PianoStaff
+    	    	    \consists #Span_stem_engraver	    
+    	    }
+    }
 }
 
 
