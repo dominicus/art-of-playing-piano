@@ -368,6 +368,6 @@
   
   \section "Lesson XLII"
   \titledPiece "Rondo by C.P.E. Bach"
-  %\include "art-of-playing-part2-lesson42-cpebach.ily"
+  \include "art-of-playing-part2-lesson42-cpebach.ily"
   \pageBreak
   %}
