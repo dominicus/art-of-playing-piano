@@ -8,6 +8,7 @@ LessonXLIIUpperA =  \relative c'' {
 	\key ees \major 
 	\time 2/4
 	\partial 8
+	\ignoreClashNote
 	
 	\stemUp bes8
 	bes[^( g' f ees])
@@ -166,9 +167,12 @@ LessonXLIIUpperA =  \relative c'' {
 	
 	r8\p c,[ e f!] ~
 	f[ dis e f,!]\ff
-	\stemUp f[ f f \stemDown <d' d'>]\p
+	\stemUp  \once \override Beam #'positions = #'(1.3 . -0.5)
+	f[ f f \stemDown <d' d'>]\p
+	 \once \override Beam #'positions = #'(-1.3 . 0.8)
 	<d d'>[ <d d'> <d d'> \stemUp fis,]\ff
 	
+	\once \override Beam #'positions = #'(1.3 . -0.5)
 	fis[ fis fis \stemDown <d' d'>]\p \stemNeutral
 	<d d'>4-. <d d'>-.
 	<d d'>-. <d d'>-.
@@ -282,7 +286,7 @@ LessonXLIIUpperA =  \relative c'' {
 	bes^([ g' f es)]
 	
 	\stemUp es4^( d8) as
-	aes^([ aes' g f]
+	aes^([ aes' g f])
 	f4^( ees8) bes
 	bes^([ bes' as g)]
 	
@@ -322,7 +326,8 @@ LessonXLIIUpperA =  \relative c'' {
   c^([ c' bes as)]
 
   as[ fis g des!]
-  \stemUp des^([ \stemDown des' c bes)]
+  \stemUp  \once \override Beam #'positions = #'(-0.1 . -2.1)
+  des^([ \stemDown des' c bes)]
   \stemNeutral bes([ g bes as)]
   g([ f b c)]
 
@@ -343,6 +348,7 @@ LessonXLIIUpperA =  \relative c'' {
   \bar "|."
   }
 LessonXLIIUpperB =  \relative c'' {
+  \ignoreClashNote
   \stemDown g8\p
   g2
   as4. s8
@@ -649,6 +655,7 @@ LessonXLIIUpperB =  \relative c'' {
   }
 
 LessonXLIILowerA =  \relative c {
+  \ignoreClashNote
   r8
   \stemNeutral es4 es
   f f
@@ -760,9 +767,11 @@ LessonXLIILowerA =  \relative c {
   \override Beam #'positions = #'(0 . 0) <ges ges'>[ <ges ges'> <ges ges'> <ges ges'>] \revert Beam #'positions
 
   \stemDown <ges'' c es>4^\markup{\tiny \halign #CENTER ten} \stemUp <as es'>
-  \stemNeutral f8[ ges as \stemUp as,]
+  \stemNeutral  \once \override Beam #'positions = #'(-1.8 . 1.0) 
+  f8[ ges as \stemUp as,]
   \stemDown <as' d! f>4_\markup{\tiny \halign #CENTER ten} \stemUp <bes f'>
-  \stemDown ges8[ as bes \stemUp bes,] \stemNeutral
+  \stemDown \once \override Beam #'positions = #'(-1.6 . 1.4) 
+  ges8[ as bes \stemUp bes,] \stemNeutral
 
   <bes' e g>4\arpeggio r8\fermata c,\p
   \stemUp r8 aes'![ g f]
@@ -925,13 +934,14 @@ LessonXLIILowerA =  \relative c {
   bes4. <bes,, bes'>8^\ff
   <bes bes'> r r4
 
-  r8 \stemDown a''([_\p bes) \stemUp <bes,, bes'>]^\ff
+  r8 \stemDown  \once \override Beam #'positions = #'(-0.3 . 1.3) a''([_\p bes) \stemUp <bes,, bes'>]^\ff
   <bes bes'> r r4
   r8 \stemDown d''^([\p ees)] \stemUp \once \override Stem #'no-stem-extend = ##t \once \override Stem #'length-fraction = #(magstep -3) <as,,, as'>
   <as as'>[ <as as'> <as as'> <as as'>]
 
   \stemDown <as'' d f>4^\markup{\tiny \halign #CENTER ten} \stemUp <bes f'>
-  \stemDown g8[ as bes \stemUp bes,]
+  \stemDown  \once \override Beam #'positions = #'(-1.0 . 1.2) 
+  g8[ as bes \stemUp bes,]
   ees[ bes ees,] r
   r2
 
