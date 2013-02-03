@@ -370,4 +370,10 @@
   \titledPiece "Rondo by C.P.E. Bach"
   \include "art-of-playing-part2-lesson42-cpebach.ily"
   \pageBreak
+  
+  \section "Lesson XLIII"
+  \titledPiece "Prelude in C minor"
+  \include "art-of-playing-part2-lesson43-prel-cmin.ily"
+  \titledPiece "Minuet, by Scarlatti"
+  \include "art-of-playing-part2-lesson43-scarlatti.ily"
   %}
