@@ -1,7 +1,7 @@
-%#(ly:set-option 'old-relative)
 \version "2.16.1"
 
 \include "definitions.ily"
+\include "articulate.ly"
 
 LessonXLIIUpperA =  \relative c'' {
 	\clef treble
@@ -202,7 +202,7 @@ LessonXLIIUpperA =  \relative c'' {
 	d[ d d] <d g>
 	g[ g g] <g c>
 	
-	\stemNeutral c16 aes! g f es8 \once \override Script #'script-priority = #-100 d^\trill\turn
+	\stemNeutral c16 aes! g f es8 \lessScriptPriority d^\trill\turn
 	c4 r8 g
 	g^(^[ des' c bes])
 	\stemUp bes4^( a8) a
@@ -1316,12 +1316,6 @@ LessonXLIILowerB =  \relative c' {
     >>
   >>
 }
-
-  \midi {
-    \tempo 4 = 66
-    }
-
-
     \layout {
     	    \context{
     	    	    \PianoStaff
@@ -1329,5 +1323,24 @@ LessonXLIILowerB =  \relative c' {
     	    }
     }
 }
-
+\score { {
+	\unfoldRepeats \articulate
+  \context PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \context Staff = "upper" <<
+      \override Staff.TimeSignature   #'style = #'default
+      \context Voice=One \LessonXLIIUpperA
+      \context Voice=Two \LessonXLIIUpperB
+    >>
+    \context Staff = "lower" <<
+      \override Staff.TimeSignature   #'style = #'default
+      \context Voice=One \LessonXLIILowerA
+      \context Voice=Two \LessonXLIILowerB
+    >>
+  >>
+}
+  \midi {
+    \tempo 4 = 66
+    }
+}
 
