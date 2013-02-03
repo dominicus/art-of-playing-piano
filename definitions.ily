@@ -65,16 +65,19 @@ forceClef = \set Staff.forceClef = ##t
 sameSizeClef = \override Staff.Clef #'full-size-change = ##t
 beamUp = \override Beam #'neutral-direction = #1
 beamDown = \override Beam #'neutral-direction = #-1
+beamFlat = \once \override Beam #'damping = #+inf.0
 hideTempo = \set Score.tempoHideNote = ##t
 autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 lessScriptPriority = \once \override Script #'script-priority = #-100
+lessTextScriptPriority = \once \override TextScript #'script-priority = #-100
 hideKeyCancellation = \set Staff.printKeyCancellation = ##f
 setFingeringLeft = \set fingeringOrientations = #'(left)
 setFingeringRight = \set fingeringOrientations = #'(right)
 setFingeringDown = \set fingeringOrientations = #'(down)
 setFingeringUp = \set fingeringOrientations = #'(up)
+pushFingerLeft = \once \override Voice.Fingering #'extra-offset = #'(-0.2 . -1.4 )
 allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
