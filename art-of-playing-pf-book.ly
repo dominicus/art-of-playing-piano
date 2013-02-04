@@ -376,4 +376,12 @@
   \include "art-of-playing-part2-lesson43-prel-cmin.ily"
   \titledPiece "Minuet, by Scarlatti"
   \include "art-of-playing-part2-lesson43-scarlatti.ily"
+  \pageBreak
+  
+  \section "Lesson XLIV"
+  \titledPiece "Prelude in A Major"
+  \include "art-of-playing-part2-lesson44-prel-amaj.ily"
+  \titledPiece "Andante Allegretto by Paradies."
+  %\include "art-of-playing-part2-lesson44-paradies.ily"
+  \pageBreak
   %}
