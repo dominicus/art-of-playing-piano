@@ -69,6 +69,10 @@ beamFlat = \once \override Beam #'damping = #+inf.0
 hideTempo = \set Score.tempoHideNote = ##t
 autoLineBreakOff= \override NonMusicalPaperColumn #'line-break-permission = ##f
 autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
+
+hideTuplet = \override TupletNumber #'stencil = ##f
+showTuplet = \override TupletNumber #'stencil = ##t
+
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 lessScriptPriority = \once \override Script #'script-priority = #-100
 lessTextScriptPriority = \once \override TextScript #'script-priority = #-100
