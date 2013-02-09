@@ -16,8 +16,15 @@ LessonXLIVUpperOne= \relative c'''{
 	s2				| %6
 	s				| %7
 	s				| %8
+	s				| %9
+	s				| %10
+	s				| %11
+	\staffDown r8 ais,-2[ b-3 fis-1]| %12
+	f8\rest b,-3 <e-1>4 _~		| %13
+	\stemDown e4 s			| %14
 }
 LessonXLIVUpperTwo= \relative c''{
+	\noteheadBlue
 	<a_1>2 ~  		| %1
 	a8 <a_1> <gis_2>4	| %2
 	<fis_1>2 ~		| %3
@@ -28,8 +35,15 @@ LessonXLIVUpperTwo= \relative c''{
 	s2			| %8
 	s			| %9
 	r8 \override Beam #'positions = #'(-4.8 . -5.8) \allowFingeringInStaff <cis^2>8_[ \allowFingeringInStaff <d^3> \allowFingeringInStaff <a^1>] | %10
+	s2			| %11
+	s			| %12
+	s			| %13
+	s			| %14
+	\staffDown \allowFingeringInStaff <e_1>2 | %15
+	\staffUp s2		| %16
 }
 LessonXLIVBUpperThree = \relative c''{
+	\noteheadGreen
 	cis4. <cis^2>8  			| %1
 	\lessScriptPriority
 	cis4\trill^\trillThree b8-1_( gis'-5)	| %2
@@ -45,13 +59,16 @@ LessonXLIVBUpperThree = \relative c''{
 	a'4.\prallmordent^\switchFiveFourFive e8\trill\turn | %9
 	fis2-5					| %10
 	fis4.\prallmordent^\switchFiveFourFive cis8\trill\turn | %11
-	
-	
-	
+	d2-5					| %12
+	e4.\prallmordent b8\trill\turn		| %13
+	cis4.-4 d8-5				| %14
+	cis4-4 \staffDown b\trill\turn		| %15
+	r16 a[^\p b cis] \staffUp d e fis gis	| %16
 }
 LessonXLIVsoprano = { << \LessonXLIVUpperOne \\ \LessonXLIVUpperTwo \\ \LessonXLIVBUpperThree >> }
 
 LessonXLIVLowerOne= \relative c' {
+	\noteheadRed
 	s2 | %1
 	s  | %2
 	s  | %3
@@ -63,9 +80,16 @@ LessonXLIVLowerOne= \relative c' {
 	r8-5 <e^3> \shape Tie #'((0 . 0.3) (0 . 0.9) (0 . 0.9) (0 . 0)) <a^1>4 ~| %9
 	<a-1>4 <fis-2>		| %10
 	r8-5 cis8-3 <fis-1>4 ~	| %11
+	\stemDown \shiftOn fis4 <d_2> | %12
+	s2			| %13
+	\stemUp r8 gis-2 a4-1 ~	| %14
+	a gis			| %15
+	s2			| %16
+	
 }
 
 LessonXLIVLowerTwo= \relative c{
+	\noteheadMagenta
 	d4\rest <a'^5>		| %1
 	<e'^3>4. <e^3>8		| %2
 	d,4\rest <fis^5>4	| %3
@@ -77,6 +101,13 @@ LessonXLIVLowerTwo= \relative c{
 	cis4. <cis^4>8		| %9
 	d2-3			| %10
 	ais4. ais8-4		| %11
+	b2-3			| %12
+	gis4.-5 gis8-5		| %13
+	\once \override Beam #'positions = #'(-4.2 . -2.7)
+	\shiftOff
+	fis8-4[ e'-1 fis-2 d-3]	| %14
+	b,4\rest e | %15
+	\stemNeutral <a a,>2	| %16
 }
 
 LessonXLIVBreaks = {
@@ -97,5 +128,7 @@ LessonXLIVbass = {<< \LessonXLIVLowerOne \\ \LessonXLIVLowerTwo \\ \LessonXLIVBr
 	  	  \new Staff = "upper" { \clef treble \global \LessonXLIVsoprano }
 	  	  \new Staff = "lower" { \clef bass \global \LessonXLIVbass }
 	  >>
-	  \midi {}
+	  \midi {
+	  	  \tempo 4=90
+	  }
 }
