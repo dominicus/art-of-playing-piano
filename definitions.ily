@@ -1,7 +1,7 @@
 \version "2.16.1"
 
 %-----------------------------------------------------------------
-%Custom function to add an upper tie between two text characters
+%Custom functions to add an upper tie between two text characters
 %
 #(define-markup-command (up-tied-lyric layout props a b)
   (markup? markup?)
@@ -17,7 +17,8 @@
                            (/ (interval-length (ly:stencil-extent join-stencil X)) -2.5)
                            props)
                           (make-line-markup joined))))
-                               
+                          
+                              
 trillFour= \markup{\up-tied-lyric \finger 4 \finger 5}
 trillThree = \markup{\up-tied-lyric \finger 3 \finger 2}
 trillTwo = \markup{\up-tied-lyric \finger 2 \finger 1}
@@ -40,7 +41,7 @@ switchFiveOne= \markup{\up-tied-lyric \finger 5 \finger 1}
 switchFiveTwo= \markup{\up-tied-lyric \finger 5 \finger 2}
 switchFiveFour= \markup{\up-tied-lyric \finger 5 \finger 4}
 switchFiveThree= \markup{\up-tied-lyric \finger 5 \finger 3}
-%switchOneFiveExMkup={ \up-tied-lyric \finger 1 \finger 5 }
+switchFiveFourFive= \markup{ \finger \halign #CENTER \concat{"   5" \hspace #0.3 "4" \hspace #0.3 "5"}}
 preTrill =  \once \override Staff.Script #'outside-staff-priority = #0
 
 %{--------This approach stopped no longer functional after 2.14.2
