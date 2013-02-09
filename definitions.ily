@@ -84,6 +84,13 @@ setFingeringDown = \set fingeringOrientations = #'(down)
 setFingeringUp = \set fingeringOrientations = #'(up)
 pushFingerLeft = \once \override Voice.Fingering #'extra-offset = #'(-0.2 . -1.4 )
 allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
+forceFingeringToStem = \override Fingering #'add-stem-support = ##t  % used in the context of polyphonic
+
+noteheadGreen = \override NoteHead #'color = #green
+noteheadBlue = \override NoteHead #'color = #blue
+noteheadRed = \override NoteHead #'color = #red
+noteheadMagenta = \override NoteHead #'color = #magenta
+
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 
