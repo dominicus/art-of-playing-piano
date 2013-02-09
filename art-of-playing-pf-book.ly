@@ -382,6 +382,6 @@
   \titledPiece "Prelude in A Major"
   \include "art-of-playing-part2-lesson44-prel-amaj.ily"
   \titledPiece "Andante Allegretto by Paradies."
-  %\include "art-of-playing-part2-lesson44-paradies.ily"
+  \include "art-of-playing-part2-lesson44-paradies.ily"
   \pageBreak
   %}
