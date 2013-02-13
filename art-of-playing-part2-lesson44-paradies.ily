@@ -32,6 +32,16 @@ LessonXLIVUpperOne= \relative c'''{
 	\stemUp
 	b8-4_([ a-1) cis-3_( b-1)]	| %30
 	d!-3_([ cis-2) fis-5_( e-4)]	| %31
+	\grace e16-4 dis8-3 cis16 dis b8-1 fis' | %32
+	fis8([ e) e( a)]		| %33
+	<a dis,>4( <e gis>8) fis	| %34
+	fis8([ e) e( a)]		| %35
+	<a dis,>4( <e gis>8) fis	| %36
+	fis8( e)  e( dis)		| %37
+	\grace e16 dis8 cis16 b e8 a,	| %38
+	gis4 fis\trill			| %39
+	e4 b'8\rest fis\p		| %40
+	fis8_([ e) e_( a)]		| %41	
 	
 }
 LessonXLIVUpperTwo= \relative c''{
@@ -64,6 +74,24 @@ LessonXLIVUpperTwo= \relative c''{
 	\staffUp s2 \bar "|."	| %24  -Must move one voice to uppers staff for proper double-fermata layout
 	\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
 	\mark \markup { \musicglyph #"scripts.ufermata" }
+	s2			| %25
+	s2			| %26
+	s2			| %27
+	s2			| %28
+	s2			| %29
+	s2			| %30
+	s2			| %31
+	s2			| %32
+	s2			| %33
+	\shiftOn b''2		| %34
+	s2			| %35
+	b2			| %36
+	s2			| %37
+	s2			| %38
+	s2			| %39
+	s2			| %40
+	s2			| %41
+	
 }
 LessonXLIVBUpperThree = \relative c''{
 	\noteheadGreen
@@ -102,6 +130,17 @@ LessonXLIVBUpperThree = \relative c''{
 	s2					| %29
 	\staffUp \stemDown s4 \setFingeringLeft \crossStaff <e'-1> | %30
 	\crossStaff { e fis }			| %31
+	fis4. a8				| %32
+	a8_([ gis) gis_( fis)]			| %33
+	fis4_( e8) a				| %34
+	a8_([ gis) gis_( fis)]			| %35
+	fis4_( e8) a				| %36
+	a_( gis) gis_( fis)			| %37
+	fis4 e					| %38
+	e4 dis					| %39
+	s2					| %40
+	s2					| %41
+	
 }
 LessonXLIVsoprano = { << \LessonXLIVUpperOne \\ \LessonXLIVUpperTwo \\ \LessonXLIVBUpperThree >> }
 
@@ -141,6 +180,16 @@ LessonXLIVLowerOne= \relative c' {
 	\stemDown <a cis>4^\markup{\finger \concat {"3" \hspace #0.4 "5"}}^\switchTwoThree <b dis>^4^2 | %29
 	\staffUp <e cis>_\markup{\finger 1}_\markup{\center-align \finger \concat {"  3" \hspace #0.4 "2"}} \staffDown \setFingeringLeft <gis,-5 b-3> | %30
 	<a cis>4 <ais cis>	| %31
+	b2 ~			| %32
+	b4 d,4\rest		| %33
+	b'2 ~			| %34
+	b4 d,4\rest		| %35
+	b'2 ~			| %36
+	b4 d,4\rest		| %37
+	a'4 gis8 a		| %38
+	b2			| %39
+	e,4 d8\rest a'		| %40
+	a([ gis) gis( fis)]	| %41
 	
 }
 
