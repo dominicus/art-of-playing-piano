@@ -9,6 +9,7 @@ global = { \key a \major \time 2/4 }
 
 LessonXLIVUpperOne= \relative c'''{
 
+	\override Staff.BarLine #'allow-span-bar = ##f
 	c8\rest-2 e,-3 a4-5		| %1
 	s2				| %2
 	g8\rest-1 cis,8-3 fis4-5	| %3
@@ -41,7 +42,28 @@ LessonXLIVUpperOne= \relative c'''{
 	\grace e16 dis8 cis16 b e8 a,	| %38
 	gis4 fis\trill			| %39
 	e4 b'8\rest fis\p		| %40
-	fis8_([ e) e_( a)]		| %41	
+	fis8_([ e) e_( a)]		| %41
+	<a dis,>4( <gis e>8) fis	| %42
+	fis8_([ e) e_( a)]		| %43
+	<a dis,>4( <gis e>8) fis	| %44
+	fis8_([ e) e_( dis)]		| %45
+	\grace e16 dis8 cis16 b e8 \staffDown a, | %46
+	\once \override NoteColumn #'force-hshift = #-0.5 gis4 fis\trill | %47
+	e4 \staffUp \stemNeutral e''16\f d! cis\trill b_\markup{ \halign #-1.3 \raise #-4 \override #'(baseline-skip . 2.2)  \abs-fontsize #11 \column{ \halign #-1 "D.C."  \concat{"sin'" \hspace #0.3 "al  " \raise #0.8 \halign #-0.5 \musicglyph #"scripts.ufermata"}}}  \bar "|." | %48
+	s2 \bar "||"			| %49
+	b4\rest b8\rest a		| %50
+	\grace a8-3 gis4.-2 bis8-4	| %51
+	\hideAccidental \grace bis8-4 cis4.-5 g8-1 | %52
+	\hideAccidental \grace g-1 fis4.-2 ais8-4  | %53
+	\hideAccidental \grace ais8-4 b4.-5 fis8-2 | %54
+	eis8-1_([ gis) fis_( a!)]	| %55
+	gis8_([ b) a_( cis)]		| %56
+	a4\trill gis			| %57
+	b4\rest b8\rest \stemUp e	| %58
+	e4( d)				| %59
+	r4 r8 d				| %60
+	d4( cis) ~			| %61
+	cis8 cis b4			| %62
 	
 }
 LessonXLIVUpperTwo= \relative c''{
@@ -92,6 +114,7 @@ LessonXLIVUpperTwo= \relative c''{
 	s2			| %40
 	s2			| %41
 	
+	
 }
 LessonXLIVBUpperThree = \relative c''{
 	\noteheadGreen
@@ -140,6 +163,28 @@ LessonXLIVBUpperThree = \relative c''{
 	e4 dis					| %39
 	s2					| %40
 	s2					| %41
+	\staffDown \stemUp b2			| %43
+	s2					| %44
+	b2					| %45
+	s2					| %46
+	s2					| %47
+	s2					| %48
+	s2					| %49
+	s2					| %50
+	s2					| %51
+	s2					| %52
+	s2					| %53
+	s2					| %54
+	s2					| %55
+	s2					| %56
+	s2					| %57
+	s2					| %58
+	s4. \staffUp \stemDown cis'8		| %59
+	cis8([ ais) b( fis)]			| %60
+	e4 g8\rest b				| %61
+	b8([ gis) a( e)]			| %62
+	d4. d8					| %63
+	
 	
 }
 LessonXLIVsoprano = { << \LessonXLIVUpperOne \\ \LessonXLIVUpperTwo \\ \LessonXLIVBUpperThree >> }
@@ -172,6 +217,7 @@ LessonXLIVLowerOne= \relative c' {
 	\shiftOff e4 \stemUp a~	| %22
 	a4 gis			| %23
 	<e cis a>2 \stemNeutral	| %24
+	\break  %--------------------------Forced break to avoid fermata getting pushed down by following beam
 	a,8^\f([ cis e a)]	| %25
 	\stemUp
 	<a-1>4( <gis-2>)	| %26
@@ -190,6 +236,30 @@ LessonXLIVLowerOne= \relative c' {
 	b2			| %39
 	e,4 d8\rest a'		| %40
 	a([ gis) gis( fis)]	| %41
+	\shiftOn fis4 \once \override Beam #'positions = #'(-1.8 . -1) e8 a	| %42
+	\once \override Beam #'positions = #'(0.2 . -1)
+	\shiftOff a([ gis) gis( fis)]	| %43
+	\shiftOn fis4 \once \override Beam #'positions = #'(-1.8 . -1) e8 a | %44
+	\once \override Beam #'positions = #'(0.2 . -1)
+	\shiftOff a([ gis) gis( fis)]	| %45
+	fis4 \stemUp e _~	| %46
+	\stemDown \shiftOn e4 dis | %47
+	s2			| %48
+	s2			| %49
+	\stemUp r8 cis' d4	| %50
+	s8 bis cis4		| %51
+	s8 ais cis4		| %52
+	s8 ais b4		| %53
+	s8 gis b4 ~		| %54
+	b4 a			| %55
+	\once \override NoteColumn #'force-hshift = #-0.4
+	eis4 fis		| %56
+	cis'4. b8		| %57
+	r8 cis fis4 ~		| %58
+	fis4 e\rest		| %59
+	r8 b e4 ~		| %60
+	e4 e\rest		| %61
+	s2			| %62
 	
 }
 
@@ -229,6 +299,41 @@ LessonXLIVLowerTwo= \relative c{
 	\stemNeutral <e''_3>2	| %26
 	s2			| %27
 	e2			| %28
+	s2			| %29
+	s2			| %30
+	s2			| %31
+	s2			| %32
+	s2			| %33
+	s2			| %34
+	s2			| %35
+	s2			| %36
+	s2			| %37
+	s2			| %38
+	s2			| %39
+	s2			| %40
+	s2			| %42
+	\stemDown b2 _~		| %43
+	b4 r			| %44
+	b2 _~			| %45
+	b4 r			| %46
+	a4 gis8 a		| %47
+	b2			| %48
+	\once \override  Voice.Tie #'transparent = ##t
+	e,2 ~ \hideNotes	| %49
+	e2 \unHideNotes 	| %50  %-----holding the note for spacing only
+	fis'2			| %51
+	eis2^.			| %52
+	e!2^.			| %53
+	dis2^.			| %54
+	d!2^.			| %55
+	cis2			| %56
+	cis2			| %57
+	cis2			| %58
+	ais'4. ais8		| %59
+	b4. a!8			| %60
+	gis4. gis8		| %61
+	a4. gis8		| %62
+	fis4 gis		| %63
 }
 
 LessonXLIVBreaks = {
@@ -251,9 +356,12 @@ LessonXLIVbass = {<< \LessonXLIVLowerOne \\ \LessonXLIVLowerTwo \\ \LessonXLIVBr
 }
 \score{ % LESSON XLIV.  Andante Allegretto by Paradies. MIDI
 	\unfoldRepeats \articulate
-	  \new PianoStaff <<
-	  	  \new Staff = "upper" { \clef treble \global \LessonXLIVsoprano }
-	  	  \new Staff = "lower" { \clef bass \global \LessonXLIVbass }
+	\new PianoStaff \with { \remove "Mark_engraver" }
+	<<
+		\new Staff = "upper" \with { \remove "Mark_engraver" }
+	  	  	{ \clef treble \global \LessonXLIVsoprano }
+	  	  \new Staff = "lower" \with { \consists "Mark_engraver" }
+	  	  	{ \clef bass \global \LessonXLIVbass }
 	  >>
 	  \midi {
 	  	  \tempo 4=90
