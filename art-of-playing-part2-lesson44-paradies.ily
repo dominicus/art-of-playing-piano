@@ -49,7 +49,7 @@ LessonXLIVUpperOne= \relative c'''{
 	\grace e16 dis8 cis16 b \once \override Beam #'positions = #'(0.6 . 0.4) e8 \staffDown a, | %46
 	\once \override NoteColumn #'force-hshift = #-0.5 gis4 fis\trill | %47
 	e4 \staffUp \stemNeutral e''16 \f d!16 cis16 \trill b16   %48
-        _\markup { \override #'( baseline-skip . 2.2 ) \halign #-1.3 \raise #-4 \abs-fontsize #11 \column { \halign #-1 "D.C."  \concat { "sin'" \hspace #0.3 "al  " \raise #0.8 \halign #-0.5 \musicglyph #"scripts.ufermata" } } } 
+        _\markup { \halign #-1.3 \raise #-4 \abs-fontsize #11  \override #'( baseline-skip . 2.2 ) \column { \halign #-1 "D.C."  \concat { "sin'" \hspace #0.3 "al  " \raise #0.8 \halign #-0.5 \musicglyph #"scripts.ufermata" } } } 
 	\bar "|." 
 	s2 \bar "||"			| %49
 	b4\rest b8\rest a		| %50
