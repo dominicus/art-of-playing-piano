@@ -384,4 +384,11 @@
   \titledPiece "Andante Allegretto by Paradies."
   \include "art-of-playing-part2-lesson44-paradies.ily"
   \pageBreak
+  
+  \section "Lesson XLV"
+  \titledPiece "Prelude in F# minor"
+  \include "art-of-playing-part2-lesson45-prel-fsmin.ily"
+  \titledPiece "Adagio by Corelli."
+  \include "art-of-playing-part2-lesson45-corelli.ily"
+  \pageBreak
   %}
