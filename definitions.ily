@@ -18,7 +18,16 @@
                            props)
                           (make-line-markup joined))))
                           
-                              
+centermarkup = {
+  \once \override TextScript #'self-alignment-X = #CENTER
+  \once \override TextScript #'X-offset =#(ly:make-simple-closure
+    `(,+
+      ,(ly:make-simple-closure (list
+        ly:self-alignment-interface::centered-on-x-parent))
+      ,(ly:make-simple-closure (list
+        ly:self-alignment-interface::x-aligned-on-self))))
+}
+                          
 trillFour= \markup{\up-tied-lyric \finger 4 \finger 5}
 trillThree = \markup{\up-tied-lyric \finger 3 \finger 2}
 trillTwo = \markup{\up-tied-lyric \finger 2 \finger 1}
@@ -42,24 +51,12 @@ switchFiveTwo= \markup{\up-tied-lyric \finger 5 \finger 2}
 switchFiveFour= \markup{\up-tied-lyric \finger 5 \finger 4}
 switchFiveThree= \markup{\up-tied-lyric \finger 5 \finger 3}
 switchFiveFourFive= \markup{ \finger \halign #CENTER \concat{"   5" \hspace #0.3 "4" \hspace #0.3 "5"}}
+
+sampleInvertedSwitch = \markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { { \finger " 5" } \finger \concat { "3" \hspace #0.4 "2 "} \raise #-1 \rotate #-180 \char ##x2040 } }
+
 preTrill =  \once \override Staff.Script #'outside-staff-priority = #0
 
-%{--------This approach stopped no longer functional after 2.14.2
-		trillFour= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "3"}}}
-		trillThree = \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
-		trillTwo = \markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
-		trillOne = \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
-		trillFourTwo= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
-		switchOneTwo= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "2"}}}
-		switchOneThree= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "3"}}}
-		switchOneFive= \markup{\finger{ \concat{ "1" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
-		switchTwoOne= \markup{\finger{ \concat{ "2" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
-		switchThreeOne= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}}
-		switchFourFive= \markup{\finger{ \concat{ "4" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
-		switchThreeFive= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "5"}}}
-		switchThreeFour= \markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "4"}}}
-		switchFiveFour= \markup{\finger{ \concat{ "5" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "4"}}}
-%}
+
 %-----------------------------------------------------------------
                           
 forceClef = \set Staff.forceClef = ##t
@@ -85,6 +82,7 @@ setFingeringUp = \set fingeringOrientations = #'(up)
 pushFingerLeft = \once \override Voice.Fingering #'extra-offset = #'(-0.2 . -1.4 )
 allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
 forceFingeringToStem = \override Fingering #'add-stem-support = ##t  % used in the context of polyphonic
+onceForceFingeringToStem = \once \override Fingering #'add-stem-support = ##t
 hideAccidental = \once \override Voice.Accidental #'stencil = ##f
 
 noteheadGreen = \override NoteHead #'color = #green
