@@ -391,4 +391,11 @@
   \titledPiece "Adagio by Corelli."
   \include "art-of-playing-part2-lesson45-corelli.ily"
   \pageBreak
+  
+  \section "Lesson XLVI"
+  \titledPiece "Prelude in A flat Major"
+  \include "art-of-playing-part2-lesson46-prel-abmaj.ily"
+  \titledPiece "Marche de Couperin."
+  %\include "art-of-playing-part2-lesson46-couperin.ily"  ---Not yet defined
+  \pageBreak
   %}
