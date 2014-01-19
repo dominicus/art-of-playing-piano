@@ -54,6 +54,8 @@ switchFiveFourFive= \markup{ \finger \halign #CENTER \concat{"   5" \hspace #0.3
 switchThreeFourThree = \markup{\finger \concat{ "3" \hspace #0.2 "4" \hspace #0.2 "3" }}
 switchThreeTwoThree = \markup{\finger \concat{ "3" \hspace #0.2 "2" \hspace #0.2 "3" }}
 switchOneTwoOne = \markup{\finger \concat{ "1" \hspace #0.2 "2" \hspace #0.2 "1" }}
+switchTwoOneTwo = \markup{\finger \concat{ "2" \hspace #0.2 "1" \hspace #0.2 "2" }}
+switchFourThreeTwo = \markup{\finger \concat{ "4" \hspace #0.2 "3" \hspace #0.2 "2" }}
 
 sampleInvertedSwitch = \markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { { \finger " 5" } \finger \concat { "3" \hspace #0.4 "2 "} \raise #-1 \rotate #-180 \char ##x2040 } }
 
@@ -78,6 +80,7 @@ ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 ignoreClashNoteOnce = \once \override NoteColumn #'ignore-collision = ##t
 lessScriptPriority = \once \override Script #'script-priority = #-100
 lessTextScriptPriority = \once \override TextScript #'script-priority = #-100
+lessFingerPriority = \once \override Fingering #'script-priority = #-100
 scriptRightOne = \once \override Script #'extra-offset = #'(0.3 . 0.0 )
 restRightOne = \once \override Voice.Rest #'extra-offset = #'(4.8 . 0.0 )
 hideKeyCancellation = \set Staff.printKeyCancellation = ##f

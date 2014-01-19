@@ -24,7 +24,16 @@ LessonXLVIUpper = \relative c''{
 	d4\trill\turn^\switchFourThree ees-4 ees4.\prallprall^\switchFiveFour d!8-3	| %6
 	g2-4\arpeggio
 	}
-	bes,4-2( \scriptRightOne c8)\prallmordent^\switchOneTwoOne des
+	bes,4-2( \scriptRightOne c8)\prallmordent^\switchOneTwoOne des-2	| %7
+	\mark \markup { \musicglyph #"scripts.segno" }
+	\repeat volta 2 {
+	ees2-3 c4-1( \scriptRightOne des8)\prallmordent^\switchTwoOneTwo ees8-3	| %8
+	f2-4 des4(-2 \scriptRightOne ees8)\prallmordent^\switchThreeTwoThree f-4	| %9
+	ges8-5 f-4 ees des c4-1 f-5	| % 10
+	\scriptRightOne d4(\prallprall^\switchFourThreeTwo \grace {c8}
+	      bes4) bes'4-5( \scriptRightOne aes8)\prall^\switchThreeFourThree g-2 | % 11
+	      f4(-1 g8-3 aes)-4 \grace {aes8-5} g4(-4 \scriptRightOne f8)\prall^\switchThreeFourThree ees-2 	| %12 
+	}
 }
 
 LessonXLVILowerOne= \relative c {
@@ -39,6 +48,15 @@ LessonXLVILowerOne= \relative c {
 	\crossStaff { <g' bes>2\arpeggio }
 	} 
 	\restRightOne d2\rest	| %7
+	\repeat volta 2 {
+	\stemDown
+	c4-4 des!8 ees \stemUp <f f,>2	| %8
+	\stemDown des4-4 ees8 f \stemUp <ges ges,>4 \stemDown f	| %9
+	ees4 \stemUp c f f,	| %10
+	bes4 bes, \stemDown g''! aes	| %11
+	\stemUp bes4 d, ees ees,	| %12
+	}
+	
 }
 
 LessonXLVILowerTwo= \relative c {
@@ -54,6 +72,7 @@ LessonXLVILowerTwo= \relative c {
 	b,4\rest \stemDown ees
 	}
 	s2		| %7
+	\repeat unfold 5 {s1}	| %8-12
 }
 
 LessonXLVILowerThree= \relative c {
@@ -68,6 +87,10 @@ LessonXLVILowerThree= \relative c {
 	ees2
 	}
 	s2			| %7
+	\repeat unfold 2 {s1}	| %8-9
+	s2 f'2			| %10
+	bes,2 s2		| %11
+	bes'2 ees,		| %12
 }
 
 LessonXLVILower = {<< \LessonXLVILowerOne \\ \LessonXLVILowerTwo \\ \LessonXLVILowerThree >>}
