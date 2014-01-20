@@ -53,9 +53,10 @@ switchFiveThree= \markup{\up-tied-lyric \finger 5 \finger 3}
 switchFiveFourFive= \markup{ \finger \halign #CENTER \concat{"   5" \hspace #0.3 "4" \hspace #0.3 "5"}}
 switchThreeFourThree = \markup{\finger \concat{ "3" \hspace #0.2 "4" \hspace #0.2 "3" }}
 switchThreeTwoThree = \markup{\finger \concat{ "3" \hspace #0.2 "2" \hspace #0.2 "3" }}
-switchOneTwoOne = \markup{\finger \concat{ "1" \hspace #0.2 "2" \hspace #0.2 "1" }}
+switchOneTwoOne = \markup{\finger \concat{ "1" \hspace #0.2 "2" \hspace #0.2 "1" \hspace #0.2 }}
 switchTwoOneTwo = \markup{\finger \concat{ "2" \hspace #0.2 "1" \hspace #0.2 "2" }}
 switchFourThreeTwo = \markup{\finger \concat{ "4" \hspace #0.2 "3" \hspace #0.2 "2" }}
+locoFingering = \markup { \finger \concat { "3" \hspace #0.1 "2"\hspace #0.1 "3" \hspace #0.1 "2" \hspace #0.1 "3" } }
 
 sampleInvertedSwitch = \markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { { \finger " 5" } \finger \concat { "3" \hspace #0.4 "2 "} \raise #-1 \rotate #-180 \char ##x2040 } }
 
@@ -78,11 +79,15 @@ showTuplet = \override TupletNumber #'stencil = ##t
 
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 ignoreClashNoteOnce = \once \override NoteColumn #'ignore-collision = ##t
+forceStemLeft = \once \override NoteColumn #'force-hshift = #-0.5
+forceStemRight = \once \override NoteColumn #'force-hshift = #0.5
+forceStemRightRight = \once \override NoteColumn #'force-hshift = #1.0
+forceStemLeftLeft = \once \override NoteColumn #'force-hshift = #-1.0
 lessScriptPriority = \once \override Script #'script-priority = #-100
 lessTextScriptPriority = \once \override TextScript #'script-priority = #-100
 lessFingerPriority = \once \override Fingering #'script-priority = #-100
 scriptRightOne = \once \override Script #'extra-offset = #'(0.3 . 0.0 )
-restRightOne = \once \override Voice.Rest #'extra-offset = #'(4.8 . 0.0 )
+restRightOne = \once \override Voice.Rest #'extra-offset = #'(5.0 . 0.0 )
 hideKeyCancellation = \set Staff.printKeyCancellation = ##f
 setFingeringLeft = \set fingeringOrientations = #'(left)
 setFingeringRight = \set fingeringOrientations = #'(right)
