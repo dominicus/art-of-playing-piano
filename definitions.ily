@@ -56,6 +56,7 @@ switchThreeTwoThree = \markup{\finger \concat{ "3" \hspace #0.2 "2" \hspace #0.2
 switchOneTwoOne = \markup{\finger \concat{ "1" \hspace #0.2 "2" \hspace #0.2 "1" \hspace #0.2 }}
 switchTwoOneTwo = \markup{\finger \concat{ "2" \hspace #0.2 "1" \hspace #0.2 "2" }}
 switchFourThreeTwo = \markup{\finger \concat{ "4" \hspace #0.2 "3" \hspace #0.2 "2" }}
+switchThreeTwoThreeTwo = \markup{ \center-align \finger \concat{ "3" \hspace #0.1 "2" \hspace #0.1 "3" \hspace #0.1 "2" }}
 locoFingering = \markup { \finger \concat { "3" \hspace #0.1 "2"\hspace #0.1 "3" \hspace #0.1 "2" \hspace #0.1 "3" } }
 
 sampleInvertedSwitch = \markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { { \finger " 5" } \finger \concat { "3" \hspace #0.4 "2 "} \raise #-1 \rotate #-180 \char ##x2040 } }

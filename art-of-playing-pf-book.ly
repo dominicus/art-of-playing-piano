@@ -395,7 +395,14 @@
   \section "Lesson XLVI"
   \titledPiece "Prelude in A flat Major"
   \include "art-of-playing-part2-lesson46-prel-abmaj.ily"
-  \titledPiece "March by Couperin."
+  \titledPiece "Slow March by Couperin."
   \include "art-of-playing-part2-lesson46-couperin.ily"
+  \pageBreak
+  
+  \section "Lesson XLVII"
+  \titledPiece "Prelude in F minor"
+  \include "art-of-playing-part2-lesson47-prel-fmin.ily"
+  \titledPiece "Allegretto by Couperin"
+  \include "art-of-playing-part2-lesson47-couperin.ily"
   \pageBreak
   %}
