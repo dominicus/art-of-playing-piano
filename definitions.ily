@@ -51,6 +51,7 @@ switchFiveOne= \markup{\up-tied-lyric \finger 5 \finger 1}
 switchFiveTwo= \markup{\up-tied-lyric \finger 5 \finger 2}
 switchFiveFour= \markup{\up-tied-lyric \finger 5 \finger 4}
 switchFiveThree= \markup{\up-tied-lyric \finger 5 \finger 3}
+switchInvertedFiveThree = \markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { \finger \concat { "5" \hspace #0.4 "3 "} \raise #-1 \rotate #-180 \char ##x2040 } } 
 switchFiveFourFive= \markup{ \finger \halign #CENTER \concat{"   5" \hspace #0.3 "4" \hspace #0.3 "5"}}
 switchThreeFourThree = \markup{\finger \concat{ "3" \hspace #0.2 "4" \hspace #0.2 "3" }}
 switchThreeTwoThree = \markup{\finger \concat{ "3" \hspace #0.2 "2" \hspace #0.2 "3" }}
@@ -79,6 +80,8 @@ autoLineBreakOn= \override NonMusicalPaperColumn #'line-break-permission = ##t
 
 hideTuplet = \override TupletNumber #'stencil = ##f
 showTuplet = \override TupletNumber #'stencil = ##t
+hideTupletBracket = \override TupletBracket #'bracket-visibility = ##f
+showTupletBracket = \override TupletBracket #'bracket-visibility = ##t
 
 ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
 ignoreClashNoteOnce = \once \override NoteColumn #'ignore-collision = ##t
@@ -100,6 +103,10 @@ pushFingerLeft = \once \override Voice.Fingering #'extra-offset = #'(-0.2 . -1.4
 allowFingeringInStaff = \once \override Fingering #'staff-padding = #'()
 forceFingeringToStem = \override Fingering #'add-stem-support = ##t  % used in the context of polyphonic
 onceForceFingeringToStem = \once \override Fingering #'add-stem-support = ##t
+pushFingeringDown = \override Voice.Fingering #'extra-offset = #'(0.0 . -1.0 )
+pushFingeringUp =   \override Voice.Fingering #'extra-offset = #'(0.0 . 1.2 )
+revertFingeringOffset = \revert Voice.Fingering #'extra-offset
+revertFingeringPadding = \revert Fingering #'staff-padding
 hideAccidental = \once \override Voice.Accidental #'stencil = ##f
 
 noteheadGreen = \override NoteHead #'color = #green

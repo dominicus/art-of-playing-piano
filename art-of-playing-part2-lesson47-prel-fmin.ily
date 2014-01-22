@@ -7,7 +7,7 @@ global = { \key f \minor \time 4/4 }
 
 tempoLegend = \markup { \right-align "Moder.e sempre legato" }
 
-LessonXLVIUpperPrel= \relative c''{
+LessonXLVIIUpperPrel= \relative c''{
 	\clef treble
 	\tempo 4=66 \hideTempo
 	
@@ -20,7 +20,7 @@ LessonXLVIUpperPrel= \relative c''{
 	\bar "|."
 }
 
-LessonXLVILowerPrel=\relative c,{
+LessonXLVIILowerPrel=\relative c,{
 	\clef bass
 	r2 f8(-5 aes-3 bes-2 g-4			| %1
 	aes-3 c-1 des-2 bes-3) c4.(-1 bes8)-3		| %2
@@ -33,8 +33,8 @@ LessonXLVILowerPrel=\relative c,{
 }
 \score{ % LESSON XLVII. Prelude in F minor.  PRINT and MIDI
 	  \new PianoStaff <<
-	  	  \new Staff = "upper" { \global \LessonXLVIUpperPrel }
-	  	  \new Staff = "lower" { \global \LessonXLVILowerPrel }
+	  	  \new Staff = "upper" { \global \LessonXLVIIUpperPrel }
+	  	  \new Staff = "lower" { \global \LessonXLVIILowerPrel }
 	  >>
 	  \layout{}
 	  \midi {}

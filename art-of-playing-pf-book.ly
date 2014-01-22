@@ -405,4 +405,8 @@
   \titledPiece "Allegretto by Couperin"
   \include "art-of-playing-part2-lesson47-couperin.ily"
   \pageBreak
+  
+  \section "Lesson XLVIII"
+  \titledPiece "Prelude in E Major"
+  \include "art-of-playing-part2-lesson48-prel-emaj.ily"
   %}
