@@ -413,12 +413,14 @@
   \include "art-of-playing-part2-lesson48-pol-emaj.ily"
   \titledPiece "Minuet by Sebastian Bach"		%BWV 817
   \include "art-of-playing-part2-lesson48-men-emaj.ily"
+  \pageBreak
   
   \section "Lesson XLIX"
   \titledPiece "Gavotta by Corelli"
   \include "art-of-playing-part2-lesson49-corelli.ily"
+  \pageBreak
   
   \section "Lesson XL"
   \titledPiece "Prelude in C sharp minor"
-  %\include "art-of-playing-part2-lesson50-prel.ily"
+  \include "art-of-playing-part2-lesson50-prel-csharpmin.ily"
   %}
