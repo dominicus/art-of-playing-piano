@@ -409,4 +409,16 @@
   \section "Lesson XLVIII"
   \titledPiece "Prelude in E Major"
   \include "art-of-playing-part2-lesson48-prel-emaj.ily"
+  \titledPiece "Polonoise by Sebastian Bach"		%BWV 817
+  \include "art-of-playing-part2-lesson48-pol-emaj.ily"
+  \titledPiece "Minuet by Sebastian Bach"		%BWV 817
+  \include "art-of-playing-part2-lesson48-men-emaj.ily"
+  
+  \section "Lesson XLIX"
+  \titledPiece "Gavotta by Corelli"
+  \include "art-of-playing-part2-lesson49-corelli.ily"
+  
+  \section "Lesson XL"
+  \titledPiece "Prelude in C sharp minor"
+  %\include "art-of-playing-part2-lesson50-prel.ily"
   %}
