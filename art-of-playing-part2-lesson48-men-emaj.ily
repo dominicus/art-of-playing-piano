@@ -5,6 +5,7 @@
 
 %---------------------------DEFINITIONS
 	tempoLegend = \markup { \right-align "Allegretto" }
+	pieceLegend = #"Minuet"
 	global = { \key e \major \time 3/4 }
 	setTempo = { \tempo 4=120 \hideTempo }
 	staffDown = \change Staff = "lower"
@@ -123,7 +124,9 @@ LessonXLVIIILower = \relative c {
 %--------------------  PRINT AND PLAY
 
 \score{ % LESSON XLVIII. Polonaise by Bach (BWV 817)
-	  \new PianoStaff <<
+	  \new PianoStaff
+	  \with { instrumentName = \pieceLegend }
+	  <<
 	  	  \new Staff = "upper" { \global \LessonXLVIIIUpper }
 	  	  \new Staff = "lower" { \global \LessonXLVIIILower }
 	  >>

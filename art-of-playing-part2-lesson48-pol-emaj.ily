@@ -7,6 +7,7 @@ global = { \key e \major \time 3/4 }
 
 %---------------------------DEFINITIONS
 tempoLegend = \markup { \right-align "Andante" }
+pieceLegend = #"Polonaise"
 tenFive = \markup { \override #'( baseline-skip . 0 )  \column { \center-align{ \finger "  5"  \small "  ten" }}}
 setTempo = { \tempo 4=72 \hideTempo }
 
@@ -23,9 +24,9 @@ angleBeamNine = \once \override Beam #'positions = #'( 0.6 . 1.4 )
 nb = \noBreak
 
 firstTrebleVolta = {
-		gis8-3( a16-4 b-5 a4-4 gis)^\switchThreeFour		\nb	| % 1
-		fis8-3 dis-2 \preTrill e2\trill^\switchFourThree	\nb	| % 2
-		b8(-1 d)-3 d(-4 cis)-3 cis(-4 b)-3				\nb	| % 3
+		gis8-3(^\tempoLegend a16-4 b-5 a4-4 gis)^\switchThreeFour\nb	| % 1
+		fis8-3 dis-2 \preTrill e2\trill^\switchFourThree	 \nb	| % 2
+		b8(-1 d)-3 d(-4 cis)-3 cis(-4 b)-3			 \nb	| % 3
 		b16-5 a-4 gis fis gis4\trill e-1					| % 4
 		gis'8-3 a16 b a4-4 gis^\switchThreeFive	\nb	| % 5
 		ais,8-1^[ cis-2] fis2-5					\nb	| % 6
@@ -106,7 +107,9 @@ LessonXLVIIILower = \relative c' {
 
 
 \score{ % LESSON XLVIII. Polonaise by Bach (BWV 817)
-	  \new PianoStaff <<
+	  \new PianoStaff 
+	  \with { instrumentName = \pieceLegend }
+	  <<
 	  	  \new Staff = "upper" { \global \LessonXLVIIIUpper }
 	  	  \new Staff = "lower" { \global \LessonXLVIIILower }
 	  >>

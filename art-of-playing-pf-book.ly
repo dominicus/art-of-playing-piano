@@ -7,6 +7,10 @@
 
 \version "2.16.1"
 
+\paper {
+     top-margin = 15\mm
+}
+
 %% INCLUDED FILES
   \include "book-titling.ily"
   \include "definitions.ily"
@@ -409,18 +413,19 @@
   \section "Lesson XLVIII"
   \titledPiece "Prelude in E Major"
   \include "art-of-playing-part2-lesson48-prel-emaj.ily"
-  \titledPiece "Polonoise by Sebastian Bach"		%BWV 817
+  \titledPiece "Polonoise and Minuet, by Sebastian Bach" %BWV 817
   \include "art-of-playing-part2-lesson48-pol-emaj.ily"
-  \titledPiece "Minuet by Sebastian Bach"		%BWV 817
   \include "art-of-playing-part2-lesson48-men-emaj.ily"
   \pageBreak
   
   \section "Lesson XLIX"
-  \titledPiece "Gavotta by Corelli"
+  \titledPiece "Gavotta, by Corelli"
   \include "art-of-playing-part2-lesson49-corelli.ily"
   \pageBreak
   
-  \section "Lesson XL"
-  \titledPiece "Prelude in C sharp minor"
+  \section "Lesson L"
+  \titledPiece "Prelude in C# minor"
   \include "art-of-playing-part2-lesson50-prel-csharpmin.ily"
+  \titledPiece "Minuet, by Dr. Haydn"
+  \include "art-of-playing-part2-lesson50-haydn.ily"
   %}

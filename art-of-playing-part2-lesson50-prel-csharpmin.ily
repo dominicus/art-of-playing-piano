@@ -34,7 +34,8 @@ LessonLPrelUpperOne = \relative c'''{
      \stemUp r8 a'8([\> fis d)\!] r8 cis4( bis8)                               | % 4
      b8\rest-\hideFF <gis cis e>\arpeggio b\rest <fis gis bis>\arpeggio r
              cis'^\(^\rallentando e, fisis                                     | % 5
-     fis8-\hideP gis \staffDown r <bis, fis> ~ <bis fis>4. <cis e,>8\)         | % 6
+     \hideAccidental fisis8-\hideP gis \staffDown r <bis, fis> ~
+             <bis fis>4. <cis e,>8\)                                           | % 6
 }
 
 LessonLPrelUpperTwo = \relative c''{
