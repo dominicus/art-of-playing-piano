@@ -159,12 +159,12 @@
       \fromproperty #'toc:page
     }
   }
-  tocSectionMarkup = \markup \italic \column {
-    \fill-line { \fromproperty #'toc:text }
+  tocSectionMarkup = \markup \italic \left-column {
+  	  \concat { \hspace #13 \fromproperty #'toc:text }
   }
-  tocChapterMarkup = \markup \large \italic \column {
+  tocChapterMarkup = \markup \large \italic \left-column {
     \vspace #1
-    \fontsize #2 \fill-line { \fromproperty #'toc:text }
+    \fontsize #2 \concat { \hspace #13 \fromproperty #'toc:text } 
     \vspace #1
   }
 }
@@ -254,8 +254,8 @@
    (header-markup-aux layout props #f))
 
 \paper {
-  evenHeaderMarkup = \markup \even-header
-  oddHeaderMarkup = \markup \odd-header
+	evenHeaderMarkup = \markup { \column { \even-header \null } }
+	oddHeaderMarkup =  \markup { \column { \odd-header  \null } }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

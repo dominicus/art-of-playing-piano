@@ -104,7 +104,7 @@ inlineScoreTwelveEigthsCompound = \markup { " " \general-align #Y #CENTER
 	    \score {
 	    	    \new Staff{
 	    	    	    \setProportionalScore
-		    	    \set Staff.instrumentName = \markup{"1" \super "st" " sort"}
+		    	    \set Staff.instrumentName = \markup{ \concat { "1" \super "st" " sort"} }
 		    	    \relative c''{
 		    	    	    \time 12/8
 		    	    	    \clef treble
@@ -121,15 +121,18 @@ inlineScoreTwelveEigthsCompound = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " containing 12 quavers in a" 
-	 \general-align #Y #-1 \line{\smaller "  bar, or their equivalent"}
-}	   
+	
+	\column { \left-align \smaller {
+		\concat { \hspace #2 "containing 12 quavers in a" } 
+		\general-align #Y #-1 \concat { \hspace #2 "bar, or their equivalent" }
+		}
+	}	   
 }
 inlineScoreSixEigthsCompound = \markup { " " \general-align #Y #CENTER 
 \column{
 	    \score {
 	    	    \new Staff{
-		    	    \set Staff.instrumentName = \markup{"2" \super "d" " sort"}
+		    	    \set Staff.instrumentName = \markup{ \concat { "2" \super "d" " sort"} }
 		    	    \relative c''{
 		    	    	    \time 6/8
 		    	    	    \clef treble
@@ -146,15 +149,17 @@ inlineScoreSixEigthsCompound = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " six quavers in a bar, or" 
-	 \general-align #Y #-1 \line{ \smaller "  their equivalent"}
-}	   
+\column { \left-align \smaller {
+		\concat { \hspace #2 "six quavers in a bar, or" } 
+		\general-align #Y #-1 \concat { \hspace #2 "their equivalent" }
+		}
+	}   
 }
 inlineScoreTwelveFourthsCompound = \markup { " " \general-align #Y #CENTER 
 \column{
 	    \score {
 	    	    \new Staff{
-		    	    \set Staff.instrumentName = \markup{"3" \super "d" " sort"}
+		    	    \set Staff.instrumentName = \markup{ \concat {"3" \super "d" " sort"} }
 		    	    \relative c''{
 		    	    	    \time 12/4
 		    	    	    \clef treble
@@ -170,13 +175,13 @@ inlineScoreTwelveFourthsCompound = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #0 \smaller " 12 crotchets in a bar, etc."}	   
+\column {\left-align \general-align #Y #0 \smaller \concat { \hspace #2 "12 crotchets in a bar, etc." } }	   
 }
 inlineScoreSixFourthsCompound = \markup { " " \general-align #Y #CENTER 
 \column{
 	    \score {
 	    	    \new Staff{
-		    	    \set Staff.instrumentName = \markup{"4" \super "th" " sort"}
+		    	    \set Staff.instrumentName = \markup{ \concat { "4" \super "th" " sort"} }
 		    	    \relative c''{
 		    	    	    \time 6/4
 		    	    	    \clef treble
@@ -192,7 +197,7 @@ inlineScoreSixFourthsCompound = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #0 \smaller " 6 crotchets in a bar, etc."}	   
+	\column {\left-align \general-align #Y #0 \smaller\concat { \hspace #2 "6 crotchets in a bar, etc." } }	   
 }
 inlineScoreThreeSecondsSimple = \markup { " " \general-align #Y #CENTER 
 \column{
@@ -213,9 +218,11 @@ inlineScoreThreeSecondsSimple = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " three minims in a bar,"
-	\general-align #Y #-1 \line{ \smaller "   or their equivalent"}
-	}	   
+\column { \left-align \smaller {
+		\concat { \hspace #10.5 "three minims in a bar," } 
+		\general-align #Y #-1 \concat { \hspace #10.5 "or their equivalent" }
+		}
+	}
 }
 inlineScoreThreeFourthsSimple = \markup { " " \general-align #Y #CENTER 
 \column{
@@ -237,8 +244,10 @@ inlineScoreThreeFourthsSimple = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " three Crotchets in"
-	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
+\column { \left-align \smaller {
+		\concat { \hspace #10.5 "three Crotchets in" } 
+		\general-align #Y #-1 \concat { \hspace #10.5 "a bar, etc:" }
+		}
 	}	   
 }
 inlineScoreThreeEighthsSimple = \markup { " " \general-align #Y #CENTER 
@@ -261,9 +270,12 @@ inlineScoreThreeEighthsSimple = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " three quavers in"
-	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
-	}	   
+\column { \left-align \smaller {
+		\concat { \hspace #10.5 "three quavers in" } 
+		\general-align #Y #-1 \concat { \hspace #10.5 "a bar, etc:" }
+		}
+	}
+
 }
 inlineScoreNineFourthsCompound = \markup { " " \general-align #Y #CENTER 
 \column{
@@ -283,9 +295,11 @@ inlineScoreNineFourthsCompound = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " nine crotchets in"
-	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
-}
+\column { \left-align \smaller {
+		\concat { \hspace #10.5 "nine crotchets in" } 
+		\general-align #Y #-1 \concat { \hspace #10.5 "a bar, etc:" }
+		}
+	}
 }
 inlineScoreNineEigthsCompound = \markup { " " \general-align #Y #CENTER 
 \column{
@@ -305,9 +319,11 @@ inlineScoreNineEigthsCompound = \markup { " " \general-align #Y #CENTER
 	    }
 	    }
 	}
-\column {\left-align \general-align #Y #-1.3 \smaller " nine quavers in"
-	\general-align #Y #-1 \line{ \smaller "   a bar, etc:"}
-}
+\column { \left-align \smaller {
+		\concat { \hspace #10.5 "nine quavers in" } 
+		\general-align #Y #-1 \concat { \hspace #10.5 "a bar, etc:" }
+		}
+	}
 }
 inlineScoreTwoFourthsSymbol = \markup {\general-align #Y #-0.4 
 	    \score {

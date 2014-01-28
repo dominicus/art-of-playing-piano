@@ -9,6 +9,10 @@
 
 \paper {
      top-margin = 15\mm
+     bottom-margin = 10\mm
+     %top-system-spacing #'basic-distance = #15 %dist. from top margin to system (no titles)
+     %top-markup-spacing #'basic-distance = #15
+     %markup-markup-spacing #'basic-distance =  #15 %the distance between a (title or top-level) markup and the system that follows it. 
 }
 
 %% INCLUDED FILES
@@ -51,7 +55,8 @@
     title = "Art of Playing on the Piano Forte"
     date = "LilyPond Typesetting by Javier Ruiz-Alma"
     arrangement = "From editions published in 1801 and 1803"
-    copyright = \markup{"2012 Javier Ruiz - Creative Commons Attribution-ShareAlike 3.0 (Unported) License " \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))} 
+    copyright = \markup{"2012 Javier Ruiz - Creative Commons Attribution-ShareAlike 3.0 (Unported) License " \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))}
+    tagline = "Mutopia Tagline"
   }
   \markup {""}  %force printing front page
 }
@@ -96,7 +101,7 @@
   
   \titledPiece \markup "Sharps, Flats, etc."
   \partOneSharpsFlats
-  %}
+  
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
@@ -150,7 +155,7 @@
   \section "Lesson II"
   \titledPiece \markup "Aria"
   \include "art-of-playing-part2-lesson2-aria.ily"
-  %{ %}
+  
   \section "Lesson III"
   \titledPiece \markup "Air, in Atalanta, by Handel"
   \include "art-of-playing-part2-lesson3-air-handel.ily"
@@ -243,6 +248,7 @@
   \section "Lesson XIX"
   \titledPiece \markup "Triste Raison"
   \include "art-of-playing-part2-lesson19-triste.ily"
+  \pageBreak
   
   \section "Lesson XX"
   \titledPiece \markup "Fal, lal, la. Air in the Cherokee."
@@ -252,6 +258,7 @@
   \section "Lesson XXI"
   \titledPiece \markup "Larghetto, by Pleyel"
   \include "art-of-playing-part2-lesson21-pleyel.ily"
+  \pageBreak
    
   \section "Lesson XXII"
   \titledPiece \markup "Arietta"
