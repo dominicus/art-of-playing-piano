@@ -116,10 +116,9 @@
 %%%
 \paper {
   bookTitleMarkup = \markup \when-property #'header:title \column {
-    %\vspace #2
-    \fill-line { \fontsize #5.45 \fromproperty #'header:coverLineOne }
+    \fill-line { \italic \fontsize #5.45 \fromproperty #'header:coverLineOne }
     \vspace #1
-    \fill-line { \fontsize #5 \fromproperty #'header:coverLineTwo }
+    \fill-line { \italic \fontsize #5 \fromproperty #'header:coverLineTwo }
     \vspace #4
     \fill-line { \fromproperty #'header:coverScrollTop }
     \vspace #2

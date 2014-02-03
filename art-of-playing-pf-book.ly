@@ -75,6 +75,7 @@
   \include "art-of-playing-part1-fingering-exerc-rh.ily"
   \include "art-of-playing-part1-fingering-exerc-lh.ily"
   \include "art-of-playing-part2-introduction.ily"
+  \include "art-of-playing-part3-appendix.ily"
   
 %---------------------- CONTENT PAGE HEADER----------------%
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
@@ -451,7 +452,14 @@
   \include "art-of-playing-part2-lesson50-prel-csharpmin.ily"
   \titledPiece "Minuet, by Dr. Haydn"
   \include "art-of-playing-part2-lesson50-haydn.ily"
- %}
+  %}
+  \pageBreak
+ 
+  \chapter "Appendix"
+  \titledPiece "Table of midi filenames"
+  \partThreeFileListOne
+  \partThreeFileListTwo
+  
  
   %{
   CREDITS:
@@ -474,6 +482,10 @@
   Robin Bannister: disable bar printing by using cadenza
   Thomas Morley: printing arpeggio symbol
   Edward Neeman: baroque slash ornament
+  Valentin Villenave: LilyPond syntax
+  Federico Bruni: custom MIDI filenames for each score in a book (requested)
+  Glen Larsen: git syntax
+  Felix Janda: LilyPond compile with no MIDI output
   
   %}
 

@@ -7,10 +7,12 @@ innerCover = \markup {
 		\line { \vspace #35 }
 		\line { \bold \larger "Acknowledgements" \postscript #"0 0 moveto 83 0 rlineto stroke" }
 		\line { \vspace #0 }
-                \line { \larger "My gratitude goes to the many volunteers at the LilyPond user forum:" }
-                \line { \larger "Mats Bengtsson, Chris Sawer, Mike Solomon, Phil Holmes, Jakob Lund, Janek Warchoł, Keith O'Hara," }
-                \line { \larger "Nick Payne, David Nalesnik, Reinhold Kainhofer, David Kastrup, Shane Brandes, Xavier Scheuer, Eluze," }
-                \line { \larger "Robin Bannister, Thomas Morley, and Edward Neeman." }
+                \line { \larger "My gratitude to the LilyPond User Forum and the Mutopia Project, for making" }
+                \line { \larger "this project possible; especially:" }
+                \line { \larger "Chris Sawer, Glen Larsen, Mats Bengtsson, Mike Solomon, Phil Holmes, Jakob Lund," }
+                \line { \larger "Janek Warchoł, Keith O'Hara, Nick Payne, David Nalesnik, Reinhold Kainhofer," }
+                \line { \larger "David Kastrup, Shane Brandes, Xavier Scheuer, Eluze, Robin Bannister," }
+                \line { \larger "Thomas Morley, Federico Bruni, Felix Janda, and Edward Neeman." }
                 %{
                 \line { \vspace #2 }
 		\line { \bold "1803 English edition cover (Sibley Music Library)" \postscript #"0 0 moveto 39.8 0 rlineto stroke" }
