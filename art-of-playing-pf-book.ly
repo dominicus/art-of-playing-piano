@@ -1,21 +1,55 @@
-%{
-%%
-%%%%MUZIO CLEMENTI'S Art of Playing on the Piano Forte
-%%  Typeset by Javier Ruiz-Alma
-%%
-%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %
+%   MUZIO CLEMENTI'S Art of Playing on the Piano Forte     %
+%   Typeset by Javier Ruiz-Alma                            %
+%                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \version "2.16.1"
 
-\paper {
-     top-margin = 15\mm
-     bottom-margin = 10\mm
-     %top-system-spacing #'basic-distance = #15 %dist. from top margin to system (no titles)
-     %top-markup-spacing #'basic-distance = #15
-     %markup-markup-spacing #'basic-distance =  #15 %the distance between a (title or top-level) markup and the system that follows it. 
+%----------------------GENERAL HEADERS---------------------%
+\header {
+  title = "Introduction to the Art of Playing on the Piano Forte"
+  composer = "Muzio Clementi"
+  author = "Muzio Clementi"
+  opus = "Op. 42"
+  typesetter = "Javier Ruiz-Alma"
+  date = "1801"
+  source = "Clementi, Banger, Hyde, Collard & Davis; London [1803] (Sibley Music Library); Gera: C.G. Menzel, n.d. [1820] (Bavarian State Library)"
+
+  coverLineOne = "Muzio Clementi's"
+  coverLineTwo = "Introduction to the"
+  coverLineThree = "Art of Playing"
+  coverLineFour = "on the"
+  coverLineFive = "Piano Forte"
+  coverLineSix = \markup { \concat { "LilyPond Typesetting " \char ##x00A9 " 2014 by Javier Ruiz-Alma" } }
+  coverScrollTop = \markup { \epsfile #X #60 #(format #f "scroll-one-top.eps" (ly:parser-output-name parser)) }
+  coverScrollBottom = \markup { \epsfile #X #60 #(format #f "scroll-one-btm.eps" (ly:parser-output-name parser)) }
+      
+  
+  mutopiatitle = "Clementi's Art of Playing on the Piano Forte"
+  mutopiaopus = "Op. 42"
+  mutopiacomposer = "ClementiM"
+  mutopiainstrument = "piano, pianoforte, harpsichord, clavichord"
+  style = "Classical"
+  maintainer = "Javier Ruiz-Alma"
+  maintainerEmail = "javier (at) ruiz-alma.com"
+  copyright = "Creative Commons Attribution 4.0"
+  
+  footer = "Mutopia "
+  tagline = "Mutopia Tagline"
 }
 
-%% INCLUDED FILES
+%--------------------MARGINS AND PAGE FORMATS--------------%
+\paper {
+     top-margin = 15\mm
+     bottom-margin = 6\mm
+     tocTitle = "Table of Contents"
+     first-page-number = -2
+     print-first-page-number = ##t
+}
+
+%--------------------INCLUDED FILES------------------------%
   \include "book-titling.ily"
   \include "definitions.ily"
   \include "art-of-playing-inner-cover.ily"
@@ -42,42 +76,24 @@
   \include "art-of-playing-part1-fingering-exerc-lh.ily"
   \include "art-of-playing-part2-introduction.ily"
   
+%---------------------- CONTENT PAGE HEADER----------------%
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
+  \useRehearsalNumbers ##f  %% set to #f to turn off piece numbering
 
-  %}
-  %% set to #f to turn off piece numbering
-  \useRehearsalNumbers ##f
-
-\bookpart{
-  \header {
-    composer = "Muzio Clementi's"
-    poet = "Introduction to the"
-    title = "Art of Playing on the Piano Forte"
-    date = "LilyPond Typesetting by Javier Ruiz-Alma"
-    arrangement = "From editions published in 1801 and 1803"
-    copyright = \markup{"2012 Javier Ruiz - Creative Commons Attribution-ShareAlike 3.0 (Unported) License " \epsfile #X #10 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser))}
-    tagline = "Mutopia Tagline"
-  }
-  \markup {""}  %force printing front page
-}
-  \paper {
-    %% Translate the TOC title
-    tocTitle = "TABLE OF CONTENTS"
-  }
-  
-  %% Inner Cover
-  \bookpart{
-  	  \pageBreak
-  	  \innerCover
-  }
-  %% Table of contents
-  \bookpart{
-  \markuplist \table-of-contents
-  }
+%---------------------- COVER PAGE-------------------------%
+  \pageBreak  %force printing front page
     
+%-----------------------INNER COVER------------------------%
+  \innerCover
+  \pageBreak
+  
+%----------------------TABLE OF CONTENTS-------------------%
+  \markuplist \table-of-contents
+  \pageBreak
+
+%----------------------BOOK CONTENTS-----------------------%
   \chapter "Music Notation"
-  %\section "Music Notation"
- %{  %}
+
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
 
@@ -86,13 +102,13 @@
   
   \titledPiece \markup "The Scale, or Gamut"
   \partOneScale
-  
+      
   \titledPiece \markup "Intervals"
   \partOneIntervals
   
   \titledPiece \markup "Tenor, Counter-tenor, and Soprano clefs explained"
   \partOneClefsExplained
-  
+ 
   \titledPiece \markup "Figure, Length, and the relative Value of Notes and Rests"
   \partOneValueOfNotes
   
@@ -101,7 +117,7 @@
   
   \titledPiece \markup "Sharps, Flats, etc."
   \partOneSharpsFlats
-  
+  %{
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
@@ -121,7 +137,7 @@
   \partOneVariousTerms
   
   \chapter "Fingering"
-  
+
   \partOneFingering
  
   \titledPiece \markup "Preliminary Directions"
@@ -155,7 +171,7 @@
   \section "Lesson II"
   \titledPiece \markup "Aria"
   \include "art-of-playing-part2-lesson2-aria.ily"
-  
+
   \section "Lesson III"
   \titledPiece \markup "Air, in Atalanta, by Handel"
   \include "art-of-playing-part2-lesson3-air-handel.ily"
@@ -435,4 +451,29 @@
   \include "art-of-playing-part2-lesson50-prel-csharpmin.ily"
   \titledPiece "Minuet, by Dr. Haydn"
   \include "art-of-playing-part2-lesson50-haydn.ily"
+ %}
+ 
+  %{
+  CREDITS:
+  
+  Mats Bengtsson: defer page numbering several pages into the book
+  Mike Solomon: up-tied fingering markup, slur as tuplet bracket
+  Phil Holmes: fix encoding errors, explicit breaks
+  Jakob Lund: segment sequencing for MIDI
+  Janek Warchoł: fixes to polyphony in MIDI, beam positioning
+  Keith O'Hara: fixes to polyphony in MIDI
+  Nick Payne: ordering scripts and fingering attached to notes, printing ledger lines without notes,
+              reversed noteheads, shortening slurs
+  David Nalesnik: adjusting beam slopes without reference to staff positions,
+                  suppressing key cancellation, slur as tuplet bracket
+  Reinhold Kainhofer: positioning fingering under slurs
+  David Kastrup: rehearsal mark positioning, vertical line spacing
+  Shane Brandes: markup positioning, reversed noteheads
+  Xavier Scheuer: polymetric notation, rehearsal mark positioning
+  Eluze W: bar line removal
+  Robin Bannister: disable bar printing by using cadenza
+  Thomas Morley: printing arpeggio symbol
+  Edward Neeman: baroque slash ornament
+  
   %}
+

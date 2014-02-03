@@ -116,24 +116,23 @@
 %%%
 \paper {
   bookTitleMarkup = \markup \when-property #'header:title \column {
-    \vspace #6
-    \fill-line { \fontsize #8 \italic \fromproperty #'header:composer }
+    %\vspace #2
+    \fill-line { \fontsize #5.45 \fromproperty #'header:coverLineOne }
     \vspace #1
-    \fill-line { \fontsize #8 \italic \fromproperty #'header:poet }
-    \vspace #6
-    \fill-line { \fontsize #10 \fromproperty #'header:title }
-    \vspace #6
-    \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
-    \vspace #6
-    \fill-line { \fontsize #5 \fromproperty #'header:date }
-    \vspace #1 
-    \fill-line {
-      \when-property #'header:arrangement \column {
-        \vspace #5
-        \fill-line { \fontsize #3 \fromproperty #'header:arrangement }
-      }
-    }
-  }
+    \fill-line { \fontsize #5 \fromproperty #'header:coverLineTwo }
+    \vspace #4
+    \fill-line { \fromproperty #'header:coverScrollTop }
+    \vspace #2
+    \fill-line { \fontsize #10.3 \fromproperty #'header:coverLineThree }
+    \vspace #1
+    \fill-line { \fontsize #9 \fromproperty #'header:coverLineFour }
+    \vspace #1.5
+    \fill-line { \fontsize #11 \fromproperty #'header:coverLineFive }
+    \vspace #2.2
+    \fill-line { \fromproperty #'header:coverScrollBottom }
+    \vspace #9.2
+    \fill-line { \fontsize #2 \fromproperty #'header:coverLineSix }
+  } 
   scoreTitleMarkup = \markup \null
 }
 
@@ -254,8 +253,15 @@
    (header-markup-aux layout props #f))
 
 \paper {
-	evenHeaderMarkup = \markup { \column { \even-header \null } }
-	oddHeaderMarkup =  \markup { \column { \odd-header  \null } }
+
+       %--Function to detect positive page numbers
+       #(define (print-positive-page-number layout props arg)
+         (if (> (chain-assoc-get 'page:page-number props -1) 0)
+             (create-page-number-stencil layout props arg)
+             empty-stencil))
+	
+             evenHeaderMarkup = \markup { \column { \on-the-fly #print-positive-page-number { \fontsize #0.2 \even-header \null } } }
+             oddHeaderMarkup =  \markup { \column { \on-the-fly #print-positive-page-number { \fontsize #0.2 \odd-header  \null } } }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
