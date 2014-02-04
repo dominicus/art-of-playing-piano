@@ -395,6 +395,8 @@
   \pageBreak
   
   \section "Lesson XLII"
+  \titledPiece "Prelude in E Flat Major"
+  \include "art-of-playing-part2-lesson42-prel-eesmaj.ily"
   \titledPiece "Rondo by C.P.E. Bach"
   \include "art-of-playing-part2-lesson42-cpebach.ily"
   \pageBreak
