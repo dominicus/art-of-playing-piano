@@ -100,7 +100,7 @@
 
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
-
+  %{
   \titledPiece \markup "Clefs"
   \partOneClefs
 
@@ -158,7 +158,7 @@
   
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
-  
+
   \titledPiece \markup "The left hand."
   \partOneFingeringLeftHand
 
@@ -168,45 +168,45 @@
   \section "Lesson I"
   \titledPiece \markup "Prelude in C Major"
   \include "ilys/clementi-op42-lyt-L01-prel-cmaj.ily"
-       %{ 
   \titledPiece \markup "Away with melancholy: by Mozart"
-  \include "art-of-playing-part2-lesson1-moderato.ily"
+  \include "ilys/clementi-op42-lyt-L01-mozart.ily"
   \pageBreak
-  
+
   \section "Lesson II"
   \titledPiece \markup "Aria"
-  \include "art-of-playing-part2-lesson2-aria.ily"
-
+  \include "ilys/clementi-op42-lyt-L02-aria.ily"
   \section "Lesson III"
   \titledPiece \markup "Air, in Atalanta, by Handel"
-  \include "art-of-playing-part2-lesson3-air-handel.ily"
+  \include "ilys/clementi-op42-lyt-L03-handel.ily"
   \pageBreak
-  
+
   \section "Lesson IV"
   \titledPiece \markup "Air, in Saul, by Handel"
-  \include "art-of-playing-part2-lesson4-air-handel.ily"
+  \include "ilys/clementi-op42-lyt-L04-handel.ily"
   \pageBreak
-  
+  %}
   \section "Lesson V"
   \titledPiece \markup "Dead March, in Saul, by Handel"
-  \include "art-of-playing-part2-lesson5-march-handel.ily"
+  \include "ilys/clementi-op42-lyt-L05-handel.ily"
   \pageBreak
-  
+
   \section "Lesson VI"
   \titledPiece \markup "Allegro by Corelli"
-  \include "art-of-playing-part2-lesson6-allegro-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L06-corelli.ily"
   \pageBreak
-  
+
   \section "Lesson VII"
   \titledPiece \markup "Prelude in A minor"
-  \include "art-of-playing-part2-lesson7-prel-amin.ily"
+  \include "ilys/clementi-op42-lyt-L07-prel-amin.ily"    
   \titledPiece \markup "Gavotta by Corelli"
-  \include "art-of-playing-part2-lesson7-gavotta-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L07-corelli.ily"
   \pageBreak
   
   \section "Lesson VIII"
   \titledPiece \markup "Prelude in F Major"
-  \include "art-of-playing-part2-lesson8-prel-fmaj.ily"
+  \include "ilys/clementi-op42-lyt-L08-prel-fmaj.ily"
+  
+  %{  
   \titledPiece \markup "Air, in Judas Maccabeus, by Handel"
   \include "art-of-playing-part2-lesson8-air-handel.ily"
   \pageBreak
