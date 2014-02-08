@@ -1,6 +1,6 @@
 \version "2.16.0"
 
-\include "definitions.ily"
+%\include "definitions.ily"
 
   #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props

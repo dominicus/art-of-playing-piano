@@ -1,6 +1,6 @@
 \version "2.16.1"
 
-\include "definitions.ily"
+%\include "definitions.ily"
 
 scoreFingeringExerciseOne = \markup { \general-align #Y #CENTER 
    \score {

@@ -50,33 +50,36 @@
 }
 
 %--------------------INCLUDED FILES------------------------%
-  \include "book-titling.ily"
-  \include "definitions.ily"
-  \include "art-of-playing-inner-cover.ily"
-  \include "art-of-playing-part1-preliminaries.ily"
-  \include "art-of-playing-part1-clefs.ily"
-  \include "art-of-playing-part1-scale.ily"
-  \include "art-of-playing-part1-intervals.ily"
-  \include "art-of-playing-part1-clefs-explained.ily"
-  \include "art-of-playing-part1-note-values.ily"
-  \include "art-of-playing-part1-time-divisions.ily"
-  \include "art-of-playing-part1-sharps-flats.ily"
-  \include "art-of-playing-part1-other-marks.ily"
-  \include "art-of-playing-part1-abbreviations.ily"
-  \include "art-of-playing-part1-style-graces.ily"
-  \include "art-of-playing-part1-turns-shakes.ily"
-  \include "art-of-playing-part1-major-minor-keys.ily"
-  \include "art-of-playing-part1-explain-various-terms.ily"
-  \include "art-of-playing-part1-fingering.ily"
-  \include "art-of-playing-part1-prelim-directions.ily"
-  \include "art-of-playing-part1-scales.ily"
-  \include "art-of-playing-part1-scales-remarks.ily"
-  \include "art-of-playing-part1-extensions.ily"
-  \include "art-of-playing-part1-fingering-exerc-rh.ily"
-  \include "art-of-playing-part1-fingering-exerc-lh.ily"
-  \include "art-of-playing-part2-introduction.ily"
-  \include "art-of-playing-part3-appendix.ily"
-  
+  #(ly:set-option 'relative-includes #t)
+  \include "ilys/book-titling.ily"
+  \include "ilys/definitions.ily"
+  \include "ilys/clementi-op42-p1-01-inner-cover.ily"
+  \include "ilys/clementi-op42-p1-02-prelims.ily" 
+  \include "ilys/clementi-op42-p1-03-clefs.ily"
+
+  \include "ilys/clementi-op42-p1-04-scale.ily"
+  \include "ilys/clementi-op42-p1-05-intervals.ily"
+
+  \include "ilys/clementi-op42-p1-06-clefs-expl.ily"
+  \include "ilys/clementi-op42-p1-07-notes.ily"
+  \include "ilys/clementi-op42-p1-08-time.ily"
+  \include "ilys/clementi-op42-p1-09-sharps-flats.ily"
+  \include "ilys/clementi-op42-p1-10-marks.ily"
+  \include "ilys/clementi-op42-p1-11-abbrevs.ily"
+  \include "ilys/clementi-op42-p1-12-style.ily"
+  \include "ilys/clementi-op42-p1-13-turns.ily"
+  \include "ilys/clementi-op42-p1-14-maj-min.ily"
+  \include "ilys/clementi-op42-p1-15-terms.ily"
+  \include "ilys/clementi-op42-p1-16-fingering.ily"
+  \include "ilys/clementi-op42-p1-17-directions.ily"
+  \include "ilys/clementi-op42-p1-18-scales.ily"
+  \include "ilys/clementi-op42-p1-19-scales.ily"
+  \include "ilys/clementi-op42-p1-20-extensions.ily"
+  \include "ilys/clementi-op42-p1-21-exercise-rh.ily"
+  \include "ilys/clementi-op42-p1-22-exercise-lh.ily"
+  \include "ilys/clementi-op42-p2-01-introduction.ily"
+
+  %}
 %---------------------- CONTENT PAGE HEADER----------------%
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
   \useRehearsalNumbers ##f  %% set to #f to turn off piece numbering
@@ -100,13 +103,13 @@
 
   \titledPiece \markup "Clefs"
   \partOneClefs
-  
+
   \titledPiece \markup "The Scale, or Gamut"
   \partOneScale
       
   \titledPiece \markup "Intervals"
   \partOneIntervals
-  
+
   \titledPiece \markup "Tenor, Counter-tenor, and Soprano clefs explained"
   \partOneClefsExplained
  
@@ -118,7 +121,7 @@
   
   \titledPiece \markup "Sharps, Flats, etc."
   \partOneSharpsFlats
-  %{
+
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
@@ -158,13 +161,14 @@
   
   \titledPiece \markup "The left hand."
   \partOneFingeringLeftHand
-  
+
   \chapter "Preludes and Lessons"
   \partTwoIntroduction
-  
+
   \section "Lesson I"
   \titledPiece \markup "Prelude in C Major"
-  \include "art-of-playing-part2-lesson1-prel-cmaj.ily"
+  \include "ilys/clementi-op42-lyt-L01-prel-cmaj.ily"
+       %{ 
   \titledPiece \markup "Away with melancholy: by Mozart"
   \include "art-of-playing-part2-lesson1-moderato.ily"
   \pageBreak
@@ -455,14 +459,7 @@
   \titledPiece "Minuet, by Dr. Haydn"
   \include "art-of-playing-part2-lesson50-haydn.ily"
   %}
-  \pageBreak
- 
-  \chapter "Appendix"
-  \titledPiece "Table of midi filenames"
-  \partThreeFileListOne
-  \partThreeFileListTwo
-  
- 
+
   %{
   CREDITS:
   
