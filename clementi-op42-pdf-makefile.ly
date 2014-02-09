@@ -234,7 +234,7 @@
   \include "ilys/clementi-op42-lyt-L13-mozart-minuet.ily"
   \include "ilys/clementi-op42-lyt-L13-mozart-trio.ily"
   \pageBreak
-    %}
+
   \section "Lesson XIV"
   \titledPiece \markup "Le Réveilmatin, by Couperin"
   \include "ilys/clementi-op42-lyt-L14-couperin.ily"
@@ -278,75 +278,75 @@
   \titledPiece \markup "Larghetto, by Pleyel"
   \include "ilys/clementi-op42-lyt-L21-pleyel.ily"
   \pageBreak
-  %{
+
   \section "Lesson XXII"
   \titledPiece \markup "Arietta"
-  \include "art-of-playing-part2-lesson22-arietta.ily"
-  
+  \include "ilys/clementi-op42-lyt-L22-arietta.ily"
+
   \section "Lesson XXIII"
   \titledPiece \markup "German Hymn, with Variations by Pleyel"
-  \include "art-of-playing-part2-lesson23-hymn.ily"
-  \include "art-of-playing-part2-lesson23-hymn-v1.ily"
-  \include "art-of-playing-part2-lesson23-hymn-v2.ily"
-  \include "art-of-playing-part2-lesson23-hymn-v3.ily"
+  \include "ilys/clementi-op42-lyt-L23-pleyel-theme.ily"
+  \include "ilys/clementi-op42-lyt-L23-pleyel-v1.ily"
+  \include "ilys/clementi-op42-lyt-L23-pleyel-v2.ily"
+  \include "ilys/clementi-op42-lyt-L23-pleyel-v3.ily"
   \pageBreak
   
   \section "Lesson XXIV"
   \titledPiece \markup "Andantino, by Dussek"
-  \include "art-of-playing-part2-lesson24-dussek.ily"
+  \include "ilys/clementi-op42-lyt-L24-dussek.ily"
   \pageBreak
-  
+
   \section "Lesson XXV"
   \titledPiece \markup "Allegro, by Handel"
-  \include "art-of-playing-part2-lesson25-handel.ily"
+  \include "ilys/clementi-op42-lyt-L25-handel.ily"
   \pageBreak
   
   \section "Lesson XXVI"
   \titledPiece \markup "Minuet in Samson, by Handel"
-  \include "art-of-playing-part2-lesson26-handel.ily"
+  \include "ilys/clementi-op42-lyt-L26-handel.ily"
   \pageBreak
   
-  %Arpeggio warning
   \section "Lesson XXVII"
   \titledPiece \markup "God Save the Emperor, composed by Dr. Haydn"
-  \include "art-of-playing-part2-lesson27-haydn.ily"
+  \include "ilys/clementi-op42-lyt-L27-haydn.ily"
   \pageBreak
-  
+
   \section "Lesson XXVIII"
   \titledPiece \markup "Rondo in the Gipsy stile, by Dr. Haydn"
-  \include "art-of-playing-part2-lesson28-haydn.ily"
+  \include "ilys/clementi-op42-lyt-L28-haydn.ily"
   \pageBreak
-  
+    %}    
   \section "Lesson XXIX"
   \titledPiece \markup "Prelude in E minor"
-  \include "art-of-playing-part2-lesson29-prel-emin.ily"
+  \include "ilys/clementi-op42-lyt-L29-prel-emin.ily"
   \titledPiece \markup "Tambourin by Rameau"
-  \include "art-of-playing-part2-lesson29-rameau.ily"
+  \include "ilys/clementi-op42-lyt-L29-rameau.ily"
   \pageBreak
-  
+
   \section "Lesson XXX"
   \titledPiece \markup "Prelude in B flat, Major"
-  \include "art-of-playing-part2-lesson30-prel-bfmaj.ily"
+  \include "ilys/clementi-op42-lyt-L30-prel-besmaj.ily"
   \titledPiece \markup "Minuetto by Scarlatti"
-  \include "art-of-playing-part2-lesson30-scarlatti.ily"
+  \include "ilys/clementi-op42-lyt-L30-scarlatti.ily"
   \pageBreak
-  
+
   \section "Lesson XXXI"
   \titledPiece \markup "Lindor - an Air"
-  \include "art-of-playing-part2-lesson31-lindor.ily"
+  \include "ilys/clementi-op42-lyt-L31-air.ily"
   \pageBreak
-  
+
   \section "Lesson XXXII"
   \titledPiece \markup "Minuet and Trio, By Mozart"
-  \include "art-of-playing-part2-lesson32-mozart.ily" \noPageBreak
-  \include "art-of-playing-part2-lesson32-trio-mozart.ily"
+  \include "ilys/clementi-op42-lyt-L32-mozart-minuet.ily"
+  \noPageBreak
+  \include "ilys/clementi-op42-lyt-L32-mozart-trio.ily"
   \pageBreak
-  
+
   \section "Lesson XXXIII"
   \titledPiece \markup "Gavotta in Otho, by Handel"
-  \include "art-of-playing-part2-lesson33-handel.ily"
+  \include "ilys/clementi-op42-lyt-L33-handel.ily"
   \pageBreak
-  
+        %{  
   \section "Lesson XXXIV"
   \titledPiece \markup "Andante with Variations, by Cramer"
   \include "art-of-playing-part2-lesson34-cramer.ily"

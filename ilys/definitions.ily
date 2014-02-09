@@ -108,6 +108,7 @@ pushFingeringUp =   \override Voice.Fingering #'extra-offset = #'(0.0 . 1.2 )
 revertFingeringOffset = \revert Voice.Fingering #'extra-offset
 revertFingeringPadding = \revert Fingering #'staff-padding
 hideAccidental = \once \override Voice.Accidental #'stencil = ##f
+connectArpeggios = \set Staff.connectArpeggios = ##t
 
 noteheadGreen = \override NoteHead #'color = #green
 noteheadBlue = \override NoteHead #'color = #blue

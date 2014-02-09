@@ -10,6 +10,7 @@ inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER
 	    	     	    \cadenzaOn
 		    	    \clef treble
 		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    \once \override Beam #'positions = #'(-1.3 . -1.3)
 		    	    c8-1[ c'-5] 
 		    	    b-1[ a'-5] g-4[ c,-1] c'4-5
 		    	    \bar "||" 
@@ -32,6 +33,7 @@ inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER
 		    	    \clef treble
 		    	    \unHideNotes
 		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    \once \override Beam #'positions = #'(-1 . -1)
 		    	    c'16-1[ c'-5] 
 		    	    c-1[ c'-5]
 		    	    \bar "||"
@@ -53,6 +55,7 @@ inlineScoreExtensionsExTwo = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    c,,16-5[ c'-1] 
 		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    \once \override Beam #'positions = #'(1.7 . 1.7)
 		    	    c-5[ c'-1]
 		    	    \bar "||"
 		    	    \stopStaff
