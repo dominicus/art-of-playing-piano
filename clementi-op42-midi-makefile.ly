@@ -13,5 +13,15 @@
 \include "ilys/clementi-op42-mid-L07-prel-amin.ily"
 \include "ilys/clementi-op42-mid-L07-corelli.ily"
 \include "ilys/clementi-op42-mid-L08-prel-fmaj.ily"
-
+\include "ilys/clementi-op42-mid-L08-handel.ily"
+\include "ilys/clementi-op42-mid-L09-handel.ily"
+\include "ilys/clementi-op42-mid-L10-corelli.ily"
+\include "ilys/clementi-op42-mid-L11-corelli.ily"
+\include "ilys/clementi-op42-mid-L12-mozart.ily"
+\include "ilys/clementi-op42-mid-L13-mozart-minuet.ily"
+\include "ilys/clementi-op42-mid-L13-mozart-trio.ily"
+\include "ilys/clementi-op42-mid-L14-couperin.ily"
+\include "ilys/clementi-op42-mid-L15-prel-dmin.ily"
+\include "ilys/clementi-op42-mid-L15-scarlatti.ily"
+\include "ilys/clementi-op42-mid-L16-corelli.ily"
 

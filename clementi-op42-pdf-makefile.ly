@@ -184,7 +184,7 @@
   \titledPiece \markup "Air, in Saul, by Handel"
   \include "ilys/clementi-op42-lyt-L04-handel.ily"
   \pageBreak
-  %}
+
   \section "Lesson V"
   \titledPiece \markup "Dead March, in Saul, by Handel"
   \include "ilys/clementi-op42-lyt-L05-handel.ily"
@@ -201,59 +201,57 @@
   \titledPiece \markup "Gavotta by Corelli"
   \include "ilys/clementi-op42-lyt-L07-corelli.ily"
   \pageBreak
-  
+
   \section "Lesson VIII"
   \titledPiece \markup "Prelude in F Major"
   \include "ilys/clementi-op42-lyt-L08-prel-fmaj.ily"
-  
-  %{  
   \titledPiece \markup "Air, in Judas Maccabeus, by Handel"
-  \include "art-of-playing-part2-lesson8-air-handel.ily"
+  \include "ilys/clementi-op42-lyt-L08-handel.ily"
   \pageBreak
   
   \section "Lesson IX"
   \titledPiece \markup "March, in Judas Maccabeus, by Handel"
-  \include "art-of-playing-part2-lesson9-march-handel.ily"
+  \include "ilys/clementi-op42-lyt-L09-handel.ily"
   \pageBreak
    
   \section "Lesson X"
   \titledPiece \markup "Sarabanda, by Corelli"
-  \include "art-of-playing-part2-lesson10-sarabanda-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L10-corelli.ily"
   \pageBreak 
    
   \section "Lesson XI"
   \titledPiece \markup "Giga, by Corelli"
-  \include "art-of-playing-part2-lesson11-giga-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L11-corelli.ily"
   \pageBreak
-     
+
   \section "Lesson XII"
   \titledPiece \markup "Arietta, by Mozart"
-  \include "art-of-playing-part2-lesson12-arietta-mozart.ily"
+  \include "ilys/clementi-op42-lyt-L12-mozart.ily"
   \pageBreak
-  
+
   \section "Lesson XIII"
   \titledPiece \markup "Minuet and Trio, by Mozart"
-  \include "art-of-playing-part2-lesson13-minuet-mozart.ily"
-  \include "art-of-playing-part2-lesson13-trio-mozart.ily"
+  \include "ilys/clementi-op42-lyt-L13-mozart-minuet.ily"
+  \include "ilys/clementi-op42-lyt-L13-mozart-trio.ily"
   \pageBreak
-  
+    %}
   \section "Lesson XIV"
   \titledPiece \markup "Le Réveilmatin, by Couperin"
-  \include "art-of-playing-part2-lesson14-couperin.ily"
+  \include "ilys/clementi-op42-lyt-L14-couperin.ily"
   \pageBreak
-  
+
   \section "Lesson XV"
   \titledPiece \markup "Prelude in D minor"
-  \include "art-of-playing-part2-lesson15-prel-dmin.ily"
+  \include "ilys/clementi-op42-lyt-L15-prel-dmin.ily"
   \titledPiece \markup "Larghetto, by Scarlatti"
-  \include "art-of-playing-part2-lesson15-scarlatti.ily"
+  \include "ilys/clementi-op42-lyt-L15-scarlatti.ily"
   \pageBreak
-  
+
   \section "Lesson XVI"
   \titledPiece \markup "Allemanda, by Corelli"
-  \include "art-of-playing-part2-lesson16-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L16-corelli.ily"
   \pageBreak
-  
+%{  
   \section "Lesson XVII"
   \titledPiece \markup "Sarabanda, by Corelli"
   \include "art-of-playing-part2-lesson17-corelli.ily"
