@@ -24,4 +24,10 @@
 \include "ilys/clementi-op42-mid-L15-prel-dmin.ily"
 \include "ilys/clementi-op42-mid-L15-scarlatti.ily"
 \include "ilys/clementi-op42-mid-L16-corelli.ily"
+\include "ilys/clementi-op42-mid-L17-corelli.ily"
+\include "ilys/clementi-op42-mid-L18-prel-gmaj.ily"
+\include "ilys/clementi-op42-mid-L18-ah-vous.ily"
+\include "ilys/clementi-op42-mid-L19-triste-raison.ily"
+\include "ilys/clementi-op42-mid-L20-air-fal-lal-la.ily"
+\include "ilys/clementi-op42-mid-L21-pleyel.ily"
 

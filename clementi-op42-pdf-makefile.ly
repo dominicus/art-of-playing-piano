@@ -251,34 +251,34 @@
   \titledPiece \markup "Allemanda, by Corelli"
   \include "ilys/clementi-op42-lyt-L16-corelli.ily"
   \pageBreak
-%{  
+  
   \section "Lesson XVII"
   \titledPiece \markup "Sarabanda, by Corelli"
-  \include "art-of-playing-part2-lesson17-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L17-corelli.ily"
   \pageBreak
-  
+
   \section "Lesson XVIII"
   \titledPiece \markup "Prelude in G Major"
-  \include "art-of-playing-part2-lesson18-prel-gmaj.ily"
+  \include "ilys/clementi-op42-lyt-L18-prel-gmaj.ily"
   \titledPiece \markup "Ah vous dirai - je maman"	
-  \include "art-of-playing-part2-lesson18-dirai-maman.ily"
+  \include "ilys/clementi-op42-lyt-L18-ah-vous.ily"
   \pageBreak
-  
+
   \section "Lesson XIX"
   \titledPiece \markup "Triste Raison"
-  \include "art-of-playing-part2-lesson19-triste.ily"
+  \include "ilys/clementi-op42-lyt-L19-triste-raison.ily"
   \pageBreak
   
   \section "Lesson XX"
   \titledPiece \markup "Fal, lal, la. Air in the Cherokee."
-  \include "art-of-playing-part2-lesson20-fal-lal-la.ily"
+  \include "ilys/clementi-op42-lyt-L20-air-fal-lal-la.ily"
   \pageBreak
-  
+
   \section "Lesson XXI"
   \titledPiece \markup "Larghetto, by Pleyel"
-  \include "art-of-playing-part2-lesson21-pleyel.ily"
+  \include "ilys/clementi-op42-lyt-L21-pleyel.ily"
   \pageBreak
-   
+  %{
   \section "Lesson XXII"
   \titledPiece \markup "Arietta"
   \include "art-of-playing-part2-lesson22-arietta.ily"

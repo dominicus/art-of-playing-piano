@@ -47,18 +47,3 @@ LessonXVIILower = \relative c'{
 		g bes g a f d|g, a4 d4.|
 	}
 }
-\score{ % LESSON XVII: Sarabande de CORELLI PRINT
-	  \new PianoStaff <<
-		    \new Staff = "upper" \LessonXVIIUpper
-		    \new Staff = "lower" \LessonXVIILower
-	  >>
-	  \layout {}
-}
-\score{ % LESSON XVII: Sarabande de CORELLI MIDI-25
-	\unfoldRepeats
-	  \new PianoStaff <<
-		    \new Staff = "upper" \LessonXVIIUpper
-		    \new Staff = "lower" \LessonXVIILower
-	  >>
-	  \midi {}
-}
