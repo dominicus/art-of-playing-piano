@@ -79,7 +79,6 @@
   \include "ilys/clementi-op42-p1-22-exercise-lh.ily"
   \include "ilys/clementi-op42-p2-01-introduction.ily"
 
-  %}
 %---------------------- CONTENT PAGE HEADER----------------%
   \bookTitle "Clementi's Art of Playing on the Piano Forte"
   \useRehearsalNumbers ##f  %% set to #f to turn off piece numbering
@@ -100,7 +99,7 @@
 
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
-  %{
+
   \titledPiece \markup "Clefs"
   \partOneClefs
 
@@ -315,7 +314,7 @@
   \titledPiece \markup "Rondo in the Gipsy stile, by Dr. Haydn"
   \include "ilys/clementi-op42-lyt-L28-haydn.ily"
   \pageBreak
-    %}    
+ 
   \section "Lesson XXIX"
   \titledPiece \markup "Prelude in E minor"
   \include "ilys/clementi-op42-lyt-L29-prel-emin.ily"
@@ -346,117 +345,116 @@
   \titledPiece \markup "Gavotta in Otho, by Handel"
   \include "ilys/clementi-op42-lyt-L33-handel.ily"
   \pageBreak
-        %{  
+  
   \section "Lesson XXXIV"
   \titledPiece \markup "Andante with Variations, by Cramer"
-  \include "art-of-playing-part2-lesson34-cramer.ily"
-  \include "art-of-playing-part2-lesson34-cramer-v1.ily"
-  \include "art-of-playing-part2-lesson34-cramer-v2.ily"
-  \include "art-of-playing-part2-lesson34-cramer-v3.ily"
+  \include "ilys/clementi-op42-lyt-L34-cramer-theme.ily"
+  \include "ilys/clementi-op42-lyt-L34-cramer-v1.ily"
+  \include "ilys/clementi-op42-lyt-L34-cramer-v2.ily"
+  \include "ilys/clementi-op42-lyt-L34-cramer-v3.ily"
   \pageBreak
-  
+
   \section "Lesson XXXV"
   \titledPiece \markup "Prelude in G minor"
-  \include "art-of-playing-part2-lesson35-prel-gmin.ily"
+  \include "ilys/clementi-op42-lyt-L35-prel-gmin.ily"
   \titledPiece \markup "Allegro, by Scarlatti"
-  \include "art-of-playing-part2-lesson35-scarlatti.ily"
+  \include "ilys/clementi-op42-lyt-L35-scarlatti.ily"
   \pageBreak
-  
+
   \section "Lesson XXXVI"
   \titledPiece \markup "Prelude in D Major"
-  \include "art-of-playing-part2-lesson36-prel-dmaj.ily"
+  \include "ilys/clementi-op42-lyt-L36-prel-dmaj.ily"
   \titledPiece \markup "Gavotta, by Corelli"
-  \include "art-of-playing-part2-lesson36-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L36-corelli.ily"
   \pageBreak
   
   \section "Lesson XXXVII"
   \titledPiece \markup "Minuet in Ariadne, by Handel"
-  \include "art-of-playing-part2-lesson37-handel.ily"
+  \include "ilys/clementi-op42-lyt-L37-handel.ily"      %---- Get's warning on rehersal mark
   \pageBreak
   
   \section "Lesson XXXVIII"
   \titledPiece \markup "March in the Occasional Oratorio, by Handel"
-  \include "art-of-playing-part2-lesson38-handel.ily"
+  \include "ilys/clementi-op42-lyt-L38-handel.ily"
   \pageBreak
   
   \section "Lesson XXXIX"
   \titledPiece \markup "Waltz, by Beethoven"
-  \include "art-of-playing-part2-lesson39-beethoven.ily"
+  \include "ilys/clementi-op42-lyt-L39-beethoven.ily"
   \pageBreak
-  
+
   \section "Lesson XL"
   \titledPiece \markup "Allegro, by Corelli"
-  \include "art-of-playing-part2-lesson40-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L40-corelli.ily"
   \pageBreak
   
   \section "Lesson XLI"
   \titledPiece \markup "Prelude in B minor"
-  \include "art-of-playing-part2-lesson41-prel-bmin.ily"
+  \include "ilys/clementi-op42-lyt-L41-prel-bmin.ily"
   \titledPiece \markup "Giga, by Corelli"
-  \include "art-of-playing-part2-lesson41-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L41-corelli.ily"
   \pageBreak
   
   \section "Lesson XLII"
   \titledPiece "Prelude in E Flat Major"
-  \include "art-of-playing-part2-lesson42-prel-eesmaj.ily"
+  \include "ilys/clementi-op42-lyt-L42-prel-eesmaj.ily"
   \titledPiece "Rondo by C.P.E. Bach"
-  \include "art-of-playing-part2-lesson42-cpebach.ily"
+  \include "ilys/clementi-op42-lyt-L42-cpebach.ily"  % ---------- Warnings: Rest collisions
   \pageBreak
-  
+
   \section "Lesson XLIII"
   \titledPiece "Prelude in C minor"
-  \include "art-of-playing-part2-lesson43-prel-cmin.ily"
+  \include "ilys/clementi-op42-lyt-L43-prel-cmin.ily"
   \titledPiece "Minuet, by Scarlatti"
-  \include "art-of-playing-part2-lesson43-scarlatti.ily"
+  \include "ilys/clementi-op42-lyt-L43-scarlatti.ily"
   \pageBreak
   
   \section "Lesson XLIV"
   \titledPiece "Prelude in A Major"
-  \include "art-of-playing-part2-lesson44-prel-amaj.ily"
+  \include "ilys/clementi-op42-lyt-L44-prel-amaj.ily"
   \titledPiece "Andante Allegretto by Paradies."
-  \include "art-of-playing-part2-lesson44-paradies.ily"
+  \include "ilys/clementi-op42-lyt-L44-paradies.ily"  %----Warning: colliding rests
   \pageBreak
   
   \section "Lesson XLV"
   \titledPiece "Prelude in F# minor"
-  \include "art-of-playing-part2-lesson45-prel-fsmin.ily"
+  \include "ilys/clementi-op42-lyt-L45-prel-fismin.ily"
   \titledPiece "Adagio by Corelli."
-  \include "art-of-playing-part2-lesson45-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L45-corelli.ily"
   \pageBreak
-  
+     
   \section "Lesson XLVI"
   \titledPiece "Prelude in A flat Major"
-  \include "art-of-playing-part2-lesson46-prel-abmaj.ily"
+  \include "ilys/clementi-op42-lyt-L46-prel-aesmaj.ily"
   \titledPiece "Slow March by Couperin."
-  \include "art-of-playing-part2-lesson46-couperin.ily"
+  \include "ilys/clementi-op42-lyt-L46-couperin.ily"
   \pageBreak
   
   \section "Lesson XLVII"
   \titledPiece "Prelude in F minor"
-  \include "art-of-playing-part2-lesson47-prel-fmin.ily"
+  \include "ilys/clementi-op42-lyt-L47-prel-fmin.ily"
   \titledPiece "Allegretto by Couperin"
-  \include "art-of-playing-part2-lesson47-couperin.ily"
+  \include "ilys/clementi-op42-lyt-L47-couperin.ily"
   \pageBreak
   
   \section "Lesson XLVIII"
   \titledPiece "Prelude in E Major"
-  \include "art-of-playing-part2-lesson48-prel-emaj.ily"
-  \titledPiece "Polonoise and Minuet, by Sebastian Bach" %BWV 817
-  \include "art-of-playing-part2-lesson48-pol-emaj.ily"
-  \include "art-of-playing-part2-lesson48-men-emaj.ily"
+  \include "ilys/clementi-op42-lyt-L48-prel-emaj.ily"
+  \titledPiece "Polonoise and Minuet, by Sebastian Bach"
+  \include "ilys/clementi-op42-lyt-L48-bach-polonaise.ily"
+  \include "ilys/clementi-op42-lyt-L48-bach-minuet.ily"
   \pageBreak
-  
+ 
   \section "Lesson XLIX"
   \titledPiece "Gavotta, by Corelli"
-  \include "art-of-playing-part2-lesson49-corelli.ily"
+  \include "ilys/clementi-op42-lyt-L49-corelli.ily"
   \pageBreak
-  
+ 
   \section "Lesson L"
   \titledPiece "Prelude in C# minor"
-  \include "art-of-playing-part2-lesson50-prel-csharpmin.ily"
+  \include "ilys/clementi-op42-lyt-L50-prel-cismin.ily"  
   \titledPiece "Minuet, by Dr. Haydn"
-  \include "art-of-playing-part2-lesson50-haydn.ily"
-  %}
+  \include "ilys/clementi-op42-lyt-L50-haydn.ily"
 
   %{
   CREDITS:
