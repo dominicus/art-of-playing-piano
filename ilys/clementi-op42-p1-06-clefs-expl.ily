@@ -18,7 +18,7 @@ inlineScoreTenorClefExp = \markup { " " \general-align #Y #CENTER
 		} 
 	    }
 	    \new Lyrics \lyricsto "upper"
-		    \lyricmode {c d e f g a b c d e f g e f d b g a b c }
+		    \lyricmode { c d e f g a b c d e f g e f d b g a b c }
 	    \new Staff 
 		\with {
 		\remove Time_signature_engraver}

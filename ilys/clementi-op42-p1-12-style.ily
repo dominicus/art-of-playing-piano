@@ -82,10 +82,8 @@ inlineScoreArpeggioSign = \markup { " " \general-align #Y #CENTER
 }
 inlineScoreArpeggio = \markup { " " \general-align #Y #CENTER 
     \score
-    { \new Staff \with {
-        \remove Time_signature_engraver
-        }
-        { \relative c''{
+    { \new Staff \with { \remove Time_signature_engraver }
+        { \relative c'' {
         	\clef treble
         	\cadenzaOn
         	<g b d g>4\arpeggio \bar "|"
@@ -93,8 +91,9 @@ inlineScoreArpeggio = \markup { " " \general-align #Y #CENTER
         }
         \layout { 
         	indent = 0\in
-        	ragged-right = ##t}
-        } " "
+        	ragged-right = ##t
+        }
+    } " "
 }
 inlineScoreBaroqueArpeggioSlash = \markup { " " \general-align #Y #CENTER 
     \score
@@ -356,7 +355,7 @@ inlineScoreAppoggiaturaOne = \markup { \general-align #Y #CENTER
 		    	    \override TextScript #'extra-offset = #'(1 . 5.5)
 		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 "thus"} b2 \unHideNotes
 		    	    \revert TextScript #'extra-offset
-		    	    e4( d) \bar "||" \noBreak
+		    	    e4(_\markup{\halign #-2.4 \musicglyph #"scripts.sforzato"} d) \bar "||" \noBreak
 		    	    \hideNotes b64 \unHideNotes
 		    	    \sameSizeClef \forceClef
 		    	    \grace e8 d4 \grace c8 b4 \bar "|" \noBreak
@@ -533,7 +532,7 @@ inlineScoreAppoggiaturaFour = \markup { \general-align #Y #CENTER
 		    	    c,32[ d e8.] 
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 0.3486 . 2.092) ( 1.6936 . 3.188) ( 2.9389 . 3.586) ( 4.4832 . 3.287) )
-			    \override TupletNumber #'extra-offset = #'(1.5 . -0.6 )
+			    \override TupletNumber #'extra-offset = #'( 0.4 . 7 )
 		    	    \times 2/3 {g,32[ c e} g8.] \bar "||" \noBreak
 		    	    \hideNotes b64 \unHideNotes
 		    	    \sameSizeClef \forceClef
@@ -632,7 +631,7 @@ partOneStyleGraces = \markuplist {
     %}
     \paragraph{ 
     	    This mark \inlineScoreArpeggioSign prefixed to a chord 
-    	    %\inlineScoreArpeggio signifies, that the notes must be played 
+    	    \inlineScoreArpeggio signifies, that the notes must be played 
     	    \caps successively, from the lowest; with more or less velocity, as the sentiment may require; keeping each note 
     	    \caps down 'till the time of the chord be filled up.
     }

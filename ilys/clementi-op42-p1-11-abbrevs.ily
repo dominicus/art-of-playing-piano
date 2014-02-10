@@ -87,7 +87,8 @@ inlineScoreAbbreviationsExFour = \markup { \general-align #Y #CENTER
 		    	    \repeat percent 4 {
 		    	    	    \override TupletBracket #'stencil = #ly:slur::print
     				    \override TupletBracket #'control-points = #'( ( 0.3486 . 2.092) ( 1.6936 . 3.188) ( 2.9389 . 3.586) ( 4.4832 . 3.287) )
-				    \override TupletNumber #'extra-offset = #'(1.5 . -0.6 )
+				    %\override TupletNumber #'extra-offset = #'(1.5 . -0.6 )
+				    \override Voice.TupletNumber #'extra-offset = #'(-0.2 . 6.1 )
 				    \times 2/3 {g8[ b d]} 
 		    	    } 
 	    	    
@@ -142,7 +143,7 @@ inlineScoreAbbreviationsExSix = \markup { \general-align #Y #CENTER
 		    	    \repeat percent 2 {
 		    	    	    \override TupletBracket #'stencil = #ly:slur::print
     				    \override TupletBracket #'control-points = #'( ( 0.2717 . 0.543) ( 4.0756 . 5.071) ( 9.8721 . 4.256) ( 13.132 . 1.992) )
-				    \override TupletNumber #'extra-offset = #'(4.2 . 0.12 )
+    				    \override Voice.TupletNumber #'extra-offset = #'(-0.4 . 7.3 )
 				    \times 2/6 {g16[ b d g d b]} 
 		    	    } 
 	    	    
@@ -180,7 +181,8 @@ inlineScoreAbbreviationsExSeven = \markup { \general-align #Y #CENTER
 		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
 		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " played thus"} b1 b2 \unHideNotes
 		    	    \sameSizeClef \forceClef
-		    	    c16[ e c e] c[ e c e] \bar "||"
+		    	    \repeat unfold 4 { c16[ e c e] } 
+		    	    \bar "||"
 		     }
 	  \layout {
 	      indent = 0.2\in
@@ -209,7 +211,8 @@ inlineScoreAbbreviationsExEight = \markup { \general-align #Y #CENTER
 		    	    \override TextScript #'extra-offset = #'(1 . 4.8)
 		    	    \hideNotes b2-\markup{\whiteout \pad-markup #0.4 " thus"} b1 \unHideNotes
 		    	    \sameSizeClef \forceClef
-		    	    e16[ c e c] e[ c e c] \bar "||"
+		    	    \repeat unfold 4 { e16[ c e c] }
+		    	    \bar "||"
 		     }
 	  \layout {
 	      indent = 0.2\in

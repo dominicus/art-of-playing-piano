@@ -16,7 +16,7 @@ inlineScoreTurnsOne = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 0.5977 . 2.49) ( 2.8891 . 3.486) ( 5.9776 . 2.889) ( 6.9738 . 1.693) )
-			    \override TupletNumber #'extra-offset = #'(1.9 . -0.9 )
+			    \override TupletNumber #'extra-offset = #'( 0.4 . 7 )
 		    	    \times 2/3 {d32[ c b} c8.]
 		    	    \bar "||"
 		    	    \revert TextScript #'extra-offset
@@ -56,7 +56,7 @@ inlineScoreTurnsTwo = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 1.6604 . 2.905) ( 3.4869 . 3.819) ( 5.9776 . 3.071) ( 6.8078 . 1.66) )
-			    \override TupletNumber #'extra-offset = #'(1.5 . -1.1 )
+			    \override TupletNumber #'extra-offset = #'( 0.5 . 7.2 )
 		    	    \times 2/3 {e32[ d cis} d8.]
 		    	    \bar "||" \noBreak
 		    	    \hideNotes b64 
@@ -88,7 +88,7 @@ inlineScoreTurnsTwo = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 1.6604 . 2.905) ( 3.4869 . 3.819) ( 5.9776 . 3.071) ( 6.8078 . 1.66) )
-			    \override TupletNumber #'extra-offset = #'(1.5 . -1.1 )
+			    \override TupletNumber #'extra-offset = #'( 0.5 . 7.2 )
 		    	    \times 2/3 {ees32[ d cis!} d8.]
 		    	    \bar "||"
 		     }
@@ -129,7 +129,7 @@ inlineScoreTurnsThree = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 0.7245 . 2.626) ( 2.1736 . 3.441) ( 4.0756 . 3.26) ( 4.8002 . 1.72) )
-			    \override TupletNumber #'extra-offset = #'(1.4 . -0.9 )
+			    \override TupletNumber #'extra-offset = #'( 0.5 . 7 )
 			    c16[
 		    	    \times 2/3 {d32 c b} c8]
 		    	    \bar "||"  \noBreak
@@ -150,7 +150,7 @@ inlineScoreTurnsThree = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 0.7245 . 2.626) ( 2.1736 . 3.441) ( 4.0756 . 3.26) ( 4.8002 . 1.72) )
-			    \override TupletNumber #'extra-offset = #'(1.4 . -0.9 )
+			    \override TupletNumber #'extra-offset = #'( 0.5 . 7 )
 			    c8.[
 		    	    \times 2/3 {d32 c b]} c8[ d] e4
 		    	    \bar "||"
@@ -183,7 +183,7 @@ inlineScoreTurnsFour = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 0.797 . 1.394) ( 1.9925 . 2.988) ( 3.985 . 3.188) ( 5.2802 . 2.59) )
-			    \override TupletNumber #'extra-offset = #'(1.9 . -0.3 )
+			    \override TupletNumber #'extra-offset = #'( 0.5 . 6.6 )
 		    	    \times 2/3 {b32[ c d} c8.]
 		    	    \bar "||" \noBreak
 		    	    \hideNotes b64 
@@ -205,7 +205,7 @@ inlineScoreTurnsFour = \markup { \general-align #Y #CENTER
 		    	    \unHideNotes
 		    	    \override TupletBracket #'stencil = #ly:slur::print
 		    	    \override TupletBracket #'control-points = #'( ( 1.2951 . -3.188) ( 3.188 . -3.5865) ( 4.4832 . -3.2876) ( 5.3798 . -2.391) )
-			    \override TupletNumber #'extra-offset = #'(1.2 . 1.2 )
+			    \override TupletNumber #'extra-offset = #'( -0.2 . -6.7 )
 		    	    \times 2/3 {fis32[ g a} g8.]
 		    	    \bar "||"
 		     }

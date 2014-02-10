@@ -222,7 +222,7 @@ inlineScoreDottedMinim = \markup { " " \general-align #Y #CENTER
         \layout { 
         	indent = 0\in
         	ragged-right = ##t
-        %	#(layout-set-staff-size 25)
+        	#(layout-set-staff-size 18)
         }
         } " "
 }

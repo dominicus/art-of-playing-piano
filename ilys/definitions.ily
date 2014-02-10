@@ -69,6 +69,7 @@ preTrill =  \once \override Staff.Script #'outside-staff-priority = #0
 
 %-----------------------------------------------------------------
                           
+hideTimeSignature = \once \override Staff.TimeSignature #'stencil = ##f
 forceClef = \set Staff.forceClef = ##t
 sameSizeClef = \override Staff.Clef #'full-size-change = ##t
 beamUp = \override Beam #'neutral-direction = #1

@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 inlineScoreBarExample = \markup { " " \general-align #Y #CENTER 
 	    \score {
@@ -377,7 +377,7 @@ inlineScoreTripletsExample = \markup { " " \general-align #Y #CENTER
 				    \set Staff.instrumentName = #'"thus"
 				    \override TextScript #'extra-offset = #'(1 . 4.7)
 				    \override TupletBracket #'control-points = #'( ( 1.8264 . 3.736) ( 4.4001 . 4.732) ( 6.4757 . 3.902) ( 7.555 . 2.158) )
-				    \override TupletNumber #'extra-offset = #'(1.6 . -1.2 )
+				    \override TupletNumber #'extra-offset = #'(1.6 . -0.9 )
 				    
 				    \override TupletBracket #'stencil = #ly:slur::print
 				    \hideNotes c16 \unHideNotes  \times 2/3 {c4 e g,} 

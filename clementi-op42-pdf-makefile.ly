@@ -111,7 +111,7 @@
 
   \titledPiece \markup "Tenor, Counter-tenor, and Soprano clefs explained"
   \partOneClefsExplained
- 
+
   \titledPiece \markup "Figure, Length, and the relative Value of Notes and Rests"
   \partOneValueOfNotes
   
@@ -170,7 +170,7 @@
   \titledPiece \markup "Away with melancholy: by Mozart"
   \include "ilys/clementi-op42-lyt-L01-mozart.ily"
   \pageBreak
-
+  %{
   \section "Lesson II"
   \titledPiece \markup "Aria"
   \include "ilys/clementi-op42-lyt-L02-aria.ily"

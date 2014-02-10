@@ -1,38 +1,74 @@
-\version "2.16.0"
+\version "2.16.1"
+
+liftNoteOne = \override Voice.TextScript #'extra-offset = #'(0.0 . 2.2 )
+liftNoteTwo = \once \override Voice.TextScript #'extra-offset = #'(0.0 . 2.8 )
+sinkNoteOne = \override Voice.TextScript #'extra-offset = #'(0.0 . -2.3 )
+sinkNoteTwo = \once \override Voice.TextScript #'extra-offset = #'(0.0 . -2.8 )
 
 inlineScoreScale = \markup { " " \general-align #Y #CENTER 
 	\score{
     << \new PianoStaff \with {
         \remove Time_signature_engraver
         }
-        \new Staff{
-			\relative c'{
-			\override TextScript #'self-alignment-Y = #CENTER
-			\override TextScript #'staff-padding = #3
-			\clef treble
-			\cadenzaOn
-			\repeat unfold 15 {s4}
-			g^\markup{g} a^\markup{a} b(^\markup{b} c)^\markup{c} d^\markup{d} e(^\markup{e} f)^\markup{f} g^\markup{g}
-			a_\markup{a} \stemUp b(_\markup{b} c)_\markup{c} \stemNeutral d_\markup{d} e(_\markup{e} f)_\markup{f} g_\markup{g} a_\markup{a}
-			b(_\markup{b} c)_\markup{c} d_\markup{d} e(_\markup{e} f)_\markup{f}
-			\bar "||"
-			}
-        	}
-        	\new Staff{
-        		\relative c,,{
-        		\override TextScript #'self-alignment-Y = #CENTER
-			\override TextScript #'staff-padding = #3
-        		\clef bass
-        		f^\markup{f} g^\markup{g} a^\markup{a} b(^\markup{b} c)^\markup{c} d^\markup{d} e(^\markup{e}
-        		f)^\markup{f} g^\markup{g} a^\markup{a} b(^\markup{b} c)^\markup{c} d^\markup{d} e(^\markup{e} f)^\markup{f}
-        		g_\markup{g} a_\markup{a} b(_\markup{b} c)_\markup{c} d_\markup{d} e(_\markup{e} f)_\markup{f} g_\markup{g}
-        		\repeat unfold 13 {s4}
-        		}
-        	}
+        \new Staff = "upper" \with { instrumentName = #"Treble" }
+          {
+          \new Voice = "notes" {
+		\relative c'{
+		\override TextScript #'self-alignment-Y = #CENTER
+		\override TextScript #'staff-padding = #3
+		\hideTimeSignature
+		\clef treble
+		\cadenzaOn
+		\repeat unfold 15 {s4}
+		\sinkNoteOne \sinkNoteTwo
+		g^\markup{ \larger g } a^\markup{ \larger a }
+		b_\(^\markup{ \larger b } c\)^\markup{ \larger c } 
+		d^\markup{ \larger d } e_\(^\markup{ \larger e }
+		f\)^\markup{ \larger f } \sinkNoteTwo g^\markup{ \larger g } 
+		a b\( c\) d e\( f\) g a
+		b\( c\) d e\( f\)
+		\bar "||"
+		}
+	  }
+	}
+	\new Lyrics {
+		\lyricsto "notes" {
+			\repeat unfold 8 { \skip 8 } a b c d e f g a b c d e f
+		}
+	}
+	\new Staff = "lower" \with { instrumentName = #"Bass" }
+	   {
+	  \new Voice = "morenotes" {
+		\relative c,, {
+		\override TextScript #'self-alignment-Y = #CENTER
+		\override TextScript #'staff-padding = #3
+		\hideTimeSignature
+		\clef bass
+		f g a b_\( c\) d e_\(
+		f\) g a b_\( c\) d e\( f\)
+		\liftNoteOne
+		g_\markup{ \larger g } a_\markup{ \larger a }
+		\liftNoteTwo
+		b\(_\markup{ \larger b } c\)_\markup{ \larger c } 
+		\liftNoteTwo
+		d_\markup{ \larger d } e\(_\markup{ \larger e }
+		\liftNoteTwo
+		f\)_\markup{ \larger f }
+		g_\markup{ \larger g }
+		\repeat unfold 13 { s4 }
+		}
+	  }
+	}
+	\new Lyrics \with { alignAboveContext = "lower" } {
+	  \lyricsto "morenotes" {
+		f g a b c d e f g a b c d e f 
+	  }
+	}
         >>
         \layout { 
-        	indent = 0\in
-        	ragged-right = ##t 
+        	indent = 5\mm
+        	ragged-right = ##t
+        	%line-width = #110
         }
       } " "
 }
@@ -44,7 +80,7 @@ inlineScoreScaleLines = \markup { \general-align #Y #CENTER
 		\clef bass
 		\tempo "Bass"
 		\cadenzaOn
-		f^\markup{F} a^\markup{A} c^\markup{C} e^\markup{E} \bar "|"
+		f4^\markup{F} a^\markup{A} c^\markup{C} e^\markup{E} \bar "|"
 		g^\markup{G} b^\markup{B} \stemUp d^\markup{D} \stemNeutral f^\markup{F} a^\markup{A} \bar "|"
 		c^\markup{C} e^\markup{E} g^\markup{G} \bar "||" 
 		s2
@@ -130,11 +166,11 @@ inlineScoreExerciseBass = \markup { \general-align #Y #CENTER
 
 partOneScale = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
-    \paragraph {""}
-    \paragraph {Shewing the position, and name of the notes.}
-    \paragraph{\inlineScoreScale}
-  \paragraph{" "}
-  \paragraph{
+  \paragraph {""}
+  \paragraph {Shewing the position, and name of the notes.}
+  \paragraph { \inlineScoreScale }
+  \paragraph {" "}
+  \paragraph {
   	  Let the \caps Pupil \normal-text now strike the notes on the instrument; taking notice, 
   	  that the first \caps long \normal-text key, on the left hand, serves for the first F; the
   	  second \caps Long \normal-text key for G; the third for A; and so on: making no other use,
@@ -142,9 +178,9 @@ partOneScale = \markuplist {
   	  to direct the eye; by observing, that between B and C, and between E and F, there are 
   	  no \caps short \normal-text keys; which places in the scale are distinguished thus \lower #1.5 \huge \char ##x2040 .
   }
-  \paragraph{" "}
-  \paragraph{  \huge \bold "Remark on the foregoing Scale."}
-  \paragraph{
+  \paragraph {" "}
+  \paragraph {  \huge \bold "Remark on the foregoing Scale."}
+  \paragraph {
   	  	The first \caps eight notes \normal-text in the treble-stave from G to G, are the
   	  	\caps same \normal-text as the corresponding \caps eight notes, \normal-text
   	  	perpendicularly under them in the bass-stave, both in \caps name \normal-text and 
