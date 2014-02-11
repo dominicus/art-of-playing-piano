@@ -8,5 +8,8 @@
     \new Staff = "upper" \LessonXIXUpper
     \new Staff = "lower" \LessonXIXLower
   >>
-  \layout { }
+  \layout {
+  	ragged-bottom = ##t
+  	indent = 0\cm
+  }
 }

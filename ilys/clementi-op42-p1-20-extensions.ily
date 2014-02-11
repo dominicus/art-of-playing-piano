@@ -22,6 +22,7 @@ inlineScoreExtensionsExOne = \markup { \general-align #Y #CENTER
 		    	    \clef bass
 		    	    \unHideNotes
 		    	    \once \override Beam #'auto-knee-gap = #1
+		    	    \once \override Beam #'positions = #'( 1.0 . 1.2 )
 		    	    c,8-1[ c,-5] 
 		    	    d-1[ e,-5] f-4[ c'-1] c,4-5
 		    	    \bar "||" 

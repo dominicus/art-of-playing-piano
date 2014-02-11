@@ -149,7 +149,7 @@ inlineScoreMinScaleInterval = \markup { \general-align #Y #CENTER
 		    	    \once \override Slur #'control-points = #'( ( 1.7711 . 1.771) ( 7.4166 . 3.985) ( 15.608 . 4.095) ( 22.139 . 2.324) )
 		    	    a4^(-\markup{\whiteout \pad-markup #0.2 \column{\line{whole}\line{tone} }}
 		    	    \override TextScript #'extra-offset = #'(3.5 . 4.6 )
-		    	    b-\markup{\whiteout \pad-markup #0.2 \column{\line{whole}\line{tone} }}
+		    	    b-\markup{\whiteout \pad-markup #0.2 \column{\line{semi}\line{tone} }}
 		    	    \override TextScript #'extra-offset = #'(0.1 . -0.2 )
 		    	    c^)^\markup{\concat{3 \super d}}
 		    	    \bar "|"
@@ -325,7 +325,7 @@ inlineScoreExampleBeginningAmin = \markup { \general-align #Y #CENTER
 			\clef bass
 			\key a \minor
 			r8
-			a gis e
+			a[ gis e]
 		}
 	}
         >>

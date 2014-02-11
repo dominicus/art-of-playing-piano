@@ -99,7 +99,7 @@
 
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
-
+  %{
   \titledPiece \markup "Clefs"
   \partOneClefs
 
@@ -132,7 +132,7 @@
  
   \titledPiece \markup "Turns, Shakes, and Beats, explained"
   \partOneTurnsShakesBeats
-        
+
   \titledPiece \markup "Major and Minor Modes or Keys; vulgarly called Sharp and Flat Keys."
   \partOneMajorMinorKeys
   
@@ -148,7 +148,7 @@
 
   \titledPiece \markup "Scales in all the Major keys, with their relative Minors"
   \partOneMajorMinorScales
- 
+          %}
   \titledPiece \markup "General Remarks on the foregoing Scales"
   \partOneRemarksOnScales
   
@@ -170,7 +170,7 @@
   \titledPiece \markup "Away with melancholy: by Mozart"
   \include "ilys/clementi-op42-lyt-L01-mozart.ily"
   \pageBreak
-  %{
+
   \section "Lesson II"
   \titledPiece \markup "Aria"
   \include "ilys/clementi-op42-lyt-L02-aria.ily"
