@@ -21,6 +21,7 @@ LessonVIUpper = \relative c'{
 	%LINE 3
 		c-2 e-3 g-5 e-3 c-1 e-2 g-4 e-2 a-4 f-2 a-4 c-5 a-4 f a c|
 		g-3 c-5 g-3 e-1 g-3 c g e f-3 a-5 f-4 d-2 b-1 g'-5 d-2 f-4|
+		\pageBreak
 		e-3 g-5 e-4 c-2 a-1 f'-5 c-2 e-4 d-3 f-5 d-4 b-1 gis-2 b-1 e-4 b-1|
 		c-2 e-4 c e b-1 e-3 b e a,-1 e'-2 a-5 gis-4 a-5 c,-1 b-2 a-1|
 	%LINE 4
@@ -33,6 +34,7 @@ LessonVIUpper = \relative c'{
 		d-1 f-3 a-5 f-3 d-1 f a f dis-2 fis-3 b-5 fis-3 dis-2 fis b fis|
 		g-4 b,-1 e-5 b-2 g-1 b-2 e-5 b-2 cis-3 dis-4 e-5 g,-1 fis-2 e'-5 dis-4 fis,-2|
 		r g'-4 b-5 g-4 e-2 g-4 b-5 g-4 cis,-2 g'-4 a-5 g-4 a,-1 g'-4 a-5 g-4|
+		\pageBreak
 	%LINE 6
 		d-2 f-4 a-5 f-4 d-2 f a f b,-1 f'-4 g-5 f-4 g,-1 f'-4 g-5 f-4|
 		c-2 e-4 g-5 e-4 c-2 e g e a,-1 d-4 c-3 d-4 a-1 d c d|

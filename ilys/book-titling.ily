@@ -129,7 +129,7 @@
     \fill-line { \fontsize #11 \fromproperty #'header:coverLineFive }
     \vspace #2.2
     \fill-line { \fromproperty #'header:coverScrollBottom }
-    \vspace #9.2
+    \vspace #8
     \fill-line { \fontsize #2 \fromproperty #'header:coverLineSix }
   } 
   scoreTitleMarkup = \markup \null

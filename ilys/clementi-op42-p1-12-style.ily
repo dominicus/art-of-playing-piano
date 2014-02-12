@@ -703,6 +703,7 @@ partOneStyleGraces = \markuplist {
     	    duration; \caps more or \caps less, however, according to the \caps expression of the passage.
     }
     \paragraph{" "}
+    \paragraph{" "}
     \paragraph{
     	    \huge \caps "Appoggiaturas," \large " and other " \huge \caps "Graces" \large " in small notes explained."
     }

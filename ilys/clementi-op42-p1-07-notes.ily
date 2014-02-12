@@ -418,6 +418,7 @@ partOneValueOfNotes = \markuplist {
     \inlineScoreNotesRests} 
     }
     \paragraph{" "}
+    \paragraph{" "}
     \paragraph {  \line {
     	\inlineScoreSemibreve} 
     }
@@ -434,8 +435,9 @@ partOneValueOfNotes = \markuplist {
     	\inlineScoreSemiQuavers} 
     }
     \paragraph {  \line {
-    	    \inlineScoreDemiSemiQuavers}
+    	\inlineScoreDemiSemiQuavers}
     }
+    \paragraph{" "}
     \paragraph{" "}
     \paragraph {
      	     A \caps dot after a note, or rest, makes the note or rest half as long again. Ex:
@@ -447,6 +449,7 @@ partOneValueOfNotes = \markuplist {
      	     double-dotted Crotchet thus \inlineScoreDoubleDottedCrotchet is equal to a crotchet, quaver,
      	     and semiquaver; or to seven semiquavers.
      }
+     \paragraph{" "}
      \paragraph{
      	    Let us farther illustrate this by the mark, called a \caps tie, made thus \inlineScoreTie 
      	    which, when placed between two notes of the \caps same pitch, binds the second to the first;

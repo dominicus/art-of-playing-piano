@@ -68,7 +68,6 @@ inlineScoreScale = \markup { " " \general-align #Y #CENTER
         \layout { 
         	indent = 5\mm
         	ragged-right = ##t
-        	%line-width = #110
         }
       } " "
 }
@@ -123,6 +122,7 @@ inlineScoreScaleSpaces = \markup { \general-align #Y #CENTER
         	ragged-right = ##t }
       } " "
 }
+exerciseTrebleText = \markup { \right-align \huge \bold "Exercise for treble notes:" }
 inlineScoreExerciseTreble = \markup { \general-align #Y #CENTER 
 	\score{
 		\new Staff \with {\remove Time_signature_engraver}
@@ -130,7 +130,7 @@ inlineScoreExerciseTreble = \markup { \general-align #Y #CENTER
 		\relative c''{
 		\clef treble
 		\cadenzaOn
-			c4 e e,g a f c'a f, b c e g'c,a'a,f'd,g'e,c''g,,a f'''d b e
+			c4 e e,g a f c'a f, b c e  g'^\exerciseTrebleText c, a' a,f'd,g'e,c''g,,a f'''d b e
 			g,,,c g''a f,d b' c e g e, a f d b c1
 		\bar "||"
 			}
@@ -140,6 +140,7 @@ inlineScoreExerciseTreble = \markup { \general-align #Y #CENTER
         	ragged-right = ##t }
       } " "
 }
+exerciseBassText = \markup { \right-align \huge \bold "Exercise for bass notes:" }
 inlineScoreExerciseBass = \markup { \general-align #Y #CENTER 
 	\score{
 		\new Staff \with {\remove Time_signature_engraver}
@@ -147,7 +148,7 @@ inlineScoreExerciseBass = \markup { \general-align #Y #CENTER
 		\relative c{
 		\clef bass
 		\cadenzaOn
-			c4 g g' e d g,b'f e c'e,,g'd,f'e c,g g'd'
+			c4 g g' e d g,b'f e c' e,,g'd,f'e c,^\exerciseBassText g g'd'
 			g,c'c,e'e,,f,a''b,g'e c' a f'd b g g,f'a, g e'd f,e c'a a,b g'e c
 			g''e,f a'g, b c,1
 			
@@ -179,7 +180,7 @@ partOneScale = \markuplist {
   	  no \caps short \normal-text keys; which places in the scale are distinguished thus \lower #1.5 \huge \char ##x2040 .
   }
   \paragraph {" "}
-  \paragraph {  \huge \bold "Remark on the foregoing Scale."}
+  \paragraph {  \larger \bold "Remark on the foregoing Scale."}
   \paragraph {
   	  	The first \caps eight notes \normal-text in the treble-stave from G to G, are the
   	  	\caps same \normal-text as the corresponding \caps eight notes, \normal-text
@@ -190,14 +191,11 @@ partOneScale = \markuplist {
   	  As a help to memory; let the Pupil contemplate the notes, \caps separately, \normal-text 
   	  on the lines, and spaces; beginning by the \caps five \normal-text lines.
   }
-  \paragraph{" "}
   \paragraph{\inlineScoreScaleLines}
   \paragraph{\inlineScoreScaleSpaces}
   \paragraph{" "}
-  \paragraph{  \huge \bold "Exercise for treble notes:"}
   \paragraph{\inlineScoreExerciseTreble}
   \paragraph{" "}
-  \paragraph{  \huge \bold "Exercise for bass notes:"}
   \paragraph{\inlineScoreExerciseBass}
   \paragraph{" "}
   \paragraph{\bold "N.B." Let the Pupil \caps first \normal-text be familiarized with the notes,

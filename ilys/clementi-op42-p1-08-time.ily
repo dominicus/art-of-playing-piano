@@ -405,6 +405,7 @@ inlineScoreTripletsExample = \markup { " " \general-align #Y #CENTER
 
 partOneTimeAndItsDivisions = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
+    \paragraph{" "}
     \paragraph {
     	The \caps bar, made thus \inlineScoreBarExample divides a musical composition into \caps equal
     	portions of time.
@@ -431,12 +432,14 @@ partOneTimeAndItsDivisions = \markuplist {
     \paragraph{\inlineScoreSixEigthsCompound}
     \paragraph{\inlineScoreTwelveFourthsCompound}
     \paragraph{\inlineScoreSixFourthsCompound}
+    \paragraph{" "}
     \paragraph{The two last sorts are very seldom used in modern music.}
     \paragraph{" "}
     \paragraph{"                             " \caps Simple triple time explained.}
     \paragraph{\inlineScoreThreeSecondsSimple}
     \paragraph{\inlineScoreThreeFourthsSimple}
     \paragraph{\inlineScoreThreeEighthsSimple}
+ %   \paragraph{" "}
     \paragraph{" "}
     \paragraph{"                             " \caps Compound triple time explained.}
     \paragraph{\inlineScoreNineFourthsCompound}

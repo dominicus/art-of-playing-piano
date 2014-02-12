@@ -55,7 +55,7 @@ partOnePreliminaries = \markuplist {
     	    The notes are placed on the lines, or spaces above, or under the stave and the
     	    additional, called \caps Ledger \normal-text lines \inlineScoreLedgerLines are for the higher and lower
     	    notes.
+    }
+    \paragraph {""}
   }
-  \paragraph {""}
-}
 }

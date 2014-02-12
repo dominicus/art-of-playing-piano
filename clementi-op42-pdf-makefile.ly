@@ -1,11 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                          %
-%   MUZIO CLEMENTI'S Art of Playing on the Piano Forte     %
+%   MUZIO CLEMENTI'S                                       %
+%   Art of Playing on the Piano Forte                      %
+%                                                          %
 %   Typeset by Javier Ruiz-Alma                            %
+%                                                          %
+%   Book Makefile                                          %
 %                                                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \version "2.16.1"
+#(set-default-paper-size "letter")
+\pointAndClickOff
 
 %----------------------GENERAL HEADERS---------------------%
 \header {
@@ -35,18 +41,23 @@
   maintainer = "Javier Ruiz-Alma"
   maintainerEmail = "javier (at) ruiz-alma.com"
   copyright = "Creative Commons Attribution 4.0"
+  license = "Creative Commons Attribution 4.0"
+  lastupdated = "2014/02/08"
   
-  footer = "Mutopia "
+  footer = "Mutopia-2014/02/08-0"
   tagline = "Mutopia Tagline"
 }
 
 %--------------------MARGINS AND PAGE FORMATS--------------%
 \paper {
-     top-margin = 15\mm
-     bottom-margin = 6\mm
+     top-margin = 12\mm
+     bottom-margin = 10\mm
+ %    right-margin = 15\mm
+ %    left-margin = 15\mm
      tocTitle = "Table of Contents"
      first-page-number = -2
      print-first-page-number = ##t
+     page-breaking = #ly:minimal-breaking
 }
 
 %--------------------INCLUDED FILES------------------------%
@@ -96,49 +107,59 @@
 
 %----------------------BOOK CONTENTS-----------------------%
   \chapter "Music Notation"
-
+  
+  \markup \vspace #5
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
-  %{
+  %{  
+  \markup \vspace #2
   \titledPiece \markup "Clefs"
   \partOneClefs
-
+  \pageBreak %---------------------------------------------
+  
   \titledPiece \markup "The Scale, or Gamut"
   \partOneScale
-      
+  \pageBreak %---------------------------------------------
+  
   \titledPiece \markup "Intervals"
   \partOneIntervals
+  \pageBreak %---------------------------------------------
 
   \titledPiece \markup "Tenor, Counter-tenor, and Soprano clefs explained"
   \partOneClefsExplained
-
+  \pageBreak %---------------------------------------------
+  
   \titledPiece \markup "Figure, Length, and the relative Value of Notes and Rests"
   \partOneValueOfNotes
+  \pageBreak %---------------------------------------------
   
   \titledPiece \markup "Time and its Divisions"
   \partOneTimeAndItsDivisions
+  \pageBreak %---------------------------------------------
   
   \titledPiece \markup "Sharps, Flats, etc."
   \partOneSharpsFlats
-
+  \pageBreak %---------------------------------------------
+  
   \titledPiece \markup "Various other marks."
   \partOneOtherMarks
   
   \titledPiece \markup "Abbreviations"
   \partOneAbbreviations
-
+  \pageBreak %---------------------------------------------
   \titledPiece \markup "Style, Graces, and marks of Expression, etc."
   \partOneStyleGraces
- 
+
   \titledPiece \markup "Turns, Shakes, and Beats, explained"
   \partOneTurnsShakesBeats
-
+  \pageBreak %---------------------------------------------
+  
   \titledPiece \markup "Major and Minor Modes or Keys; vulgarly called Sharp and Flat Keys."
   \partOneMajorMinorKeys
   
   \titledPiece \markup "Explanation of Various Terms"
   \partOneVariousTerms
-  
+
   \chapter "Fingering"
 
   \partOneFingering
@@ -148,7 +169,7 @@
 
   \titledPiece \markup "Scales in all the Major keys, with their relative Minors"
   \partOneMajorMinorScales
-          %}
+
   \titledPiece \markup "General Remarks on the foregoing Scales"
   \partOneRemarksOnScales
   
@@ -157,12 +178,18 @@
   
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
-
+  %}
   \titledPiece \markup "The left hand."
   \partOneFingeringLeftHand
 
   \chapter "Preludes and Lessons"
   \partTwoIntroduction
+
+\paper {
+     top-margin = 8\mm
+     bottom-margin = 6\mm
+     page-breaking = #ly:minimal-breaking
+}
 
   \section "Lesson I"
   \titledPiece \markup "Prelude in C Major"
@@ -193,7 +220,7 @@
   \titledPiece \markup "Allegro by Corelli"
   \include "ilys/clementi-op42-lyt-L06-corelli.ily"
   \pageBreak
-
+  %{
   \section "Lesson VII"
   \titledPiece \markup "Prelude in A minor"
   \include "ilys/clementi-op42-lyt-L07-prel-amin.ily"    
@@ -464,7 +491,7 @@
   Phil Holmes: fix encoding errors, explicit breaks
   Jakob Lund: segment sequencing for MIDI
   Janek Warchoł: fixes to polyphony in MIDI, beam positioning
-  Keith O'Hara: fixes to polyphony in MIDI
+  Keith OHara: fixes to polyphony in MIDI
   Nick Payne: ordering scripts and fingering attached to notes, printing ledger lines without notes,
               reversed noteheads, shortening slurs
   David Nalesnik: adjusting beam slopes without reference to staff positions,

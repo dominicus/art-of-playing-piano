@@ -2,6 +2,11 @@
 \include "definitions.ily"
 \include "clementi-op42-mus-L01-prel-cmaj.ily"
 
+\paper {
+     ragged-bottom = ##t
+     system-system-spacing #'basic-distance = #15
+}
+
 \score {
    	   %LESSON I PRELUDE 
 		  \new PianoStaff <<

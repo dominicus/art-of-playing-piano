@@ -322,6 +322,7 @@ partOneSharpsFlats = \markuplist {
     	    same key as \inlineScoreAsharpExample and \inlineScoreGflatExample by the \caps same key as 
     	    \inlineScoreFsharpExample etc.
     }
+    \paragraph { " " }
     \paragraph{
     	Now, the inconveniency of charging to memory with the \caps various uses of the \caps same keys, is 
     	but small; when compared with the impracticableness of performing on an instrument, furnished with keys, 

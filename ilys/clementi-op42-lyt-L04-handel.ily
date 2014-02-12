@@ -5,6 +5,10 @@
 
 % LESSON IV: Air in Saul de Handel.
 
+\paper {
+  system-system-spacing #'basic-distance = #12
+}
+
 \score {
   \new PianoStaff <<
     \new Staff = "upper" \LessonIVUpper

@@ -1,16 +1,14 @@
-\version "2.16.0"
-
-innerCoverCopyright = \markup{ \center-column { \concat { \epsfile #X #20 #(format #f "cc-by-sa-lic-logo.eps" (ly:parser-output-name parser)) } } }
+\version "2.16.1"
 
 innerCover = \markup {      
 	\column { \small {
 		\line { \vspace #35 }
-		\line { \bold \larger "Acknowledgements" \postscript #"0 0 moveto 83 0 rlineto stroke" }
+		\line { \bold \larger "Acknowledgements for this edition" \postscript #"0 0 moveto 60 0 rlineto stroke" }
 		\line { \vspace #0 }
                 \line { \larger "My gratitude to the LilyPond User Forum and the Mutopia Project, for making" }
                 \line { \larger "this project possible; especially:" }
                 \line { \larger "Chris Sawer, Glen Larsen, Mats Bengtsson, Mike Solomon, Phil Holmes, Jakob Lund," }
-                \line { \larger "Janek Warchoł, Keith O'Hara, Nick Payne, David Nalesnik, Reinhold Kainhofer," }
+                \line { \larger "Janek Warchoł, Keith OHara, Nick Payne, David Nalesnik, Reinhold Kainhofer," }
                 \line { \larger "David Kastrup, Shane Brandes, Xavier Scheuer, Eluze, Robin Bannister," }
                 \line { \larger "Thomas Morley, Federico Bruni, Felix Janda, and Edward Neeman." }
                 %{
@@ -73,7 +71,6 @@ innerCover = \markup {
 		%}
 
 		\line { \vspace #5 }
-		%\line { \innerCoverCopyright }
 		}
 	}
   }
