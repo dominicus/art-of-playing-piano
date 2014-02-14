@@ -32,6 +32,7 @@ LessonXIUpper = \relative c'' {
 		d-2 f d c-1 f c d-2 f-4 g-5 d-1 g-4 d-1|
 		e-2 g-4 e-2 d-1 g d e-2 g e d-1 g d|
 		e g e d g d e-2 g-4 a-5 e-2 a-5 e-2|
+		\pageBreak
 	%LINE 5
 		f-3 a-5 f-3 e-2 a-5 e-2 f-3 a f e-2 a e|
 		f-3 a f e-2 a e f-3 a f e-2 a e|

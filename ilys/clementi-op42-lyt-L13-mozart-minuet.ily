@@ -10,5 +10,7 @@
 	\new Staff = "upper" \LessonXIIIUpperA
 	\new Staff = "lower" \LessonXIIILowerA
    >>
-  \layout { }
+  \layout {
+    indent = 15\mm
+  }
 }

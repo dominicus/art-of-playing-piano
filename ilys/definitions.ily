@@ -28,13 +28,13 @@ centermarkup = {
         ly:self-alignment-interface::x-aligned-on-self))))
 }
                           
-trillFour= \markup{\up-tied-lyric \finger 4 \finger 5}
-trillThree = \markup{\up-tied-lyric \finger 3 \finger 2}
-trillTwo = \markup{\up-tied-lyric \finger 2 \finger 1}
-trillOne = \markup{\up-tied-lyric \finger 1 \finger 2}
-trillFourTwo= \markup{\up-tied-lyric \finger 4 \finger 2}
+trillFour= \markup { \up-tied-lyric \finger 4 \finger 5 }
+trillThree = \markup { \up-tied-lyric \finger 3 \finger 2 }
+trillTwo = \markup { \up-tied-lyric \finger 2 \finger 1 }
+trillOne = \markup { \up-tied-lyric \finger 1 \finger 2 }
+trillFourTwo= \markup { \up-tied-lyric \finger 4 \finger 2 }
 switchOneTwo= \trillOne
-switchOneThree= \markup{\up-tied-lyric \finger 1 \finger 3}
+switchOneThree= \markup { \up-tied-lyric \finger 1 \finger 3 }
 switchOneFive= \markup{\up-tied-lyric \finger 1 \finger 5}
 switchTwoOne= \trillTwo
 switchTwoThree = \markup{\up-tied-lyric \finger 2 \finger 3}

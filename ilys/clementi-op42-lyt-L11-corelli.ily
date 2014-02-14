@@ -4,6 +4,7 @@
 
 % LESSON XI. Giga by Corelli.
 
+
 \score {
   \new PianoStaff <<
     \new Staff = "upper" \LessonXIUpper

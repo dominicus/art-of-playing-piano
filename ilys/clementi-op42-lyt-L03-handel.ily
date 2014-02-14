@@ -4,7 +4,7 @@
 
 %LESSON III. Air del'Opera Atalante de HANDEL
 
-\score { % LESSON III (PRINT)
+\score {
   \new PianoStaff <<
     \new Staff = "upper" \LessonIIIUpper
     \new Staff = "lower" \LessonIIILower

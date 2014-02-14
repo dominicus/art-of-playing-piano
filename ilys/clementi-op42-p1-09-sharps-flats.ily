@@ -271,7 +271,7 @@ inlineScoreOrderOfFlats = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneSharpsFlats = \markuplist {
+partOneSharpsFlatsOne = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph {
@@ -339,6 +339,10 @@ partOneSharpsFlats = \markuplist {
     	    N.B.  The same rule holds, when there are two or more sharps at the clef; every one 
     	    affecting its corresponding note.
     }
+  }
+}
+partOneSharpsFlatsTwo = \markuplist {
+  \override-lines #'(baseline-skip . 2.5) {
     \paragraph{
     	    When a \caps flat is placed by the clef \inlineScoreFmajorKeyExample it affects every B throughout the piece; except 
     	    where the flat is contradicted by the natural.

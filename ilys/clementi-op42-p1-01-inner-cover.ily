@@ -5,11 +5,11 @@ innerCover = \markup {
 		\line { \vspace #35 }
 		\line { \bold \larger "Acknowledgements for this edition" \postscript #"0 0 moveto 60 0 rlineto stroke" }
 		\line { \vspace #0 }
-                \line { \larger "My gratitude to the LilyPond User Forum and the Mutopia Project, for making" }
-                \line { \larger "this project possible; especially:" }
-                \line { \larger "Chris Sawer, Glen Larsen, Mats Bengtsson, Mike Solomon, Phil Holmes, Jakob Lund," }
+                \line { \larger "My gratitude to the LilyPond User Forum and the Mutopia Project, for making this project" }
+                \line { \larger "possible; especially:" }
+                \line { \larger "Nicolas Sceaux, Chris Sawer, Glen Larsen, Mats Bengtsson, Mike Solomon, Jakob Lund," }
                 \line { \larger "Janek Warchoł, Keith OHara, Nick Payne, David Nalesnik, Reinhold Kainhofer," }
-                \line { \larger "David Kastrup, Shane Brandes, Xavier Scheuer, Eluze, Robin Bannister," }
+                \line { \larger "David Kastrup, Shane Brandes, Xavier Scheuer, Eluze, Robin Bannister, Phil Holmes, " }
                 \line { \larger "Thomas Morley, Federico Bruni, Felix Janda, and Edward Neeman." }
                 %{
                 \line { \vspace #2 }

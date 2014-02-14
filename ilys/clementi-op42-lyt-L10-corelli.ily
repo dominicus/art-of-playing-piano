@@ -4,6 +4,7 @@
 
 % LESSON X. Sarabanda by Corelli.
 
+
 \score {
 	\new PianoStaff <<
 	    \new Staff = "upper" \LessonXUpper

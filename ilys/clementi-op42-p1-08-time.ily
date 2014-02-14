@@ -403,7 +403,7 @@ inlineScoreTripletsExample = \markup { " " \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneTimeAndItsDivisions = \markuplist {
+partOneTimeAndItsDivisionsOne = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph {
@@ -439,8 +439,11 @@ partOneTimeAndItsDivisions = \markuplist {
     \paragraph{\inlineScoreThreeSecondsSimple}
     \paragraph{\inlineScoreThreeFourthsSimple}
     \paragraph{\inlineScoreThreeEighthsSimple}
- %   \paragraph{" "}
     \paragraph{" "}
+  }
+}
+partOneTimeAndItsDivisionsTwo = \markuplist {
+  \override-lines #'(baseline-skip . 2.5) {
     \paragraph{"                             " \caps Compound triple time explained.}
     \paragraph{\inlineScoreNineFourthsCompound}
     \paragraph{\inlineScoreNineEigthsCompound}

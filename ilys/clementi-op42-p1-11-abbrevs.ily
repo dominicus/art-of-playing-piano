@@ -291,7 +291,7 @@ partOneAbbreviations = \markuplist {
     \paragraph{"                " \inlineScoreAbbreviationsExSeven}
     \paragraph{"                " \inlineScoreAbbreviationsExEight}
     \paragraph{" "}
-    \paragraph{ The \caps italian word, Segue; means, it continues, or follows:}
+    \paragraph{ "The " \caps italian " word, Segue; means, it continues, or follows:" }
     \paragraph{" "}
     \paragraph{"                " \inlineScoreAbbreviationsExNine}
     \paragraph{" "}

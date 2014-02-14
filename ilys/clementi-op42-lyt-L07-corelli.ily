@@ -5,9 +5,9 @@
 % LESSON VII: Gavotta by Corelli
 
 \score {
-			  \new PianoStaff <<
-	    \new Staff = "upper" \LessonVIIUpper
-	    \new Staff = "lower" \LessonVIILower
-	  >>
-	  \layout { }
+  \new PianoStaff <<
+    \new Staff = "upper" \LessonVIIUpper
+    \new Staff = "lower" \LessonVIILower
+  >>
+  \layout { }
 }

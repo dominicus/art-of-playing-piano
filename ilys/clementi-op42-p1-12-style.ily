@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 inlineScoreStaccatissimo = \markup { " " \general-align #Y #CENTER 
     \score
@@ -605,7 +605,7 @@ inlineScoreAppoggiaturaFive = \markup { \general-align #Y #CENTER
   (interpret-markup-list layout props
    (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
 
-partOneStyleGraces = \markuplist {
+partOneStyleGracesOne = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
     \paragraph{" "}
     \paragraph{
@@ -662,6 +662,10 @@ partOneStyleGraces = \markuplist {
     \paragraph{
     	    \italic \bold "Mezzo " \musicglyph #"f", or \italic \bold "Mez:" \musicglyph #"f", \caps "rather loud."
     }
+  }
+}
+partOneStyleGracesTwo = \markuplist {
+  \override-lines #'(baseline-skip . 2.5) {
     \paragraph{
     	    \italic \bold "Forzando," or \italic \bold "sforzando" \dynamic fz, or \dynamic "sf", 
     	    to \caps "force," or give emphasis to, \caps one note.
@@ -715,5 +719,5 @@ partOneStyleGraces = \markuplist {
     \paragraph{ \inlineScoreAppoggiaturaFour}
     \paragraph{ \inlineScoreAppoggiaturaFive}
     \paragraph{" "}
-}
+  }
 }

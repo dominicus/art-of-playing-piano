@@ -11,7 +11,7 @@
 
 \version "2.16.1"
 #(set-default-paper-size "letter")
-\pointAndClickOff
+%\pointAndClickOff
 
 %----------------------GENERAL HEADERS---------------------%
 \header {
@@ -50,14 +50,13 @@
 
 %--------------------MARGINS AND PAGE FORMATS--------------%
 \paper {
-     top-margin = 12\mm
-     bottom-margin = 10\mm
- %    right-margin = 15\mm
- %    left-margin = 15\mm
+     top-margin = 8\mm
+     bottom-margin = 8\mm
      tocTitle = "Table of Contents"
      first-page-number = -2
      print-first-page-number = ##t
      page-breaking = #ly:minimal-breaking
+     system-system-spacing #'padding = #6
 }
 
 %--------------------INCLUDED FILES------------------------%
@@ -111,7 +110,7 @@
   \markup \vspace #5
   \titledPiece \markup "Preliminaries"
   \partOnePreliminaries 
-  %{  
+ 
   \markup \vspace #2
   \titledPiece \markup "Clefs"
   \partOneClefs
@@ -134,11 +133,15 @@
   \pageBreak %---------------------------------------------
   
   \titledPiece \markup "Time and its Divisions"
-  \partOneTimeAndItsDivisions
+  \partOneTimeAndItsDivisionsOne
+  \pageBreak
+  \partOneTimeAndItsDivisionsTwo
   \pageBreak %---------------------------------------------
   
   \titledPiece \markup "Sharps, Flats, etc."
-  \partOneSharpsFlats
+  \partOneSharpsFlatsOne
+  \pageBreak
+  \partOneSharpsFlatsTwo
   \pageBreak %---------------------------------------------
   
   \titledPiece \markup "Various other marks."
@@ -147,8 +150,11 @@
   \titledPiece \markup "Abbreviations"
   \partOneAbbreviations
   \pageBreak %---------------------------------------------
+  
   \titledPiece \markup "Style, Graces, and marks of Expression, etc."
-  \partOneStyleGraces
+  \partOneStyleGracesOne
+  \pageTurn %---------------------------------------------
+  \partOneStyleGracesTwo
 
   \titledPiece \markup "Turns, Shakes, and Beats, explained"
   \partOneTurnsShakesBeats
@@ -178,18 +184,12 @@
   
   \titledPiece \markup "Examples of fingering for the right hand."
   \partOneFingeringRightHand
-  %}
+
   \titledPiece \markup "The left hand."
   \partOneFingeringLeftHand
 
   \chapter "Preludes and Lessons"
   \partTwoIntroduction
-
-\paper {
-     top-margin = 8\mm
-     bottom-margin = 6\mm
-     page-breaking = #ly:minimal-breaking
-}
 
   \section "Lesson I"
   \titledPiece \markup "Prelude in C Major"
@@ -215,12 +215,12 @@
   \titledPiece \markup "Dead March, in Saul, by Handel"
   \include "ilys/clementi-op42-lyt-L05-handel.ily"
   \pageBreak
-
+  
   \section "Lesson VI"
   \titledPiece \markup "Allegro by Corelli"
   \include "ilys/clementi-op42-lyt-L06-corelli.ily"
   \pageBreak
-  %{
+    
   \section "Lesson VII"
   \titledPiece \markup "Prelude in A minor"
   \include "ilys/clementi-op42-lyt-L07-prel-amin.ily"    
@@ -239,12 +239,12 @@
   \titledPiece \markup "March, in Judas Maccabeus, by Handel"
   \include "ilys/clementi-op42-lyt-L09-handel.ily"
   \pageBreak
-   
+
   \section "Lesson X"
   \titledPiece \markup "Sarabanda, by Corelli"
   \include "ilys/clementi-op42-lyt-L10-corelli.ily"
   \pageBreak 
-   
+
   \section "Lesson XI"
   \titledPiece \markup "Giga, by Corelli"
   \include "ilys/clementi-op42-lyt-L11-corelli.ily"
@@ -254,13 +254,13 @@
   \titledPiece \markup "Arietta, by Mozart"
   \include "ilys/clementi-op42-lyt-L12-mozart.ily"
   \pageBreak
-
+  
   \section "Lesson XIII"
   \titledPiece \markup "Minuet and Trio, by Mozart"
   \include "ilys/clementi-op42-lyt-L13-mozart-minuet.ily"
   \include "ilys/clementi-op42-lyt-L13-mozart-trio.ily"
   \pageBreak
-
+  
   \section "Lesson XIV"
   \titledPiece \markup "Le Réveilmatin, by Couperin"
   \include "ilys/clementi-op42-lyt-L14-couperin.ily"
@@ -423,69 +423,70 @@
   \pageBreak
   
   \section "Lesson XLII"
-  \titledPiece "Prelude in E Flat Major"
+  \titledPiece \markup "Prelude in E Flat Major"
   \include "ilys/clementi-op42-lyt-L42-prel-eesmaj.ily"
   \titledPiece "Rondo by C.P.E. Bach"
   \include "ilys/clementi-op42-lyt-L42-cpebach.ily"  % ---------- Warnings: Rest collisions
   \pageBreak
 
   \section "Lesson XLIII"
-  \titledPiece "Prelude in C minor"
+  \titledPiece \markup "Prelude in C minor"
   \include "ilys/clementi-op42-lyt-L43-prel-cmin.ily"
-  \titledPiece "Minuet, by Scarlatti"
+  \titledPiece \markup "Minuet, by Scarlatti"
   \include "ilys/clementi-op42-lyt-L43-scarlatti.ily"
   \pageBreak
   
   \section "Lesson XLIV"
-  \titledPiece "Prelude in A Major"
+  \titledPiece \markup "Prelude in A Major"
   \include "ilys/clementi-op42-lyt-L44-prel-amaj.ily"
-  \titledPiece "Andante Allegretto by Paradies."
+  \titledPiece \markup "Andante Allegretto by Paradies."
   \include "ilys/clementi-op42-lyt-L44-paradies.ily"  %----Warning: colliding rests
   \pageBreak
   
   \section "Lesson XLV"
-  \titledPiece "Prelude in F# minor"
+  \titledPiece \markup "Prelude in F# minor"
   \include "ilys/clementi-op42-lyt-L45-prel-fismin.ily"
-  \titledPiece "Adagio by Corelli."
+  \titledPiece \markup "Adagio by Corelli."
   \include "ilys/clementi-op42-lyt-L45-corelli.ily"
   \pageBreak
      
   \section "Lesson XLVI"
-  \titledPiece "Prelude in A flat Major"
+  \titledPiece \markup "Prelude in A flat Major"
   \include "ilys/clementi-op42-lyt-L46-prel-aesmaj.ily"
-  \titledPiece "Slow March by Couperin."
+  \titledPiece \markup "Slow March by Couperin."
   \include "ilys/clementi-op42-lyt-L46-couperin.ily"
   \pageBreak
   
   \section "Lesson XLVII"
-  \titledPiece "Prelude in F minor"
+  \titledPiece \markup "Prelude in F minor"
   \include "ilys/clementi-op42-lyt-L47-prel-fmin.ily"
-  \titledPiece "Allegretto by Couperin"
+  \titledPiece \markup "Allegretto by Couperin"
   \include "ilys/clementi-op42-lyt-L47-couperin.ily"
   \pageBreak
   
   \section "Lesson XLVIII"
-  \titledPiece "Prelude in E Major"
+  \titledPiece \markup "Prelude in E Major"
   \include "ilys/clementi-op42-lyt-L48-prel-emaj.ily"
-  \titledPiece "Polonoise and Minuet, by Sebastian Bach"
+  \titledPiece \markup "Polonoise and Minuet, by Sebastian Bach"
   \include "ilys/clementi-op42-lyt-L48-bach-polonaise.ily"
   \include "ilys/clementi-op42-lyt-L48-bach-minuet.ily"
   \pageBreak
  
   \section "Lesson XLIX"
-  \titledPiece "Gavotta, by Corelli"
+  \titledPiece \markup "Gavotta, by Corelli"
   \include "ilys/clementi-op42-lyt-L49-corelli.ily"
   \pageBreak
  
   \section "Lesson L"
-  \titledPiece "Prelude in C# minor"
+  \titledPiece \markup "Prelude in C# minor"
   \include "ilys/clementi-op42-lyt-L50-prel-cismin.ily"  
-  \titledPiece "Minuet, by Dr. Haydn"
+  \titledPiece \markup "Minuet, by Dr. Haydn"
   \include "ilys/clementi-op42-lyt-L50-haydn.ily"
 
   %{
   CREDITS:
   
+  Nicolas Sceaux: book titling framework
   Mats Bengtsson: defer page numbering several pages into the book
   Mike Solomon: up-tied fingering markup, slur as tuplet bracket
   Phil Holmes: fix encoding errors, explicit breaks
