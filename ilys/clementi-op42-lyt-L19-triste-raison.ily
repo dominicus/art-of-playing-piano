@@ -9,7 +9,6 @@
     \new Staff = "lower" \LessonXIXLower
   >>
   \layout {
-  	ragged-bottom = ##t
-  	indent = 0\cm
+    system-count = #3
   }
 }

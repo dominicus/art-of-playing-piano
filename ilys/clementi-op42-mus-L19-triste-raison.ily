@@ -19,6 +19,7 @@ LessonXIXUpper = \relative c''{
 		}>>
 		<g b>8-1-4 <fis a>-2-3 <g b>-1-4 <a c>-2-4 <b d>4-3-5|
 		<b d>4-3-5 <b g>-1-3 <c a>\turn^2^4^"*"|
+		\break
 		<<{<d>2-3-5 d8-2-4 e16-5 d-4|c8-1-3 d16-5 c-4 b4^1^\switchThreeFour a-2-3|}\\
 		{b2 b4|a g fis|}>>
 		g2-1 r4|

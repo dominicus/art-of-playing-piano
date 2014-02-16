@@ -39,6 +39,7 @@ LessonXXIIUpper = \relative c''{
 		}\\{
 			\grace s16\fz d2^\markup{\finger 3}^\fermata
 		}>>
+		\pageBreak
 		g,8-1_\markup{\italic "a tempo"} b-3 d-5 b-3|
 		c-4 a-2 a4\turn|
 	%LINE 3

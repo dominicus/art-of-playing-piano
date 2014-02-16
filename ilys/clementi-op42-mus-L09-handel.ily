@@ -19,7 +19,9 @@ LessonIXUpper= \relative c' {
 	%LINE 3
 		\preTrill e2.\trill^\trillFour d8-2 f-4|e2-3 \preTrill e4.\trill^\trillFour d16-2 e-3|
 		f4-4 e-3 d-2 c-1|b2-2 e-5|d4-4 c8-3 b-2 c4-3 d-4|\preTrill b2\trill^\trillThree a-1|
-		d8-3 cis-2 d-3 e-4 d4-3 e-4|f2.-5 a,4-1|bes8-2 a-1 bes-2 c-3 bes4-2 c-1|d2.-3 c8-2 ees-4|
+		d8-3 cis-2 d-3 e-4 d4-3 e-4|f2.-5 a,4-1|
+		\pageBreak
+		bes8-2 a-1 bes-2 c-3 bes4-2 c-1|d2.-3 c8-2 ees-4|
 	%LINE4
 		\preTrill d2.\trill^\trillThree c16-1 d-2 ees8-3|d2.-2 c4-1|
 		d8-2 f-4 e!-3 g-5 f4-4 e8-3 d-2|c4-1 d8-2 e-3 f4-4 e-3|d-2 e8-3 f-4 g4-5 f-4|

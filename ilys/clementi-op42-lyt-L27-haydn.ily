@@ -11,5 +11,7 @@
 		    \new Staff = "lower" \with { \consists "Span_arpeggio_engraver" } 
 		        \LessonXXVIILower 
 	  >>
-	  \layout {  }
+	  \layout { 
+	    system-count = 3
+	  }
 }

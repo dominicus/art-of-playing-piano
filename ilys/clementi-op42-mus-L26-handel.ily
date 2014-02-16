@@ -72,11 +72,11 @@ LessonXXVIUpperAii = \relative c'{  %UPPER SEGNO TO FIRST VOLTA & FINE
 		}>>
 		<g' d b>4.|
 		\bar ":|:"
-		%\mark \markup {\right-align "Fine." } \break
 }
-LessonXXVIUpperA ={\repeat volta 2{\LessonXXVIUpperAi \LessonXXVIUpperAii}}
+
+LessonXXVIUpperA ={ \repeat volta 2 { \LessonXXVIUpperAi \LessonXXVIUpperAii } }
 LessonXXVIUpperB = \relative c''{     %  SECOND VOLTA START TO FINISH
-	\repeat volta 2{
+	\repeat volta 2 {
 		<<{
 			d8-5-3 b-1-3 c-2-4|
 			d16-1-3 e-2-4 d8-1-3 g-5|
@@ -148,6 +148,7 @@ LessonXXVIUpperB = \relative c''{     %  SECOND VOLTA START TO FINISH
 		%\markup {"D.C. al Segno"}
 		\bar "|."
 }
+
 LessonXXVIUpperFINEbar={\relative c'{<g' d b>4.|}}
 
 LessonXXVILowerAi = \relative c'{   %LOWER BEGIN TO SEGNO
@@ -198,9 +199,9 @@ LessonXXVILowerAii = \relative c{  %LOWER SEGNO TO FIRST VOLTA & FINE
 		<<{g4.|}\\{s4 s16 s32 s32^\markup{\right-align "Fine."}|}>>|
 		\bar ":|:"
 		}
-LessonXXVILowerA={\repeat volta 2{\LessonXXVILowerAi \LessonXXVILowerAii}}
+LessonXXVILowerA= { \repeat volta 2 { \LessonXXVILowerAi \LessonXXVILowerAii } }
 
-LessonXXVILowerB = \relative c'{     % LOWER SECOND VOLTA START TO FINISH
+LessonXXVILowerB = \relative c' {     % LOWER SECOND VOLTA START TO FINISH
 	%LINE 5
 	\repeat volta 2{
 		r4.|

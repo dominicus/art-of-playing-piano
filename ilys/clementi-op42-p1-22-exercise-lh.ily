@@ -99,7 +99,6 @@ scoreFingeringExerciseThirtyThree = \markup { \general-align #Y #CENTER
 
 partOneFingeringLeftHand = \markuplist {
   \override-lines #'(baseline-skip . 2.5) {
-    \paragraph{  }
     \paragraph{ \scoreFingeringExerciseThirty }
     \paragraph{ \scoreFingeringExerciseThirtyOne }
     \paragraph{ \scoreFingeringExerciseThirtyTwo }

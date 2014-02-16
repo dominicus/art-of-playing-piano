@@ -8,5 +8,7 @@
 		    \new Staff = "upper" \LessonXXXUpper
 		    \new Staff = "lower" \LessonXXXLower
 	  >>
-	  \layout { }
+	  \layout {
+	    system-count = #4
+	  }
 }

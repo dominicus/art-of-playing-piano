@@ -9,5 +9,5 @@
     \new Staff = "upper" \LessonIVUpper
     \new Staff = "lower" \LessonIVLower
   >>
-  \layout {  }
+  \layout { }
 }

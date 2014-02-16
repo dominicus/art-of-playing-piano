@@ -3,7 +3,7 @@
 
 % LESSON XXVI. Minuet in Samson, by Handel.
 
-\score{ % LESSON XXVI: Menuet in Samson de HANDEL PRINT
+\score{ 
 	  \new PianoStaff
 	  <<
 		    \new Staff = "upper"
@@ -11,5 +11,8 @@
 		    \new Staff = "lower"
 		    {\LessonXXVILowerA \LessonXXVILowerB}
 	  >>
-	  \layout { }
+	  \layout {
+	    system-count = #8
+	    indent = 0\mm
+	  }
 }

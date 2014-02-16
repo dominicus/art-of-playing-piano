@@ -14,15 +14,15 @@ LessonXXXIIUpperA = \relative c'''{
 		f4..-3 g16-4 f8.-3 ees16-2|
 		ees4-3( d8-2) f-.-4 ees-.-3 c-.-1|
 		bes4-2 bes bes|
-		<<{s8.. s32\turn s2|}\\{bes4.^\markup{\finger 2} c8^\markup{\finger 3} d4^\markup{\finger 4}|\noPageBreak}>>
-		<<{d8-1-4[ c-3 ees-5 d-1-5 c-2-5 bes-1-4]|bes2-2-5( a8-1-5) b\rest|\noPageBreak
+		<<{s8.. s32\turn s2|}\\{bes4.^\markup{\finger 2} c8^\markup{\finger 3} d4^\markup{\finger 4}|}>>
+		<<{d8-1-4[ c-3 ees-5 d-1-5 c-2-5 bes-1-4]|bes2-2-5( a8-1-5) b\rest|
 		}\\{g4. f8[ ees d]|d2( c8) s}>>
 	}
 	\repeat volta 2{
 		\preTrill f'8.\trill^\trillThree e32-1 f-2 g4-3 <c g c,>8\fz\arpeggio r|
 		\preTrill g8.\trill^\trillFour fis32-2 g-3 a4-4 <c a f c>8\fz\arpeggio r|
-		a8.-4 f16-2 bes8.-5 <f d>16-2-4 <ees c>8.-1-3 <d bes>16-2-4|\noPageBreak
-		<d bes>4-2-4( <c a>8-1-3)[ f-.-5 ees-.-4 c-.-1]|\noPageBreak
+		a8.-4 f16-2 bes8.-5 <f d>16-2-4 <ees c>8.-1-3 <d bes>16-2-4|
+		<d bes>4-2-4( <c a>8-1-3)[ f-.-5 ees-.-4 c-.-1]|
 		bes4-2 bes bes|
 		<<{s8.. s32\turn s2|}\\{bes4.^\markup{\finger 2} c8^\markup{\finger 1} d8.^\markup{\finger 2} ees16^\markup{\finger 3}|}>>
 		f8.-4 g16-5 bes,4-2 \grace d16-4 c-3 bes-2 c-3 d-4|

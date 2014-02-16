@@ -11,5 +11,7 @@
 		    \new Staff = "upper" \LessonXXIIIUpperD
 		    \new Staff = "lower" \LessonXXIIILowerD
 	  >>
-	  \layout { }
+	  \layout { 
+	    system-count = #6
+	  }
 }

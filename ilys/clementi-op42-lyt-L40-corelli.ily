@@ -10,5 +10,6 @@
 	  >>
 	  \layout{
 		   indent = 0.0\cm % remove indent on first staff
+		   system-count = #15
 	  }
 }

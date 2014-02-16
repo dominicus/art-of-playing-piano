@@ -116,6 +116,7 @@
 %%%
 \paper {
   bookTitleMarkup = \markup \when-property #'header:title \column {
+    \vspace #3
     \fill-line { \italic \fontsize #5.45 \fromproperty #'header:coverLineOne }
     \vspace #1
     \fill-line { \italic \fontsize #5 \fromproperty #'header:coverLineTwo }
@@ -129,8 +130,6 @@
     \fill-line { \fontsize #11 \fromproperty #'header:coverLineFive }
     \vspace #2.2
     \fill-line { \fromproperty #'header:coverScrollBottom }
-    \vspace #8
-    \fill-line { \fontsize #2 \fromproperty #'header:coverLineSix }
   } 
   scoreTitleMarkup = \markup \null
 }
@@ -259,8 +258,8 @@
              (create-page-number-stencil layout props arg)
              empty-stencil))
 	
-             evenHeaderMarkup = \markup { \column { \on-the-fly #print-positive-page-number { \fontsize #0.2 \even-header \null } } }
-             oddHeaderMarkup =  \markup { \column { \on-the-fly #print-positive-page-number { \fontsize #0.2 \odd-header  \null } } }
+             evenHeaderMarkup = \markup { \column { \on-the-fly #print-positive-page-number { \abs-fontsize #10 \even-header \null } } }
+             oddHeaderMarkup =  \markup { \column { \on-the-fly #print-positive-page-number { \abs-fontsize #10 \odd-header  \null } } }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -374,7 +373,7 @@ titledPiece =
 
 #(define-markup-command (piece-title layout props title) (markup?)
   (interpret-markup layout props
-   (markup #:fill-line (#:override '(line-width . 80) title))))
+   (markup #:fill-line (#:override '(line-width . 80) #:bold title))))
 
 #(define-markup-command (rehearsal-number layout props number) (markup?)
   (interpret-markup layout props

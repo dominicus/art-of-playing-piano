@@ -18,9 +18,13 @@ LessonIVUpper = \relative c''{
 	\repeat volta 2 {
 	e,4-1 fis-2 gis-3|a8-1 b-2 \preTrill b4.\trill^\trillThree a16-1 b-2|c4-3 cis2-4|
 	d8-1 e-3 \preTrill e4.\trill^\trillFour d16-2 e-3| f4-4 f-5 e-4|d2-3 c4-2|
-	b-1 a8-3 [gis-2 a-3 b-4]|gis2.-2|e'-5|c-1|g'-3|e-1|e-5|a4-3 gis-2 a-1|b-3 d8-5 c-4 b-3 a-1|
+	b-1 a8-3 [gis-2 a-3 b-4]|gis2.-2|e'-5|
+	
+	c-1|g'-3|e-1|e-5|a4-3 gis-2 a-1|b-3 d8-5 c-4 b-3 a-1|
 	gis4.-2 a8-3 \grace b16-4 a8-3 g16-2 a-3|b4-4 e,-1 d-2|\grace c8-1 c'4-5 b8-4 c-5 a4-3|
-	b-4 gis4.-2 a8-3|a2.-5|g2.-4|
+	b-4 gis4.-2 a8-3|
+	\pageBreak
+	a2.-5|g2.-4|
 	e^\switchTwoFive |
 	a,4-2 g-1 c-3|b-1 e-3 d-1|f-3 e-2 a-5|
 	g-4 f8-3 e-2 d-1 c-3|b-2 c-3 \preTrill c4.\trill^\trillFour b16-2 c-3|d2-4 r4|g,2.-2|e-1|

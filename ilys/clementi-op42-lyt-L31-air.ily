@@ -4,9 +4,11 @@
 % LESSON XXXI. Lindor - an Air.
 
 \score {
-	  \new PianoStaff <<
-		    \new Staff = "upper" \LessonXXXIUpper
-		    \new Staff = "lower" \LessonXXXILower
-	  >>
-	  \layout{ }
+  \new PianoStaff <<
+    \new Staff = "upper" \LessonXXXIUpper
+    \new Staff = "lower" \LessonXXXILower
+  >>
+  \layout{ 
+    system-count = #3
+  }
 }

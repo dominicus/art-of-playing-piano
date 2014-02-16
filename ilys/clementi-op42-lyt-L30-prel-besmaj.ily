@@ -8,5 +8,8 @@
 		    \new Staff = "upper" \LessonXXXUpperPrel
 		    \new Staff = "lower" \LessonXXXLowerPrel
 	  >>
-	  \layout { }
+	  \layout { 
+	    indent = 0\mm
+	    
+	  }
 }

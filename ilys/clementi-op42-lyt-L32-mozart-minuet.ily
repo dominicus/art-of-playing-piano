@@ -5,7 +5,7 @@
 
 \score {
 	  \new PianoStaff <<
-	  	    \set PianoStaff.instrumentName = #"Minuet"
+	  	   \set PianoStaff.instrumentName = #"Minuet"
 		    \new Staff = "upper" \LessonXXXIIUpperA
 		    \new Staff = "lower" \LessonXXXIILowerA
 	  >>

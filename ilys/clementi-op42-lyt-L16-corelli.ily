@@ -8,5 +8,8 @@
     \new Staff = "upper" \LessonXVIUpper
     \new Staff = "lower" \LessonXVILower
   >>
-  \layout { }
+  \layout { 
+    system-count = #10
+    indent = 0\mm
+  }
 }

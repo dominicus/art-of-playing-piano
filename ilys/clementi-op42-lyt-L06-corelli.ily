@@ -4,8 +4,6 @@
 
 % LESSON VI: Allegro by Corelli
 
-
-
 \score {
 	\new PianoStaff <<
 	    \new Staff = "upper" \LessonVIUpper
