@@ -12,6 +12,6 @@
 		        \LessonXXVIILower 
 	  >>
 	  \layout { 
-	    system-count = 3
+	    system-count = #3
 	  }
 }
