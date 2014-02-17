@@ -1,4 +1,6 @@
 Lilypond Typesetting
 by Javier Ruiz-Alma
 
-Book make-file: art-of-playing-pf-book.ly
+Book make-file: clementi-op42.ly
+
+Generate midi: clementi-op42-midi.ly
