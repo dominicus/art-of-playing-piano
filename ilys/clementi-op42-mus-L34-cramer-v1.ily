@@ -7,7 +7,7 @@ LessonXXXIVUpperB=\relative c'{
 	\key g \minor
 	\clef treble
 	\time 2/4
-	\tempo 4=64 \hideTempo
+	\tempo 4=72 \hideTempo
 	\repeat volta 2{
 	%LINE 1
 		\set Score.measurePosition = #(ly:make-moment 3 8)

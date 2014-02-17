@@ -10,7 +10,7 @@ innerCover = \markup {
                 \line { \larger "Nicolas Sceaux, Chris Sawer, Glen Larsen, Mats Bengtsson, Mike Solomon, Jakob Lund," }
                 \line { \larger "Janek Warchoł, Keith OHara, Nick Payne, David Nalesnik, Reinhold Kainhofer," }
                 \line { \larger "David Kastrup, Shane Brandes, Xavier Scheuer, Eluze, Robin Bannister, Phil Holmes, " }
-                \line { \larger "Thomas Morley, Federico Bruni, Felix Janda, and Edward Neeman." }
+                \line { \larger "Thomas Morley, Federico Bruni, Felix Janda, Bas Wassink, and Edward Neeman." }
                 %{
                 \line { \vspace #2 }
 		\line { \bold "1803 English edition cover (Sibley Music Library)" \postscript #"0 0 moveto 39.8 0 rlineto stroke" }

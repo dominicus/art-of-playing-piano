@@ -6,7 +6,7 @@
 LessonXXXVIIIUpperA= \relative c''{
 	\key d \major
 	\time 2/2
-	\tempo 4=95
+	\tempo 2=55
 	\hideTempo
 	\clef treble
 	%LINE 1

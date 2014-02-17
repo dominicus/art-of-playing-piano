@@ -6,7 +6,7 @@
 LessonIVUpper = \relative c''{
 	\clef treble
 	\time 3/4
-	\tempo 4 =92 \hideTempo
+	\tempo 4 =65 \hideTempo  % published score tempo: "Andante Larghetto"
 	\key c \major
 	\repeat volta 2 {
 		g2.-3|e-3|a4-3 g-1 c-3|b-1 e-3 d-1|f-3 e-2 a-5|g-4 f8-3 e-2 d-1 c-2|

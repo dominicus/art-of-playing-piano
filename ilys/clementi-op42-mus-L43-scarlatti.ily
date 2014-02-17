@@ -10,7 +10,7 @@ global = {\key c \minor  \time 3/4}
 
 LessonXLIIIUpperVoiceOne= \relative c''{
 	\clef treble
-	\tempo 4=88
+	\tempo 4=100
 	\hideTempo
 	\repeat volta 2 {
 		\stemDown c8-2( g'-5 c,4-2 b-1) | %1   ---LINE 1
@@ -20,7 +20,7 @@ LessonXLIIIUpperVoiceOne= \relative c''{
 		f,-1 f'-5 ees-4 d-3 ees-5 g,-2  |%5
 		f-1 f'-5 ees d ees-4 c-2 | %6
 		d-3 f-5 c4-3( \lessScriptPriority b)\trill-2 | %7
-		bes2( c4)  |%8                         ---LINE 2
+		\hideAccidental b2( c4)  |%8                         ---LINE 2
 	}
 	\repeat volta 2 {
 		\stemNeutral
@@ -41,7 +41,7 @@ LessonXLIIIUpperVoiceOne= \relative c''{
 		\once \override Beam #'positions = #'(0.2 . 0)
 		f8-1[ \stemDown f'] \stemUp \grace f16 \stemNeutral ees8[ d] ees-4[ c-2] | %22
 		d8-3 f-5 c4-3( b)\trill | %23
-		bes2( c4) | %24
+		\hideAccidental b2( c4) | %24
 	}
 }
 %{

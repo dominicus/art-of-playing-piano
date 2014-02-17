@@ -6,7 +6,7 @@
 LessonXXVIUpperAi = \relative c''{  %UPPER BEGIN TO SEGNO
 	\clef treble
 	\key g \major
-	\tempo 4=95 \hideTempo
+	\tempo 4=88 \hideTempo
 	\time 3/8
 	%LINE 1
 		d8-2 g4-5|fis16-4 e fis d g8-5|

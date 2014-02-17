@@ -116,6 +116,9 @@ noteheadBlue = \override NoteHead #'color = #blue
 noteheadRed = \override NoteHead #'color = #red
 noteheadMagenta = \override NoteHead #'color = #magenta
 
+hidePiano = \tweak #'stencil ##f\p  %usage: must add as <note>-\hidePiano
+hideForte = \tweak #'stencil ##f\f  %usage: must add as <note>-\hidePiano
+
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 

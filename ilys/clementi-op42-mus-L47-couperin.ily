@@ -9,7 +9,7 @@ tempoLegend = \markup { \right-align "Più tosto Vivace."}
 
 LessonXLVIIUpper = \relative c''{
 	\time 6/8
-	\tempo 4=123 \hideTempo
+	\tempo 4=135 \hideTempo
 	\partial 8
 	\repeat volta 2 {
 	f8-2				 %partial

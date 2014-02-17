@@ -44,9 +44,7 @@ LessonVIUpper = \relative c'{
 		a-1 c-3 f-5 a,-2 g-1 b-3 e-5 g,-2 f-1 a-3 d-5 f,-2 e-1 g-3 c-5 e,-1|
 		f-2 b-4 c-5 e,-2 d-1 c'-5 b-4 d,-1 c-2 e-3 a-5 c,-2 b-1 d-3 g-5 b,-1|
 		r g'-3 c-5 e,-1 f-2 a-3 d-5 f,-2 e-1 d'-3 g-5 b,-1 c-2 e-3 g-5 c,-2|
-		g-1 b-4 c-5 e,-1 f-2 b-4 c-5 e,-2
-		\tempo 4 = 60
-		\hideTempo
+		g-1 b-4 c-5 e,-1 \tempo 4 = 70 \hideTempo f-2 b-4 c-5 \tempo 4 = 52 \hideTempo e,-2
 		<d g c>4\arpeggio-1-3-5 <d f b>\arpeggio-1-2-4| <c e c'>1\arpeggio-1-2-5|
 		\bar "|."
 }
@@ -74,12 +72,12 @@ LessonVILower = \relative c{
 		d, r g r|c, r f r|g-2 e-4 f-3 g-2|a-1 b-2 c-1 r8 g-2|
 	%LINE 7
 		a4-1 r8 e-2 f4-1 r8 e-2|d-3[ c-4] g'-1[ g,-5] c4-3 r8 g'|
+		
 		a4-1 r8 b-2 c4-1 r8 f,-2|
-		<<{s2 r4^\markup {"Adagio"}
-			\tempo 4 = 60
-			\hideTempo
-			   g4-1|} \\
-		{g8-1 e-2 d-3 c-4 g2-5|}>>
+		<<{
+		   s4 \tempo 4 = 70 \hideTempo s4 \tempo 4 = 52 \hideTempo r4^\markup {"Adagio"}
+                   g4-1|} \\
+		{g8-1 e-2 \tempo 4 = 70 \hideTempo d-3 c-4 \tempo 4 = 52 \hideTempo g2-5|}>>
 		<c g'>1-3-1|
 		\bar "|."		
 }

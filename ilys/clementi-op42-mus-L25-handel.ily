@@ -7,7 +7,7 @@ LessonXXVUpper = \relative c'''{
 	\clef treble
 	\time 3/4
 	\key g \major
-	\tempo 4=100 \hideTempo
+	\tempo 4=108 \hideTempo
 	\repeat volta 2{
 	%LINE 1
 		r16 g-5 fis e d c b-3 a g8 g'|

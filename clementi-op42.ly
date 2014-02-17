@@ -10,10 +10,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \version "2.16.1"
-%#(set-default-paper-size "letter")
-\pointAndClickOff
 
-%----------------------GENERAL HEADERS---------------------%
+\pointAndClickOff
+%#(set-default-paper-size "letter")
+
+%----------------------- HEADERS --------------------------%
 \header {
   title = "Introduction to the Art of Playing on the Piano Forte"
   composer = "Muzio Clementi"
@@ -206,7 +207,7 @@
   \titledPiece \markup "Air, in Atalanta, by Handel"
   \include "ilys/clementi-op42-lyt-L03-handel.ily"
   \pageBreak
-  %-
+
   \section "Lesson IV"
   \titledPiece \markup "Air, in Saul, by Handel"
   \include "ilys/clementi-op42-lyt-L04-handel.ily"
@@ -221,7 +222,7 @@
   \titledPiece \markup "Allegro by Corelli"
   \include "ilys/clementi-op42-lyt-L06-corelli.ily"
   \pageBreak
-  %-  
+  
   \section "Lesson VII"
   \titledPiece \markup "Prelude in A minor"
   \include "ilys/clementi-op42-lyt-L07-prel-amin.ily"    
@@ -240,7 +241,7 @@
   \titledPiece \markup "March, in Judas Maccabeus, by Handel"
   \include "ilys/clementi-op42-lyt-L09-handel.ily"
   \pageBreak
-  %-
+
   \section "Lesson X"
   \titledPiece \markup "Sarabanda, by Corelli"
   \include "ilys/clementi-op42-lyt-L10-corelli.ily"
@@ -255,7 +256,7 @@
   \titledPiece \markup "Arietta, by Mozart"
   \include "ilys/clementi-op42-lyt-L12-mozart.ily"
   \pageBreak
-  %-
+
   \section "Lesson XIII"
   \titledPiece \markup "Minuet and Trio, by Mozart"
   \include "ilys/clementi-op42-lyt-L13-mozart-minuet.ily"
@@ -274,7 +275,7 @@
   \titledPiece \markup "Larghetto, by Scarlatti"
   \include "ilys/clementi-op42-lyt-L15-scarlatti.ily"
   \pageBreak
-  %-
+
   \section "Lesson XVI"
   \titledPiece \markup "Allemanda, by Corelli"
   \include "ilys/clementi-op42-lyt-L16-corelli.ily"
@@ -292,7 +293,7 @@
   \titledPiece \markup "Ah vous dirai - je maman"	
   \include "ilys/clementi-op42-lyt-L18-ah-vous.ily"
   \pageBreak
-  %-
+
   \section "Lesson XIX"
   \titledPiece \markup "Triste Raison"
   \include "ilys/clementi-op42-lyt-L19-triste-raison.ily"
@@ -307,7 +308,7 @@
   \titledPiece \markup "Larghetto, by Pleyel"
   \include "ilys/clementi-op42-lyt-L21-pleyel.ily"
   \pageBreak
-  %-
+
   \section "Lesson XXII"
   \titledPiece \markup "Arietta"
   \include "ilys/clementi-op42-lyt-L22-arietta.ily"
@@ -327,7 +328,7 @@
   \markup \vspace #1
   \include "ilys/clementi-op42-lyt-L24-dussek.ily"
   \pageBreak
-  %-
+
   \section "Lesson XXV"
   \titledPiece \markup "Allegro, by Handel"
   \include "ilys/clementi-op42-lyt-L25-handel.ily"
@@ -343,16 +344,17 @@
   \markup \vspace #1
   \include "ilys/clementi-op42-lyt-L27-haydn.ily"
   \pageBreak
-  %-
+
   \section "Lesson XXVIII"
   \titledPiece \markup "Rondo in the Gipsy stile, by Dr. Haydn"
   \include "ilys/clementi-op42-lyt-L28-haydn.ily"
   \pageBreak
- 
+
   \section "Lesson XXIX"
   \titledPiece \markup "Prelude in E minor"
   \include "ilys/clementi-op42-lyt-L29-prel-emin.ily"
-  \titledPiece \markup "Tambourin by Rameau"
+  \markup \vspace #2
+  \titledPiece \markup "Tambourin by Rameau"    %--------causing ragged compression in A4
   \include "ilys/clementi-op42-lyt-L29-rameau.ily"
   \pageBreak
 
@@ -363,7 +365,7 @@
   \titledPiece \markup "Minuetto by Scarlatti"
   \include "ilys/clementi-op42-lyt-L30-scarlatti.ily"
   \pageBreak
-  %-
+
   \section "Lesson XXXI"
   \titledPiece \markup "Lindor - an Air"
   \include "ilys/clementi-op42-lyt-L31-air.ily"
@@ -380,7 +382,7 @@
   \titledPiece \markup "Gavotta in Otho, by Handel"
   \include "ilys/clementi-op42-lyt-L33-handel.ily"
   \pageBreak
-  %-
+
   \section "Lesson XXXIV"
   \titledPiece \markup "Andante with Variations, by Cramer"
   \include "ilys/clementi-op42-lyt-L34-cramer-theme.ily"
@@ -402,10 +404,10 @@
   \titledPiece \markup "Gavotta, by Corelli"
   \include "ilys/clementi-op42-lyt-L36-corelli.ily"
   \pageBreak
-%-
+
   \section "Lesson XXXVII"
   \titledPiece \markup "Minuet in Ariadne, by Handel"
-  \include "ilys/clementi-op42-lyt-L37-handel.ily"      %---- Get's warning on rehersal mark
+  \include "ilys/clementi-op42-lyt-L37-handel.ily"
   \pageBreak
   
   \section "Lesson XXXVIII"
@@ -417,7 +419,7 @@
   \titledPiece \markup "Waltz, by Beethoven"
   \include "ilys/clementi-op42-lyt-L39-beethoven.ily"
   \pageBreak
-  %-
+
   \section "Lesson XL"
   \titledPiece \markup "Allegro, by Corelli"
   \include "ilys/clementi-op42-lyt-L40-corelli.ily"
@@ -434,7 +436,7 @@
   \titledPiece \markup "Prelude in E Flat Major"
   \include "ilys/clementi-op42-lyt-L42-prel-eesmaj.ily"
   \titledPiece "Rondo by C.P.E. Bach"
-  \include "ilys/clementi-op42-lyt-L42-cpebach.ily"  % ---------- Warnings: Rest collisions
+  \include "ilys/clementi-op42-lyt-L42-cpebach.ily"
   \pageBreak
 
   \section "Lesson XLIII"
@@ -443,7 +445,7 @@
   \titledPiece \markup "Minuet, by Scarlatti"
   \include "ilys/clementi-op42-lyt-L43-scarlatti.ily"
   \pageBreak
-  %-
+
   \section "Lesson XLIV"
   \titledPiece \markup "Prelude in A Major"
   \include "ilys/clementi-op42-lyt-L44-prel-amaj.ily"
@@ -491,13 +493,13 @@
   \titledPiece \markup "Minuet, by Dr. Haydn"
   \include "ilys/clementi-op42-lyt-L50-haydn.ily"
 
-  %{
+%{
   CONTRIBUTIONS:
   
   Nicolas Sceaux: book titling framework
   Mats Bengtsson: defer page numbering several pages into the book
   Mike Solomon: up-tied fingering markup, slur as tuplet bracket
-  Phil Holmes: fix encoding errors, explicit breaks
+  Phil Holmes: fix encoding errors, explicit breaks, resolve rest direction warnings
   Jakob Lund: segment sequencing for MIDI
   Janek Warchoł: fixes to polyphony in MIDI, beam positioning
   Keith OHara: fixes to polyphony in MIDI
@@ -517,6 +519,7 @@
   Federico Bruni: custom MIDI filenames for each score in a book (requested)
   Glen Larsen: git syntax
   Felix Janda: LilyPond compile with no MIDI output
+  Bas Wassink: Lesson 42: CPE Bach Rondo typesetting (leveraged)
   
   %}
 

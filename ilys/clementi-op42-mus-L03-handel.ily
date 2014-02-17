@@ -7,6 +7,7 @@ LessonIIIUpper = \relative c''{
 	\key c \major
 	\clef treble
 	\time 4/4
+	\tempo 4 = 80 \hideTempo
 	\repeat volta 2 {
 	\set Score.measurePosition = #(ly:make-moment 1 2)
 	e4-3-\tweak #'stencil ##f \mf f8-4 e-3|

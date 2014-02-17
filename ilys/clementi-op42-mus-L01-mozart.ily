@@ -39,16 +39,16 @@ LessonIModeratoLower =  \relative c'{
 	\time 4/4
 	\key c \major
 	\repeat volta 2 {
-	\set Score.measurePosition = #(ly:make-moment 3 4) r4
+	\set Score.measurePosition = #(ly:make-moment 3 4) r4-\hidePiano
 	c2-1 c-1   g-4 g-4   b-2 b-2
-	c-1 c   e,-5 e   f-4 f  g-3 g
+	c-1 c   e,-5-\hideForte e   f-4 f  g-3 g
 	\set Score.measurePosition = #(ly:make-moment 1 4)
 	c2-1 c4}
 	\repeat volta 2{
 	\set Score.measurePosition = #(ly:make-moment 3 4)
-	r4    <g b>2-4-2 <g b>
+	r4-\hidePiano   <g b>2-4-2 <g b>
 	<g c>-4-1 <g c>    <g b>2-4-2 <g b>   c-1 c-1
-	e,-5 e     f-4 f    g-3 g
+	e,-5-\hideForte e     f-4 f    g-3 g
 	\set Score.measurePosition = #(ly:make-moment 1 4)
 	c2-1 c4}
 }

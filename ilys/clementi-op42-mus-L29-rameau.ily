@@ -16,7 +16,9 @@ LessonXXIXUpper= \relative c'{
 		b4-1 e-3 dis8-2 e fis dis|
 	%LINE 2
 		e2-3 e8-3 fis g fis|e4-3 b-1 c-2\prall b-1|c\prall b e8 fis g fis|
-		e4 b c\prall b|c\prall b g'-5 e-4|c-2\prall b-1 g' e|c\prall b g'e|
+		e4 b c\prall b|
+		\pageBreak
+		c\prall b g'-5 e-4|c-2\prall b-1 g' e|c\prall b g'e|
 		c-2\prall b-1 a-3 b-5|g-3\prall fis-2 e8-1 fis g fis|
 		e4 b' b a|g\prall fis e8 fis g a|
 	%LINE 3

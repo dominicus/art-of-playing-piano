@@ -52,7 +52,7 @@ LessonIIAriaLower = \relative c {
 		c,-5|
 	}
 	\repeat volta 2 {
-		e'4-1 g,-5|
+		e'4-1-\hidePiano g,-5|
 		d'-1 g,-5|
 		c-2 g-5|
 		b-3 g-5|
@@ -60,7 +60,7 @@ LessonIIAriaLower = \relative c {
 		d'-1 g,-5|
 		c-2 g-5|
 		b-3 g-5|
-		c-1 g-2|
+		c-1-\hideForte g-2|
 		e-4 c-5|
 		f2-2|
 		e4-3 c-5|

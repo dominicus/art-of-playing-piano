@@ -7,6 +7,7 @@ LessonXXXIIIUpper=\relative c''{
 	\key bes \major
 	\time 2/2
 	\clef treble
+	\tempo 2 = 67 \hideTempo 
 	\repeat volta 2{
 	%LINE 1
 		\set Score.measurePosition = #(ly:make-moment 2 4)

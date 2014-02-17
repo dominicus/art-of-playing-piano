@@ -60,6 +60,7 @@ LessonXIXLower = \relative c{
 	s4 s8.
 }
 LessonXIXUpperMIDI = \relative c''{
+	\tempo 4 = 100 \hideTempo
 	\key g \major
 	\time 3/4
 	\clef treble

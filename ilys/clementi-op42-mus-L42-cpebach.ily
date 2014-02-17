@@ -211,7 +211,7 @@ LessonXLIIUpperA =  \relative c'' {
 	f_[^( <es g,> <d f,> <c ees,>])
 	
 	d4 c8_[ \lessScriptPriority b]^\trill\turn
-	\stemDown b4^( c8) g\rest
+	\stemDown b4^( c8) g\rest   %------------------------rest causing warning
 	\stemUp ges2^~
 	ges4 f^~
 	
@@ -651,6 +651,13 @@ LessonXLIIUpperB =  \relative c'' {
   s
   s
   }
+  
+LessonXLIIUpper = {
+  <<
+  \new Voice { \voiceOne \LessonXLIIUpperA }
+  \new Voice { \voiceTwo \LessonXLIIUpperB }
+  >>
+}
 
 LessonXLIILowerA =  \relative c {
   \ignoreClashNote
@@ -1298,3 +1305,10 @@ LessonXLIILowerB =  \relative c' {
   s
   s
   }
+ 
+ LessonXLIILower = {
+  <<
+  \new Voice { \voiceOne \LessonXLIILowerA }
+  \new Voice { \voiceTwo \LessonXLIILowerB }
+  >>
+}

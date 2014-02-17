@@ -6,7 +6,7 @@
 LessonXIUpper = \relative c'' {
 	\key f \major
 	\time 12/8
-	\tempo "Allegro" 4=120
+	\tempo "Allegro" 4=170
 	\hideTempo
 	%\autoLineBreakOff
 	\clef treble

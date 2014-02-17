@@ -7,6 +7,7 @@ LessonXIIIUpperB= \relative c'' {
 		\time 3/4
 		\key f \major 
 		\clef treble
+		\tempo 4=100 \hideTempo
 		\repeat volta 2 {
 		%LINE 1
 			\set Score.measurePosition = #(ly:make-moment 2 4)
@@ -42,7 +43,7 @@ LessonXIIILowerB= \relative c {
 	\clef bass
 	\repeat volta 2 {
 		%LINE 1
-			\set Score.measurePosition = #(ly:make-moment 2 4) r4|
+			\set Score.measurePosition = #(ly:make-moment 2 4) r4-\hidePiano |
 			<<{r4 <c f>-2-1 <c f>|r  <c f> <c f>}\\{f,2.-5|f|}>>
 		%LINE 2
 			<<{r4 <c' f> <c f>|r <c f> <c f>|r <c f> <c f>|r <c f> <c f>|r <c f> <c f>}

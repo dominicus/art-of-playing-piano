@@ -6,6 +6,7 @@
 LessonIXUpper= \relative c' {
 	\time 4/4
 	\key f \major
+	\tempo 4 = 120 \hideTempo
 	\clef treble
 	\repeat volta 2{
 		f8-2 e-1 f-2 g-3 f4-1 g-2|a2.-3 g8-2 bes-4|\preTrill a2.\trill^\trillFour g8-2 bes-4|

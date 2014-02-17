@@ -77,9 +77,9 @@ LessonXXIVLower= \relative c'{
 		<c a e>4-5-2-1 <d a d,>|
 		\clef treble <<{\setFingeringLeft <g>8.-5-4-1 fis16-2 g4-1|}\\{<cis, a>2|}>>
 		<fis d>8^\markup{\finger "3-5"}^\markup{\finger "2-3"} <g e>-4-2 <a fis>4-3-1|
-		\clef bass <<{g,8 d g d|}\\{g,2|}>>
+		\clef bass <<{ g,8[ d g d] |}\\{g,2|}>>
 	%LINE 2
-		b'8-1 d,-3 a'-1 d,-3|
+		b'8-1[ d,-3 a'-1 d,-3] |
 		<g g,>4 <d d,>|
 		<g, g,> r|
 		<b g'>-4-1 <c g'>-3-1|

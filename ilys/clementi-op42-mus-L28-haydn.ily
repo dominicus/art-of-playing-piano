@@ -23,7 +23,7 @@ LessonXXVIIIUpper = \relative c''{
 		d b c a b g a fis|
 		g8( b) \autoBeamOff d,\staccatissimo \autoBeamOn c'16 d|
 		e c d b c a b g|
-		fis8( a) \autoBeamOff d,\staccatissimo e16 \autoBeamOn fis|
+		fis8( a) d,\staccatissimo e16[ fis] |
 	%LINE 3
 		g d e fis g e fis gis|
 		a e fis gis a gis a b|

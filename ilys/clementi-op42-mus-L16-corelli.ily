@@ -33,6 +33,7 @@ LessonXVIUpper = \relative c''{
 		}\\{
 			s4 c~ c b8 a|gis4 s8 c fis, gis-2 a4~|a gis a2|
 		}>>
+	}
 	\repeat volta 2{
 		<cis e>4.-2-3 <cis e>8-2-3 <d f>4-1-4 r4|
 	%LINE 5
@@ -48,16 +49,15 @@ LessonXVIUpper = \relative c''{
 		<<{e8-2-3 f-1-4 e4-3 d4-1 s4|}\\{cis8 d4 cis8^\markup{\finger 2} d4 bes8\rest <f' a>8|}>>
 		<e g>4 r8 <g bes>8 <f a>4 r8 <e g>16 <d f>|
 		<<{e8 f e4 d2|}\\{cis8 d4 cis8 d2|}>>
-		  }
 	}
 }
 LessonXVILower = \relative c'{
 	\key f \major
 	\time 4/4
 	\clef bass
-	\repeat volta 2{
+	\repeat volta 2 {
 	%LINE 1
-		d16-1 d,-5 f-3 e-4  d-5 e-4 f-3 g-2  a-1 g-3 a-1 bes-2  a-1 bes-2 a-1 g-3|
+		d16-1-\hidePiano d,-5 f-3 e-4  d-5 e-4 f-3 g-2  a-1 g-3 a-1 bes-2  a-1 bes-2 a-1 g-3|
 		f-4 e-5 f-4 g-3 a-2 g-4 a-3 bes-2 c-1 c,-5 e-3 d-4 c-5 d e f|
 		g-1 fis-3 g-2 a-1 bes-3 a-4 bes-3 c-2
 	%LINE 2
@@ -75,7 +75,7 @@ LessonXVILower = \relative c'{
 		e-3 f-2 e d c-5 d-3 e-2 c-4 d-3 c d e f-1 e-2 f d|
 		e8-1 a,-4  e'-1 e,-5 a2^\switchThreeFive|
 	}
-	\repeat volta 2{
+	\repeat volta 2 {
 		a'16-1 g-3 a-1 bes-2 a-1 bes-2 a-1 g-2 f-3 g-2 f e d-5 e-4 f-3 d-5|
 	%LINE 5
 		c'-1 bes-2 c-1 d-2  c-1 d-2 c-1 bes-2 a-3 bes-2 a-3 g-4  f-5 g-4 a-3 f-5|

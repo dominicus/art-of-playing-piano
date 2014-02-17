@@ -7,7 +7,7 @@ LessonXXXIXUpperVoltaA= \relative c'''{
 	\key d \major
 	\time 3/4
 	\clef treble
-	\tempo "Presto" 4=133 \hideTempo
+	\tempo "Presto" 4=145 \hideTempo
 	\repeat volta 2 {
 		\set Score.measurePosition = #(ly:make-moment 2 4) a8-5\( fis-4
 		d-2 a-1 fis'-4 d-2 a'-5 fis-4\)

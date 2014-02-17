@@ -9,7 +9,7 @@ global = { \key e \major \time 3/4 }
 tempoLegend = \markup { \right-align "Andante" }
 pieceLegend = #"Polonaise"
 tenFive = \markup { \override #'( baseline-skip . 0 )  \column { \center-align{ \finger "  5"  \small "  ten" }}}
-setTempo = { \tempo 4=72 \hideTempo }
+setTempo = { \tempo 4=100 \hideTempo }
 
 angleBeamOne = \once \override Beam #'positions = #'( 0.0 . -0.3 )
 angleBeamTwo = \once \override Beam #'positions = #'( -2.7 . -0.1 )

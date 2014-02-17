@@ -6,7 +6,7 @@
 
 \book {   \bookOutputName "clementi-op42-les43-scarlatti-minuet"
   \score {
-	\unfoldRepeats \articulate
+	\unfoldRepeats \articulate  
 	\new PianoStaff <<
 		\new Staff = "upper"
 		<<
