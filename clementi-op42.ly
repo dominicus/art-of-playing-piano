@@ -29,8 +29,8 @@
   coverLineThree = "Art of Playing"
   coverLineFour = "on the"
   coverLineFive = "Piano Forte"
-  coverScrollTop = \markup { \epsfile #X #60 #(format #f "scroll-one-top.eps" (ly:parser-output-name parser)) }
-  coverScrollBottom = \markup { \epsfile #X #60 #(format #f "scroll-one-btm.eps" (ly:parser-output-name parser)) }
+  coverScrollTop = \markup { \epsfile #X #60 #(format #f "img/scroll-one-top.eps" (ly:parser-output-name parser)) }
+  coverScrollBottom = \markup { \epsfile #X #60 #(format #f "img/scroll-one-btm.eps" (ly:parser-output-name parser)) }
       
   
   mutopiatitle = "Clementi's Art of Playing on the Piano Forte"
@@ -43,7 +43,7 @@
   license = "Creative Commons Attribution ShareAlike 4.0"
   footer = "Mutopia-2014/02/08-0"
   copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9  "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " "2014" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0	} } }
-  lastupdated = "2014/02/08"
+  lastupdated = "2014/02/17"
   tagline = ##f
 }
   
@@ -56,7 +56,7 @@
      print-first-page-number = ##t
      page-breaking = #ly:minimal-breaking
      ragged-bottom = ##t
-     system-system-spacing #'padding = #6
+     system-system-spacing #'padding = #3
 }
 
 %--------------------INCLUDED FILES------------------------%
@@ -354,7 +354,7 @@
   \titledPiece \markup "Prelude in E minor"
   \include "ilys/clementi-op42-lyt-L29-prel-emin.ily"
   \markup \vspace #2
-  \titledPiece \markup "Tambourin by Rameau"    %--------causing ragged compression in A4
+  \titledPiece \markup "Tambourin by Rameau"
   \include "ilys/clementi-op42-lyt-L29-rameau.ily"
   \pageBreak
 
@@ -450,7 +450,7 @@
   \titledPiece \markup "Prelude in A Major"
   \include "ilys/clementi-op42-lyt-L44-prel-amaj.ily"
   \titledPiece \markup "Andante Allegretto by Paradies."
-  \include "ilys/clementi-op42-lyt-L44-paradies.ily"  %----Warning: colliding rests
+  \include "ilys/clementi-op42-lyt-L44-paradies.ily"
   \pageBreak
   
   \section "Lesson XLV"
