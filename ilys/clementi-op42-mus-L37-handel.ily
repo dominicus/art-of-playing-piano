@@ -93,8 +93,8 @@ LessonXXXVIILowerASegnoToFine=\relative c{
 	%LINE 5
 		d4 b e|d a'a,|d,d'cis|b g'b,|cis a d|g, a2|
 		<<{\ignoreClashNote <fis' a>2.\arpeggio|
-		\override Staff.RehearsalMark #'direction = #DOWN 
-		\mark \markup { \musicglyph #"scripts.dfermata" }
+		%\override Staff.RehearsalMark #'direction = #DOWN 
+		%\mark \markup { \musicglyph #"scripts.dfermata" }   ----------> Causing warnings and compile errors
 		}\\{\stemUp d,|}>>
 }
 LessonXXXVIILowerA= {\LessonXXXVIILowerABegToSegno \LessonXXXVIILowerASegnoToFine}

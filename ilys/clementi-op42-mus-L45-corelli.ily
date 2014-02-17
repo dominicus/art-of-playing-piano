@@ -33,7 +33,7 @@ LessonXLVUpperA= \relative c''{
 	cis2^\markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { { \finger " 5" } \finger \concat { "2" \hspace #0.4 "1" \hspace #4 } \raise #-1 \rotate #-180 \char ##x2040 } } \once \override Voice.Fingering #'extra-offset = #'(0.0 . 0.3 ) b2-4 <b^2^4> | %23
 	\centermarkup \once \override Voice.TextScript #'extra-offset = #'(0.0 . -0.6 ) b1^\markup{ \override #'( baseline-skip . 1.3 ) \column { \finger \concat { "3" \hspace #0.2 "4" \hspace #0.2 "5" \hspace #0.2 "4" } \finger " 1" \concat { \tiny \musicglyph #"accidentals.sharp" \hspace #0.8 \tiny \rotate #90 \musicglyph #"scripts.turn" } } }-\tweak #'stencil ##f \turn  
 	<a-2>2^\switchThreeFour ~ | %24
-	\stemDown a2 \preTrill \once \override NoteColumn #'force-hshift = #0.5 \once \override Voice.TextScript #'extra-offset = #'(1.8 . -0.1 ) gis2.^\trill^\switchFourThree eis4-1 | %25
+	\stemDown \ignoreClashNoteOnce a2 \preTrill \once \override NoteColumn #'force-hshift = #0.5 \once \override Voice.TextScript #'extra-offset = #'(1.8 . -0.1 ) gis2.^\trill^\switchFourThree eis4-1 | %25
 	 \allowFingeringInStaff fis1.-2\fermata
 	\bar "|."
 }
@@ -96,3 +96,4 @@ LessonXLVLower= \relative c {
 	<b-3>2 cis1-2	| %25
 	fis,1.-5_\fermata	| %26
 }
+

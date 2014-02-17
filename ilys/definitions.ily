@@ -119,6 +119,7 @@ noteheadMagenta = \override NoteHead #'color = #magenta
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 
+disallowCrossStaffBarLines = \override Staff.BarLine #'allow-span-bar = ##f
 
 setProportionalScore = {
 		  	\override Score.SpacingSpanner #'strict-note-spacing = ##t
