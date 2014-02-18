@@ -56,7 +56,7 @@
      print-first-page-number = ##t
      page-breaking = #ly:minimal-breaking
      ragged-bottom = ##t
-     system-system-spacing #'padding = #3
+     system-system-spacing #'padding = #6
 }
 
 %--------------------INCLUDED FILES------------------------%
