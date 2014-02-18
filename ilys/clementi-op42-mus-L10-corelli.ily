@@ -3,20 +3,28 @@
 
 % LESSON X. Sarabanda by Corelli.
 
+%--------------definitions -----------------
+pushFOne = \override Fingering #'extra-offset = #'(-0.1 . 0.8 )
+revFing = \revert Fingering #'extra-offset
+lowerTrillOne = \once \override Script #'extra-offset = #'(-0.7 . -1.4 )
+lowerTextOne = \once \override TextScript #'extra-offset = #'(-0.7 . -1.4 )
+
 LessonXUpper = \relative c''{
 	\time 3/4
 	\key f \major
 	\tempo "Vivace" 4=140
 	\hideTempo
 	\repeat volta 2 {
-		<<{s2.|g'2.-4|a2-3-5 a4-3-5|g-3-4 c-2-5 s4|}\\{f,4-3 f2-3~|f4-3 e2-2|f4 c-1 f~|f e c-1|}>>
+		<<{s2.|g'2.-4| \pushFOne <a^3^5>2 <a^3^5>4 |
+                <g^3^4> <c^2^5> s4| \revFing }\\{ f,4-3 f2-3~|f4-3 e2-2|f4 c-1 f~|f e c-1|}>>
 		\preTrill f2.\trill^\trillFour|
-		<<{s2 g4-1-4|a4-1-5 \preTrill d,2\trill^\trillFour|}\\{e2-2c4~|c4 b2-1|}>>
+		%\pushFOne
+		<<{ \pushFOne s2 <g^1^4>4| <a^1^5>4 \preTrill \lowerTextOne \lowerTrillOne d,2\trill^\trillFour|}\\{e2-2c4~|c4 b2-1|}>>
 		c2.-2|
 	}
 	\repeat volta 2{
 		
-		<<{f2.-1-5|f-4-5|g-1-5|g-3-5|a-2-5|}\\{a,4 c2-3|d4 bes2-2|b4 d2-2|e4 c2-1|cis4 e2-3|}>>
+		<<{ \pushFOne <f^1^5>2.| <f^4^5>|<g^1^5>|<g^3^5>|<a^2^5>|}\\{a,4 c2-3|d4 bes2-2|b4 d2-2|e4 c2-1|cis4 e2-3|}>>
 		<f a>4.^\trillFour^\markup{\finger \concat{\hspace #0.3 5}}
 		<e g>8-2-4 <f~ d>4-1-3|f8-3 e-2 \preTrill e2\trill^\trillThree|d2.-1|<f a>-3-5|
 		<d f>-1-2|<g bes>-3-5|<e g>-1-3|<a c>-4-5|
@@ -49,7 +57,7 @@ LessonXLower = \relative c{
 		g-2 e-4 a-1 g-2 a-1 a,-5 d2.-3|r8 f-4 a-2 c-1 a-2 f-4|bes-1 bes,-5 d-3 f-1 d-2 bes-4|
 		g-5 g'-1 bes-2 d-1 bes-2 g-4| c-5 c,-1 e-3 g-1 e-2 c-4|a-5 a'-1 c-2 f-1 c-2 a-3|
 		bes-2 d-1 g,-3 c-1 f,-2 a,-5|
-		bes-4 f'-1 c4^\markup{\finger{ \concat{ "3" \hspace #-0.5 \char ##x2040 \hspace #-0.5 "1"}}} c,-5|
+		bes-4 f'-1 c4^\switchThreeOne c,-5|
 		f2.-3|
 	%LINE 4
 		r8 f'-4 a c a f|bes bes, d f d bes|g g' bes d bes g|c c, e g e c|a a' c f c a|

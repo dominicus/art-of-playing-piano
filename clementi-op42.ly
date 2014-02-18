@@ -476,8 +476,11 @@
   
   \section "Lesson XLVIII"
   \titledPiece \markup "Prelude in E Major"
+  \markup \vspace #1
   \include "ilys/clementi-op42-lyt-L48-prel-emaj.ily"
+  \markup \vspace #2
   \titledPiece \markup "Polonoise and Minuet, by Sebastian Bach"
+  \markup \vspace #1
   \include "ilys/clementi-op42-lyt-L48-bach-polonaise.ily"
   \include "ilys/clementi-op42-lyt-L48-bach-minuet.ily"
   \pageBreak

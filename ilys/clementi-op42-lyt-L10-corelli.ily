@@ -9,5 +9,8 @@
 	    \new Staff = "upper" \LessonXUpper
 	    \new Staff = "lower" \LessonXLower
 	  >>
-	\layout { }
+	\layout {
+	  system-count = #4
+	  indent = 0\mm
+	}
 }

@@ -24,7 +24,7 @@ LessonXLVIUpper = \relative c''{
 	g2-4\arpeggio
 	}
 	bes,4-2( \scriptRightOne c8)\prallmordent^\switchOneTwoOne des-2	| %6
-	\mark \markup { \musicglyph #"scripts.segno" }
+	%\mark \markup { \musicglyph #"scripts.segno" }
 	
 	\repeat volta 2 {
 	ees2-3 c4-1( \scriptRightOne des8)\prallmordent^\switchTwoOneTwo ees8-3	| %7
@@ -74,7 +74,7 @@ LessonXLVIUpper = \relative c''{
 		{
 		<c, ees aes>2\arpeggio bes'4( \staffUp
 		c8\prallmordent des)				| %33
-		\mark \markup { \musicglyph #"scripts.segno" }
+		%\mark \markup { \musicglyph #"scripts.segno" }
 		}	
 		{
 		\staffDown <c, ees aes>2\arpeggio		  %34

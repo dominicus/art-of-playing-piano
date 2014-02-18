@@ -4,11 +4,11 @@
 % LESSON XLIV. Prelude in A Major.
 
 \score {
-	  \new PianoStaff <<
-	  	  \new Staff = "upper" { \global \LessonXLIVUpperPrel }
-	  	  \new Staff = "lower" { \global \LessonXLIVLowerPrel }
-	  >>
-	  \layout{
-	  	    indent = #0
-	  }
+  \new PianoStaff <<
+	  \new Staff = "upper" { \global \LessonXLIVUpperPrel }
+	  \new Staff = "lower" { \global \LessonXLIVLowerPrel }
+  >>
+  \layout{
+    system-count = #2
+  }
 }
